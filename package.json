@@ -1,0 +1,23 @@
+{
+  "name": "portfoliosite",
+  "version": "1.0.0",
+  "description": "NPM for Portfolio Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch sass -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Nezunoban/portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Nathan Freemyer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nezunoban/portfolio/issues"
+  },
+  "homepage": "https://github.com/Nezunoban/portfolio#readme"
+}

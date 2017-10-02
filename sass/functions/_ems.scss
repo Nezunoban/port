@@ -1,0 +1,81 @@
+/**
+ ********************************
+ * _EM.SCSS
+ ********************************
+ */
+
+/**
+ * @function base-em
+ * @description Convert any unit measurement to a base em size
+ * (based on 16px/12pt/100% base value).
+ *
+ * @param {measurement} [$val] A value to convert to em
+ *
+ * @return {measurement} Returns an the em size
+ *
+ * @example
+    .foo {
+      font-size: base-em(24px);
+    }
+ */
+@function base-em($val) {
+  $u: unit($val);
+
+  @if $u == "em" {
+    @return $val;
+  } @else if $u == "%" {
+    @return $val / 100% + 0em;
+  } @else if $u == "px" {
+    @return $val / 16px + 0em;
+  } @else if $u == "pt" {
+    @return $val / 12pt + 0em;
+  } @else if $u == "in" {
+    @return $val / 0.17in + 0em;
+  } @else if $u == "pc" {
+    @return $val / 1pc + 0em;
+  } @else if $u == "mm" {
+    @return $val / 4.2mm + 0em;
+  } @else if $u == "cm" {
+    @return $val / 0.42cm + 0em;
+  } @else if $u == "" {
+    @return $val + 0em;
+  } @else {
+    @warn "#{$val} has an unrecognizable unit.";
+    @return $val;
+  }
+}
+
+/**
+ * @function em
+ * @description Convert any unit measurement to em
+ *
+ * @param {measurement} [$value] The measurement to convert
+ * @param {measurement} [$context=base font size] The measurement size of the parent
+ *
+ * @return {measurement} Return an em size
+ *
+ * @example
+    .foo {
+      font-size: em(24px, 16px);
+    }
+ */
+@function em($value, $context: get(font-size)) {
+  @return ( base-em($value) / base-em($context) ) + 0em;
+}
+
+/**
+ * @function rem
+ * @description Convert any unit measurement to rem
+ *
+ * @param {measurement} [$value] The measurement to convert
+ *
+ * @return {measurement} Return an rem size
+ *
+ * @example
+    .foo {
+      font-size: rem(24px);
+    }
+ */
+@function rem($value) {
+  @return ( base-em($value) / base-em(get(font-size)) ) + 0rem;
+}

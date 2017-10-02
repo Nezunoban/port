@@ -1,0 +1,3665 @@
+@charset "UTF-8";
+/**
+ ********************************
+ * GEMINI-CSS
+ ********************************
+ */
+/**
+ *
+ * Framework used for Carpages.ca
+ *
+ * Credits/Inspiration:
+ * SMACSS
+ * BEM
+ * Inuit.css
+ * Bootstrap.css
+ * Foundation.css
+ * CSS-Tricks
+ * Nicolas Gallagher
+ *
+ */
+/**
+ * Gotta' get our Compass
+ */
+/**
+ * Variables
+ */
+/**
+ ********************************
+ * _DEFAULTS.SCSS
+ ********************************
+ */
+/**
+ * You can override all of these settings
+ */
+/********************************
+ * BASE DEFAULTS
+ ********************************/
+/**
+ * @settings $gemini-base
+ * @description The base settings for gemini. You can get these values using
+ * get(property);
+ *
+ * @prop {measurement} [border-radius=4px] Default round corners
+ * @prop {color} [brand-color=#090] Base brand color
+ * @prop {color} [link-color=#4374AE] Default link colors
+ * @prop {color} [color=#333] Default text color
+ * @prop {color} [background-color=#FFF] Website background color
+ * @prop {color} [border-color=#D6D6D6] Website border color
+ * @prop {measurement} [font-size=14px] Default font-size
+ * @prop {measurement} [line-height=24px] Default line-height
+ * @prop {measurement} [spacing=24px] Default spacing used throughout the site
+ * @prop {string} [brand-font-family=unquote("'Helvetica', Arial, sans-serif")] Default brand font face
+ * @prop {string} [font-family=unquote("'Helvetica', Arial, sans-serif")] Default font face
+ * @prop {string} [font-directory="fonts"] The location of fonts in relation to outputed CSS
+ * @prop {string} [img-directory="../img"] The location of images in relation to outputed CSS
+ */
+/********************************
+ * SCREEN DEFAULTS
+ ********************************/
+/**
+ * @settings $gemini-screens
+ * @description The default breakpoints used throughout the site. These are
+ * automatically converted to em's when used by media queries.
+ *
+ * @prop {measurement} [medium=481px] When medium breakpoint starts
+ * @prop {measurement} [large=1024px] When large breakpoint starts
+ * @prop {measurement} [xlarge=1200px] When xlarge breakpoint starts
+ */
+/********************************
+ * OBJECT USE DEFAULTS
+ ********************************/
+/**
+ * @settings $gemini-use
+ * @description Settings for whether to use a certain object or not. By default
+ * all object are set to false. As you need them, set them to true.
+ *
+ * @markup
+    $gemini-use: (
+      block-list: true,
+      grid: true
+    );
+ */
+/********************************
+ * DEFAULT OVERWRITES
+ ********************************/
+/**
+ * Functions
+ */
+ /**
+********************************
+* _LISTS.SCSS
+********************************
+*/
+/**
+ * @function remove
+ * @description Remove an item from a list
+ *
+ * @param {list} [$list] The list to alter
+ * @param {undefined} [$value] The value to remove from the lsit
+ * @param {boolean} [$recursive=false] Whether to search recursively
+ *
+ * @return {list} The newly trimmed list
+ */
+/**
+ * @function implode
+ * @description Implode the items of a list into a string. Similar to javascripts
+ * Array.implode();
+ *
+ * @param {list} [$list] The list to implode
+ * @param {string} [$glue=""] The string to implode the list with
+ * @param {string} [$trim=true] Whether to trim empty strings and nulls
+ *
+ * @return {string} A string of the implodeed list
+ *
+ * @example
+    .foo:before {
+      content: implode((a,b,c), "-") // a-b-c;
+    }
+ */
+/**
+ ********************************
+ * _MAPS.SCSS
+ ********************************
+ */
+/**
+ * @function get
+ * @description Gets the key from a map. By default it retrieves from
+ * $gemini-base. You can access maps recursively using dot notation like in
+ * Javascript objects (leve1.level2).
+ *
+ * @param {string} [$key] The key of the desired value
+ * @param {map} [$map=$gemini-base] The map to search
+ *
+ * @return {undefined} Returns the assoicated variable
+ *
+ * @example
+    .foo {
+      color: get(brand-color);
+      background-color: get(first.second.color, $some-map);
+    }
+ */
+/**
+ * @function extend
+ * @description Merges two maps together. The second map take priority. This
+ * works recursively for deep merges.
+ *
+ * @param {map} [$map1] The first map
+ * @param {map} [$map2] The second map which take priority
+ *
+ * @return {map} A newly combined map
+ */
+/**
+ ********************************
+ * _COLORS.SCSS
+ ********************************
+ */
+/**
+ * @function brightness
+ * @description Computes the "brightness" of a color.
+ * Brightness is similiar to lightness in HSL but more closely approximates
+ * how humans perceive the intensity of the different RGB components of
+ * a color. Brightness is sometimes called luminance.
+ *
+ * This will be in Compass Stable soon
+ * https://github.com/chriseppstein/compass/issues/1296
+ *
+ * @param {color} [$color] The color
+ *
+ * @return {percent} Returns a number between 0% and 100%, where 100% is fully bright
+ * (white) and 0% is fully dark (black).
+ */
+/**
+ * @function contrast-color
+ * @description Takes a color and returns a contrasting color for readability
+ *
+ * @param {color} [$color] The input color to contrast
+ * @param {color} [$dark=#333] The dark color to contrast with
+ * @param {color} [$light=#FFF] The light color to contrast with
+ *
+ * @return {color} A contrasting color
+ *
+ * @example
+    .foo {
+      color: contrast-color(#090);
+    }
+ */
+/**
+ * @function lighter
+ * @description Lighter is a replacement of lighten
+ * https://groups.google.com/d/msg/compass-users/umJGUEn6jpQ/MKeUs97DIj0J
+ * https://github.com/nex3/sass/issues/598
+ *
+ * @param {color} [$color] The color that you want to change
+ * @param {percent} [$percent] The percent that you want to lighten by
+ *
+ * @return {color} The lightened color
+ */
+/**
+ * @function darker
+ * @description Darker is a replacement of darken
+ * https://groups.google.com/d/msg/compass-users/umJGUEn6jpQ/MKeUs97DIj0J
+ * https://github.com/nex3/sass/issues/598
+ *
+ * @param {color} [$color] The color that you want to change
+ * @param {percent} [$percent] The percent that you want to darken by
+ *
+ * @return {color} The darkened color
+ */
+/**
+ * Stores colors
+ */
+/**
+ * @function addColor
+ * @description Add a color to the map of colors
+ *
+ * @param {string} [$name] The key of the color
+ * @param {color} [$color] The color that you want to store
+ *
+ * @return {color} The color you're storing
+ *
+ * @example
+    $garbage = addColor(blue, #009)
+ */
+/**
+ * @function getColor
+ * @description Get one of the colors that you've stored
+ *
+ * @param {string} [$name] The key of the color you want
+ *
+ * @return {color} The corresponding color
+ *
+ * @example
+    .foo {
+      color: getColor(g25);
+    }
+ */
+/**
+ ********************************
+ * _EM.SCSS
+ ********************************
+ */
+/**
+ * @function base-em
+ * @description Convert any unit measurement to a base em size
+ * (based on 16px/12pt/100% base value).
+ *
+ * @param {measurement} [$val] A value to convert to em
+ *
+ * @return {measurement} Returns an the em size
+ *
+ * @example
+    .foo {
+      font-size: base-em(24px);
+    }
+ */
+/**
+ * @function em
+ * @description Convert any unit measurement to em
+ *
+ * @param {measurement} [$value] The measurement to convert
+ * @param {measurement} [$context=base font size] The measurement size of the parent
+ *
+ * @return {measurement} Return an em size
+ *
+ * @example
+    .foo {
+      font-size: em(24px, 16px);
+    }
+ */
+/**
+ * @function rem
+ * @description Convert any unit measurement to rem
+ *
+ * @param {measurement} [$value] The measurement to convert
+ *
+ * @return {measurement} Return an rem size
+ *
+ * @example
+    .foo {
+      font-size: rem(24px);
+    }
+ */
+/**
+ * Mixins
+ */
+/**
+ ********************************
+ * _ACCESSIBILITY.SCSS
+ ********************************
+ */
+/**
+ * @mixin accessibility
+ * @description Hide content off-screen without resorting to 'display:none;'.
+ *
+ * @param {string} [$important=''] Option to append values with !important
+ *
+ * @example
+    .foo {
+      @include accessibility;
+    }
+ */
+/**
+ ********************************
+ * _ARROWS.SCSS
+ ********************************
+ */
+/**
+ * @mixin arrow
+ * @description This mixin creates a CSS arrow on a given element. We can have
+ * the arrow appear in one of 12 locations, thus:
+ *
+ *       01    02    03
+ *    +------------------+
+ * 12 |                  | 04
+ *    |                  |
+ * 11 |                  | 05
+ *    |                  |
+ * 10 |                  | 06
+ *    +------------------+
+ *       09    08    07
+ *
+ * @param {string} [$arrow-edge=bottom] The edge that the arrow is on (top, right, bottom, left)
+ * @param {string} [$arrow-location=center] The location placement along the edge (top, right, center, bottom, left)
+ * @param {string} [$arrow-size=get(spacing)*0.4] The size of the arrow
+ * @param {string} [$arrow-color=#333] The color of the arrow
+ * @param {string} [$arrow-size=get(spacing)*0.4] The size of the border
+ * @param {string} [$border-color=$arrow-color] The color of the border
+ *
+ * @example
+    .foo {
+      @include arrow(bottom, center, red, black);
+    }
+ */
+/**
+ ********************************
+ * _BORDER.SCSS
+ ********************************
+ */
+/**
+ * @mixin border
+ * @description Add custom border
+ *
+ * @param {color} [$color] The color of the border. Defaults to color set as border-color in $gemini-base.
+ * @param {measurement} [$width] The desired width of the border. Defaults to 1px.
+ * @param {string} [$position] The desired position of the border. Defaults to border on all sides.
+ *
+ * @example
+    .foo {
+      @include border(#D6D6D6, 1px, "bottom");
+    }
+ */
+/**
+ ********************************
+ * _CLEARFIX.SCSS
+ ********************************
+ */
+/**
+ * @mixin clearfix
+ * @description Make an element clear floating elements as per:
+ * http://css-tricks.com/snippets/css/clear-fix/
+ *
+ * @example
+    .foo {
+      @include clearfix;
+    }
+ */
+/**
+ ********************************
+ * _FONT-FACE.SCSS
+ ********************************
+ */
+/**
+ * @mixin font-face
+ * @description Add custom font-face
+ *
+ * @param {string} [$font-family] The name of the font-family
+ * @param {string} [$file-path] The location of the font files relative to the outputed CSS (.eot, .woff, .ttf, and .svg expected)
+ * @param {string} [$weight=normal] The weight of the font
+ * @param {string} [$style=normal] The style of the font
+ * @param {string} [$version=1] A number to append to the include to bust the cache on font files
+ *
+ * @example
+    .foo {
+      @include font-face('UI Font', '../fonts/ui-font/ui-font', bold, italic);
+    }
+ */
+/**
+ ********************************
+ * _FONT-SIZE.SCSS
+ ********************************
+ */
+/**
+ * @mixin font-size
+ * @description Get a fully formed type falue
+ *
+ * @param {measurement} [$font-size] The font size
+ * @param {boolean} [$line-height=false] Whether to include a calculated line-height based on the base line-height
+ * @param {boolean} [$use-rem=false] Include rem value
+ * @param {string} [$iportant=''] The option to add !important
+ *
+ * @example
+    .foo {
+      @include font-size(14px);
+    }
+
+    .bar {
+      @include font-size(14px, true, false, !important);
+    }
+ */
+/**
+ ********************************
+ * _GPU.SCSS
+ ********************************
+ */
+/**
+ * @mixin gpu
+ * @description Force an element to use the gpu to render. Causes for smoother
+ * performance
+ *
+ * @example
+    .foo {
+      @include gpu;
+    }
+ */
+/**
+ ********************************
+ * _HEADINGS.SCSS
+ ********************************
+ */
+/**
+ * @mixin headings
+ * @description Style any number of headings in one fell swoop
+ *
+ * @param {integer} [$from=1] The starting range of headings to style
+ * @param {integer} [$to=6] The ending range of headings to style
+ *
+ * @example
+    @include headings(1, 3) {
+      color:#A55BAD;
+    }
+ */
+/**
+ ********************************
+ * _LISTS.SCSS
+ ********************************
+ */
+/**
+ * @mixin prune-list
+ * @description Remove all styles from a list
+ *
+ * @example
+    .list--prune {
+      @include prune-list;
+    }
+ */
+/**
+ ********************************
+ * _MEDIA-QUERIES.SCSS
+ ********************************
+ */
+/**
+ * @mixin media
+ * @description It's not great practice to define solid breakpoints up-front,
+ * preferring to modify your design when it needs it, rather than assuming
+ * you'll want a change at 'mobile'. However, as inuit.css is required to take a
+ * hands off approach to design decisions, this is the closest we can get to
+ * baked-in responsiveness. It's flexible enough to allow you to set your own
+ * breakpoints but solid enough to be frameworkified.
+ *
+ * We define some broad breakpoints in our vars file that are picked up here
+ * for use in a simple media query mixin. Our options are:
+ *
+ * medium
+ * large
+ * xlarge
+ *
+ * visible-small
+ * visible-medium
+ * visible-large
+ *
+ * hidden-small
+ * hidden-medium
+ * hidden-large
+ *
+ * retina
+ *
+ * @param {string} [$media-query] The media query breakpoint keyword
+ * @param {boolean} [$print=false] Whether to include print
+ *
+ * @example
+    @include media(medium) {
+      [styles here]
+    }
+ */
+/**
+ * @mixin media-query
+ * @description This is a simple media query mixin that supports min and max
+ * widths.
+ *
+ * IE8 doesn't support media queries, so set $fixed-queries to a width to
+ * create style sheets for that particular width.
+ * Inspired by: //http://jakearchibald.github.com/sass-ie/
+ *
+ * @param {unit} [$min] The min breakpoint
+ * @param {unit} [$max=99999] The max breakpoint
+ * @param {boolean} [$print=false] Whether to include for print
+ *
+ * @example
+    @include media-query(300px) {
+      [styles here]
+    }
+ */
+/**
+ ********************************
+ * _TEXT-RENDERING.SCSS
+ ********************************
+ */
+/**
+ * @mixin text-legibility
+ * @description Optimizes text for legibility
+ *
+ * @example
+    .foo {
+      @include text-legibility;
+    }
+ */
+/**
+ * @mixin text-speed
+ * @description Optimizes text for speed
+ *
+ * @example
+    .foo {
+      @include text-speed;
+    }
+ */
+/**
+ * @mixin text-smooth
+ * @description Optimizes text to be smooth on webkit and mozilla OSX
+ *
+ * @example
+    .foo {
+      @include text-smooth;
+    }
+ */
+/**
+ ********************************
+ * _TRUNCATE.SCSS
+ ********************************
+ */
+/**
+ * @mixin truncate
+ * @description Add a ... to the end of an element's text
+ *
+ * @param {string} [$important=''] Option to append values with !important
+ *
+ * @example
+    .foo {
+      @include truncate(!important);
+    }
+ */
+/**
+ ********************************
+ * _VENDOR.SCSS
+ ********************************
+ */
+/**
+ * @mixin vendor
+ * @description Create vendor-prefixed CSS in one go, e.g.
+ *
+ * @param {string} [$property] CSS property
+ * @param {undefined} [$value] CSS values
+ *
+ * @example
+    .foo {
+      @include vendor(border-radius, 4px);
+    }
+ */
+/**
+ * Load Colors
+ */
+/**
+ ********************************
+ * _COLORS.SCSS
+ ********************************
+ */
+/**
+ * @settings $gemini-colors
+ * @description Add custom colors to be used with getColor() or .c-{color}.
+ *
+ * @prop {color} [facebook=#315998] Facebook Blue
+ * @prop {color} [twitter=#1AB2E8] Twitter Blue
+ * @prop {color} [google=#4386F7] Google Blue
+ * @prop {color} [google-plus=#DD4C39] Google Plus Red
+ * @prop {color} [pinterest=#C9232D] Pinterest Red
+ */
+/**
+ * Add all the colors to the color collection
+ */
+/**
+ * @module Grey Colors
+ * @description Easy reference to the color scale. The scale goes from 0 - 100
+ * by intervals of 5, where 0 is white, and 100 is black.
+ *
+ * @example
+    .foo {
+      color: get(g20, $color);
+    }
+ */
+/**
+ * Base Styles
+ */
+/**
+ ********************************
+ * _NORMALIZE.SCSS
+ ********************************
+ */
+/**
+ * @module normalize.css v3.0.2
+ * @description Check out git.io/normalize
+ */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 20, ../sass/base/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 30, ../sass/base/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 44, ../sass/base/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 65, ../sass/base/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 78, ../sass/base/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 88, ../sass/base/_normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 100, ../sass/base/_normalize.scss */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 108, ../sass/base/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 120, ../sass/base/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 128, ../sass/base/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 137, ../sass/base/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 146, ../sass/base/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 155, ../sass/base/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 164, ../sass/base/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 172, ../sass/base/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 180, ../sass/base/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 184, ../sass/base/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 195, ../sass/base/_normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 203, ../sass/base/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 214, ../sass/base/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 222, ../sass/base/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 232, ../sass/base/_normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 240, ../sass/base/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 263, ../sass/base/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 277, ../sass/base/_normalize.scss */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 288, ../sass/base/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 301, ../sass/base/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 313, ../sass/base/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 322, ../sass/base/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 333, ../sass/base/_normalize.scss */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 345, ../sass/base/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 357, ../sass/base/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 368, ../sass/base/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 381, ../sass/base/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 390, ../sass/base/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 401, ../sass/base/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 410, ../sass/base/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 419, ../sass/base/_normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 430, ../sass/base/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 435, ../sass/base/_normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/**
+ ********************************
+ * _RESET.SCSS
+ ********************************
+ */
+/**
+ * @module Reset
+ * @description A more considered reset; more of a restart... csswizardry.com/2011/10/reset-restarted
+ */
+/* line 12, ../sass/base/_reset.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+ * Safari and Chrome default input[type="search"] to border-box, while
+ * everything else is content-box. In order to normalize this, normalize.css
+ * sets input[type="search"] back to content-box. Unfortunately, since we
+ * actually want border-box, we need to overwrite normalize.css and set this
+ * to border-box. Fun.
+ *
+ * https://github.com/necolas/normalize.css/blob/v2.1.3/normalize.css#L352-L363
+ * https://github.com/necolas/normalize.css/issues/187#issuecomment-21511692
+ */
+/* line 29, ../sass/base/_reset.scss */
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+ * The usual...
+ */
+/* line 36, ../sass/base/_reset.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+form,
+fieldset,
+legend,
+table,
+th,
+td,
+caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Give a help cursor to elements that give extra info on ':hover'.
+ */
+/* line 64, ../sass/base/_reset.scss */
+abbr[title],
+dfn[title] {
+  cursor: help;
+}
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+/* line 72, ../sass/base/_reset.scss */
+u,
+ins {
+  text-decoration: none;
+}
+
+/**
+ * Apply faux underline via 'border-bottom'.
+ */
+/* line 80, ../sass/base/_reset.scss */
+ins {
+  border-bottom: 1px solid;
+}
+
+/**
+ ********************************
+ * _MARGINS.SCSS
+ ********************************
+ */
+/**
+ * @module Margins
+ * @description Set all the default margins for the site at once. Look at .push in helper.scss for classes.
+ */
+/**
+ * Where 'margin-bottom' is concerned, this value will be the same as the
+ * base line-height. This allows us to keep a consistent vertical rhythm.
+ * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+/* line 17, ../sass/base/_margins.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+.hgroup,
+ul,
+ol,
+dl,
+blockquote,
+p,
+address,
+table,
+fieldset,
+figure,
+pre {
+  margin-bottom: 24px;
+}
+
+/**
+ * 'hr' elements only take up a few pixels, so we need to give them special
+ * treatment regarding vertical rhythm.
+ */
+/* line 44, ../sass/base/_margins.scss */
+hr {
+  margin-bottom: 22px;
+}
+
+/**
+ * Where 'margin-left' is concerned we want to try and indent certain elements
+ * by a consistent amount. Define that amount once, here.
+ */
+/* line 53, ../sass/base/_margins.scss */
+ul,
+ol,
+dd {
+  margin-left: 48px;
+}
+
+/**
+ ********************************
+ * _MAIN.SCSS
+ ********************************
+ */
+/**
+ * @module Main styling [html, body]
+ * @description Just your basic styling on the document
+ */
+/* line 11, ../sass/base/_main.scss */
+html {
+  font: 0.875em/1.71429 'Helvetica', Arial, sans-serif;
+  min-height: 100%;
+}
+
+/* line 16, ../sass/base/_main.scss */
+body {
+  position: relative;
+  background: #FFF;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/**
+ ********************************
+ * _HEADINGS.SCSS
+ ********************************
+ */
+/**
+ * @settings $gemini-headings
+ * @description The size of headings based on:
+ * http://alistapart.com/article/more-meaningful-typography
+ * http://typecast.com/blog/contrast-through-scale
+ *
+ * @prop {number} [line-height=1.3]          Line-height for headings
+ * @prop {boolean} [responsive=false]        Use responsive helpers
+ * @prop {number} [giga=font-size * 6.5]     Giga sized fonts
+ * @prop {number} [mega=font-size * 5]       Mega sized fonts
+ * @prop {number} [kilo=font-size * 4]       Kilo sized fonts
+ * @prop {number} [alpha=font-size * 3.33]   h1 sized fonts
+ * @prop {number} [beta=font-size * 2.66]    h2 sized fonts
+ * @prop {number} [gamma=font-size * 2]      h3 sized fonts
+ * @prop {number} [delta=font-size * 1.33]   h4 sized fonts
+ * @prop {number} [epsilon=font-size * 1.16] h5 sized fonts
+ * @prop {number} [zeta=font-size * 1]       Giga h6 fonts
+ * @prop {number} [milli=font-size * 0.83]   Milli sized fonts
+ * @prop {number} [micro=font-size * 0.75]   Micro sized fonts
+ */
+/**
+ * @module Headings
+ * @description When we define a heading we also define a corresponding class to go with it.
+ *
+ * @modifier [.{heading}-medium] Apply this size on medium screens - set responsive to true
+ * @modifier [.{heading}-large] Apply this size on large screens - set responsive to true
+ *
+ * @markup
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <h1 class="zeta">Heading 1</h1>
+    <h2 class="epsilon">Heading 2</h2>
+    <h3 class="delta">Heading 3</h3>
+    <h4 class="gamma">Heading 4</h4>
+    <h5 class="beta">Heading 5</h5>
+    <h6 class="alpha">Heading 6</h6>
+ */
+/**
+ * Set line-heights
+ */
+/* line 89, ../sass/base/_headings.scss */
+.giga,
+.giga-medium,
+.giga-large, .mega,
+.mega-medium,
+.mega-large, .kilo,
+.kilo-medium,
+.kilo-large, .alpha,
+.alpha-medium,
+.alpha-large, .beta,
+.beta-medium,
+.beta-large, .gamma,
+.gamma-medium,
+.gamma-large, .delta,
+.delta-medium,
+.delta-large, .epsilon,
+.epsilon-medium,
+.epsilon-large, .zeta,
+.zeta-medium,
+.zeta-large, .milli,
+.milli-medium,
+.milli-large, .micro,
+.micro-medium,
+.micro-large {
+  line-height: 1.3;
+}
+
+/* line 101, ../sass/base/_headings.scss */
+false {
+  font-size: 91px;
+}
+
+/* line 105, ../sass/base/_headings.scss */
+.giga {
+  font-size: 91px !important;
+}
+
+/* line 101, ../sass/base/_headings.scss */
+false {
+  font-size: 70px;
+}
+
+/* line 105, ../sass/base/_headings.scss */
+.mega {
+  font-size: 70px !important;
+}
+
+/* line 101, ../sass/base/_headings.scss */
+false {
+  font-size: 56px;
+}
+
+/* line 105, ../sass/base/_headings.scss */
+.kilo {
+  font-size: 56px !important;
+}
+
+/* line 101, ../sass/base/_headings.scss */
+h1 {
+  font-size: 46.6662px;
+}
+
+/* line 105, ../sass/base/_headings.scss */
+.alpha {
+  font-size: 46.6662px !important;
+}
+
+/* line 101, ../sass/base/_headings.scss */
+h2 {
+  font-size: 37.3338px;
+}
+
+/* line 105, ../sass/base/_headings.scss */
+.beta {
+  font-size: 37.3338px !important;
+}
+
+/* line 101, ../sass/base/_headings.scss */
+h3 {
+  font-size: 28px;
+}
+
+/* line 105, ../sass/base/_headings.scss */
+.gamma {
+  font-size: 28px !important;
+}
+
+/* line 101, ../sass/base/_headings.scss */
+h4 {
+  font-size: 18.6662px;
+}
+
+/* line 105, ../sass/base/_headings.scss */
+.delta {
+  font-size: 18.6662px !important;
+}
+
+/* line 101, ../sass/base/_headings.scss */
+h5 {
+  font-size: 16.3338px;
+}
+
+/* line 105, ../sass/base/_headings.scss */
+.epsilon {
+  font-size: 16.3338px !important;
+}
+
+/* line 101, ../sass/base/_headings.scss */
+h6 {
+  font-size: 14px;
+}
+
+/* line 105, ../sass/base/_headings.scss */
+.zeta {
+  font-size: 14px !important;
+}
+
+/* line 101, ../sass/base/_headings.scss */
+false {
+  font-size: 11.6662px;
+}
+
+/* line 105, ../sass/base/_headings.scss */
+.milli {
+  font-size: 11.6662px !important;
+}
+
+/* line 101, ../sass/base/_headings.scss */
+false {
+  font-size: 10.5px;
+}
+
+/* line 105, ../sass/base/_headings.scss */
+.micro {
+  font-size: 10.5px !important;
+}
+
+/**
+ * Responsive helper declerations
+ */
+/**
+ * @module Any Heading [.hN]
+ * @description A general heading class to target any heading
+ */
+/**
+ * @module Heading Group [.hgroup]
+ * @description A group of headings
+ *
+ * @modifier [.hgroup--inline] Displays all headings to be inline-block
+ *
+ * @markup
+    <div class="hgroup">
+      <h2 class="hN">Heading 1</h2>
+      <h3 class="hN">Heading 2</h3>
+    </div>
+    <div class="hgroup hgroup--inline">
+      <h4 class="hN">Heading 3</h4>
+      <h5 class="hN">Heading 4</h5>
+    </div>
+ */
+/* line 164, ../sass/base/_headings.scss */
+hgroup .hN, .hgroup .hN {
+  margin-bottom: 0;
+}
+/* line 169, ../sass/base/_headings.scss */
+.hN .hgroup--inline {
+  display: inline-block;
+}
+
+/**
+ ********************************
+ * _PARAGRAPHS.SCSS
+ ********************************
+ */
+/**
+ * @module Paragraph [p]
+ * @description Check em' paragraphs out
+ *
+ * @modifier [.lede] Make the introductory text (usually a paragraph) of a document slightly larger.
+ *
+ * @markup
+   <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+   ac turpis egestas.</p>
+
+   <p class="lede">Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+   ac turpis egestas.</p>
+ */
+/* line 20, ../sass/base/_paragraphs.scss */
+.lede,
+.lead {
+  font-size: 15.75px;
+}
+
+/**
+ ********************************
+ * _LINKS.SCSS
+ ********************************
+ */
+/**
+ * @module Links [a]
+ * @description Your basic link
+ *
+ * @markup
+ *   <a href="http://www.carpages.ca">Click me!</a>
+ */
+/* line 14, ../sass/base/_links.scss */
+a {
+  color: #76304C;
+  text-decoration: none;
+}
+/* line 18, ../sass/base/_links.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/**
+ ********************************
+ * _QUOTES.SCSS
+ ********************************
+ */
+/**
+ * @module Inline quotes [q]
+ * @description Put some quotes in thur
+ *
+ * @markup
+    <p>And with great audacity, he told them, <q>My name is derp!</q></p>
+ */
+/* line 14, ../sass/base/_quotes.scss */
+q {
+  quotes: "\2018" "\2019" "\201C" "\201D";
+}
+/* line 17, ../sass/base/_quotes.scss */
+q:before {
+  content: "\2018";
+  content: open-quote;
+}
+/* line 21, ../sass/base/_quotes.scss */
+q:after {
+  content: "\2019";
+  content: close-quote;
+}
+/* line 26, ../sass/base/_quotes.scss */
+q q:before {
+  content: "\201C";
+  content: open-quote;
+}
+/* line 30, ../sass/base/_quotes.scss */
+q q:after {
+  content: "\201D";
+  content: close-quote;
+}
+
+/**
+ * @module Block quotes [blockquote]
+ * @description Put some blocky quotes in thur
+ *
+ * @modifier [.blockquote--indent] Indent the quote
+ *
+ * @markup
+    <blockquote class="blockquote--indent">
+      <p>Insanity: doing the same thing over and over again and expecting different results.</p>
+    </blockquote>
+ */
+/* line 47, ../sass/base/_quotes.scss */
+blockquote {
+  quotes: "\201C" "\201D";
+  text-indent: -0.41em;
+}
+/* line 51, ../sass/base/_quotes.scss */
+blockquote p {
+  font-size: 17.5px;
+  line-height: 1.5;
+}
+/* line 55, ../sass/base/_quotes.scss */
+blockquote p:before {
+  content: "\201C";
+  content: open-quote;
+}
+/* line 60, ../sass/base/_quotes.scss */
+blockquote p:after {
+  content: "";
+  content: no-close-quote;
+}
+/* line 65, ../sass/base/_quotes.scss */
+blockquote p:last-of-type {
+  margin-bottom: 0;
+}
+/* line 67, ../sass/base/_quotes.scss */
+blockquote p:last-of-type:after {
+  content: "\201D";
+  content: close-quote;
+}
+/* line 74, ../sass/base/_quotes.scss */
+blockquote q:before {
+  content: "\2018";
+  content: open-quote;
+}
+/* line 78, ../sass/base/_quotes.scss */
+blockquote q:after {
+  content: "\2019";
+  content: close-quote;
+}
+
+/* line 83, ../sass/base/_quotes.scss */
+.blockquote--indent {
+  padding: 0 0 0 15px;
+  border-left: 5px solid #d9d9d9;
+}
+
+/**
+ * @submodule Blockquote source [.blockquote__source]
+ * @description The source of a quote
+ *
+ * @markup
+    <blockquote>
+        <p>Rats!!</p>
+        <b class="blockquote__source">Tim</b>
+    </blockquote>
+ */
+/* line 98, ../sass/base/_quotes.scss */
+.blockquote__source {
+  color: #bfbfbf;
+  display: block;
+  text-indent: 0;
+}
+/* line 103, ../sass/base/_quotes.scss */
+.blockquote__source:before {
+  content: "\2014";
+}
+
+/**
+ ********************************
+ * _CODE.SCSS
+ ********************************
+ */
+/* line 7, ../sass/base/_code.scss */
+code,
+pre {
+  padding: 0 3px 2px;
+  font-family: Monaco, Consolas, “Lucida Console”, monospace;
+  font-size: 12px;
+  color: #4d4d4d;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/**
+ * @module Inline Code [code]
+ * @description Display inline code
+ *
+ * @markup
+    <code>console.log('Hello World!');</code>
+ */
+/* line 23, ../sass/base/_code.scss */
+code {
+  padding: 2px 4px;
+  color: darkblue;
+  background-color: #f2f2f2;
+  border: 1px solid #76304C;
+  white-space: nowrap;
+}
+
+/**
+ * @module Code Block [pre]
+ * @description Display a block of code
+ *
+ * @modifier [.pre__scrollable] Gives max height so that block is scrollable
+ *
+ * @markup
+    <pre><code>
+      var foo = "Hello";<br/>
+      var bar = " World!";<br/>
+      console.log(foo + bar);
+    </code></pre>
+ */
+/* line 45, ../sass/base/_code.scss */
+pre {
+  display: block;
+  padding: 2.5px;
+  font-size: 13px;
+  line-height: 24px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f2f2f2;
+  border: 1px solid #76304C;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 59, ../sass/base/_code.scss */
+pre.pre__scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
+/* line 65, ../sass/base/_code.scss */
+pre code {
+  padding: 0;
+  color: inherit;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: 0;
+}
+
+/**
+ ********************************
+ * _IMAGES.SCSS
+ ********************************
+ */
+/**
+ * @module Images [img]
+ * @description We got some images o-er he-ya
+ *
+ * @modifier [.img--right] Place right
+ * @modifier [.img--left] Place left
+ * @modifier [.img--center] Place center
+ *
+ * @markup
+    <img src="http://www.placetim.com/100/100" />
+ */
+/* line 18, ../sass/base/_images.scss */
+img,
+.img {
+  max-width: 100%;
+  font-style: italic;
+  vertical-align: middle;
+}
+
+/**
+ * Non-fluid images if you specify 'width' and/or 'height' attributes.
+ */
+/* line 28, ../sass/base/_images.scss */
+.gm-style img,
+img[width],
+img[height] {
+  max-width: none;
+}
+
+/**
+ * Image placement variations.
+ */
+/* line 38, ../sass/base/_images.scss */
+.img--right {
+  float: right;
+  margin-bottom: 24px;
+  margin-left: 24px;
+}
+
+/* line 43, ../sass/base/_images.scss */
+.img--left {
+  float: left;
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+
+/* line 48, ../sass/base/_images.scss */
+.img--center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 24px;
+}
+
+/**
+ * @module Inline Image [.inline-img]
+ * @description Display an image inline with the text (small images/ glyphs)
+ *
+ * @markup
+    <div class="inline-img">&nbsp;</div>
+ */
+/* line 62, ../sass/base/_images.scss */
+.inline-img {
+  display: inline-block;
+  background: transparent no-repeat center center;
+}
+/* line 66, ../sass/base/_images.scss */
+.inline-img:hover {
+  text-decoration: none;
+}
+
+/**
+ ********************************
+ * _LISTS.SCSS
+ ********************************
+ */
+/**
+ * @module Lists [ul, ol]
+ * @description Your basic lists
+ *
+ * @modifier [.list--numbered] Have a numbered 'ul' without the semantics implied by using an 'ol'.
+ * @modifier [.list--prune] Clear all the style from a list
+ *
+ * @markup
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <ul class="numbered-list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+ */
+/**
+ * Remove vertical spacing from nested lists.
+ */
+/* line 33, ../sass/base/_lists.scss */
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+/**
+ * Have a numbered 'ul' without the semantics implied by using an 'ol'.
+ */
+/*ul*/
+/* line 42, ../sass/base/_lists.scss */
+.list--numbered {
+  list-style-type: decimal;
+}
+
+/*ul*/
+/* line 47, ../sass/base/_lists.scss */
+.list--prune {
+  list-style: none;
+  margin-left: 0;
+}
+
+/**
+ ********************************
+ * _TABLES.SCSS
+ ********************************
+ */
+/**
+ * @module Tables [table]
+ * @description We have a lot at our disposal for making very complex table constructs, e.g.:
+ *
+ * @modifier [.table--bordered] Add a border
+ * @modifier [.table--striped] Alternates the background of the rows
+ * @modifier [.table--data] Smaller text
+ * @modifier [.table--responvie] Makes the table break rows on smaller devices
+ *
+ * @markup
+    <table class="table--bordered  table--striped  table--data  table--responsive">
+      <colgroup>
+        <col class=t10>
+        <col class=t10>
+        <col class=t10>
+        <col>
+      </colgroup>
+      <thead>
+        <tr>
+          <th colspan=3>Foo</th>
+          <th>Bar</th>
+        </tr>
+        <tr>
+          <th>Lorem</th>
+          <th>Ipsum</th>
+          <th class=numerical>Dolor</th>
+          <th>Sit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th rowspan=3>Sit</th>
+          <td>Dolor</td>
+          <td class=numerical>03.788</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class=numerical>32.210</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class=numerical>47.797</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <th rowspan=2>Sit</th>
+          <td>Dolor</td>
+          <td class=numerical>09.640</td>
+          <td>Lorem</td>
+        </tr>
+        <tr>
+          <td>Dolor</td>
+          <td class=numerical>12.117</td>
+          <td>Lorem</td>
+        </tr>
+      </tbody>
+    </table>
+ */
+/* line 67, ../sass/base/_tables.scss */
+table {
+  width: 100%;
+}
+
+/* line 70, ../sass/base/_tables.scss */
+th,
+td {
+  padding: 6px;
+  text-align: left;
+}
+@media print, screen and (min-width: 30.0625em) {
+  /* line 70, ../sass/base/_tables.scss */
+  th,
+  td {
+    padding: 12px;
+  }
+}
+
+/**
+ * Cell alignments
+ */
+/* line 83, ../sass/base/_tables.scss */
+[colspan] {
+  text-align: center;
+}
+
+/* line 86, ../sass/base/_tables.scss */
+[colspan="1"] {
+  text-align: left;
+}
+
+/* line 89, ../sass/base/_tables.scss */
+[rowspan] {
+  vertical-align: middle;
+}
+
+/* line 92, ../sass/base/_tables.scss */
+[rowspan="1"] {
+  vertical-align: top;
+}
+
+/* line 95, ../sass/base/_tables.scss */
+.numerical {
+  text-align: right;
+}
+
+/**
+ * In the HTML above we see several 'col' elements with classes whose numbers
+ * represent a percentage width for that column. We leave one column free of a
+ * class so that column can soak up the effects of any accidental breakage in
+ * the table.
+ */
+/* line 105, ../sass/base/_tables.scss */
+.t5 {
+  width: 5%;
+}
+
+/* line 108, ../sass/base/_tables.scss */
+.t10 {
+  width: 10%;
+}
+
+/* line 111, ../sass/base/_tables.scss */
+.t12 {
+  width: 12.5%;
+}
+
+/* 1/8 */
+/* line 114, ../sass/base/_tables.scss */
+.t15 {
+  width: 15%;
+}
+
+/* line 117, ../sass/base/_tables.scss */
+.t20 {
+  width: 20%;
+}
+
+/* line 120, ../sass/base/_tables.scss */
+.t25 {
+  width: 25%;
+}
+
+/* 1/4 */
+/* line 123, ../sass/base/_tables.scss */
+.t30 {
+  width: 30%;
+}
+
+/* line 126, ../sass/base/_tables.scss */
+.t33 {
+  width: 33.333%;
+}
+
+/* 1/3 */
+/* line 129, ../sass/base/_tables.scss */
+.t35 {
+  width: 35%;
+}
+
+/* line 132, ../sass/base/_tables.scss */
+.t37 {
+  width: 37.5%;
+}
+
+/* 3/8 */
+/* line 135, ../sass/base/_tables.scss */
+.t40 {
+  width: 40%;
+}
+
+/* line 138, ../sass/base/_tables.scss */
+.t45 {
+  width: 45%;
+}
+
+/* line 141, ../sass/base/_tables.scss */
+.t50 {
+  width: 50%;
+}
+
+/* 1/2 */
+/* line 144, ../sass/base/_tables.scss */
+.t55 {
+  width: 55%;
+}
+
+/* line 147, ../sass/base/_tables.scss */
+.t60 {
+  width: 60%;
+}
+
+/* line 150, ../sass/base/_tables.scss */
+.t62 {
+  width: 62.5%;
+}
+
+/* 5/8 */
+/* line 153, ../sass/base/_tables.scss */
+.t65 {
+  width: 65%;
+}
+
+/* line 156, ../sass/base/_tables.scss */
+.t66 {
+  width: 66.666%;
+}
+
+/* 2/3 */
+/* line 159, ../sass/base/_tables.scss */
+.t70 {
+  width: 70%;
+}
+
+/* line 162, ../sass/base/_tables.scss */
+.t75 {
+  width: 75%;
+}
+
+/* 3/4*/
+/* line 165, ../sass/base/_tables.scss */
+.t80 {
+  width: 80%;
+}
+
+/* line 168, ../sass/base/_tables.scss */
+.t85 {
+  width: 85%;
+}
+
+/* line 171, ../sass/base/_tables.scss */
+.t87 {
+  width: 87.5%;
+}
+
+/* 7/8 */
+/* line 174, ../sass/base/_tables.scss */
+.t90 {
+  width: 90%;
+}
+
+/* line 177, ../sass/base/_tables.scss */
+.t95 {
+  width: 95%;
+}
+
+/**
+ * Bordered tables
+ */
+/* line 186, ../sass/base/_tables.scss */
+.table--bordered th,
+.table--bordered td {
+  border: 1px solid #76304C;
+}
+/* line 190, ../sass/base/_tables.scss */
+.table--bordered th:empty,
+.table--bordered td:empty {
+  border: none;
+}
+/* line 195, ../sass/base/_tables.scss */
+.table--bordered thead tr:last-child th {
+  border-bottom-width: 2px;
+}
+/* line 199, ../sass/base/_tables.scss */
+.table--bordered tbody tr th:last-of-type {
+  border-right-width: 2px;
+}
+
+/**
+ * Striped tables
+ */
+/* line 209, ../sass/base/_tables.scss */
+.table--striped tbody tr:nth-of-type(odd) {
+  background-color: #f2f2f2;
+}
+
+/**
+ * Data table
+ */
+/* line 218, ../sass/base/_tables.scss */
+.table--data {
+  font: 12px/1.5 sans-serif;
+}
+
+/**
+ * Responsive table
+ * This isn't mobile first for the sake of backwards compatability
+ */
+@media screen and (min-width: 0em) and (max-width: 30em) {
+  /* line 229, ../sass/base/_tables.scss */
+  .table--responsive thead {
+    display: none;
+  }
+  /* line 232, ../sass/base/_tables.scss */
+  .table--responsive th,
+  .table--responsive td,
+  .table--responsive tr {
+    display: block;
+  }
+  /* line 237, ../sass/base/_tables.scss */
+  .table--responsive td {
+    text-align: left;
+  }
+  /* line 240, ../sass/base/_tables.scss */
+  .table--responsive td:before {
+    content: attr(data-th);
+    font-weight: bold;
+  }
+  /* line 245, ../sass/base/_tables.scss */
+  .table--responsive tr {
+    margin-bottom: 24px;
+  }
+}
+/**
+ ********************************
+ * _FORMS.SCSS
+ ********************************
+ */
+/**
+ * @module Default Forms [form]
+ * @description Default form layout
+ *
+ * @modifier [.form--inline] Make all elements inline
+ *
+ * @markup
+    <form>
+      <fieldset>
+        <legend>Legend</legend>
+        <label for="thing">Label name</label>
+        <input id="thing" name="thing" class="text-input" type="text" placeholder="Type something...">
+        <label class="checkbox">
+          <input type="checkbox"> Check me out
+        </label>
+        <button type="submit" class="button">Submit</button>
+      </fieldset>
+    </form>
+ */
+/* line 28, ../sass/base/_forms.scss */
+.form--inline .hN {
+  display: inline-block;
+  margin-bottom: 0;
+}
+/* line 32, ../sass/base/_forms.scss */
+.form--inline fieldset {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+/**
+ * @module Label [label]
+ * @description A tag for labelling form elements. Labels become inline when
+ * they're after a checkbox.
+ *
+ * @state [is-required] Adds an asterisk
+ *
+ * @markup
+    <div>
+      <label>Foo</label>
+      <input type="text" class="text-input">
+    </div>
+ */
+/* line 51, ../sass/base/_forms.scss */
+label {
+  display: block;
+}
+/* line 54, ../sass/base/_forms.scss */
+label.is-required:before {
+  content: "* ";
+}
+/* line 58, ../sass/base/_forms.scss */
+input[type="checkbox"] + label {
+  display: inline-block;
+  padding-left: 12px;
+}
+@media print, screen and (min-width: 30.0625em) {
+  /* line 64, ../sass/base/_forms.scss */
+  .form--inline label {
+    display: inline-block;
+  }
+}
+
+/**
+ * @submodule Additional Help [.label__additional]
+ * @description Additional help for labels
+ *
+ * @markup
+    <label>
+      Email:
+      <input type="text" class="text-input" placeholder="email@fake.com">
+      <span class="label__additional">No spaces</span>
+    </label>
+ */
+/* line 81, ../sass/base/_forms.scss */
+.label__additional {
+  display: block;
+  font-weight: normal;
+}
+
+/**
+ * @module Radio/Checkbox intputs [.checkbox]
+ * @description Basic checkbox and radio elements
+ *
+ * @markup
+    <label class="checkbox">
+        <input type="checkbox" /> Check it!
+    </label>
+ */
+/* line 98, ../sass/base/_forms.scss */
+.form--inline .radio, .form--inline
+.checkbox {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+/* line 108, ../sass/base/_forms.scss */
+.form--inline .radio input[type="radio"], .form--inline
+.checkbox input[type="checkbox"] {
+  float: left;
+  margin-right: 12px;
+  margin-left: 0;
+}
+
+/**
+ * Position radios and checkboxes better
+ */
+/* line 118, ../sass/base/_forms.scss */
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  /* IE8-9 */
+  line-height: normal;
+}
+
+/**
+ * This fixes a bug in webkit where radio buttons get clipped 1px when the
+ * container is overflow: hidden;
+ * I've opened a ticket with Chromium
+ * https://code.google.com/p/chromium/issues/detail?q=radio%20button%20overflow%20hidden&colspec=ID%20Pri%20M%20Iteration%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified&id=396726&thanks=396726&ts=1406140510
+ */
+/* line 131, ../sass/base/_forms.scss */
+input[type="radio"] {
+  margin-left: 1px;
+}
+
+/**
+ * Reset width of input images, buttons, radios, checkboxes
+ */
+/* line 138, ../sass/base/_forms.scss */
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+
+/**
+ * Change the cursor
+ */
+/* line 152, ../sass/base/_forms.scss */
+label,
+select,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+/**
+ * Make select boxes look better
+ */
+/* line 165, ../sass/base/_forms.scss */
+select {
+  vertical-align: middle;
+}
+/* line 167, ../sass/base/_forms.scss */
+select :focus {
+  outline: none;
+}
+
+/**
+ ********************************
+ * _IFRAMES.SCSS
+ ********************************
+ */
+/**
+ * @module Iframes [iframe]
+ * @description Make iframe 100% width. We can't control the content inside of them.
+ */
+/* line 13, ../sass/base/_iframes.scss */
+iframe {
+  width: 100%;
+}
+
+/**
+ ********************************
+ * _OBJECTS.SCSS
+ ********************************
+ */
+/**
+ * @module Objects [object]
+ * @description Basic object element
+ */
+/**
+ * Object element can be used in the clown car technique (as seen on NCS details page)
+ * 1. Allow <object> to be wrapped in anchors
+ * 2. Solves bug on Chrome where the SVG media queries won't detect initial width
+ */
+/* line 17, ../sass/base/_objects.scss */
+object {
+  pointer-events: none;
+  /* 1 */
+  width: 100%;
+  /* 2 */
+}
+
+/**
+ * Objects and abstractions
+ */
+/**
+ ********************************
+ * _ICONS.SCSS
+ ********************************
+ */
+/**
+ * @mixin icon
+ * @description Adds icon styles to the :before of a module
+ *
+ * @example
+    .foo {
+      @include icon;
+    }
+ */
+/**
+ ********************************
+ * _GRID.SCSS
+ ********************************
+ */
+/**
+ * @settings $gemini-grid
+ * @description The settings for the grid
+ *
+ * @prop {measurement} [max-width=get(xlarge, $gemini-screens)] The max-width of the grid's rows
+ * @prop {measurement} [gutter=get(spacing)] The gutter size between the columns
+ * @prop {integer} [columns=12] The number of columns in the grid
+ * @prop {measurement} [medium-breakpoint=get(medium, $gemini-screens)] The breakpoint for medium layout
+ * @prop {measurement} [large-breakpoint=get(large, $gemini-screens)] The breakpoint for large layout
+ * @prop {measurement} [xlarge-breakpoint=get(xlarge, $gemini-screens)] The breakpoint for xlarge layout
+ */
+/**
+ * This is inspired by the Foundation Grid
+ * http://foundation.zurb.com/docs/components/grid.html
+
+ * You can play with a live example here:
+ * http://codepen.io/mattdrose/pen/crEHG?editors=100
+ */
+/*
+ * SCREEN SPECIFIED GRID STYLINGS
+ */
+/**
+ ********************************
+ * _NAV.SCSS
+ ********************************
+ */
+/**
+ ********************************
+ * _PAGINATION.SCSS
+ ********************************
+ */
+/**
+ ********************************
+ * _MEDIA.SCSS
+ ********************************
+ */
+/**
+ ********************************
+ * _BLOCK-LIST.SCSS
+ ********************************
+ */
+/**
+ ********************************
+ * _MULTI-LIST.SCSS
+ ********************************
+ */
+/**
+ ********************************
+ * _BULLET-LIST.SCSS
+ ********************************
+ */
+/**
+ ********************************
+ * _SPLIT.SCSS
+ ********************************
+ */
+/**
+ ********************************
+ * _LINK-COMPLEX.SCSS
+ ********************************
+ */
+/**
+ ********************************
+ * _FLYOUT.SCSS
+ ********************************
+ */
+/**
+ ********************************
+ * _TAGS.SCSS
+ ********************************
+ */
+/**
+ * @settings $gemini-tags
+ * @description The settings to give tags a custom look
+ *
+ * @prop {color} [color=#333] The font color of the font
+ * @prop {color} [background-color=#EEE] The background color
+ * @prop {measurement} [padding-ends=0.5em] The padding on the top and bottom
+ * @prop {measurement} [padding-sides=1em] The padding on the left and right
+ * @prop {measurement} [border-width=0] The width of the border
+ * @prop {color} [border-color=get(border-color)] The color of the border
+ * @prop {measurement} [border-radius=0] The border of the radius
+ */
+/**
+ * Tags are a common CSS element that we see multiple elements extend,
+ * including buttons, tabs, and various other tags
+ */
+/**
+ ********************************
+ * _BUTTONS.SCSS
+ ********************************
+ */
+/**
+ * @settings $gemini-buttons
+ * @description The settings for buttons
+ *
+ * @prop {color} [color=#333] The color of the text
+ * @prop {color} [background-color=#EEE] The background color
+ * @prop {measurement} [padding-ends=0.5em] The padding on the top and bottom
+ * @prop {measurement} [padding-sides=1em] The padding on the ends
+ * @prop {measurement} [border-width=1px] The border width
+ * @prop {color} [border-color=get(border-color)] The border color
+ * @prop {measurement} [border-radius=get(border-radius)] The border radius
+ */
+/**
+ ********************************
+ * _RULES.SCSS
+ ********************************
+ */
+/**
+ ********************************
+ * _STATS.SCSS
+ ********************************
+ */
+/**
+ ********************************
+ * _FIT.SCSS
+ ********************************
+ */
+/**
+ * @mixin fitRatio
+ * @description Spits out the necessary padding to work with a specified ratio
+ * in the .fit module
+ *
+ * @param {integer} [$width=4] The width ratio
+ * @param {integer} [$height=3] THe height ratio
+ * @param {percent} [$container=%100] The width of the container that you want to fit
+ */
+/**
+ ********************************
+ * _OVERLAY.SCSS
+ ********************************
+ */
+/**
+ ********************************
+ * _COLORS.SCSS
+ ********************************
+ */
+/**
+ * @settings $gemini-colors
+ * @description Add custom colors to be used with getColor() or .c-{color}.
+ *
+ * @prop {color} [facebook=#315998] Facebook Blue
+ * @prop {color} [twitter=#1AB2E8] Twitter Blue
+ * @prop {color} [google=#4386F7] Google Blue
+ * @prop {color} [google-plus=#DD4C39] Google Plus Red
+ * @prop {color} [pinterest=#C9232D] Pinterest Red
+ */
+/**
+ * Add all the colors to the color collection
+ */
+/**
+ * @module Grey Colors
+ * @description Easy reference to the color scale. The scale goes from 0 - 100
+ * by intervals of 5, where 0 is white, and 100 is black.
+ *
+ * @example
+    .foo {
+      color: get(g20, $color);
+    }
+ */
+/**
+ ********************************
+ * _COPY.SCSS
+ ********************************
+ */
+/**
+ ********************************
+ * _TEXT-INPUTS.SCSS
+ ********************************
+ */
+/**
+ * @settings $gemini-text-inputs
+ * @description The settings for text-inputs. They mostly extend buttons for
+ * the sake of continuity.
+ *
+ * @prop {color} [color=#333] The color of the text
+ * @prop {color} [background-color=#FFF] The background color
+ * @prop {measurement} [padding-ends=get(padding-ends, $gemini-buttons)] The padding on the top and bottom
+ * @prop {measurement} [padding-sides=get(padding-sides, $gemini-buttons)] The padding on the sides
+ * @prop {measurement} [border-width=1px] The border width
+ * @prop {color} [border-color=#EEE] The border color
+ * @prop {measurement} [border-radius=get(border-radius)] The border radius
+ */
+/**
+ * @module Text inputs [.text-input]
+ * @description Instead of a '[type]' selector for each kind of form input, we just use a
+ * class to target any/every one, e.g.:
+ *
+ * @markup
+    <input type="text" class="text-input" placeholder="Text...">
+    <input type="email" class="text-input" placeholder="Email...">
+    <input type="password" class="text-input" placeholder="Password...">
+ */
+/* line 42, ../sass/base/_text-inputs.scss */
+.text-input {
+  display: inline-block;
+  vertical-align: middle;
+  font: inherit;
+  margin: 0;
+  padding: 0.5em 1em;
+  padding: calc(0.5em - 1px) 1em;
+  color: #333;
+  background: #FFF;
+  border: 1px solid #76304C;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+/**
+ * Helpers
+ */
+/**
+ ********************************
+ * _ACCESSIBILITY.SCSS
+ ********************************
+ */
+/**
+ * @module Accessibility [.accessibility, .a11y]
+ * @description Hide content off-screen without resorting to 'display:none;'.
+ *
+ * @markup
+    <p class="accessibility">This text is only seen by screen readers!</p>
+ */
+/* line 14, ../sass/helpers/_accessibility.scss */
+.a11y,
+.accessibility {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+@media print, screen and (min-width: 30.0625em) {
+  /* line 20, ../sass/helpers/_accessibility.scss */
+  .accessibility--medium {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  /* line 20, ../sass/helpers/_accessibility.scss */
+  .accessibility--large {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+  }
+}
+@media print, screen and (min-width: 75em) {
+  /* line 20, ../sass/helpers/_accessibility.scss */
+  .accessibility--xlarge {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+  }
+}
+/**
+ ********************************
+ * _ALIGN.SCSS
+ ********************************
+ */
+/**
+ * @settings $gemini-align
+ * @description Settings for the align helper
+ *
+ * @prop {boolean} [responsive=false] Whether you want to use responsive helpers
+ */
+/**
+ * @module Text Alignment
+ * @description Easily align text
+ *
+ * @modifier [.align-left] Align left
+ * @modifier [.align-center] Align center
+ * @modifier [.align-right] Align right
+ * @modifier [.align-bottom] Vertical-align bottom
+ * @modifier [.align-medium-{direction}] Apply on medium screens (set responsive to true)
+ * @modifier [.align-large-{direction}] Apply on large screens (set responsive to true)
+ */
+/* line 30, ../sass/helpers/_align.scss */
+.align-left {
+  text-align: left       !important;
+}
+
+/* line 31, ../sass/helpers/_align.scss */
+.align-center {
+  text-align: center     !important;
+}
+
+/* line 32, ../sass/helpers/_align.scss */
+.align-right {
+  text-align: right      !important;
+}
+
+/* line 33, ../sass/helpers/_align.scss */
+.align-bottom {
+  vertical-align: bottom !important;
+}
+
+/**
+ * Responsive helper declerations
+ */
+/**
+ ********************************
+ * _BRAND.SCSS
+ ********************************
+ */
+/**
+ * @module Brand [.brand]
+ * @description '.brand' is a quick and simple way to apply your brand face
+ * and/or color to any element using a handy helper class.
+ *
+ * @modifier [.brand-face] Just apply the font face
+ * @modifier [.brand-color] Just apply the color
+ *
+ * @markup
+    <h2 class="brand">I like cheese</h2>
+ */
+/* line 18, ../sass/helpers/_brand.scss */
+.brand {
+  font-family: 'Helvetica', Arial, sans-serif!important;
+  color: #F06B6A!important;
+}
+
+/* line 22, ../sass/helpers/_brand.scss */
+.brand-face {
+  font-family: 'Helvetica', Arial, sans-serif!important;
+}
+
+/* line 25, ../sass/helpers/_brand.scss */
+.brand-color {
+  color: #F06B6A!important;
+}
+
+/**
+ ********************************
+ * _CASING.SCSS
+ ********************************
+ */
+/**
+ * @module Uppercase [.uppercase]
+ * @description Apply capital case to an element (usually a 'strong').
+ */
+/* line 11, ../sass/helpers/_casing.scss */
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+/**
+ * @module Lowercase [.lowercase]
+ * @description Apply lowercase to all the letters .
+ */
+/* line 19, ../sass/helpers/_casing.scss */
+.lowercase {
+  text-transform: lowercase !important;
+}
+
+/**
+ ********************************
+ * _CLEARFIX.SCSS
+ ********************************
+ */
+/**
+ * @module Clearfix [.clearfix, .cf]
+ * @description Clearfix, as per: http://css-tricks.com/snippets/css/clear-fix/
+ */
+/* line 18, ../sass/mixins/_clearfix.scss */
+.clearfix:after,
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/**
+ ********************************
+ * _CURSORs.SCSS
+ ********************************
+ */
+/**
+ * @module Informative [.informative]
+ * @description Add a help cursor to any element that gives the user extra information on
+ * ':hover'.
+ *
+ * @markup
+    <span class="informative">Information on hover</span>
+ */
+/* line 15, ../sass/helpers/_cursors.scss */
+.informative {
+  cursor: help !important;
+}
+
+/**
+ * @module Clickable [.clickable]
+ * @description Add a pointer cursor to any element to show that it's clickable
+ *
+ * @markup
+    <span class="clickable">Clickable on hover</span>
+ */
+/* line 26, ../sass/helpers/_cursors.scss */
+.clickable {
+  cursor: pointer !important;
+}
+
+/**
+ ********************************
+ * _DISPLAY.SCSS
+ ********************************
+ */
+/**
+ * @module Display Helpers
+ * @description Change the display properties for an element
+ *
+ * @modifier [.display-inline, .inline] display: inline
+ * @modifier [.display-block, .block] display: block
+ * @modifier [.display-inline-block, .inline-block] display: inline-block
+ */
+/* line 15, ../sass/helpers/_display.scss */
+.display-inline,
+.inline {
+  display: inline !important;
+}
+
+/* line 20, ../sass/helpers/_display.scss */
+.display-block,
+.block {
+  display: block !important;
+}
+
+/* line 25, ../sass/helpers/_display.scss */
+.display-inline-block,
+.inline-block {
+  display: inline-block !important;
+}
+
+/**
+ ********************************
+ * _FLOATS.SCSS
+ ********************************
+ */
+/**
+ * @module Float
+ * @description Add/remove floats
+ *
+ * @modifier [.float-right] Float right
+ * @modifier [.float-left] Float left
+ * @modifier [.float-none] Clear floats
+ */
+/* line 15, ../sass/helpers/_floats.scss */
+.float-right {
+  float: right !important;
+}
+
+/* line 16, ../sass/helpers/_floats.scss */
+.float-left {
+  float: left  !important;
+}
+
+/* line 17, ../sass/helpers/_floats.scss */
+.float-none {
+  float: none  !important;
+}
+
+/**
+ ********************************
+ * _FULL.SCSS
+ ********************************
+ */
+/**
+ * @module Full Width [.full]
+ * @description Make something full width (100%)
+ *
+ * @markup
+    <input type="text" value="Rounded" class="full" />
+ */
+/* line 14, ../sass/helpers/_full.scss */
+.full {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0    !important;
+}
+
+/**
+ ********************************
+ * _GPU.SCSS
+ ********************************
+ */
+/**
+ * @module GPU Rendering [.gpu]
+ * @description A SASS helper to use the gpu on that element ( translateZ(0) )
+ */
+/* line 11, ../sass/helpers/_gpu.scss */
+.gpu {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/**
+ ********************************
+ * _HIDDEN.SCSS
+ ********************************
+ */
+/**
+ * @module Visibility Utilities
+ * @description Helper classes to quickly show and hide elements based on screen size
+ *
+ * @modifier [.visible-js] Only show if javascript is enabled
+ * @modifier [.hidden-js] Hide if javascript is enaabled
+ * @modifier [.visible-medium] Show on medium, hide on small and large
+ * @modifier [.visible-large] Show on large, hide on small and medium
+ * @modifier [.hidden-small] Hide on small, show on medium and large
+ * @modifier [.hidden-medium] Hide on medium, show on small and large
+ * @modifier [.hidden-large] Hide on large, show on small and medium
+ * @modifier [.visible-print] Show on print, hide on rest
+ * @modifier [.hidden-large] Hide on print, show on rest
+ *
+ * @markup
+    <ul class="block-list">
+      <li class="visible-small">.visible-small</li>
+      <li class="hidden-small">.hidden-small</li>
+      <li class="visible-medium">.visible-medium</li>
+      <li class="hidden-medium">.hidden-medium</li>
+      <li class="visible-large">.visible-large</li>
+      <li class="hidden-large">.hidden-large</li>
+    </ul>
+ */
+/* line 32, ../sass/helpers/_hidden.scss */
+.no-js .visible--js, .yes-js .hidden--js, .hidden-small, .visible-medium, .visible-large, .visible-print,
+.hidden {
+  position: absolute !important;
+  left: -999% !important;
+  top: -999% !important;
+}
+
+@media print, screen and (min-width: 30.0625em) {
+  /* line 57, ../sass/helpers/_hidden.scss */
+  .visible-small, .hidden-medium {
+    position: absolute !important;
+    left: -999% !important;
+    top: -999% !important;
+  }
+
+  /* line 62, ../sass/helpers/_hidden.scss */
+  .hidden-small, .visible-medium {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  /* line 76, ../sass/helpers/_hidden.scss */
+  .visible-medium, .hidden-large {
+    position: absolute !important;
+    left: -999% !important;
+    top: -999% !important;
+  }
+
+  /* line 81, ../sass/helpers/_hidden.scss */
+  .hidden-medium, .visible-large {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+  }
+}
+@media print {
+  /* line 98, ../sass/helpers/_hidden.scss */
+  .hidden-print {
+    position: absolute !important;
+    left: -999% !important;
+    top: -999% !important;
+  }
+
+  /* line 103, ../sass/helpers/_hidden.scss */
+  .visible-print {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+  }
+}
+/**
+ ********************************
+ * _LINE-HEIGHT.SCSS
+ ********************************
+ */
+/**
+ * @module Line height
+ * @description Helpers to quickly adjust line-height
+ *
+ * @modifier [.line-height-half, .lh-half] line-height: 0.5
+ * @modifier [.line-height-double, .lh-double] line-height: 2
+ * @modifier [.line-height-triple, .lh-triple] line-height: 3
+ */
+/* line 15, ../sass/helpers/_line-height.scss */
+.line-height-half,
+.lh-half {
+  line-height: 0.5 !important;
+}
+
+/* line 20, ../sass/helpers/_line-height.scss */
+.line-height-double,
+.lh-double {
+  line-height: 2 !important;
+}
+
+/* line 25, ../sass/helpers/_line-height.scss */
+.line-height-triple,
+.lh-triple {
+  line-height: 3 !important;
+}
+
+/**
+ ********************************
+ * _MUTE.SCSS
+ ********************************
+ */
+/**
+ * @module Muted [.muted]
+ * @description Mute an object by reducing its opacity.
+ *
+ * @modifier [.muted-25] Opacity of 25%
+ * @modifier [.muted-50] Opacity of 50%
+ * @modifier [.muted-75] Opacity of 75%
+ *
+ * @markup
+    <img class="muted" src="http://www.placetim.com/200/200">
+    <img class="muted-25" src="http://www.placetim.com/200/200">
+    <img class="muted-50" src="http://www.placetim.com/200/200">
+    <img class="muted-75" src="http://www.placetim.com/200/200">
+ */
+/* line 21, ../sass/helpers/_mute.scss */
+.muted {
+  opacity: 0.5 !important;
+  filter: alpha(opacity=50) !important;
+}
+
+/* line 27, ../sass/helpers/_mute.scss */
+.muted-25 {
+  opacity: 0.25 !important;
+  filter: alpha(opacity = 25) !important;
+}
+
+/* line 27, ../sass/helpers/_mute.scss */
+.muted-50 {
+  opacity: 0.5 !important;
+  filter: alpha(opacity = 50) !important;
+}
+
+/* line 27, ../sass/helpers/_mute.scss */
+.muted-75 {
+  opacity: 0.75 !important;
+  filter: alpha(opacity = 75) !important;
+}
+
+/**
+ ********************************
+ * _RADIUS.SCSS
+ ********************************
+ */
+/**
+ * @module Rounded Corners [.round]
+ * @description Round the corners according to default border-radius
+ *
+ * @markup
+    <input type="text" value="Rounded" class="round" />
+ */
+/* line 14, ../sass/helpers/_radius.scss */
+.round {
+  -moz-border-radius: 4px !important;
+  -webkit-border-radius: 4px;
+  border-radius: 4px !important;
+}
+
+/**
+ * @module Fully Rounded Corners [.round-full]
+ * @description Round the corners as much as possible
+ *
+ * @markup
+    <input type="text" value="Rounded Full" class="round-full" />
+ */
+/* line 25, ../sass/helpers/_radius.scss */
+.round-full {
+  -moz-border-radius: 9999px !important;
+  -webkit-border-radius: 9999px;
+  border-radius: 9999px !important;
+}
+
+/**
+ * @module Ellipse [.ellipse]
+ * @description Round the corners to shape an oval or circle
+ *
+ * @markup
+    <input type="text" value="Ellipse" class="ellipse" />
+ */
+/* line 36, ../sass/helpers/_radius.scss */
+.ellipse {
+  -moz-border-radius: 100% !important;
+  -webkit-border-radius: 100%;
+  border-radius: 100% !important;
+}
+
+/**
+ ********************************
+ * _SCROLL.SCSS
+ ********************************
+ */
+/**
+ * @module Scroll Content [.scroll]
+ * @description Make element scrollable on all devices
+ */
+/* line 11, ../sass/helpers/_scroll.scss */
+.scroll {
+  overflow: scroll !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/**
+ ********************************
+ * _SPACING.SCSS
+ ********************************
+ */
+/**
+ * @settings $gemini-spacing
+ * @description Settings for the spacing helper
+ *
+ * @prop {map} [naming] You can add custom naming for the helper. This is complicated: Look at source code
+ * @prop {boolean} [medium=false] Whether to include medium responsive helpers. NOTE: This adds 4kb to output CSS
+ * @prop {boolean} [large=false] Whether to include large responsive helpers. NOTE: This adds 4kb to output CSS
+ * @prop {boolean} [xlarge=false] Whether to include xlarge responsive helpers. NOTE: This adds 4kb to output CSS
+ */
+/**
+ * Not documented since this shouldn't be used outside of this conext
+ */
+/**
+ * @module Spacing
+ * @description Helpers to quickly add margin and spacing to an element.
+ * (push|pad)-(rev)-(none|half|double)-(medium|large|xlarge)-(top|right|bottom|left)
+ *
+ * @modifier [.push] Add margin
+ * @modifier [.pad] Add padding
+ * @modifier [(push|pad)-rev] Give it a negative value
+ * @modifier [(push|pad)-(rev)-none] Set it to zero
+ * @modifier [(push|pad)-(rev)-half] Set it to half the base spacing value
+ * @modifier [(push|pad)-(rev)-double] Set it to double the base spacing value
+ * @modifier [(push|pad)-(rev)-(none|half|double)-medium] Only on medium screens (set responsive to true)
+ * @modifier [(push|pad)-(rev)-(none|half|double)-large] Only on large screens (set responsive to true)
+ * @modifier [(push|pad)-(rev)-(none|half|double)-xlarge] Only on xlarge screens (set responsive to true)
+ * @modifier [(push|pad)-(rev)-(none|half|double)-(medium|large|xlarge)-top] Apply to top
+ * @modifier [(push|pad)-(rev)-(none|half|double)-(medium|large|xlarge)-right] Apply to right
+ * @modifier [(push|pad)-(rev)-(none|half|double)-(medium|large|xlarge)-bottom] Apply to bottom
+ * @modifier [(push|pad)-(rev)-(none|half|double)-(medium|large|xlarge)-left] Apply to left
+ *
+ * @markup
+    <div class="push-bottom">Test!</div> // Base margin to bottom
+    <div class="pad-medium-top">Test!</div> // Adds to top on medium screens
+    <div class="push-rev-half-left">Test!</div> // Bleeds half spacing to the left
+    <div class="push-double-xlarge-right">Test!</div> // Adds double margin to right on xlarge screens
+ */
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-none {
+  margin: 0px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-none-top {
+  margin-top: 0px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-none-right {
+  margin-right: 0px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-none-bottom {
+  margin-bottom: 0px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-none-left {
+  margin-left: 0px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-none-sides {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-none-ends {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-half {
+  margin: 12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-half-top {
+  margin-top: 12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-half-right {
+  margin-right: 12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-half-bottom {
+  margin-bottom: 12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-half-left {
+  margin-left: 12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-half-sides {
+  margin-left: 12px !important;
+  margin-right: 12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-half-ends {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push {
+  margin: 24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-top {
+  margin-top: 24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-right {
+  margin-right: 24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-bottom {
+  margin-bottom: 24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-left {
+  margin-left: 24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-sides {
+  margin-left: 24px !important;
+  margin-right: 24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-ends {
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-double {
+  margin: 48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-double-top {
+  margin-top: 48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-double-right {
+  margin-right: 48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-double-bottom {
+  margin-bottom: 48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-double-left {
+  margin-left: 48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-double-sides {
+  margin-left: 48px !important;
+  margin-right: 48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-double-ends {
+  margin-top: 48px !important;
+  margin-bottom: 48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-half {
+  margin: -12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-half-top {
+  margin-top: -12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-half-right {
+  margin-right: -12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-half-bottom {
+  margin-bottom: -12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-half-left {
+  margin-left: -12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-half-sides {
+  margin-left: -12px !important;
+  margin-right: -12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-half-ends {
+  margin-top: -12px !important;
+  margin-bottom: -12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev {
+  margin: -24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-top {
+  margin-top: -24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-right {
+  margin-right: -24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-bottom {
+  margin-bottom: -24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-left {
+  margin-left: -24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-sides {
+  margin-left: -24px !important;
+  margin-right: -24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-ends {
+  margin-top: -24px !important;
+  margin-bottom: -24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-double {
+  margin: -48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-double-top {
+  margin-top: -48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-double-right {
+  margin-right: -48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-double-bottom {
+  margin-bottom: -48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-double-left {
+  margin-left: -48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-double-sides {
+  margin-left: -48px !important;
+  margin-right: -48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.push-rev-double-ends {
+  margin-top: -48px !important;
+  margin-bottom: -48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-none {
+  padding: 0px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-none-top {
+  padding-top: 0px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-none-right {
+  padding-right: 0px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-none-bottom {
+  padding-bottom: 0px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-none-left {
+  padding-left: 0px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-none-sides {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-none-ends {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-half {
+  padding: 12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-half-top {
+  padding-top: 12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-half-right {
+  padding-right: 12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-half-bottom {
+  padding-bottom: 12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-half-left {
+  padding-left: 12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-half-sides {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-half-ends {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad {
+  padding: 24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-top {
+  padding-top: 24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-right {
+  padding-right: 24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-bottom {
+  padding-bottom: 24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-left {
+  padding-left: 24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-sides {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-ends {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-double {
+  padding: 48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-double-top {
+  padding-top: 48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-double-right {
+  padding-right: 48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-double-bottom {
+  padding-bottom: 48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-double-left {
+  padding-left: 48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-double-sides {
+  padding-left: 48px !important;
+  padding-right: 48px !important;
+}
+
+/* line 62, ../sass/helpers/_spacing.scss */
+.pad-double-ends {
+  padding-top: 48px !important;
+  padding-bottom: 48px !important;
+}
+
+/**
+ ********************************
+ * _TEXT-RENDERING.SCSS
+ ********************************
+ */
+/**
+ * @module Text Rendering
+ * @description Render text in different ways
+ *
+ * @modifier [.text-legibility] Renders the text to be legible. This uses the GPU.
+ * @modifier [.text-speed] Optimized rendering for speed
+ * @modifier [.text-smooth] Makes font look smooth on webkit and mozilla OSX
+ *
+ * @markup
+    <div class="hgroup">
+      <h2 class="hN  text-legibility">Legibility</h2>
+      <h2 class="hN  text-speed">Speed</h2>
+      <h2 class="hN  text-smooth">Smooth</h2>
+    </div>
+ */
+/* line 22, ../sass/helpers/_text-rendering.scss */
+.text-legibility {
+  text-rendering: optimizeLegibility;
+}
+
+/* line 25, ../sass/helpers/_text-rendering.scss */
+.text-speed {
+  text-rendering: optimizeSpeed;
+}
+
+/* line 28, ../sass/helpers/_text-rendering.scss */
+.text-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ ********************************
+ * _TRUNCATE.SCSS
+ ********************************
+ */
+/**
+ * @module Truncate Ellipsis [.truncate]
+ * @description Truncate a fixed width string with an ellipsis
+ *
+ * @markup
+    <p style="width:250px;" class="truncate">This is a test for truncating.</p>
+ */
+/* line 14, ../sass/helpers/_truncate.scss */
+.truncate {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/**
+ ********************************
+ * _USER-SELECT.SCSS
+ ********************************
+ */
+/**
+ * @module Unselectable [.unselectable]
+ * @description Make it so that you can't highlight the text
+ *
+ * @markup
+    <span class="unselectable">Can't select me >:)</span>
+ */
+/* line 14, ../sass/helpers/_user-select.scss */
+.unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/**
+ ********************************
+ * _WEIGHT.SCSS
+ ********************************
+ */
+/**
+ * @module Font Weights
+ * @description Easily add font weights
+ *
+ * @modifier [.weight-light] Light
+ * @modifier [.weight-normal] Normal
+ * @modifier [.weight-semibold] Semibold
+ * @modifier [.weight-bold] Bold
+ * @modifier [.weight-bolder] Bolder
+ */
+/* line 17, ../sass/helpers/_weight.scss */
+.weight-light {
+  font-weight: 300 !important;
+}
+
+/* line 18, ../sass/helpers/_weight.scss */
+.weight-normal {
+  font-weight: 400 !important;
+}
+
+/* line 19, ../sass/helpers/_weight.scss */
+.weight-semibold {
+  font-weight: 600 !important;
+}
+
+/* line 20, ../sass/helpers/_weight.scss */
+.weight-bold {
+  font-weight: 700 !important;
+}
+
+/* line 21, ../sass/helpers/_weight.scss */
+.weight-bolder {
+  font-weight: 900 !important;
+}
