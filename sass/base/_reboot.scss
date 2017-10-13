@@ -108,7 +108,11 @@ h1, h2, h3, h4, h5, h6 {
 // bottom margin to use `rem` units instead of `em`.
 p {
   margin-top: 0;
-  margin-bottom: $paragraph-margin-bottom;
+  margin-bottom: 1rem;
+  //
+  //
+  //
+  //margin-bottom: $paragraph-margin-bottom; //Not from latest Beta downloaded 2017-10-12
 }
 
 // Abbreviations
@@ -200,6 +204,7 @@ a {
   text-decoration: $link-decoration;
   background-color: transparent; // Remove the gray background on active links in IE 10.
   -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
+
 
   @include hover {
     color: $link-hover-color;

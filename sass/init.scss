@@ -1,6 +1,6 @@
 /**
  ********************************
- * GEMINI-CSS
+ * GEMINI-CSS + NF
  ********************************
  */
 
@@ -11,7 +11,7 @@
  * SMACSS
  * BEM
  * Inuit.css
- * Bootstrap.css
+ * Bootstrap.css + Bootstrap 4 Beta
  * Foundation.css
  * CSS-Tricks
  * Nicolas Gallagher
@@ -27,7 +27,7 @@
  * Variables
  */
 @import "defaults";
-
+@import "reboot-variables";
 /**
  * Functions
  */
@@ -40,6 +40,7 @@
  * Mixins
  */
 @import "mixins/accessibility";
+@import "mixins/hover";
 @import "mixins/arrows";
 @import "mixins/border";
 @import "mixins/clearfix";
@@ -51,6 +52,7 @@
 @import "mixins/media-queries";
 @import "mixins/text-rendering";
 @import "mixins/truncate";
+@import "mixins/gradients";
 @import "mixins/vendor";
 
 /**
@@ -62,8 +64,8 @@
  * Base Styles
  */
 @import "base/normalize";
-@import "base/reboot";
 //@import "base/reset";
+@import "base/reboot";
 @import "base/margins";
 @import "base/main";
 @import "base/headings";
@@ -137,5 +139,5 @@
 @import "theme/navigation";
 //@import "theme/hero";
 //@import "theme/colors";
-@import "theme/footer";
+//@import "theme/footer";
 @import "theme/shame"

@@ -1,0 +1,22 @@
+
+
+
+ /*
+  * Base Gradients
+  */  
+
+   /*
+   gradient-purple: ,
+   gradient-purple-2: ,
+   gradient-blue: ,
+   */
+
+   .g-btn {
+    background: #ED6A6A;
+    @include background-image(linear-gradient(to bottom right, #ED6A6A, #5C1073));
+   }
+
+   .g-btn:hover {
+    background: #ED6A6A;
+    @include background-image(linear-gradient(to bottom right, #ED6A6A, #762071));
+   }
