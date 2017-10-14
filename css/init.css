@@ -604,6 +604,237 @@ gradient-blue: ,
       @include vendor(border-radius, 4px);
     }
  */
+/* line 125, ../sass/mixins/_angled-edges.scss */
+.angle--top-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 calc(0% + 56vw), 100% 0, 100% 100%, 0 100%);
+}
+@supports not (clip-path: polygon(0 calc(0% + 56vw), 100% 0, 100% 100%, 0 100%)) {
+  /* line 87, ../sass/mixins/_angled-edges.scss */
+  .angle--top-left::before, .angle--top-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 97, ../sass/mixins/_angled-edges.scss */
+  .angle--top-left::before {
+    top: 0;
+    border-width: 57vw 100vw 0 0;
+    border-color: #fff transparent transparent transparent;
+  }
+}
+
+/* line 129, ../sass/mixins/_angled-edges.scss */
+.angle--top-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% calc(0% + 56vw), 100% 100%, 0 100%);
+}
+@supports not (clip-path: polygon(0 0, 100% calc(0% + 56vw), 100% 100%, 0 100%)) {
+  /* line 87, ../sass/mixins/_angled-edges.scss */
+  .angle--top-right::before, .angle--top-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 97, ../sass/mixins/_angled-edges.scss */
+  .angle--top-right::before {
+    top: 0;
+    border-width: 57vw 0 0 100vw;
+    border-color: #fff transparent transparent transparent;
+  }
+}
+
+/* line 133, ../sass/mixins/_angled-edges.scss */
+.angle--bottom-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 56vw));
+}
+@supports not (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 56vw))) {
+  /* line 87, ../sass/mixins/_angled-edges.scss */
+  .angle--bottom-left::before, .angle--bottom-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 105, ../sass/mixins/_angled-edges.scss */
+  .angle--bottom-left::after {
+    bottom: 0;
+    border-width: 0 100vw 57vw 0;
+    border-color: transparent transparent #fff transparent;
+  }
+}
+
+/* line 137, ../sass/mixins/_angled-edges.scss */
+.angle--bottom-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 56vw), 0 100%);
+}
+@supports not (clip-path: polygon(0 0, 100% 0, 100% calc(100% - 56vw), 0 100%)) {
+  /* line 87, ../sass/mixins/_angled-edges.scss */
+  .angle--bottom-right::before, .angle--bottom-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 105, ../sass/mixins/_angled-edges.scss */
+  .angle--bottom-right::after {
+    bottom: 0;
+    border-width: 0 0 57vw 100vw;
+    border-color: transparent transparent #fff transparent;
+  }
+}
+
+/* line 141, ../sass/mixins/_angled-edges.scss */
+.angle--both-left-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 calc(0% + 56vw), 100% 0, 100% 100%, 0 calc(100% - 56vw));
+}
+@supports not (clip-path: polygon(0 calc(0% + 56vw), 100% 0, 100% 100%, 0 calc(100% - 56vw))) {
+  /* line 87, ../sass/mixins/_angled-edges.scss */
+  .angle--both-left-left::before, .angle--both-left-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 97, ../sass/mixins/_angled-edges.scss */
+  .angle--both-left-left::before {
+    top: 0;
+    border-width: 57vw 100vw 0 0;
+    border-color: #fff transparent transparent transparent;
+  }
+  /* line 105, ../sass/mixins/_angled-edges.scss */
+  .angle--both-left-left::after {
+    bottom: 0;
+    border-width: 0 100vw 57vw 0;
+    border-color: transparent transparent #fff transparent;
+  }
+}
+
+/* line 145, ../sass/mixins/_angled-edges.scss */
+.angle--both-right-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% calc(0% + 56vw), 100% calc(100% - 56vw), 0 100%);
+}
+@supports not (clip-path: polygon(0 0, 100% calc(0% + 56vw), 100% calc(100% - 56vw), 0 100%)) {
+  /* line 87, ../sass/mixins/_angled-edges.scss */
+  .angle--both-right-right::before, .angle--both-right-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 97, ../sass/mixins/_angled-edges.scss */
+  .angle--both-right-right::before {
+    top: 0;
+    border-width: 57vw 0 0 100vw;
+    border-color: #fff transparent transparent transparent;
+  }
+  /* line 105, ../sass/mixins/_angled-edges.scss */
+  .angle--both-right-right::after {
+    bottom: 0;
+    border-width: 0 0 57vw 100vw;
+    border-color: transparent transparent #fff transparent;
+  }
+}
+
+/* line 149, ../sass/mixins/_angled-edges.scss */
+.angle--both-left-right {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 calc(0% + 56vw), 100% 0, 100% calc(100% - 56vw), 0 100%);
+}
+@supports not (clip-path: polygon(0 calc(0% + 56vw), 100% 0, 100% calc(100% - 56vw), 0 100%)) {
+  /* line 87, ../sass/mixins/_angled-edges.scss */
+  .angle--both-left-right::before, .angle--both-left-right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 97, ../sass/mixins/_angled-edges.scss */
+  .angle--both-left-right::before {
+    top: 0;
+    border-width: 57vw 100vw 0 0;
+    border-color: #fff transparent transparent transparent;
+  }
+  /* line 105, ../sass/mixins/_angled-edges.scss */
+  .angle--both-left-right::after {
+    bottom: 0;
+    border-width: 0 0 57vw 100vw;
+    border-color: transparent transparent #fff transparent;
+  }
+}
+
+/* line 153, ../sass/mixins/_angled-edges.scss */
+.angle--both-right-left {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% calc(0% + 56vw), 100% 100%, 0 calc(100% - 56vw));
+}
+@supports not (clip-path: polygon(0 0, 100% calc(0% + 56vw), 100% 100%, 0 calc(100% - 56vw))) {
+  /* line 87, ../sass/mixins/_angled-edges.scss */
+  .angle--both-right-left::before, .angle--both-right-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border-style: solid;
+  }
+  /* line 97, ../sass/mixins/_angled-edges.scss */
+  .angle--both-right-left::before {
+    top: 0;
+    border-width: 57vw 0 0 100vw;
+    border-color: #fff transparent transparent transparent;
+  }
+  /* line 105, ../sass/mixins/_angled-edges.scss */
+  .angle--both-right-left::after {
+    bottom: 0;
+    border-width: 0 100vw 57vw 0;
+    border-color: transparent transparent #fff transparent;
+  }
+}
+
+/* line 158, ../sass/mixins/_angled-edges.scss */
+.angle__content {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 164, ../sass/mixins/_angled-edges.scss */
+.angle--colour {
+  color: #fff;
+  background-color: #2196F3;
+  text-align: center;
+  padding: 10% 0;
+}
+
 /**
  * Load Colors
  */
@@ -4005,15 +4236,57 @@ object {
   list-style: none;
   margin-bottom: 0;
   margin-left: 0;
+  padding: 0;
 }
 /* line 20, ../sass/theme/_navigation.scss */
-.nav li .primary-nav__link {
+.nav .primary-nav__link {
   color: #FFF;
   background: rgba(55, 26, 92, 0.67);
 }
 /* line 25, ../sass/theme/_navigation.scss */
-.nav li .primary-nav__link:hover {
+.nav .primary-nav__link:hover {
   color: #F7B5B5;
+}
+
+/* line 30, ../sass/theme/_navigation.scss */
+.primary-nav__list {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 36, ../sass/theme/_navigation.scss */
+.primary-nav__link {
+  display: block;
+  transform: skewY(-30deg);
+  padding: .5rem;
+  font-size: 1rem;
+  text-align: center;
+  height: 6rem;
+  font-weight: 300;
+}
+
+/* line 45, ../sass/theme/_navigation.scss */
+.primary-nav__link--active {
+  background: #5C1073;
+}
+
+/* line 48, ../sass/theme/_navigation.scss */
+.primary-nav__link:hover {
+  background: #ED6A6A;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuMCIgeDI9IjEuMCIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VkNmE2YSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVjMTA3MyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #ed6a6a), color-stop(100%, #5c1073));
+  background-image: -moz-linear-gradient(top, #ed6a6a, #5c1073);
+  background-image: -webkit-linear-gradient(top, #ed6a6a, #5c1073);
+  background-image: linear-gradient(to bottom right, #ed6a6a, #5c1073);
+  text-decoration: none;
+  color: #fff;
+}
+
+/* line 54, ../sass/theme/_navigation.scss */
+.primary-nav__text {
+  display: block;
 }
 
 /**
@@ -4021,3 +4294,24 @@ object {
  * _SHAME.SCSS
  ********************************
  */
+/* line 9, ../sass/theme/_shame.scss */
+body {
+  font-family: Muli, Futura, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* line 14, ../sass/theme/_shame.scss */
+.w-global-logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/* line 23, ../sass/theme/_shame.scss */
+.hero {
+  color: #fff;
+  background-color: #371A5C;
+  padding-left: 80px;
+  padding-bottom: 10rem;
+  padding-right: 3rem;
+}

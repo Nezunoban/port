@@ -16,14 +16,42 @@
     list-style: none;
     margin-bottom: 0;
     margin-left: 0;
-    li {
-        .primary-nav__link {
-            color: $navigation;
-            background: rgba($brand-color-2, 0.67)
-        }
+    padding: 0;
+    .primary-nav__link {
+        color: $navigation;
+        background: rgba($brand-color-2, 0.67);
+    }
 
-        .primary-nav__link:hover {
-            color: $navigation-hover;
-        }
+    .primary-nav__link:hover {
+        color: $navigation-hover;
     }
 }
+
+.primary-nav__list {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.primary-nav__link {
+    display: block;
+    transform: skewY(-30deg);
+    padding: .5rem;
+    font-size: 1rem;
+    text-align: center;
+    height: 6rem;
+    font-weight: 300;
+}
+.primary-nav__link--active {
+    background: $brand-color-2-bg;
+}
+.primary-nav__link:hover {
+    background: $brand-color-bg;
+    @include background-image(linear-gradient(to bottom right, $brand-color-bg, $brand-color-2-bg));
+    text-decoration: none;
+    color: #fff;
+}
+.primary-nav__text {
+    display: block;
+}
+
