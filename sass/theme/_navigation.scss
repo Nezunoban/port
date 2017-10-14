@@ -4,5 +4,26 @@
  ********************************
  */
 
+  
 
- 
+
+
+.w-global-logo {
+    max-width: 80px;
+}
+
+.nav {
+    list-style: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    li {
+        .primary-nav__link {
+            color: $navigation;
+            background: rgba($brand-color-2, 0.67)
+        }
+
+        .primary-nav__link:hover {
+            color: $navigation-hover;
+        }
+    }
+}
