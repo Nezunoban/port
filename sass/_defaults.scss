@@ -41,7 +41,7 @@ $gemini-base-defaults: (
    * Base Coloring
    */
   brand-color:         #F06B6A,
-  brand-color-2:      #371A5C,
+  brand-color-2:       #371A5C,
   link-color:          #76304C,
   color:               #333,
   background-color:    #FFF,
@@ -49,11 +49,8 @@ $gemini-base-defaults: (
 
 
 
-
   /**
-   * Base Gradients
-   
-
+   * Base 
    */
 
   /**
@@ -70,8 +67,8 @@ $gemini-base-defaults: (
   /**
    * Type
    */
-  brand-font-family:   unquote("'Muli', 'Helvetica', Arial, sans-serif"),
-  font-family:         unquote("'Muli', 'Helvetica', Arial, sans-serif"),
+  brand-font-family:   unquote("'Muli', Arial, sans-serif"),
+  font-family:         unquote("'Muli', Arial, sans-serif"),
 
   /**
    * Directories
@@ -124,7 +121,7 @@ $gemini-use-defaults: (
   copy:            false,
   fit:             false,
   flyout:          false,
-  grid:            false,
+  grid:            true,
   iframes:         true,
   icons:           false,
   link-complex:    false,
@@ -167,70 +164,14 @@ $gemini-use: map-merge($gemini-use-defaults, $gemini-use);
 //  url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 //
 
-
-
-
+/*
 @font-face {
-  font-family:'Muli';
-  src: url('Muli Bold.eot');
-  src: url('Muli Bold.eot?#iefix') format('embedded-opentype'),
-    url('Muli Bold.woff2') format('woff2'),
-    url('Muli Bold.woff') format('woff'),
-    url('Muli Bold.svg#Muli Bold') format('svg');
-    font-weight: 700;
-    font-style: normal;
-    font-stretch: normal;
-    unicode-range: U+0020-2044;
 }
+*/
 
-@font-face {
-  font-family:'Muli';
-  src: url('Muli Bold Italic.eot');
-  src: url('Muli Bold Italic.eot?#iefix') format('embedded-opentype'),
-    url('Muli Bold Italic.woff2') format('woff2'),
-    url('Muli Bold Italic.woff') format('woff'),
-    url('Muli Bold Italic.svg#Muli Bold Italic') format('svg');
-    font-weight: 700;
-    font-style: italic;
-    font-stretch: normal;
-    unicode-range: U+0020-2044;
+body {
+  font-family: sans-serif;
 }
-
-@font-face {
-  font-family:'Muli';
-  src: url('Muli Italic.eot');
-  src: url('Muli Italic.eot?#iefix') format('embedded-opentype'),
-    url('Muli Italic.woff2') format('woff2'),
-    url('Muli Italic.woff') format('woff'),
-    url('Muli Italic.svg#Muli Italic') format('svg');
-    font-weight: 400;
-    font-style: italic;
-    font-stretch: normal;
-    unicode-range: U+0020-2044;
-}
-
-@font-face {
-  font-family:'Muli';
-  src: url('Muli Regular.eot');
-  src: url('Muli Regular.eot?#iefix') format('embedded-opentype'),
-    url('Muli Regular.woff2') format('woff2'),
-    url('Muli Regular.woff') format('woff'),
-    url('Muli Regular.svg#Muli Regular') format('svg');
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal;
-    unicode-range: U+0020-2044;
-}
-
-@font-face {
-  font-family:'Muli Light';
-  src: url('Muli Light.eot');
-  src: url('Muli Light.eot?#iefix') format('embedded-opentype'),
-    url('Muli Light.woff2') format('woff2'),
-    url('Muli Light.woff') format('woff'),
-    url('Muli Light.svg#Muli Light') format('svg');
-    font-weight: 300;
-    font-style: normal;
-    font-stretch: normal;
-    unicode-range: U+0020-2044;
+.fonts-loaded body {
+  font-family: 'Muli', sans-serif;
 }

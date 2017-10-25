@@ -11,32 +11,32 @@
       position: relative;
       overflow: hidden;
     
-      // Converts degrees to VW, 100vw = 45deg using this technique
-      @if $angle < 96 {
+    // Converts degrees to VW, 100vw = 45deg using this technique
+    @if $angle < 96 {
         $angle: convertDegToVW($angle);
-      }
-      @if $angle > 95 {
+    }
+    @if $angle > 95 {
         $angle: 0;
         @error 'Invalid angle, it must be between 1-45';
-      }
+    }
     
-      @if $angle-position-bottom-x == '' {
+    @if $angle-position-bottom-x == '' {
         $angle-position-bottom-x: $angle-position-x;
-      }
+    }
     
-      $angle-calc-top: calc(0% + #{$angle}vw);
-      $angle-calc-bottom: calc(100% - #{$angle}vw);
+    $angle-calc-top: calc(0% + #{$angle}vw);
+    $angle-calc-bottom: calc(100% - #{$angle}vw);
+
+    $clip-path-top: 0 0, 100% 0;
+    $clip-path-bottom: 100% 100%, 0 100%;
+
+    $border-width-top: '';
+    $border-width-bottom: '';
+    $border-color-top: '';
+    $border-color-bottom: '';
     
-      $clip-path-top: 0 0, 100% 0;
-      $clip-path-bottom: 100% 100%, 0 100%;
     
-      $border-width-top: '';
-      $border-width-bottom: '';
-      $border-color-top: '';
-      $border-color-bottom: '';
-    
-    
-      @if $angle-position-y == 'top' or $angle-position-y == 'both' {
+    @if $angle-position-y == 'top' or $angle-position-y == 'both' {
         
         @if $angle-position-x == 'left' {
           $clip-path-top: 0 $angle-calc-top, 100% 0;   
@@ -51,10 +51,10 @@
         }
     
         $border-color-top: $fallback-color transparent transparent transparent;
-      }
+    }
     
     
-      @if $angle-position-y == 'bottom' or $angle-position-y == 'both' {
+    @if $angle-position-y == 'bottom' or $angle-position-y == 'both' {
     
         @if $angle-position-y == 'both' and $angle-position-x != $angle-position-bottom-x {
           $angle-position-x: $angle-position-bottom-x;
@@ -73,14 +73,14 @@
         }
         
         $border-color-bottom: transparent transparent $fallback-color transparent;
-      }
+    }
     
       $clip-path: polygon($clip-path-top, $clip-path-bottom);
       clip-path: $clip-path;
     
     
       // Fallback for clip-path with solid colours
-      @if $fallback {
+    @if $fallback {
     
         @supports not (clip-path: $clip-path) {
     
@@ -111,59 +111,59 @@
     
         }
     
-      }
-    
     }
     
-    // Converts degrees to VW, 100vw = 45deg using this technique
-    @function convertDegToVW($angle){
-      @return round($angle*2.22);
-    }
+}
     
-    
-    // Classes
-    .angle--top-left {
-      @include angle-edge($angle: 25, $angle-position-y: 'top', $angle-position-x: 'left');
-    }
-    
-    .angle--top-right {
-      @include angle-edge($angle: 25, $angle-position-y: 'top', $angle-position-x: 'right');
-    }
-    
-    .angle--bottom-left {
-      @include angle-edge($angle: 25, $angle-position-y: 'bottom', $angle-position-x: 'left');
-    }
-    
-    .angle--bottom-right {
-      @include angle-edge($angle: 25, $angle-position-y: 'bottom', $angle-position-x: 'right');
-    }
-    
-    .angle--both-left-left {
-      @include angle-edge($angle: 25, $angle-position-y: 'both', $angle-position-x: 'left');
-    }
-    
-    .angle--both-right-right {
-      @include angle-edge($angle: 25, $angle-position-y: 'both', $angle-position-x: 'right');
-    }
-    
-    .angle--both-left-right {
-      @include angle-edge($angle: 25, $angle-position-y: 'both', $angle-position-x: 'left', $angle-position-bottom-x: 'right');
-    }
-    
-    .angle--both-right-left {
-      @include angle-edge($angle: 25, $angle-position-y: 'both', $angle-position-x: 'right', $angle-position-bottom-x: 'left');
-    }
-    
-    
-      .angle__content {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-    
-    .angle--colour {
-      color: #fff;
-      background-color: #2196F3;
-      text-align: center;
-      padding: 10% 0;
-    }
+// Converts degrees to VW, 100vw = 45deg using this technique
+@function convertDegToVW($angle){
+    @return round($angle*2.22);
+}
+
+
+// Classes
+.angle--top-left {
+    @include angle-edge($angle: 25, $angle-position-y: 'top', $angle-position-x: 'left');
+}
+
+.angle--top-right {
+    @include angle-edge($angle: 25, $angle-position-y: 'top', $angle-position-x: 'right');
+}
+
+.angle--bottom-left {
+    @include angle-edge($angle: 25, $angle-position-y: 'bottom', $angle-position-x: 'left');
+}
+
+.angle--bottom-right {
+    @include angle-edge($angle: 25, $angle-position-y: 'bottom', $angle-position-x: 'right');
+}
+
+.angle--both-left-left {
+    @include angle-edge($angle: 25, $angle-position-y: 'both', $angle-position-x: 'left');
+}
+
+.angle--both-right-right {
+    @include angle-edge($angle: 25, $angle-position-y: 'both', $angle-position-x: 'right');
+}
+
+.angle--both-left-right {
+    @include angle-edge($angle: 25, $angle-position-y: 'both', $angle-position-x: 'left', $angle-position-bottom-x: 'right');
+}
+
+.angle--both-right-left {
+    @include angle-edge($angle: 25, $angle-position-y: 'both', $angle-position-x: 'right', $angle-position-bottom-x: 'left');
+}
+
+
+.angle__content {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.angle--colour {
+    color: #fff;
+    background-color: #2196F3;
+    text-align: center;
+    padding: 10% 0;
+}

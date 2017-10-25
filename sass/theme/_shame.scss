@@ -7,21 +7,25 @@
  // Temporary location for bad or unsorted code to figure out later
 
 body {
-    font-family: sans-serif;
-
-    //font-family: 'Muli', Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    //font-weight: 300;
+    font-family: Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+
+/* For fixing FOIT and font loading inconsistencies: font-loaded class */
+
 .fonts-loaded body {
-    font-family: Source Sans Pro, sans-serif;
+    font-family: 'Muli', Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
- .w-global-logo {
-     position: fixed;
-     top: 0;
-     left: 0;
-     z-index: 2;
- }
+.w-global-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    max-width: 60px;
+    padding: 20px 12px;
+    text-align: center;
+}
 
 /// Hero
 
@@ -29,29 +33,124 @@ body {
     color: #fff;
     background-color: $brand-color-2;
     padding-left: 80px;
-    padding-bottom: 10rem;
-    padding-right: 3rem;
-
+    padding-bottom: 12rem;
+    padding-right: 4rem;
+    padding-top: 8rem;
 }
-
-@font-face {
-    font-family: ‘Muli’;
-    src: url(‘webfont.eot’);
-    src: url(‘webfont.eot?#iefix’) format(‘embedded-opentype’),
-         url(‘webfont.svg#svgFontName’) format(‘svg’),
-         url(‘webfont.woff’) format(‘woff’),
-         url(‘webfont.ttf’)  format(‘truetype’);
+h2.hero__h2 {
+    margin-bottom: 0;
 }
-@import url('https://fonts.googleapis.com/css?family=Muli:200,300,400,400i,700,700i');
-
-
-h2.hero__h2,
-h2.light {
+h2.margin-w {
+    margin-left: -.2rem;
+}
+.fonts-loaded h2.hero__h2 {
+    // To be replaced by twentieth century pro medium
     font-family: 'Muli', Futura, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
-    font-weight: normal;
-    font-weight: lighter;
+    font-weight: 600;
+    font-size: 2rem;
+}
+.fonts-loaded .hero__p {
     font-weight: 200;
 }
-.hero__p {
 
+
+
+/*
+.grid-bg {
+    background-color: transparent;
+    background-image:       
+      linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .15) 1%, rgba(255, 255, 255, .15) 2%, transparent 3%, transparent 49%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 51%, transparent 52%, transparent), 
+      linear-gradient(30deg, transparent 49%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .15) 98%, rgba(255, 255, 255, .15) 99%, transparent 100%, transparent), 
+      linear-gradient(150deg, transparent 49%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .15) 98%, rgba(255, 255, 255, .15) 99%, transparent 100%, transparent);
+    height:100%;
+    background-size:50px 30px;
 }
+.purple-gradient-bg {
+//@include gradient-directional($brand-p-bg, $brand-bp-bg, 45deg);
+}
+.angle-containter__content {
+position: relative;
+z-index: 1;
+}
+
+.grid-star-bg {
+    background: url("../img/starry-bg.jpg") repeat #181d25;
+    background-size: cover;
+}
+
+.grid-star-bg:before,
+.grid-star-bg:after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+}
+.grid-star-bg:before {
+    background-color: transparent;
+    background-image:       
+        linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .05) 1%, rgba(255, 255, 255, .05) 2%, transparent 3%, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent), 
+        linear-gradient(30deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent), 
+        linear-gradient(150deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent);
+    height:100%;
+    background-size:100px 60px;
+}
+.grid-star-bg:after {
+    @include gradient-directional($brand-p-bg, $brand-bp-bg, 45deg);
+}
+*/
+
+/* Isometric grid */
+
+
+.star-bg {
+    overflow: hidden;
+    background: url("../img/starry-bg.jpg") no-repeat center center fixed #181d25;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.overlay {
+    content: "";
+    position: fixed;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+}
+
+.overlay--grid {
+    background-color: transparent;
+    background-image:  
+        //linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .05) 1%, rgba(255, 255, 255, .05) 2%, transparent 3%, transparent 53%, rgba(255, 255, 255, .05) 54%, rgba(255, 255, 255, .05) 55%, transparent 56%, transparent),
+        linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .05) 0%, rgba(255, 255, 255, .05) 1%, transparent 2%, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent), 
+        linear-gradient(30deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent), 
+        linear-gradient(150deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent);
+    height:100%;
+    background-size:100px 56px;
+}
+
+.overlay--purple {
+    @include gradient-directional($brand-bp-bg, $brand-p-bg, 45deg);
+}
+
+.angle-container__content {
+    position: relative;
+}
+
+
+
+/*
+* Base Gradients
+*/  
+
+
+.g-btn {
+    background: $brand-color-bg;
+    @include background-image(linear-gradient(to bottom right, $brand-color-bg, $brand-color-2-bg));
+}
+
+.g-btn:hover {
+    background: $brand-color;
+    @include background-image(linear-gradient(to bottom right, $brand-color-bg, $link-color));
+}
+  
