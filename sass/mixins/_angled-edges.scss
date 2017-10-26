@@ -167,3 +167,9 @@
     text-align: center;
     padding: 10% 0;
 }
+
+
+.angle-clip--up-right {
+    -webkit-clip-path: polygon(0 33%, 100% 0, 100% 66%, 0% 100%);
+    clip-path: polygon(0 33%, 100% 0, 100% 66%, 0% 100%);
+}

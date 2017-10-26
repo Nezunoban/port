@@ -1,12 +1,15 @@
 
 $brand-color:         #F06B6A;
 $brand-color-bg:      #ED6A6A;
+$brand-pink-text-1:      #A53151;
 $brand-color-2:       #371A5C;
 $brand-color-2-bg:    #5C1073;
 $brand-p-bg:          rgba(92, 16, 115, 0.8);  //#5C1073
+$brand-p-text-1:        #4F1649;
 $brand-b-bg:          rgba(48, 95, 189, 0.8);  //#305FBD
 $brand-bp-bg:         rgba(75, 47, 144, 0.8); //#4B2F90
 $brand-blue:          #305FBD;
+$brand-blue-text-1:      #39548E;
 
 
 
@@ -19,3 +22,19 @@ $border-color:        #76304C;
 $navigation:          #FFF;
 $navigation-hover:    #F7B5B5;
 
+
+.c-pink-1 {
+    color: $brand-pink-text-1;
+}
+.c-blue-1 {
+    color: $brand-blue-text-1;
+}
+.button.c-pink-1 {
+    border-color: $brand-pink-text-1;
+}
+.button.c-blue-1 {
+    border-color: $brand-blue-text-1;
+}
+.button.c-purple-1 {
+    border-color: $brand-p-text-1;
+}

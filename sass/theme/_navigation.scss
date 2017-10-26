@@ -46,7 +46,7 @@
 }
 */
 
-.nav {
+.primary-nav__list {
     list-style: none;
     margin-bottom: 0;
     margin-left: 0;
@@ -63,7 +63,7 @@
 
 .primary-nav__list {
     position: fixed;
-    bottom: 0;
+    bottom: 20px;
     left: 0;
     z-index: 10;
 }

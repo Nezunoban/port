@@ -154,3 +154,16 @@ z-index: 1;
     @include background-image(linear-gradient(to bottom right, $brand-color-bg, $link-color));
 }
   
+
+
+
+//   Layout
+
+
+// !REPLACE! with grid system changes for mobile
+main section {
+    padding-left: 74px;
+}
+.main__h2 {
+    font-size: 1.5rem;
+}

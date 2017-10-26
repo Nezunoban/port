@@ -35,7 +35,7 @@ $gemini-base-defaults: (
   /**
    * Default Round Corners
    */
-  border-radius:       4px,
+  border-radius:       0px,
 
   /**
    * Base Coloring
@@ -114,22 +114,22 @@ $gemini-screens-defaults: (
     );
  */
 $gemini-use-defaults: (
-  block-list:      false,
-  bullet-list:     false,
-  buttons:         false,
-  colors:          false,
+  block-list:      true,
+  bullet-list:     true,
+  buttons:         true,
+  colors:          true,
   copy:            false,
   fit:             false,
   flyout:          false,
   grid:            true,
   iframes:         true,
-  icons:           false,
+  icons:           true,
   link-complex:    false,
-  media:           false,
+  media:           true,
   multi-list:      false,
-  nav:             false,
+  nav:             true,
   overlay:         false,
-  pagination:      false,
+  pagination:      true,
   rules:           false,
   split:           false,
   stats:           false,
