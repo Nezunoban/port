@@ -119,16 +119,19 @@ body {
 /* line 32, ../../sass/theme/_colors.scss */
 .button.c-pink-1 {
   border-color: #A53151;
+  background-color: transparent;
 }
 
-/* line 35, ../../sass/theme/_colors.scss */
+/* line 36, ../../sass/theme/_colors.scss */
 .button.c-blue-1 {
   border-color: #39548E;
+  background-color: transparent;
 }
 
-/* line 38, ../../sass/theme/_colors.scss */
+/* line 40, ../../sass/theme/_colors.scss */
 .button.c-purple-1 {
   border-color: #4F1649;
+  background-color: transparent;
 }
 
 /**
@@ -6593,24 +6596,26 @@ body {
   pointer-events: none;
 }
 
-/* line 21, ../../sass/objects/_angled-portfolio.scss */
+/* line 20, ../../sass/objects/_angled-portfolio.scss */
+.preserve-3d {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 20em;
+}
+
+/* line 26, ../../sass/objects/_angled-portfolio.scss */
 .isolayer {
   position: absolute;
   top: 0;
   left: 0;
   -webkit-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
+  transform: rotateX(-30deg) rotateY(40deg);
+  /*perspective: 20em;*/
+  position: relative;
 }
 
-/* line 29, ../../sass/objects/_angled-portfolio.scss */
-.js .grid,
-.js .grid__item,
-.js .grid__link {
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-
-/* line 36, ../../sass/objects/_angled-portfolio.scss */
+/* line 48, ../../sass/objects/_angled-portfolio.scss */
 .grid {
   position: relative;
   margin: 0 auto;
@@ -6618,31 +6623,31 @@ body {
   list-style: none;
 }
 
-/* line 43, ../../sass/objects/_angled-portfolio.scss */
+/* line 55, ../../sass/objects/_angled-portfolio.scss */
 .grid__item {
   width: 300px;
 }
 
-/* line 47, ../../sass/objects/_angled-portfolio.scss */
+/* line 60, ../../sass/objects/_angled-portfolio.scss */
 .js .grid__item {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-/* line 52, ../../sass/objects/_angled-portfolio.scss */
+/* line 65, ../../sass/objects/_angled-portfolio.scss */
 .grid__link {
   position: relative;
   z-index: 1;
   display: block;
 }
 
-/* line 58, ../../sass/objects/_angled-portfolio.scss */
+/* line 71, ../../sass/objects/_angled-portfolio.scss */
 .grid__img {
   display: block;
   max-width: 100%;
 }
 
-/* line 63, ../../sass/objects/_angled-portfolio.scss */
+/* line 76, ../../sass/objects/_angled-portfolio.scss */
 .grid__title {
   font-size: 0.65em;
   font-weight: 600;
@@ -6654,27 +6659,39 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   opacity: 0;
-  color: #fff;
-  -webkit-transform: translate3d(0, -20px, 0);
-  transform: translate3d(0, -20px, 0);
+  color: #F06B6A;
+  -webkit-transform: translate3d(0, -1.5rem, 0);
+  transform: translate3d(0, -1.5rem, 0);
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
 }
 
-/* line 81, ../../sass/objects/_angled-portfolio.scss */
+/* line 94, ../../sass/objects/_angled-portfolio.scss */
 .grid__item:hover .grid__title {
   opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 1.5rem, 0);
+  transform: translate3d(0, 1.5rem, 0);
 }
 
-/* line 87, ../../sass/objects/_angled-portfolio.scss */
+/* line 99, ../../sass/objects/_angled-portfolio.scss */
+.grid__item .grid__img {
+  transform-origin: 0 0;
+  transition: transform 0.3s;
+}
+
+/* line 104, ../../sass/objects/_angled-portfolio.scss */
+.grid__img.layer-3:hover,
+.grid__item:hover .grid__img.layer-3 {
+  transform: rotateX(0deg) rotateY(-40deg) rotateZ(0deg);
+}
+
+/* line 109, ../../sass/objects/_angled-portfolio.scss */
 .layer {
   position: relative;
   display: block;
 }
 
-/* line 92, ../../sass/objects/_angled-portfolio.scss */
+/* line 114, ../../sass/objects/_angled-portfolio.scss */
 .layer:not(:first-child) {
   position: absolute;
   top: 0;
@@ -6682,133 +6699,132 @@ body {
 }
 
 /* Shadow effect */
-/* line 99, ../../sass/objects/_angled-portfolio.scss */
-.isolayer--shadow .grid__link::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 5px;
-  right: 5px;
-  bottom: 5px;
-  left: 5px;
-  opacity: 0.6;
-  background: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.8);
-  -webkit-transform: translateZ(-1px) scale(0.95);
-  transform: translateZ(-1px) scale(0.95);
-  -webkit-transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
-  transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+/*
+.isolayer--shadow .grid__link:before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: 5px;
+	right: 5px;
+	bottom: 5px;
+	left: 5px;
+	opacity: 0.6;
+	background: rgba(0,0,0,0.8);
+	box-shadow: 0 0 0 0 rgba(0,0,0,0.8);
+	-webkit-transform: translateZ(-1px) scale(0.95);
+	transform: translateZ(-1px) scale(0.95);
+	-webkit-transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+	transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
-/* line 118, ../../sass/objects/_angled-portfolio.scss */
-.isolayer--shadow .grid__item:hover .grid__link::before {
-  opacity: 0.2;
-  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.8);
-  -webkit-transform: translateZ(-1px) scale(1);
-  transform: translateZ(-1px) scale(1);
+.isolayer--shadow .grid__item:hover .grid__link:before {
+	opacity: 0.2;
+	box-shadow: 0 0 20px 10px rgba(0,0,0,0.8);
+	-webkit-transform: translateZ(-1px) scale(1);
+	transform: translateZ(-1px) scale(1);
 }
-
+*/
 /* All individual isometric grid layouts (static and scrollable) */
-/* line 126, ../../sass/objects/_angled-portfolio.scss */
+/* line 150, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--scroll1 {
   width: 70vw;
   max-width: 1200px;
   height: calc(100vh - 280px);
 }
 
-/* line 132, ../../sass/objects/_angled-portfolio.scss */
+/* line 156, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--scroll1 .grid__item {
   width: 300px;
   padding: 15px;
 }
 
-/* line 137, ../../sass/objects/_angled-portfolio.scss */
+/* line 161, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco1 {
   width: 1200px;
   height: 900px;
 }
 
-/* line 142, ../../sass/objects/_angled-portfolio.scss */
+/* line 166, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco1 .grid__link .layer:first-child:not(img) {
   background: #ac5cf5;
 }
 
-/* line 146, ../../sass/objects/_angled-portfolio.scss */
+/* line 170, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco1 .grid__link .layer:nth-child(2):not(img) {
   background: #5db4eb;
 }
 
-/* line 150, ../../sass/objects/_angled-portfolio.scss */
+/* line 174, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco1 .grid__link .layer:nth-child(3):not(img) {
   background: #5debb4;
 }
 
-/* line 154, ../../sass/objects/_angled-portfolio.scss */
+/* line 178, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco1 .grid__link div.layer {
   width: 370px;
   height: 270px;
   opacity: 0.4;
 }
 
-/* line 160, ../../sass/objects/_angled-portfolio.scss */
+/* line 184, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco1 .grid__item {
   width: 400px;
   height: 300px;
   padding: 15px;
 }
 
-/* line 166, ../../sass/objects/_angled-portfolio.scss */
+/* line 190, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco1 .grid__item:nth-child(2) {
   margin-top: 150px;
 }
 
-/* line 170, ../../sass/objects/_angled-portfolio.scss */
+/* line 194, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco2 {
   width: 1200px;
   height: 100vh;
 }
 
-/* line 175, ../../sass/objects/_angled-portfolio.scss */
+/* line 199, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco2 .grid__item {
   padding: 20px;
 }
 
-/* line 179, ../../sass/objects/_angled-portfolio.scss */
+/* line 203, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco2 .grid__link .layer {
   border: 20px solid #fff;
   border-width: 40px 20px;
   box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.08);
 }
 
-/* line 185, ../../sass/objects/_angled-portfolio.scss */
+/* line 209, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco3 {
   width: 960px;
   height: 500px;
 }
 
-/* line 190, ../../sass/objects/_angled-portfolio.scss */
+/* line 214, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco3 .grid__item {
   width: 240px;
   height: 320px;
   padding: 0;
 }
 
-/* line 196, ../../sass/objects/_angled-portfolio.scss */
+/* line 220, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco3 .grid__item:nth-child(2),
 .isolayer--deco3 .grid__item:nth-child(4) {
   margin-top: -160px;
 }
 
-/* line 201, ../../sass/objects/_angled-portfolio.scss */
+/* line 225, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco3 .grid__link,
 .isolayer--deco3 .layer {
   width: 100%;
   height: 100%;
 }
 
-/* line 207, ../../sass/objects/_angled-portfolio.scss */
+/* line 231, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco3 .layer {
   text-align: center;
   background: #fff;
@@ -6816,43 +6832,43 @@ body {
   transform-origin: 0% 50%;
 }
 
-/* line 214, ../../sass/objects/_angled-portfolio.scss */
+/* line 238, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco3 .grid__link:hover .layer:not(:first-child) {
   box-shadow: 2px 0 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 218, ../../sass/objects/_angled-portfolio.scss */
+/* line 242, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco3 .grid__item:nth-child(2n) .layer {
   background: #f7d2dc;
 }
 
-/* line 222, ../../sass/objects/_angled-portfolio.scss */
+/* line 246, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco3 .grid__item:nth-child(3n) .layer {
   background: #fff0f3;
 }
 
-/* line 226, ../../sass/objects/_angled-portfolio.scss */
+/* line 250, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco3 .grid__item:nth-child(4n) .layer {
   background: #e9c5cc;
 }
 
-/* line 230, ../../sass/objects/_angled-portfolio.scss */
+/* line 254, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco3 .grid__item:nth-child(5n) .layer {
   background: #d6cbcd;
 }
 
-/* line 234, ../../sass/objects/_angled-portfolio.scss */
+/* line 258, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco3 .grid__item:nth-child(7n) .layer {
   background: #ffc9d8;
 }
 
-/* line 238, ../../sass/objects/_angled-portfolio.scss */
+/* line 262, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco3 .layer {
   width: 100%;
   height: 100%;
 }
 
-/* line 243, ../../sass/objects/_angled-portfolio.scss */
+/* line 267, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco3 .decoletter {
   font-size: 6em;
   font-weight: 900;
@@ -6863,53 +6879,53 @@ body {
   color: #000;
 }
 
-/* line 253, ../../sass/objects/_angled-portfolio.scss */
+/* line 277, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco3 .deconumber {
   font-size: 3em;
   display: block;
   color: #000;
 }
 
-/* line 259, ../../sass/objects/_angled-portfolio.scss */
+/* line 283, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco4 {
   width: 1000px;
   height: 900px;
 }
 
-/* line 264, ../../sass/objects/_angled-portfolio.scss */
+/* line 288, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco4 .grid__item {
   padding: 15px;
 }
 
-/* line 268, ../../sass/objects/_angled-portfolio.scss */
+/* line 292, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco4 .grid__link .layer:first-child:not(img) {
   background: #ac5cf5;
 }
 
-/* line 272, ../../sass/objects/_angled-portfolio.scss */
+/* line 296, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco4 .grid__link .layer:nth-child(2):not(img) {
   background: #5db4eb;
 }
 
-/* line 276, ../../sass/objects/_angled-portfolio.scss */
+/* line 300, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco4 .grid__link .layer:nth-child(3):not(img) {
   background: #5debb4;
 }
 
-/* line 280, ../../sass/objects/_angled-portfolio.scss */
+/* line 304, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco4 .grid__link .layer {
   -webkit-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
 }
 
-/* line 285, ../../sass/objects/_angled-portfolio.scss */
+/* line 309, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco4 .grid__link div.layer {
   width: 270px;
   height: 203px;
   opacity: 0.4;
 }
 
-/* line 291, ../../sass/objects/_angled-portfolio.scss */
+/* line 315, ../../sass/objects/_angled-portfolio.scss */
 .isolayer--deco4 .grid__item {
   width: 300px;
   height: 225px;
@@ -6917,17 +6933,17 @@ body {
 }
 
 /* Flip effect for the scrollable grid */
-/* line 299, ../../sass/objects/_angled-portfolio.scss */
+/* line 323, ../../sass/objects/_angled-portfolio.scss */
 .js .grid--effect-flip .grid__item {
   opacity: 0;
 }
 
-/* line 303, ../../sass/objects/_angled-portfolio.scss */
+/* line 327, ../../sass/objects/_angled-portfolio.scss */
 .js .grid--effect-flip .grid__item.shown {
   opacity: 1;
 }
 
-/* line 307, ../../sass/objects/_angled-portfolio.scss */
+/* line 331, ../../sass/objects/_angled-portfolio.scss */
 .grid--effect-flip .grid__item.animate {
   -webkit-transform: translateY(800px);
   transform: translateY(800px);
@@ -6950,19 +6966,19 @@ body {
   }
 }
 /* Loading effect */
-/* line 331, ../../sass/objects/_angled-portfolio.scss */
+/* line 355, ../../sass/objects/_angled-portfolio.scss */
 .js .grid {
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 
-/* line 337, ../../sass/objects/_angled-portfolio.scss */
+/* line 361, ../../sass/objects/_angled-portfolio.scss */
 .js .grid.grid--loaded {
   opacity: 1;
 }
 
-/* line 341, ../../sass/objects/_angled-portfolio.scss */
+/* line 365, ../../sass/objects/_angled-portfolio.scss */
 .js body::after {
   content: '';
   position: fixed;
@@ -6973,8 +6989,8 @@ body {
   height: 70px;
   margin: -35px 0 0 -35px;
   pointer-events: none;
-  border: 3px solid #fff;
-  border-right-color: #323f5c;
+  border: 3px solid #F06B6A;
+  border-right-color: #371A5C;
   border-radius: 50%;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -6994,7 +7010,7 @@ body {
     transform: rotate(360deg);
   }
 }
-/* line 375, ../../sass/objects/_angled-portfolio.scss */
+/* line 399, ../../sass/objects/_angled-portfolio.scss */
 .js body.grid-loaded::after {
   opacity: 0;
 }

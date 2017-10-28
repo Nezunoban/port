@@ -17,20 +17,32 @@ body {
 .pseudo-scroller {
 	pointer-events: none;
 }
-
+.preserve-3d {
+    //position: relative;
+	-webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    perspective: 20em;
+}
 .isolayer {
 	position: absolute;
 	top: 0;
 	left: 0;
 	-webkit-transform-origin: 50% 100%;
-	transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+// Pure css rotation
+
+	transform: rotateX(-30deg) rotateY(40deg);
+	/*perspective: 20em;*/
+	position: relative;
+
+
+}
+.grid--effect-flip {
 }
 
 .js .grid,
 .js .grid__item,
 .js .grid__link {
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
 }
 
 .grid {
@@ -41,7 +53,8 @@ body {
 }
 
 .grid__item {
-	width: 300px;
+    width: 300px;
+    
 }
 
 .js .grid__item {
@@ -71,17 +84,26 @@ body {
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	opacity: 0;
-	color: #fff;
-	-webkit-transform: translate3d(0,-20px,0);
-	transform: translate3d(0,-20px,0);
+	color: $brand-color;
+	-webkit-transform: translate3d(0,-1.5rem,0);
+	transform: translate3d(0,-1.5rem,0);
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
 	transition: transform 0.3s, opacity 0.3s;
 }
 
 .grid__item:hover .grid__title {
 	opacity: 1;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,1.5rem,0);
+	transform: translate3d(0,1.5rem,0);
+}
+.grid__item .grid__img {
+    transform-origin: 0 0;
+    transition: transform 0.3s;
+    //animation: doorani 1.3s ease-in-out infinite alternate;
+}
+.grid__img.layer-3:hover,
+.grid__item:hover .grid__img.layer-3{
+    transform: rotateX(0deg) rotateY(-40deg) rotateZ(0deg);
 }
 
 .layer {
@@ -96,7 +118,8 @@ body {
 }
 
 /* Shadow effect */
-.isolayer--shadow .grid__link::before {
+/*
+.isolayer--shadow .grid__link:before {
 	content: '';
 	position: absolute;
 	z-index: -1;
@@ -115,12 +138,13 @@ body {
 	backface-visibility: hidden;
 }
 
-.isolayer--shadow .grid__item:hover .grid__link::before {
+.isolayer--shadow .grid__item:hover .grid__link:before {
 	opacity: 0.2;
 	box-shadow: 0 0 20px 10px rgba(0,0,0,0.8);
 	-webkit-transform: translateZ(-1px) scale(1);
 	transform: translateZ(-1px) scale(1);
 }
+*/
 
 /* All individual isometric grid layouts (static and scrollable) */
 .isolayer--scroll1 {
@@ -348,8 +372,8 @@ body {
 	height: 70px;
 	margin: -35px 0 0 -35px;
 	pointer-events: none;
-	border: 3px solid #fff;
-	border-right-color: #323f5c;
+	border: 3px solid $brand-color;
+	border-right-color: $brand-color-2;
 	border-radius: 50%;
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
