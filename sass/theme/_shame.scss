@@ -6,6 +6,7 @@
 
  // Temporary location for bad or unsorted code to figure out later
 
+
 body {
     font-family: Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -17,92 +18,91 @@ body {
     font-family: 'Muli', Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.main-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
 .w-global-logo {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
     max-width: 60px;
-    padding: 20px 12px;
+    padding: 10px 12px;
+    margin-top: 10px;
     text-align: center;
+    @include media(medium) {
+        
+        max-width: 70px;
+        padding: 10px 12px;
+        margin: 16px 16px;
+    }
+}
+.main-container {
+    position: relative;
 }
 
-/// Hero
-
-.hero {
-    color: #fff;
-    background-color: $brand-color-2;
-    padding-left: 80px;
-    padding-bottom: 12rem;
-    padding-right: 4rem;
-    padding-top: 8rem;
-}
-h2.hero__h2 {
-    margin-bottom: 0;
-}
-h2.margin-w {
-    margin-left: -.2rem;
-}
-.fonts-loaded h2.hero__h2 {
-    // To be replaced by twentieth century pro medium
-    font-family: 'Muli', Futura, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
-    font-weight: 600;
-    font-size: 2rem;
-}
-.fonts-loaded .hero__p {
-    font-weight: 200;
+.homepage__work,
+.homepage__self {
+    position: relative;
 }
 
 
+.angle-work__bg,
+.angle-self__bg {
+    padding: 500px 100px;
+    display: block;
+    width: 60vw;
+    
 
-/*
-.grid-bg {
-    background-color: transparent;
-    background-image:       
-      linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .15) 1%, rgba(255, 255, 255, .15) 2%, transparent 3%, transparent 49%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 51%, transparent 52%, transparent), 
-      linear-gradient(30deg, transparent 49%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .15) 98%, rgba(255, 255, 255, .15) 99%, transparent 100%, transparent), 
-      linear-gradient(150deg, transparent 49%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .15) 98%, rgba(255, 255, 255, .15) 99%, transparent 100%, transparent);
-    height:100%;
-    background-size:50px 30px;
-}
-.purple-gradient-bg {
-//@include gradient-directional($brand-p-bg, $brand-bp-bg, 45deg);
-}
-.angle-containter__content {
-position: relative;
-z-index: 1;
-}
-
-.grid-star-bg {
-    background: url("../img/starry-bg.jpg") repeat #181d25;
-    background-size: cover;
-}
-
-.grid-star-bg:before,
-.grid-star-bg:after {
-    content: "";
     position: absolute;
-    left: 0; right: 0;
-    top: 0; bottom: 0;
+    top: -400px;
+    right: 0;
+    //overflow: hidden;
 }
-.grid-star-bg:before {
-    background-color: transparent;
-    background-image:       
-        linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .05) 1%, rgba(255, 255, 255, .05) 2%, transparent 3%, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent), 
-        linear-gradient(30deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent), 
-        linear-gradient(150deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent);
-    height:100%;
-    background-size:100px 60px;
+/*
+.angle-work__bg {
+    @include media(medium, $gemini-screens) {
+        //padding: 1000px 100px;
+    }
+    @include media(xlarge, $gemini-screens) {
+        top: -400px;
+    }
+    @media screen and (min-aspect-ratio: 19/6) {
+        top: -700px;
+    }
 }
-.grid-star-bg:after {
-    @include gradient-directional($brand-p-bg, $brand-bp-bg, 45deg);
+
+.angle-self__bg {
+    @include media(medium, $gemini-screens) {
+        top: -300px;
+        padding: 500px 100px;
+    }
+    @include media(xlarge, $gemini-screens) {
+        top: -400px;
+    }
+    
+    @media screen and (min-aspect-ratio: 19/6) {
+        top: -400px;
+    }
+}
+
+.self__intro {
+    margin-top: 400px;
+    margin-bottom: 200px;
 }
 */
 
 /* Isometric grid */
 
+.header__star-bg  {
+    position: relative;
+}
 
 .star-bg {
+    //@extend %overlay;
     overflow: hidden;
     background: url("../img/starry-bg.jpg") no-repeat center center fixed #181d25;
     -webkit-background-size: cover;
@@ -111,31 +111,83 @@ z-index: 1;
     background-size: cover;
 }
 
-.overlay {
+
+%overlay {
     content: "";
-    position: fixed;
+    position: absolute;
     left: 0; right: 0;
     top: 0; bottom: 0;
 }
-
-.overlay--grid {
+%overlay--grid {
+    background-attachment: fixed;
     background-color: transparent;
+    height:100%;
+    background-size:100px 56px; 
+}
+%grid-1{
+    // dark grid bg
+    background-image:  
+    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .05) 0%, rgba(255, 255, 255, .05) 1%, transparent 2%, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent), 
+    linear-gradient(30deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent), 
+    linear-gradient(150deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent);
+}
+%grid-2{
+    // light pink grid
+    background-image:  
+    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .09) 0%, rgba(255, 255, 255, .09) 1%, transparent 2%, transparent 49%, rgba(255, 255, 255, .09) 50%, rgba(255, 255, 255, .09) 51%, transparent 52%, transparent), 
+    linear-gradient(30deg, transparent 49%, rgba(255, 255, 255, .09) 50%, rgba(255, 255, 255, .09) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .09) 98%, rgba(255, 255, 255, .09) 99%, transparent 100%, transparent), 
+    linear-gradient(150deg, transparent 49%, rgba(255, 255, 255, .09) 50%, rgba(255, 255, 255, .09) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .09) 98%, rgba(255, 255, 255, .09) 99%, transparent 100%, transparent);
+}
+.overlay--grid-1 {
+    background-attachment: fixed;
+    background-color: transparent;
+    height:100%;
+    background-size:100px 56px; 
+}
+
+.overlay--grid-1 {
+    @extend %overlay;
+    @extend %overlay--grid;
+    @extend %grid-1;
+}
+.overlay--grid-2 {
+    @extend %overlay;
+    @extend %overlay--grid;
+    @extend %grid-2;
+}
+
+.overlay--purple {
+    @extend %overlay;
+    @include gradient-directional($brand-bp-bg, $brand-p-bg, 90deg);
+}
+.overlay--pink {
+    @extend %overlay;
+    @include gradient-directional($brand-pink-bg, $brand-p-bg, 90deg);
+}
+.overlay--blue {
+    @extend %overlay;
+    @include gradient-directional($brand-b-bg, $brand-bp-bg, 90deg);
+}
+
+/*
+.hero__overlay-3:hover {
     background-image:  
         //linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .05) 1%, rgba(255, 255, 255, .05) 2%, transparent 3%, transparent 53%, rgba(255, 255, 255, .05) 54%, rgba(255, 255, 255, .05) 55%, transparent 56%, transparent),
         linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .05) 0%, rgba(255, 255, 255, .05) 1%, transparent 2%, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent), 
         linear-gradient(30deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent), 
         linear-gradient(150deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent);
-    height:100%;
-    background-size:100px 56px;
 }
-
-.overlay--purple {
-    @include gradient-directional($brand-bp-bg, $brand-p-bg, 45deg);
-}
+*/
 
 .angle-container__content {
     position: relative;
 }
+
+.delay-500 {
+    transition-delay: 500ms;
+}
+
+
 
 
 
@@ -143,18 +195,7 @@ z-index: 1;
 * Base Gradients
 */  
 
-
-.g-btn {
-    background: $brand-color-bg;
-    @include background-image(linear-gradient(to bottom right, $brand-color-bg, $brand-color-2-bg));
-}
-
-.g-btn:hover {
-    background: $brand-color;
-    @include background-image(linear-gradient(to bottom right, $brand-color-bg, $link-color));
-}
   
-
 
 
 //   Layout
@@ -166,4 +207,138 @@ main section {
 }
 .main__h2 {
     font-size: 1.5rem;
+}
+
+.homepage__self {
+    @include media(medium, $gemini-screens){
+        padding-bottom: 100px;
+    }
+}
+
+
+
+.g-button {
+    border: 0 none transparent;
+    color: $navigation;
+    background: $brand-color-bg;
+    @include background-image(linear-gradient(to bottom right, $brand-color-bg, $brand-color-2-bg));
+    
+}
+
+.g-button:hover {
+    color: $navigation;
+    background: $brand-color;
+    @include background-image(linear-gradient(to bottom right, $brand-color-bg, $link-color));
+}
+
+.main__button {
+    background: transparent;
+}
+
+.main__button.c-pink-1 {
+    border-color: $brand-pink-text-1;
+    color: $brand-pink-text-1;
+}
+.main__button.c-blue-1 {
+    border-color: $brand-blue-text-1;
+    color: $brand-blue-text-1
+}
+.main__button.c-purple-1 {
+    border-color: $brand-p-text-1;
+    color: $brand-p-text-1;
+}
+
+
+// animated button outlines
+
+/*
+$width:  300px;
+$height: 80px;
+$border: 4px;
+
+$violet: #6559ae;
+$orange: #ff7159;
+
+$deg:  120deg;
+$size: 400%;
+$dur:  8s;
+
+@mixin clip-frame($width, $height, $border) {
+  -webkit-clip-path: polygon(0% 100%, $border 100%, $border $border, $width - $border $border, $width - $border $height - $border, $border $height - $border, $border 100%, 100% 100%, 100% 0%, 0% 0%);
+}
+
+
+.button--granimate {
+  display: block;
+  width: $width;
+  height: $height;
+  z-index: 1;
+  position: relative;
+  color: $orange;
+  &:hover {
+      color: #fff;
+      text-decoration: none;
+  }
+
+  @extend .text-formatting;
+  //@extend .absolute-centering;
+ 
+  &:after {
+    content: '';
+    @extend .absolute-centering;
+    background: linear-gradient($deg, $violet, $orange, $violet);
+    background-size: $size $size;
+    @include clip-frame($width, $height, $border);
+    @include animation(gradient $dur ease-in-out infinite, border 1s forwards ease-in-out reverse);
+  }
+  
+  & > span {
+    display: block;
+    background: linear-gradient($deg, $violet, $orange, $violet);
+    background-size: $size $size;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     @include animation(gradient $dur ease-in-out infinite);
+  }
+}
+
+
+///* helpers
+
+
+.absolute-centering {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.text-formatting {
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 70px;
+  font-weight: bold;
+  //font-family: 'Squada One', cursive;
+  //font-size: 28px;
+}
+
+
+///* motion 
+*/
+@include keyframes(gradient) { 
+    //0%   { background-position: 14% 0%; }
+    //50%  { background-position: 87% 100%; }
+    //100% { background-position: 14% 0%; }
+}
+
+@include keyframes(border) {
+  //0% { -webkit-clip-path: polygon(/*1*/ 0% 100%, /*2*/ $border 100%, /*3*/ $border $border, /*4*/ $width - $border $border, /*5*/ $width - $border $height - $border, /*6*/ $border $height - $border, /*7*/ $border 100%, /*8*/ 100% 100%, /*9*/ 100% 0%, /*10*/ 0% 0%); }
+  //25% { -webkit-clip-path: polygon(/*1*/ 0% 100%, /*2*/ $border 100%, /*3*/ $border $border, /*4*/ $width - $border $border, /*5*/ $width - $border $height - $border, /*6*/ $width - $border $height - $border, /*7*/ $width - $border 100%, /*8*/ 100% 100%, /*9*/ 100% 0%, /*10*/ 0% 0%); }
+  //50% { -webkit-clip-path: polygon(/*1*/ 0% 100%, /*2*/ $border 100%, /*3*/ $border $border, /*4*/ $width - $border $border, /*5*/ $width - $border $border, /*6*/ $width - $border $border, /*7*/ $width - $border $border, /*8*/ $width - $border $border, /*9*/ 100% 0%, /*10*/ 0% 0%); }
+  //75% { -webkit-clip-path: polygon(/*1*/ 0% 100%, /*2*/ $border 100%, /*3*/ $border $border, /*4*/ $border $border, /*5*/ $border $border, /*6*/ $border $border, /*7*/ $border $border, /*8*/ $border $border, /*9*/ $border 0%, /*10*/ 0% 0%); }
+  //100%  { -webkit-clip-path: polygon(/*1*/ 0% 100%, /*2*/ $border 100%, /*3*/ $border 100%, /*4*/ $border 100%, /*5*/ $border 100%, /*6*/ $border 100%, /*7*/ $border 100%, /*8*/ $border 100%, /*9*/ $border 100%, /*10*/ 0% 100%); }
 }

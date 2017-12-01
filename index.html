@@ -8,6 +8,8 @@
   <title>Nathan Freemyer | Designer</title>
 
   <!-- CSS -->
+
+  <link rel="stylesheet" href="css/aos.css" />
   <link rel="stylesheet" type="text/css" href="css/init.css">
 
   <!--<link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,400i,700,700i" rel="stylesheet">-->
@@ -95,9 +97,9 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-  <!-- RSS -->
+  <!-- RSS 
   <link rel="alternate" type="application/rss+xml" title="RSS for Official Bootstrap Blog" href="/feed.xml">
-
+  -->
 
   <!-- Twitter -->
   <meta name="twitter:site" content="@NathanFreemyer">
@@ -130,311 +132,423 @@
 <!-- This is a comment -->
 
 <body>
-  <header navigation class="header sticky-header stuck">
-    <nav role="navigation" class="primary-nav">
-      <div class="w-global-logo">
-        <a href="index.html" class="w-global-logo__link scaling-svg-container" alt="Home">
-          <!--removed global-logo img- -left -->
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="scaling-svg w-global-logo__svg"
-            width="126" height="346" viewBox="0 0 126 346">
-            <defs>
-              <radialGradient id="a" cx="88.2" cy="236.9" r="321.46" gradientTransform="matrix(1, 0, 0, -1, 0, 348)" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="#ff7569" />
-                <stop offset="0.31" stop-color="#d0586c" />
-                <stop offset="1" stop-color="#5c1073" />
-              </radialGradient>
-            </defs>
-            <title>NF-logo</title>
-            <path d="M2.29,125.27V2.71l123.36,60V247l-29.33-15.4V113.92l29.33-13.65L30.65,54l0,58Z" fill="#fff" />
-            <path d="M96.32,195.2,35.8,223.46V185.22L125.65,143v-42.7L2.29,157.7V342.53l33.47-16.3L35.62,260l60.7-28.36Z" fill="url(#a)"
-            />
 
-            <image src="img/logo-w.png" xlink:href="" class="svg__img--hide-on-fallback"></image>
-          </svg>
-        </a>
-      </div>
-      <ul class="menu nav--right primary-nav__list">
-        <li class="primary-nav__item">
-          <a class="primary-nav__link primary-nav__work" href="/work">
-              <img class="primary-nav__icon visible-small" src="img/port-right.png" alt="portfolio icon" height="42" width="42">
-              <span class="primary-nav__text">work</span>
+          <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="pure-container" data-effect="pure-effect-flipY">
+            <input type="checkbox" id="pure-toggle-right" class="pure-toggle" data-toggle="right"/>
+            <label class="pure-toggle-label" for="pure-toggle-right" data-toggle-label="right"><span class="pure-toggle-text">menu</span><span class="pure-toggle-icon"></span></label>
+
+            <nav class="pure-drawer" data-position="right">
+                <div class="row collapse">
+                    <div class="large-12 columns">
+                        <ul class="nav-primary nav nav--stacked">
+                            <li class="nav__item"><a href="/" class="nav__link">home</a></li>
+                            <li class="nav__item"><a href="/" class="nav__link">work</a></li>
+                            <li class="nav__item"><a href="/" class="nav__link">self</a></li>
+                            <li class="nav__item"><a href="/" class="nav__link">contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="pure-pusher-container">
+                <div class="pure-pusher">
+
+  <header navigation class="header nav-down">
+
+
+    <nav role="navigation" class="primary-nav star-bg">
+      
+        <div class="overlay overlay--purple" role="img" aria-label="purple gradient" title="overlay"></div>
+        <div class="overlay overlay--grid-1" role="img" aria-label="Isometric grid" title="overlay"></div>
+        
+        <div class="w-global-logo">
+          <a href="index.html" class="w-global-logo__link scaling-svg-container" alt="Home">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="scaling-svg w-global-logo__svg"
+              width="126" height="346" viewBox="0 0 126 346">
+              <defs>
+                <radialGradient id="a" cx="88.2" cy="236.9" r="321.46" gradientTransform="matrix(1, 0, 0, -1, 0, 348)" gradientUnits="userSpaceOnUse">
+                  <stop offset="0" stop-color="#ff7569" />
+                  <stop offset="0.31" stop-color="#d0586c" />
+                  <stop offset="1" stop-color="#5c1073" />
+                </radialGradient>
+              </defs>
+              <title>NF-logo</title>
+              <path d="M2.29,125.27V2.71l123.36,60V247l-29.33-15.4V113.92l29.33-13.65L30.65,54l0,58Z" fill="#fff" />
+              <path d="M96.32,195.2,35.8,223.46V185.22L125.65,143v-42.7L2.29,157.7V342.53l33.47-16.3L35.62,260l60.7-28.36Z" fill="url(#a)"
+              />
+              <image src="img/logo-w.png" xlink:href="" class="svg__img--hide-on-fallback"></image>
+            </svg>
+          </a>
+        </div>
+        
+        <!--
+        <ul role="navigation" class=" primary-nav__list nav__list menu nav--right nav nav--right">
+          <li class="primary-nav__item nav__item">
+            <a class="primary-nav__work primary-nav__link nav__link" href="/work">
+                <span class="primary-nav__text nav__text">work</span>
+              </a>
+          </li>
+          <li class="primary-nav__item nav__item">
+            <a class="primary-nav__self primary-nav__link nav__link" href="/self">
+                <span class="primary-nav__text nav__text">self</span>
+              </a>
+          </li>
+          <li class="primary-nav__item nav__item">
+            <a class="primary-nav__contact primary-nav__link nav__link" href="/contact">
+                <span class="primary-nav__text nav__text">contact</span>
             </a>
         </li>
-        <li class="primary-nav__item">
-          <a class="primary-nav__link primary-nav__self" href="/self">
-              <img class="primary-nav__icon visible-small" src="img/port-right.png" alt="portfolio icon" height="42" width="42">
-              <span class="primary-nav__text">self</span>
+      </ul>
+    -->
+    </nav>
+
+
+    <nav class="secondary-nav visible-small">
+      <ul class="secondary-nav__list nav menu nav--stacked">
+        <li class="secondary-nav__item nav__item">
+          <a class="secondary-nav__work secondary-nav__link nav__link" href="/work">
+              <img class="secondary-nav__icon visible-small" src="img/port-right.png" alt="portfolio icon" height="42" width="42">
+              <span class="secondary-nav__text">work</span>
             </a>
         </li>
-        <li class="primary-nav__item">
-          <a class="primary-nav__link primary-nav__contact" href="/contact">
-              <img class="primary-nav__icon visible-small" src="img/port-right.png" alt="portfolio icon" height="42" width="42">
-              <span class="primary-nav__text">contact</span>
+        <li class="secondary-nav__item nav__item">
+          <a class="secondary-nav__self secondary-nav__link nav__link" href="/self">
+              <img class="secondary-nav__icon visible-small" src="img/port-right.png" alt="portfolio icon" height="42" width="42">
+              <span class="secondary-nav__text nav__text">self</span>
+            </a>
+        </li>
+        <li class="secondary-nav__item nav__item">
+          <a class="secondary-nav__contact secondary-nav__link nav__link" href="/contact">
+              <img class="secondary-nav__icon visible-small" src="img/port-right.png" alt="portfolio icon" height="42" width="42">
+              <span class="secondary-nav__text nav__text">contact</span>
             </a>
         </li>
       </ul>
     </nav>
   </header>
 
+  <!--
+
+<header class="main_h">
+    
+        <div class="row">
+            
+          <div class="w-global-logo logo">
+              <a href="index.html" class="w-global-logo__link scaling-svg-container" alt="Home">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="scaling-svg w-global-logo__svg"
+                  width="126" height="346" viewBox="0 0 126 346">
+                  <defs>
+                    <radialGradient id="a" cx="88.2" cy="236.9" r="321.46" gradientTransform="matrix(1, 0, 0, -1, 0, 348)" gradientUnits="userSpaceOnUse">
+                      <stop offset="0" stop-color="#ff7569" />
+                      <stop offset="0.31" stop-color="#d0586c" />
+                      <stop offset="1" stop-color="#5c1073" />
+                    </radialGradient>
+                  </defs>
+                  <title>NF-logo</title>
+                  <path d="M2.29,125.27V2.71l123.36,60V247l-29.33-15.4V113.92l29.33-13.65L30.65,54l0,58Z" fill="#fff" />
+                  <path d="M96.32,195.2,35.8,223.46V185.22L125.65,143v-42.7L2.29,157.7V342.53l33.47-16.3L35.62,260l60.7-28.36Z" fill="url(#a)"
+                  />
+                  <image src="img/logo-w.png" xlink:href="" class="svg__img- -hide-on-fallback"></image>
+                </svg>
+              </a>
+            </div>
+    
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <nav>
+                <ul>
+                    <li><a href=".sec01">Section 01</a></li>
+                    <li><a href=".sec02">Section 02</a></li>
+                    <li><a href=".sec03">Section 03</a></li>
+                    <li><a href=".sec04">Section 04</a></li>
+                </ul>
+            </nav>
+    
+        </div> 
+    
+    </header> -->
+
   <main class="main-container">
-    <!--
-      <div class="angle-top-left">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Sig07-007.jpg/1280px-Sig07-007.jpg" alt="Nebula" class="angle__content">
-      </div>
-      -->
-    <section class="hero angle--bottom-right grid-star-bg star-bg">
+    <section class="hero angle--bottom-right grid-star-bg star-bg bcg">
       <div class="overlay hero__overlay-2 overlay--purple" role="img" aria-label="purple gradient" title="overlay"></div>
-      <div class="overlay hero__overlay-1 overlay--grid" role="img" aria-label="Isometric grid" title="overlay"></div>
-      <div class="hero__content angle-container__content">
-        <h2 class="hero__h2 margin-w">
-          Welcome
-        </h2>
-        <p class="hero__p">
-          You're probably here to learn something about who I am and what I do, so I'll stop talking now.
-        </p>
+      <div class="overlay hero__overlay-1 overlay--grid-1" role="img" aria-label="Isometric grid" title="overlay"></div>
+      
+      <div class="hero-row">
+        <div class="hero__content angle-container__content l-column--medium-4 l-column--large-3">
+          <h2 class="hero__h2 margin-w">
+            Welcome
+          </h2>
+          <p class="hero__p">
+            You're probably here to learn something about who I am and what I do, so I'll stop talking now.
+          </p>
+          <!-- hero__button button g-button -->
+          <a class="button--granimate" href="/work"><span>see all work</span></a>
+        </div>
       </div>
     </section>
 
     <section class="homepage__work">
 
-      <div class="intro intro--left hidden-xs hidden-small hidden-medium">
-        <h2 class="main__h2 margin-w c-pink-1">
-          What do I do?
-        </h2>
-        <p class="main__p f-intro-sans">
-          My goal is to design considerate, user-focused experiences focused on users.
-        </p>
-        <a class="main__btn button" href="/work">see all work</a>
+      <div class="work__intro-row">
+        <div class="angle-work__bg grid-star-bg star-bg angle--both-right-left aos-item aos-init aos-animate" data-aos="fade-up-left">
+            <div class="overlay overlay--pink" role="img" aria-label="pink gradient" title="overlay"></div>
+            <div class="overlay overlay--grid-2" role="img" aria-label="Isometric grid" title="overlay">
+            </div>
+            <div class="homepage__work__content angle-container__content">                
+              <img class="hidden-small" src="img/port-right.png" alt="portfolio icon" height="42" width="42">
+            </div>
+        </div>
+        <div class="intro intro--left hidden-xs hidden-small hidden-medium l-column--medium-4 l-column--large-3">
+          <h2 class="main__h2 margin-w c-pink-1">
+            What do I do?
+          </h2>
+          <p class="main__p f-intro-sans">
+            My goal is to design considerate, user-focused experiences.
+          </p>
+          <a class="main__button button c-pink-1" href="/work">see all work</a>
+        </div>
       </div>
 
-      <div class="angle-portfolio">
+      
+      <div class="angleport">
+        <div class="angleport__container preserve-3d">
+          <ul class="anglegrid preserve-3d">
+              <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+              <a class="anglegrid__link preserve-3d" href="https://dribbble.com/forefathers">
+                      <img class="anglegrid__img layer layer-1  bcg" src="img/canvas.png" alt="Canvas Dummy" />
+                      <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                      <img class="anglegrid__img layer layer-3" src="img/Dribbble1/1.jpg" alt="01" />
+                      <span class="anglegrid__title">CBC</span>
+                    </a>
+            </li>
+            <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+              <a class="anglegrid__link preserve-3d" href="https://dribbble.com/JulienLavallee">
+                      <img class="anglegrid__img layer layer-1 bcg" src="img/canvas.png" alt="Canvas Dummy" />
+                      <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                      <img class="anglegrid__img layer layer-3 layer-3" src="img/Dribbble1/2_1.jpg" alt="021" />
+                      <span class="anglegrid__title">Security Federal</span>
+                    </a>
+            </li>
+            
+            <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+              <a class="anglegrid__link preserve-3d" href="https://dribbble.com/creativemints">
+                      <img class="anglegrid__img layer layer-1 bcg" src="img/canvas.png" alt="Canvas Dummy" />
+                      <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                      <img class="anglegrid__img layer layer-3" src="img/Dribbble1/3.jpg" alt="03" />
+                      <span class="anglegrid__title">OmniWeb</span>
+                    </a>
+            </li>
+            <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+              <a class="anglegrid__link preserve-3d" href="https://dribbble.com/Radium">
+                      <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                      <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                      <img class="anglegrid__img layer layer-3" src="img/Dribbble1/4_2.jpg" alt="042" />
+                      <span class="anglegrid__title">Urban Initiatives</span>
+                    </a>
+            </li>
+            <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+              <a class="anglegrid__link preserve-3d" href="https://dribbble.com/forefathers">
+                      <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                      <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                      <img class="anglegrid__img layer layer-3" src="img/Dribbble1/1_1.jpg" alt="011" />
+                      <span class="anglegrid__title">TQI</span>
+                    </a>
+            </li>
+            <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+              <a class="anglegrid__link preserve-3d" href="https://dribbble.com/JulienLavallee">
+                      <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                      <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                      <img class="anglegrid__img layer layer-3" src="img/Dribbble1/2.jpg" alt="02" />
+                      <span class="anglegrid__title">GE</span>
+                    </a>
+            </li>
 
-        <div class="isolayer isolayer--scroll1 isolayer--shadow preserve-3d">
-          <ul class="grid grid--effect-flip preserve-3d">
-            <li class="grid__item">
-              <a class="grid__link" href="https://dribbble.com/forefathers">
-                      <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                      <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                      <img class="grid__img layer layer-3" src="img/Dribbble1/1.jpg" alt="01" />
-                      <span class="grid__title">Forefathers</span>
+            <!--
+            <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+              <a class="anglegrid__link preserve-3d" href="https://dribbble.com/creativemints">
+                      <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                      <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                      <img class="anglegrid__img layer layer-3" src="img/Dribbble1/3_1.jpg" alt="031" />
+                      <span class="anglegrid__title">WAM</span>
                     </a>
             </li>
-            <li class="grid__item">
-              <a class="grid__link" href="https://dribbble.com/JulienLavallee">
-                      <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                      <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                      <img class="grid__img layer layer-3 layer-3" src="img/Dribbble1/2_1.jpg" alt="021" />
-                      <span class="grid__title">Julien Lavallee</span>
+            <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+              <a class="anglegrid__link preserve-3d" href="https://dribbble.com/Radium">
+                      <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                      <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                      <img class="anglegrid__img layer layer-3" src="img/Dribbble1/4.jpg" alt="04" />
+                      <span class="anglegrid__title">CenterState</span>
                     </a>
             </li>
-            <li class="grid__item">
-              <a class="grid__link" href="https://dribbble.com/creativemints">
-                      <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                      <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                      <img class="grid__img layer layer-3" src="img/Dribbble1/3.jpg" alt="03" />
-                      <span class="grid__title">Mike | Creative Mints</span>
+            <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+              <a class="anglegrid__link preserve-3d" href="https://dribbble.com/forefathers">
+                      <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                      <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                      <img class="anglegrid__img layer layer-3" src="img/Dribbble1/1_2.jpg" alt="012" />
+                      <span class="anglegrid__title">nSpire Radio</span>
                     </a>
             </li>
-            <li class="grid__item">
-              <a class="grid__link" href="https://dribbble.com/Radium">
-                      <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                      <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                      <img class="grid__img layer layer-3" src="img/Dribbble1/4_2.jpg" alt="042" />
-                      <span class="grid__title">Cosmin Capitanu</span>
+            <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+              <a class="anglegrid__link preserve-3d" href="https://dribbble.com/JulienLavallee">
+                      <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                      <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                      <img class="anglegrid__img layer layer-3" src="img/Dribbble1/2_2.jpg" alt="022" />
+                      <span class="anglegrid__title">Julien Lavallee</span>
                     </a>
             </li>
-            <li class="grid__item">
-              <a class="grid__link" href="https://dribbble.com/forefathers">
-                      <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                      <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                      <img class="grid__img layer layer-3" src="img/Dribbble1/1_1.jpg" alt="011" />
-                      <span class="grid__title">Forefathers</span>
+            <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+              <a class="anglegrid__link preserve-3d" href="https://dribbble.com/creativemints">
+                      <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                      <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                      <img class="anglegrid__img layer layer-3" src="img/Dribbble1/3_2.jpg" alt="032" />
+                      <span class="anglegrid__title">Mike | Creative Mints</span>
                     </a>
             </li>
-            <li class="grid__item">
-              <a class="grid__link" href="https://dribbble.com/JulienLavallee">
-                      <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                      <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                      <img class="grid__img layer layer-3" src="img/Dribbble1/2.jpg" alt="02" />
-                      <span class="grid__title">Julien Lavallee</span>
+            <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+              <a class="anglegrid__link preserve-3d" href="https://dribbble.com/forefathers">
+                      <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                      <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                      <img class="anglegrid__img layer layer-3" src="img/Dribbble1/1_3.jpg" alt="013" />
+                      <span class="anglegrid__title">Forefathers</span>
                     </a>
             </li>
-            <li class="grid__item">
-              <a class="grid__link" href="https://dribbble.com/creativemints">
-                      <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                      <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                      <img class="grid__img layer layer-3" src="img/Dribbble1/3_1.jpg" alt="031" />
-                      <span class="grid__title">Mike | Creative Mints</span>
+            <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+              <a class="anglegrid__link preserve-3d" href="https://dribbble.com/Radium">
+                      <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                      <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                      <img class="anglegrid__img layer layer-3" src="img/Dribbble1/4_1.jpg" alt="041" />
+                      <span class="anglegrid__title">Cosmin Capitanu</span>
                     </a>
             </li>
-            <li class="grid__item">
-              <a class="grid__link" href="https://dribbble.com/Radium">
-                      <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                      <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                      <img class="grid__img layer layer-3" src="img/Dribbble1/4.jpg" alt="04" />
-                      <span class="grid__title">Cosmin Capitanu</span>
+            <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+              <a class="anglegrid__link preserve-3d" href="https://dribbble.com/forefathers">
+                      <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                      <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                      <img class="anglegrid__img layer layer-3" src="img/Dribbble1/1.jpg" alt="01" />
+                      <span class="anglegrid__title">Forefathers</span>
                     </a>
             </li>
-            <li class="grid__item">
-              <a class="grid__link" href="https://dribbble.com/forefathers">
-                      <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                      <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                      <img class="grid__img layer layer-3" src="img/Dribbble1/1_2.jpg" alt="012" />
-                      <span class="grid__title">Forefathers</span>
-                    </a>
-            </li>
-            <li class="grid__item">
-              <a class="grid__link" href="https://dribbble.com/JulienLavallee">
-                      <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                      <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                      <img class="grid__img layer layer-3" src="img/Dribbble1/2_2.jpg" alt="022" />
-                      <span class="grid__title">Julien Lavallee</span>
-                    </a>
-            </li>
-            <li class="grid__item">
-              <a class="grid__link" href="https://dribbble.com/creativemints">
-                      <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                      <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                      <img class="grid__img layer layer-3" src="img/Dribbble1/3_2.jpg" alt="032" />
-                      <span class="grid__title">Mike | Creative Mints</span>
-                    </a>
-            </li>
-            <li class="grid__item">
-              <a class="grid__link" href="https://dribbble.com/forefathers">
-                      <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                      <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                      <img class="grid__img layer layer-3" src="img/Dribbble1/1_3.jpg" alt="013" />
-                      <span class="grid__title">Forefathers</span>
-                    </a>
-            </li>
-            <li class="grid__item">
-              <a class="grid__link" href="https://dribbble.com/Radium">
-                      <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                      <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                      <img class="grid__img layer layer-3" src="img/Dribbble1/4_1.jpg" alt="041" />
-                      <span class="grid__title">Cosmin Capitanu</span>
-                    </a>
-            </li>
-            <li class="grid__item">
-              <a class="grid__link" href="https://dribbble.com/forefathers">
-                      <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                      <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                      <img class="grid__img layer layer-3" src="img/Dribbble1/1.jpg" alt="01" />
-                      <span class="grid__title">Forefathers</span>
-                    </a>
-            </li>
-            <li class="grid__item">
-                <a class="grid__link" href="https://dribbble.com/forefathers">
-                        <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                        <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                        <img class="grid__img layer layer-3" src="img/Dribbble1/1.jpg" alt="01" />
-                        <span class="grid__title">Forefathers</span>
+            <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+                <a class="anglegrid__link preserve-3d" href="https://dribbble.com/forefathers">
+                        <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                        <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                        <img class="anglegrid__img layer layer-3" src="img/Dribbble1/1.jpg" alt="01" />
+                        <span class="anglegrid__title">Forefathers</span>
                       </a>
               </li>
-              <li class="grid__item">
-                <a class="grid__link" href="https://dribbble.com/JulienLavallee">
-                        <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                        <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                        <img class="grid__img layer layer-3 layer-3" src="img/Dribbble1/2_1.jpg" alt="021" />
-                        <span class="grid__title">Julien Lavallee</span>
+              <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+                <a class="anglegrid__link preserve-3d" href="https://dribbble.com/JulienLavallee">
+                        <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                        <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                        <img class="anglegrid__img layer layer-3 layer-3" src="img/Dribbble1/2_1.jpg" alt="021" />
+                        <span class="anglegrid__title">Julien Lavallee</span>
                       </a>
               </li>
-              <li class="grid__item">
-                <a class="grid__link" href="https://dribbble.com/creativemints">
-                        <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                        <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                        <img class="grid__img layer layer-3" src="img/Dribbble1/3.jpg" alt="03" />
-                        <span class="grid__title">Mike | Creative Mints</span>
+              <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+                <a class="anglegrid__link preserve-3d" href="https://dribbble.com/creativemints">
+                        <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                        <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                        <img class="anglegrid__img layer layer-3" src="img/Dribbble1/3.jpg" alt="03" />
+                        <span class="anglegrid__title">Mike | Creative Mints</span>
                       </a>
               </li>
-              <li class="grid__item">
-                <a class="grid__link" href="https://dribbble.com/Radium">
-                        <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                        <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                        <img class="grid__img layer layer-3" src="img/Dribbble1/4_2.jpg" alt="042" />
-                        <span class="grid__title">Cosmin Capitanu</span>
+              <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+                <a class="anglegrid__link preserve-3d" href="https://dribbble.com/Radium">
+                        <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                        <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                        <img class="anglegrid__img layer layer-3" src="img/Dribbble1/4_2.jpg" alt="042" />
+                        <span class="anglegrid__title">Cosmin Capitanu</span>
                       </a>
               </li>
-              <li class="grid__item">
-                <a class="grid__link" href="https://dribbble.com/forefathers">
-                        <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                        <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                        <img class="grid__img layer layer-3" src="img/Dribbble1/1_1.jpg" alt="011" />
-                        <span class="grid__title">Forefathers</span>
+              <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+                <a class="anglegrid__link preserve-3d" href="https://dribbble.com/forefathers">
+                        <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                        <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                        <img class="anglegrid__img layer layer-3" src="img/Dribbble1/1_1.jpg" alt="011" />
+                        <span class="anglegrid__title">Forefathers</span>
                       </a>
               </li>
-              <li class="grid__item">
-                <a class="grid__link" href="https://dribbble.com/JulienLavallee">
-                        <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                        <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                        <img class="grid__img layer layer-3" src="img/Dribbble1/2.jpg" alt="02" />
-                        <span class="grid__title">Julien Lavallee</span>
+              <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+                <a class="anglegrid__link preserve-3d" href="https://dribbble.com/JulienLavallee">
+                        <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                        <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                        <img class="anglegrid__img layer layer-3" src="img/Dribbble1/2.jpg" alt="02" />
+                        <span class="anglegrid__title">Julien Lavallee</span>
                       </a>
               </li>
-              <li class="grid__item">
-                <a class="grid__link" href="https://dribbble.com/creativemints">
-                        <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                        <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                        <img class="grid__img layer layer-3" src="img/Dribbble1/3_1.jpg" alt="031" />
-                        <span class="grid__title">Mike | Creative Mints</span>
+              <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+                <a class="anglegrid__link preserve-3d" href="https://dribbble.com/creativemints">
+                        <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                        <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                        <img class="anglegrid__img layer layer-3" src="img/Dribbble1/3_1.jpg" alt="031" />
+                        <span class="anglegrid__title">Mike | Creative Mints</span>
                       </a>
               </li>
-              <li class="grid__item">
-                <a class="grid__link" href="https://dribbble.com/Radium">
-                        <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                        <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                        <img class="grid__img layer layer-3" src="img/Dribbble1/4.jpg" alt="04" />
-                        <span class="grid__title">Cosmin Capitanu</span>
+              <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+                <a class="anglegrid__link preserve-3d" href="https://dribbble.com/Radium">
+                        <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                        <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                        <img class="anglegrid__img layer layer-3" src="img/Dribbble1/4.jpg" alt="04" />
+                        <span class="anglegrid__title">Cosmin Capitanu</span>
                       </a>
               </li>
-              <li class="grid__item">
-                <a class="grid__link" href="https://dribbble.com/forefathers">
-                        <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                        <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                        <img class="grid__img layer layer-3" src="img/Dribbble1/1_2.jpg" alt="012" />
-                        <span class="grid__title">Forefathers</span>
+              <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+                <a class="anglegrid__link preserve-3d" href="https://dribbble.com/forefathers">
+                        <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                        <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                        <img class="anglegrid__img layer layer-3" src="img/Dribbble1/1_2.jpg" alt="012" />
+                        <span class="anglegrid__title">Forefathers</span>
                       </a>
               </li>
-              <li class="grid__item">
-                <a class="grid__link" href="https://dribbble.com/JulienLavallee">
-                        <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                        <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                        <img class="grid__img layer layer-3" src="img/Dribbble1/2_2.jpg" alt="022" />
-                        <span class="grid__title">Julien Lavallee</span>
+              <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+                <a class="anglegrid__link preserve-3d" href="https://dribbble.com/JulienLavallee">
+                        <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                        <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                        <img class="anglegrid__img layer layer-3" src="img/Dribbble1/2_2.jpg" alt="022" />
+                        <span class="anglegrid__title">Julien Lavallee</span>
                       </a>
               </li>
-              <li class="grid__item">
-                <a class="grid__link" href="https://dribbble.com/creativemints">
-                        <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                        <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                        <img class="grid__img layer layer-3" src="img/Dribbble1/3_2.jpg" alt="032" />
-                        <span class="grid__title">Mike | Creative Mints</span>
+              <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+                <a class="anglegrid__link preserve-3d" href="https://dribbble.com/creativemints">
+                        <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                        <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                        <img class="anglegrid__img layer layer-3" src="img/Dribbble1/3_2.jpg" alt="032" />
+                        <span class="anglegrid__title">Mike | Creative Mints</span>
                       </a>
               </li>
-              <li class="grid__item">
-                <a class="grid__link" href="https://dribbble.com/forefathers">
-                        <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                        <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                        <img class="grid__img layer layer-3" src="img/Dribbble1/1_3.jpg" alt="013" />
-                        <span class="grid__title">Forefathers</span>
+              <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+                <a class="anglegrid__link preserve-3d" href="https://dribbble.com/forefathers">
+                        <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                        <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                        <img class="anglegrid__img layer layer-3" src="img/Dribbble1/1_3.jpg" alt="013" />
+                        <span class="anglegrid__title">Forefathers</span>
                       </a>
               </li>
-              <li class="grid__item">
-                <a class="grid__link" href="https://dribbble.com/Radium">
-                        <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                        <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                        <img class="grid__img layer layer-3" src="img/Dribbble1/4_1.jpg" alt="041" />
-                        <span class="grid__title">Cosmin Capitanu</span>
+              <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+                <a class="anglegrid__link preserve-3d" href="https://dribbble.com/Radium">
+                        <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                        <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                        <img class="anglegrid__img layer layer-3" src="img/Dribbble1/4_1.jpg" alt="041" />
+                        <span class="anglegrid__title">Cosmin Capitanu</span>
                       </a>
               </li>
-              <li class="grid__item">
-                <a class="grid__link" href="https://dribbble.com/forefathers">
-                        <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                        <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                        <img class="grid__img layer layer-3" src="img/Dribbble1/1.jpg" alt="01" />
-                        <span class="grid__title">Forefathers</span>
+              <li class="anglegrid__item aos-item aos-init aos-animate preserve-3d" data-aos="slide-left">
+                <a class="anglegrid__link preserve-3d" href="https://dribbble.com/forefathers">
+                        <img class="anglegrid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
+                        <img class="anglegrid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
+                        <img class="anglegrid__img layer layer-3" src="img/Dribbble1/1.jpg" alt="01" />
+                        <span class="anglegrid__title">Forefathers</span>
                       </a>
               </li>
+            -->
           </ul>
         </div>
 
@@ -443,144 +557,61 @@
     </section>
 
     <section class="homepage__self">
+      
 
-      <div class="intro intro--left">
-        <h2 class="main__h2 margin-w c-blue-1">
-          Who am I?
-        </h2>
-        <p class="main__p f-intro-sans">
-          As a user advocate, designer, and visual symbolism enthusiast my goal is to peak interest while establishing.
-        </p>
-        <a class="main__btn button c-blue-1" href="/work">see all work</a>
+      <div class="l-row">
+        <div class="angle-self__bg grid-star-bg star-bg angle--both-left-right aos-item aos-init aos-animate bcg" data-aos="fade-up-left">
+            <div class="overlay overlay--blue" role="img" aria-label="blue gradient" title="overlay"></div>
+            <div class="overlay overlay--grid-1" role="img" aria-label="Isometric grid" title="overlay">
+            </div>
+            <div class="homepage__self__content angle-container__content">                
+              <img class="hidden-small" src="img/port-right.png" alt="portfolio icon" height="42" width="42">
+            </div>
+          
+            <div class="slider">
+              <!--
+              <ul>
+                <li>
+                <div class="slider__container">
+                  <h4>Pure CSS slider Content</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                </div>
+                </li>
+                  <li>
+                  <div class="slider__container">
+                     <h4>Pure CSS slider Content</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                </div>
+                </li>
+                  <li>
+                  <div class="slider__container">
+                     <h4>Pure CSS slider Content</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                </div>
+                </li>
+                  <li>
+                  <div class="slider__container">
+                    <h4>Pure CSS slider Content</h4>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                </div>
+                </li>
+              </ul>
+            -->
+            </div>
+          
+        </div>
+        <div class="self__intro intro intro--left l-column--small-6 l-column--medium-4 l-column--large-3">
+          <h2 class="main__h2 margin-w c-blue-1">
+            Who am I?
+          </h2>
+          <p class="main__p f-intro-sans">
+            As a user advocate, designer, and visual symbolism enthusiast my goal is to peak interest while establishing.
+          </p>
+          <a class="main__button button c-blue-1" href="/self">learn more</a>
+          <a href="https://codepen.io/ARS" class="button--granimate" target="_blank"><span>button</span></a>
+        </div>
       </div>
-
     </section>
-
-    <h2>Demo</h2>
-    <h3>Basic</h3>
-    <div class="l-row">
-      <div class="l-column--small-6 l-column--medium-4 l-column--large-3">
-        <div class="inner">small 6, medium 4, large 3</div>
-      </div>
-      <div class="l-column--small-6 l-column--medium-8 l-column--large-9">
-        <div class="inner">small 6, medium 7, large 9</div>
-      </div>
-    </div>
-
-    <div class="l-row">
-      <div class="l-column--medium-8 l-column--large-9">
-        <div class="inner">medium 7, large 9</div>
-      </div>
-      <div class="l-column--medium-4 l-column--large-3">
-        <div class="inner">medium 4, large 3</div>
-      </div>
-    </div>
-
-    <h3>Offset</h3>
-    <div class="l-row">
-      <div class="l-column--small-3 l-column--small-offset-2">
-        <div class="inner">3, offset 2</div>
-      </div>
-      <div class="l-column--small-6 l-column--small-offset-1">
-        <div class="inner">6, offset 1</div>
-      </div>
-    </div>
-
-    <h3>Pull/Push (order change on small devices)</h3>
-    <div class="l-row">
-      <div class="l-column--small-3 l-column--small-push-9
-                    l-column--medium-push-reset">
-        <div class="inner">3, first</div>
-      </div>
-      <div class="l-column--small-9 l-column--small-pull-3
-                    l-column--medium-pull-reset">
-        <div class="inner">9, last</div>
-      </div>
-    </div>
-
-    <h3>Embedded Grids</h3>
-
-    <div class="l-row">
-      <div class="l-column--small-6">
-        <div class="l-row">
-          <div class="l-column--small-6">
-            <div class="inner">6&rarr;6</div>
-          </div>
-          <div class="l-column--small-6">
-            <div class="inner">6&rarr;6</div>
-          </div>
-        </div>
-        <div class="l-row">
-          <div class="l-column--small-4">
-            <div class="inner">6&rarr;4</div>
-          </div>
-          <div class="l-column--small-8">
-            <div class="inner">6&rarr;8</div>
-          </div>
-        </div>
-      </div>
-      <div class="l-column--small-6">
-        <div class="inner">6</div>
-      </div>
-    </div>
-
-    <h3>Collapse Grid</h3>
-
-    <div class="l-row l-row--collapse">
-      <div class="l-column--small-4">
-        <div class="inner">4</div>
-      </div>
-      <div class="l-column--small-4">
-        <div class="inner">4</div>
-      </div>
-      <div class="l-column--small-4">
-        <div class="inner">4</div>
-      </div>
-    </div>
-
-    <div class="fixed-screen">
-      <div class="l-row l-row--guide">
-        <div class="l-column--small-1">
-          <div class="inner"></div>
-        </div>
-        <div class="l-column--small-1">
-          <div class="inner"></div>
-        </div>
-        <div class="l-column--small-1">
-          <div class="inner"></div>
-        </div>
-        <div class="l-column--small-1">
-          <div class="inner"></div>
-        </div>
-        <div class="l-column--small-1">
-          <div class="inner"></div>
-        </div>
-        <div class="l-column--small-1">
-          <div class="inner"></div>
-        </div>
-        <div class="l-column--small-1">
-          <div class="inner"></div>
-        </div>
-        <div class="l-column--small-1">
-          <div class="inner"></div>
-        </div>
-        <div class="l-column--small-1">
-          <div class="inner"></div>
-        </div>
-        <div class="l-column--small-1">
-          <div class="inner"></div>
-        </div>
-        <div class="l-column--small-1">
-          <div class="inner"></div>
-        </div>
-        <div class="l-column--small-1">
-          <div class="inner"></div>
-        </div>
-      </div>
-    </div>
-
-
-
 
 
     <aside>
@@ -589,9 +620,43 @@
   </main>
 
 
-  <footer>
-
+  <footer class="footer angle--top-right">
+    <div class="l-row">
+      <div class="l-column--large-8">
+        <div class="footer__image l-column--medium-6">
+          <h2 class="footer__h2">Let's Talk</h2>
+          <div class="w-contact-airplane aos-item aos-init aos-animate delay-500" data-aos="fade-up-right">
+            <a href="contact.html" class="w-contact-airplane__link scaling-svg-container" alt="Contact">
+                <!--removed global-logo img- -left -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="354" height="280" viewBox="10 50 364 280">
+                <title>Contact Paper Airplane</title>
+                <g id="bc8f46f1-a6b9-4483-97c3-af8b9aa75da4" data-name="Layer 1">
+                  <polygon points="89 263.07 346 88.74 80 189.74 89 263.07" fill="#d0d2d3"/>
+                  <polygon points="89 261.41 125.67 236.74 103 212.07 89 261.41" fill="#e6e7e8"/>
+                  <polygon points="182 290.74 101.67 212.07 346 88.74 182 290.74" fill="#fff"/>
+                  <polygon points="80 189.74 346 88.74 28 139.24 80 189.74" fill="#fff"/>
+                </g>
+                <image src="img/airplane.png" xlink:href="" class="svg__img--hide-on-fallback"></image>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__content l-column--medium-6">
+          <div class="phone__container">
+              <a href="tel:+1-765-506-8400" class="phone__number footer__link">+1(765)506-8400</a>
+          </div>
+          <div class="email__container">
+              <a href="mailto:nathanfreemyer@gmail.com&subject=Hi%20Nathan&We%20would%20love%20to%20start%20a%20conversation%20with%20you%20about%20how%20you%20might%20be%20able%20to%20help%20us%46" class="email__address footer__link">nathanfreemyer@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
+
+        </div> <!-- pure-pusher  -->
+      </div> <!-- pure-pusher-container -->
+      <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
+    </div> <!-- Pure Container  -->
 
   <script>
     /* fontfaceobserver Copyright (c) 2014 - Bram Stein https://github.com/bramstein/fontfaceobserver/*/
@@ -600,23 +665,23 @@
       function l(a, b) { if (a.a === k) { if (b === a) throw new TypeError("Promise resolved with itself."); var c = !1; try { var d = b && b.then; if (null !== b && "object" === typeof b && "function" === typeof d) { d.call(b, function (b) { c || l(a, b); c = !0 }, function (b) { c || m(a, b); c = !0 }); return } } catch (e) { c || m(a, e); return } a.a = 0; a.b = b; q(a) } } function m(a, b) { if (a.a === k) { if (b === a) throw new TypeError("Promise rejected with itself."); a.a = 1; a.b = b; q(a) } }
       function q(a) { setTimeout(function () { if (a.a !== k) for (; a.d.length;) { var b = a.d.shift(), c = b[0], d = b[1], e = b[2], b = b[3]; try { 0 === a.a ? "function" === typeof c ? e(c.call(void 0, a.b)) : e(a.b) : 1 === a.a && ("function" === typeof d ? e(d.call(void 0, a.b)) : b(a.b)) } catch (g) { b(g) } } }, 0) } f.prototype.e = function (a) { return this.c(void 0, a) }; f.prototype.c = function (a, b) { var c = this; return new f(function (d, e) { c.d.push([a, b, d, e]); q(c) }) };
       function r(a) { return new f(function (b, c) { function d(c) { return function (d) { g[c] = d; e += 1; e === a.length && b(g) } } var e = 0, g = []; 0 === a.length && b(g); for (var h = 0; h < a.length; h += 1)a[h].c(d(h), c) }) } function s(a) { return new f(function (b, c) { for (var d = 0; d < a.length; d += 1)a[d].c(b, c) }) }; window.Promise || (window.Promise = f, window.Promise.resolve = p, window.Promise.reject = n, window.Promise.race = s, window.Promise.all = r, window.Promise.prototype.then = f.prototype.c, window.Promise.prototype["catch"] = f.prototype.e);    
-}());
-    (function () {      
-'use strict'; function e(a) {
-      this.a = document.createElement("div"); this.a.setAttribute("aria-hidden", "true"); this.a.appendChild(document.createTextNode(a)); this.b = document.createElement("span"); this.c = document.createElement("span"); this.f = document.createElement("span"); this.e = document.createElement("span"); this.d = -1; this.b.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;"; this.c.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;";
-        this.e.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;"; this.f.style.cssText = "display:inline-block;width:200%;height:200%;"; this.b.appendChild(this.f); this.c.appendChild(this.e); this.a.appendChild(this.b); this.a.appendChild(this.c)
-      } function r(a, b, c) { a.a.style.cssText = "min-width:20px;min-height:20px;display:inline-block;visibility:hidden;position:absolute;width:auto;margin:0;padding:0;top:0;white-space:nowrap;font-size:100px;font-family:" + b + ";" + c }
-      function s(a) { var b = a.a.offsetWidth, c = b + 100; a.e.style.width = c + "px"; a.c.scrollLeft = c; a.b.scrollLeft = a.b.scrollWidth + 100; return a.d !== b ? (a.d = b, !0) : !1 } function t(a, b) { a.b.addEventListener("scroll", function () { s(a) && null !== a.a.parentNode && b(a.d) }, !1); a.c.addEventListener("scroll", function () { s(a) && null !== a.a.parentNode && b(a.d) }, !1); s(a) }; function u(a, b) { this.family = a; this.style = b.style || "normal"; this.variant = b.variant || "normal"; this.weight = b.weight || "normal"; this.stretch = b.stretch || "stretch"; this.featureSettings = b.featureSettings || "normal" } var v = null;
-      u.prototype.a = function (a) {
-        a = a || "BESbswy"; var b = "font-style:" + this.style + ";font-variant:" + this.variant + ";font-weight:" + this.weight + ";font-stretch:" + this.stretch + ";font-feature-settings:" + this.featureSettings + ";-moz-font-feature-settings:" + this.featureSettings + ";-webkit-font-feature-settings:" + this.featureSettings + ";", c = document.createElement("div"), k = new e(a), l = new e(a), m = new e(a), f = -1, d = -1, g = -1, n = -1, p = -1, q = -1, h = this; r(k, "sans-serif", b); r(l, "serif", b); r(m, "monospace", b); c.appendChild(k.a); c.appendChild(l.a);
-        c.appendChild(m.a); document.body.appendChild(c); n = k.a.offsetWidth; p = l.a.offsetWidth; q = m.a.offsetWidth; return new Promise(function (a, y) {          
-function w() { null !== c.parentNode && document.body.removeChild(c) } function x() {
-            if (-1 !== f && -1 !== d && -1 !== g && f === d && d === g) {              
-if (null === v) { var b = /AppleWeb[kK]it\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent); v = !!b && (536 > parseInt(b[1], 10) || 536 === parseInt(b[1], 10) && 11 >= parseInt(b[2], 10)) } v ? f === n && d === n && g === n || f === p && d === p && g === p || f === q && d === q && g === q || (w(), a(h)) : (w(),
-                a(h))            
-}
-          } setTimeout(function () { w(); y(h) }, 3E3); t(k, function (a) { f = a; x() }); r(k, h.family + ",sans-serif", b); t(l, function (a) { d = a; x() }); r(l, h.family + ",serif", b); t(m, function (a) { g = a; x() }); r(m, h.family + ",monospace", b)        
-})
+    }());
+        (function () {      
+    'use strict'; function e(a) {
+          this.a = document.createElement("div"); this.a.setAttribute("aria-hidden", "true"); this.a.appendChild(document.createTextNode(a)); this.b = document.createElement("span"); this.c = document.createElement("span"); this.f = document.createElement("span"); this.e = document.createElement("span"); this.d = -1; this.b.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;"; this.c.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;";
+            this.e.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;"; this.f.style.cssText = "display:inline-block;width:200%;height:200%;"; this.b.appendChild(this.f); this.c.appendChild(this.e); this.a.appendChild(this.b); this.a.appendChild(this.c)
+          } function r(a, b, c) { a.a.style.cssText = "min-width:20px;min-height:20px;display:inline-block;visibility:hidden;position:absolute;width:auto;margin:0;padding:0;top:0;white-space:nowrap;font-size:100px;font-family:" + b + ";" + c }
+          function s(a) { var b = a.a.offsetWidth, c = b + 100; a.e.style.width = c + "px"; a.c.scrollLeft = c; a.b.scrollLeft = a.b.scrollWidth + 100; return a.d !== b ? (a.d = b, !0) : !1 } function t(a, b) { a.b.addEventListener("scroll", function () { s(a) && null !== a.a.parentNode && b(a.d) }, !1); a.c.addEventListener("scroll", function () { s(a) && null !== a.a.parentNode && b(a.d) }, !1); s(a) }; function u(a, b) { this.family = a; this.style = b.style || "normal"; this.variant = b.variant || "normal"; this.weight = b.weight || "normal"; this.stretch = b.stretch || "stretch"; this.featureSettings = b.featureSettings || "normal" } var v = null;
+          u.prototype.a = function (a) {
+            a = a || "BESbswy"; var b = "font-style:" + this.style + ";font-variant:" + this.variant + ";font-weight:" + this.weight + ";font-stretch:" + this.stretch + ";font-feature-settings:" + this.featureSettings + ";-moz-font-feature-settings:" + this.featureSettings + ";-webkit-font-feature-settings:" + this.featureSettings + ";", c = document.createElement("div"), k = new e(a), l = new e(a), m = new e(a), f = -1, d = -1, g = -1, n = -1, p = -1, q = -1, h = this; r(k, "sans-serif", b); r(l, "serif", b); r(m, "monospace", b); c.appendChild(k.a); c.appendChild(l.a);
+            c.appendChild(m.a); document.body.appendChild(c); n = k.a.offsetWidth; p = l.a.offsetWidth; q = m.a.offsetWidth; return new Promise(function (a, y) {          
+    function w() { null !== c.parentNode && document.body.removeChild(c) } function x() {
+                if (-1 !== f && -1 !== d && -1 !== g && f === d && d === g) {              
+    if (null === v) { var b = /AppleWeb[kK]it\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent); v = !!b && (536 > parseInt(b[1], 10) || 536 === parseInt(b[1], 10) && 11 >= parseInt(b[2], 10)) } v ? f === n && d === n && g === n || f === p && d === p && g === p || f === q && d === q && g === q || (w(), a(h)) : (w(),
+                    a(h))            
+    }
+              } setTimeout(function () { w(); y(h) }, 3E3); t(k, function (a) { f = a; x() }); r(k, h.family + ",sans-serif", b); t(l, function (a) { d = a; x() }); r(l, h.family + ",serif", b); t(m, function (a) { g = a; x() }); r(m, h.family + ",monospace", b)        
+    })
       }; window.FontFaceObserver = u; window.FontFaceObserver.prototype.check = u.prototype.a;
     }());
     /*
@@ -649,7 +714,6 @@ if (null === v) { var b = /AppleWeb[kK]it\/([0-9]+)(?:\.([0-9]+))/.exec(window.n
         });
     }(this));
 
-
     /*
     Inline SVG Check
     */
@@ -667,66 +731,18 @@ if (null === v) { var b = /AppleWeb[kK]it\/([0-9]+)(?:\.([0-9]+))/.exec(window.n
   </script>
 
   <script src="js/imagesloaded.pkgd.min.js"></script>
-  <script src="js/masonry.pkgd.min.js"></script>
-  <script src="js/dynamics.min.js"></script>
+  <script src="js/aos.js"></script>
+  <!--<script src="js/dynamics.min.js"></script>-->
   <script src="js/classie.js"></script>
-  <script src="js/animOnScroll.js"></script>
-  <script src="js/main.js"></script>
+  <!--
   <script>
-    
-    (function () {
-      function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-      }
-
-      [].slice.call(document.querySelectorAll('.isolayer')).forEach(function (el) {
-        new IsoGrid(el, {
-          type: 'scrollable',
-          /* Original Transform */
-          //transform : 'translateX(-15vw) translateY(275px) rotateX(45deg) rotateZ(45deg)',
-          /* Verticle transform */
-          //transform: 'translateX(-15vw) translateY(275px) rotateX(-30deg) rotateY(40deg)',
-          
-          stackItemsAnimation: {
-            properties: function (pos) {
-              return {
-                //translateZ: (pos + 1) * 50,
-                //rotateY: (pos) * -20,
-                //rotateX: (pos) * 10,
-                //getRandomInt(-3, 3)
-              };
-            },
-            
-            options: function (pos, itemstotal) {
-              return {
-                //type: dynamics.bezier,
-                //duration: 500,
-                //points: [{ "x": 0, "y": 0, "cp": [{ "x": 0.2, "y": 1 }] }, { "x": 1, "y": 1, "cp": [{ "x": 0.3, "y": 1 }] }],
-                /* Delay already comented out */
-                //delay: (itemstotal-pos-1)*40
-              };
-            }
-          },
-          
-          onGridLoaded: function () {
-            classie.add(document.body, 'grid-loaded');
-          }
-        });
-      });
-    })();
+    AOS.init({
+      easing: 'ease-in-out-sine'
+    });
   </script>
-  <!--  
-<div class="isolayer isolayer- -scroll1 isolayer- -shadow preserve-3d">
-          <ul class="grid grid- -effect-flip">
-            <li class="grid__item">
-              <a class="grid__link" href="https://dribbble.com/forefathers">
-                      <img class="grid__img layer layer-1" src="img/canvas.png" alt="Canvas Dummy" />
-                      <img class="grid__img layer layer-2" src="img/wireframe.png" alt="Wireframe Dummy" />
-                      <img class="grid__img layer layer-3" src="img/Dribbble1/1.jpg" alt="01" />
-                      <span class="grid__title">Forefathers</span>
-                    </a>
-            </li>
-  -->
+-->
+  <!--<script src="js/animOnScroll.js"></script>-->
+  
 </body>
 
 </html>

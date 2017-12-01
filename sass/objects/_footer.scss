@@ -1,0 +1,42 @@
+
+/// Footer
+
+.footer {
+    color: #fff;
+    padding-left: 80px;
+    padding-bottom: 12rem;
+    padding-right: 4rem;
+    padding-top: 28rem;
+    min-height: 90vh;
+    background: $brand-color-bg;
+    @include background-image(linear-gradient(to bottom right, $brand-color-bg, $brand-color-2-bg));
+}
+.footer__image {
+    @include media(xlarge, $gemini-screens) {
+        margin-top: 12rem
+    }
+}
+.footer__content {
+    margin-top: 4.5em;
+    @include media(xlarge, $gemini-screens) {
+        font-size: 1.5em;
+        margin-top: 21rem;
+    }
+}
+.footer__h2 {
+    margin-bottom: 0;
+    font-size: 4.5em;
+    text-transform: uppercase;
+}
+.footer__link {
+    color: $navigation;
+    padding: .125em .5em 0.25em .5em;
+    border: 1px solid transparent;
+    &:hover {
+        color: $navigation;
+        border: 1px solid $brand-color;
+        text-decoration: none;
+    }
+}
+
+

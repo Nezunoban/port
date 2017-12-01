@@ -1,18 +1,5 @@
 
 
-//## License
-//  Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is". 
-//  Read more here: [License](http://tympanus.net/codrops/licensing/)
-//  
-//  ## Credits
-//  - [Masonry](http://masonry.desandro.com/) by David DeSandro.
-//  - [Dynamics.js](http://dynamicsjs.com/) by Michael Villar.
-//  - [Unsplash](http://unsplash.com)
-
-
-body {
-	overflow-x: hidden;
-}
 
 .pseudo-scroller {
 	pointer-events: none;
@@ -21,89 +8,86 @@ body {
     //position: relative;
 	-webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    perspective: 20em;
-}
-.isolayer {
-	position: absolute;
-	top: 0;
-	left: 0;
-	-webkit-transform-origin: 50% 100%;
-    transform-origin: 50% 100%;
-// Pure css rotation
-
-	transform: rotateX(-30deg) rotateY(40deg);
-	/*perspective: 20em;*/
-	position: relative;
-
-
-}
-.grid--effect-flip {
+    //perspective: 20rem;
 }
 
-.js .grid,
-.js .grid__item,
-.js .grid__link {
+.angleport__container {
+	@include media(large, $gemini-screens) {
+		width: 150vh;
+		// Pure css rotation
+		transform: rotateX(-30deg) rotateY(45deg);
+		position: relative;
+		margin-top: -200px;
+		z-index: 10; // Safari OSX - z-index inconsistency fix
+    }
 }
 
-.grid {
+.anglegrid {
 	position: relative;
 	margin: 0 auto;
 	padding: 0;
 	list-style: none;
 }
 
-.grid__item {
-    width: 300px;
-    
+.anglegrid__item {
+  transform-origin: 0 0;
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  margin-bottom: 2em;
+  margin-right: 3%;
+
 }
 
-.js .grid__item {
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.grid__link {
+.anglegrid__link {
+    width: auto;
 	position: relative;
-	z-index: 1;
+}
+.anglegrid__img {
+	width: 100%;
+}
+
+.js .anglegrid__item {
+	-webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.anglegrid__link {
+	position: relative;
 	display: block;
 }
 
-.grid__img {
+.anglegrid__img {
 	display: block;
 	max-width: 100%;
 }
 
-.grid__title {
+
+.anglegrid__title {
 	font-size: 0.65em;
 	font-weight: 600;
-	position: absolute;
-	z-index: -1;
-	bottom: 0;
-	width: 100%;
-	text-align: center;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	opacity: 0;
-	color: $brand-color;
-	-webkit-transform: translate3d(0,-1.5rem,0);
-	transform: translate3d(0,-1.5rem,0);
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
+	@include media(large, $gemini-screens) {
+		position: absolute;
+		z-index: -3;
+		left: -220px;
+		bottom: 200px;
+		width: 200px;
+		text-align: left;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		opacity: 0;
+		color: #F06B6A;
+		transition: transform 0.3s;
+		transform: rotate(-180deg);
+		transform-origin: top right;
+		/* Internet Explorer */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	}
 }
 
-.grid__item:hover .grid__title {
-	opacity: 1;
-	-webkit-transform: translate3d(0,1.5rem,0);
-	transform: translate3d(0,1.5rem,0);
-}
-.grid__item .grid__img {
-    transform-origin: 0 0;
-    transition: transform 0.3s;
-    //animation: doorani 1.3s ease-in-out infinite alternate;
-}
-.grid__img.layer-3:hover,
-.grid__item:hover .grid__img.layer-3{
-    transform: rotateX(0deg) rotateY(-40deg) rotateZ(0deg);
+.anglegrid__item:hover .anglegrid__link{
+	//z-index: 9;
+	//position: relative;
 }
 
 .layer {
@@ -112,244 +96,137 @@ body {
 }
 
 .layer:not(:first-child) {
-	position: absolute;
-	top: 0;
-	left: 0;
+	@include media(large, $gemini-screens) {
+		//display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+.anglegrid__item .layer {
+    transition: transform 0.3s;
+	transform-origin: 0 0;
 }
 
-/* Shadow effect */
-/*
-.isolayer--shadow .grid__link:before {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	top: 5px;
-	right: 5px;
-	bottom: 5px;
-	left: 5px;
-	opacity: 0.6;
-	background: rgba(0,0,0,0.8);
-	box-shadow: 0 0 0 0 rgba(0,0,0,0.8);
-	-webkit-transform: translateZ(-1px) scale(0.95);
-	transform: translateZ(-1px) scale(0.95);
-	-webkit-transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
-	transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+.anglegrid__item {
+
+	.layer {
+		display: none;
+		@include media(large, $gemini-screens) {
+			display: block;
+			-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			transition-duration: .5s;
+			transition-delay: .2s;
+		}
+	}
+	.layer-1 { 
+		@include media(large, $gemini-screens) {
+		transform: rotateY(30deg);
+		}
+	}
+	.layer-2 { 
+		@include media(large, $gemini-screens) {
+		transform: rotateY(0deg);
+		}
+	}
+	.layer-3 { 
+		display: block;
+		@include media(large, $gemini-screens) {
+		transform: rotateY(-30deg);
+		}
+	}
 }
-
-.isolayer--shadow .grid__item:hover .grid__link:before {
-	opacity: 0.2;
-	box-shadow: 0 0 20px 10px rgba(0,0,0,0.8);
-	-webkit-transform: translateZ(-1px) scale(1);
-	transform: translateZ(-1px) scale(1);
-}
-*/
-
-/* All individual isometric grid layouts (static and scrollable) */
-.isolayer--scroll1 {
-	width: 70vw;
-	max-width: 1200px;
-	height: calc(100vh - 280px);
-}
-
-.isolayer--scroll1 .grid__item {
-	width: 300px;
-	padding: 15px;
-}
-
-.isolayer--deco1 {
-	width: 1200px;
-	height: 900px;
-}
-
-.isolayer--deco1 .grid__link .layer:first-child:not(img) {
-	background: #ac5cf5;
-}
-
-.isolayer--deco1 .grid__link .layer:nth-child(2):not(img) {
-	background: #5db4eb;
-}
-
-.isolayer--deco1 .grid__link .layer:nth-child(3):not(img) {
-	background: #5debb4;
-}
-
-.isolayer--deco1 .grid__link div.layer {
-	width: 370px;
-	height: 270px;
-	opacity: 0.4;
-}
-
-.isolayer--deco1 .grid__item {
-	width: 400px;
-	height: 300px;
-	padding: 15px;
-}
-
-.isolayer--deco1 .grid__item:nth-child(2) {
-	margin-top: 150px;
-}
-
-.isolayer--deco2 {
-	width: 1200px;
-	height: 100vh;
-}
-
-.isolayer--deco2 .grid__item {
-	padding: 20px;
-}
-
-.isolayer--deco2 .grid__link .layer {
-	border: 20px solid #fff;
-	border-width: 40px 20px;
-	box-shadow: -1px 1px 5px rgba(0,0,0,0.08);
-}
-
-.isolayer--deco3 {
-	width: 960px;
-	height: 500px;
-}
-
-.isolayer--deco3 .grid__item {
-	width: 240px;
-	height: 320px;
-	padding: 0;
-}
-
-.isolayer--deco3 .grid__item:nth-child(2),
-.isolayer--deco3 .grid__item:nth-child(4) {
-	margin-top: -160px;
-}
-
-.isolayer--deco3 .grid__link,
-.isolayer--deco3 .layer {
-	width: 100%;
-	height: 100%;
-}
-
-.isolayer--deco3 .layer {
-	text-align: center;
-	background: #fff;
-	-webkit-transform-origin: 0% 50%;
-	transform-origin: 0% 50%;
-}
-
-.isolayer--deco3 .grid__link:hover .layer:not(:first-child) {
-	box-shadow: 2px 0 2px rgba(0,0,0,0.1);
-}
-
-.isolayer--deco3 .grid__item:nth-child(2n) .layer {
-	background: #f7d2dc;
-}
-
-.isolayer--deco3 .grid__item:nth-child(3n) .layer {
-	background: #fff0f3;
-}
-
-.isolayer--deco3 .grid__item:nth-child(4n) .layer {
-	background: #e9c5cc;
-}
-
-.isolayer--deco3 .grid__item:nth-child(5n) .layer {
-	background: #d6cbcd;
-}
-
-.isolayer--deco3 .grid__item:nth-child(7n) .layer {
-	background: #ffc9d8;
-}
-
-.isolayer--deco3 .layer {
-	width: 100%;
-	height: 100%;
-}
-
-.isolayer--deco3 .decoletter {
-	font-size: 6em;
-	font-weight: 900;
-	line-height: 1;
-	display: block;
-	padding: 70px 0 0 0;
-	color: #000;
-	color: #000;
-}
-
-.isolayer--deco3 .deconumber {
-	font-size: 3em;
-	display: block;
-	color: #000;
-}
-
-.isolayer--deco4 {
-	width: 1000px;
-	height: 900px;
-}
-
-.isolayer--deco4 .grid__item {
-	padding: 15px;
-}
-
-.isolayer--deco4 .grid__link .layer:first-child:not(img) {
-	background: #ac5cf5;
-}
-
-.isolayer--deco4 .grid__link .layer:nth-child(2):not(img) {
-	background: #5db4eb;
-}
-
-.isolayer--deco4 .grid__link .layer:nth-child(3):not(img) {
-	background: #5debb4;
-}
-
-.isolayer--deco4 .grid__link .layer {
-	-webkit-transform-origin: 50% 100%;
-	transform-origin: 50% 100%;
-}
-
-.isolayer--deco4 .grid__link div.layer {
-	width: 270px;
-	height: 203px;
-	opacity: 0.4;
-}
-
-.isolayer--deco4 .grid__item {
-	width: 300px;
-	height: 225px;
-	padding: 15px;
-}
-
-/* Flip effect for the scrollable grid */
-
-.js .grid--effect-flip .grid__item {
-	opacity: 0;
-}
-
-.js .grid--effect-flip .grid__item.shown {
-	opacity: 1;
-}
-
-.grid--effect-flip .grid__item.animate {
-	-webkit-transform: translateY(800px);
-	transform: translateY(800px);
-	-webkit-animation: moveUp 1s cubic-bezier(0.2,1,0.3,1) forwards;
-	animation: moveUp 1s cubic-bezier(0.2,1,0.3,1) forwards;
-}
-
-@-webkit-keyframes moveUp {
-	100% {
-		opacity: 1; 
-		-webkit-transform: translateY(0px);
-		transform: translateY(0px);
+.anglegrid__item.aos-init.aos-animate {
+	.layer {
+		//transition-duration: .2s;
+		//transition-delay: 0s;
+	}
+	.layer-1 { 
+		//z-index: 3;
+		@include media(large, $gemini-screens) {
+			transform: rotateY(0deg);
+		}
+	}
+	.layer-2 { 
+		//z-index: 2;
+		@include media(large, $gemini-screens) {
+			transform: rotateY(0deg);
+		}
+	}
+	.layer-3 { 
+		//z-index: 1;
+		@include media(large, $gemini-screens) {
+			transform: rotateY(0deg);
+		}
 	}
 }
 
-@keyframes moveUp {
-	100% {
-		opacity: 1; 
-		-webkit-transform: translateY(0px);
-		transform: translateY(0px);
+[data-aos=slide-left] {
+	@include media(medium) {
+		transform:translateX(450%)
+	}
+	@include media(large) {
+		transform:translateX(550%)
+	}
+	@include media(xlarge) {
+		transform:translateX(900%)
 	}
 }
+
+
+
+
+
+
+.anglegrid__item:hover,
+.anglegrid__item.aos-animate:hover {
+	
+	.anglegrid__title {
+		opacity: 1;
+		transform: rotate(-90deg);
+		//z-index: auto;
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+				
+	}
+	.layer {
+
+		transition-duration: .2s;
+		transition-delay: 0s;
+		
+	}
+	.layer-1 { 
+		@include media(large, $gemini-screens) {
+			transform: rotateY(40deg);
+		}
+	}
+	.layer-2 { 
+		@include media(large, $gemini-screens) {
+			transform: rotateY(0deg);
+		}
+	}
+	.layer-3 { 
+		@include media(large, $gemini-screens) {
+			transform: rotateY(-40deg);
+		}
+	}
+
+}
+
+
+
+
+.work__intro-row {
+	
+	position: absolute;
+    top: 26vh;
+    width: 100%;
+	display: block;
+	overflow: visible;
+}
+
+
+
 
 /* Loading effect */
 .js .grid {

@@ -8,6 +8,7 @@
  *
  *
  * Credits/Inspiration:
+ * Gemini
  * SMACSS
  * BEM
  * Inuit.css
@@ -104,8 +105,13 @@
 @import "objects/fit";
 @import "objects/overlay";
 @import "objects/colors";
+@import "objects/pure-drawer";
 @import "objects/copy";
 @import "objects/angled-portfolio";
+@import "objects/hero";
+@import "objects/footer";
+//@import "objects/scrollhead";
+//@import "objects/batman";
 
 // Text inputs are an exception to base styles since they extend buttons and tag
 @import "base/text-inputs";
