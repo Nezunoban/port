@@ -63,6 +63,11 @@ b {
         margin-top: 10em;
     }
 }
+.self__intro {
+    @include media(medium, $gemini-screens) {
+        padding-top: 18rem;
+    }
+}
 
 .angle-work__bg {
     display: none; 
