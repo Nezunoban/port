@@ -70,7 +70,7 @@
         padding: 16px 26px 18px;
     }
 }
-.nav__link--active {
+.nav__link--is-active {
     background: $brand-color-2-bg;
 }
 .nav__link:hover {
@@ -153,12 +153,16 @@
 .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top']  {
     .pure-toggle-text {
         color: transparent;
-        -ms-transform: rotateY(-45deg); /* IE 9 */
-        -webkit-transform: rotateY(-45deg); /* Chrome, Safari, Opera */
-        transform: rotateY(-45deg);
-        //-ms-transform: translate(25px, 0); /* IE 9 */
-        //-webkit-transform: translate(25px, 0); /* Safari */
-        //transform: translate(25px, 0);
+        //-ms-transform: rotateY(-45deg); /* IE 9 */
+        //-webkit-transform: rotateY(-45deg); /* Chrome, Safari, Opera */
+        //transform: rotateY(-45deg);
+        -ms-transform: translateX(25px); /* IE 9 */
+        -webkit-transform: translateX(25px); /* Safari */
+        transform: translateX(25px);
+
+    -ms-transform: rotateZ(-90deg); /* IE 9 */
+    -webkit-transform: rotateZ(-90deg); /* Chrome, Safari, Opera */
+    transform: rotateZ(-90deg);
     }
     .pure-toggle-icon {
 	  	//background-color: transparent;
@@ -174,3 +178,20 @@
 .pure-drawer .nav__link {
     padding: .5rem 2rem;
 }
+/*
+
+.l-nav__flex-container {
+    @include media(medium) {
+        @include flex-flow (row wrap);
+        justify-content: flex-end;
+    }
+    
+}
+.nav__item {
+    @include media(medium) {  
+        @include flex(1 auto);
+        max-width: 100%;
+    }
+
+}
+*/

@@ -1,0 +1,89 @@
+/**
+ ********************************
+ * _GRID-LAYOUT.SCSS
+ ********************************
+ */
+
+ // CSS Grid and Layout
+ /********    Pending  Support for Subgrid      *********/
+
+
+
+
+
+@supports(display: grid) {
+    /*
+    .grid-parent {
+        margin: 0;
+        padding: 0;
+    }
+    .grid-subgrid {
+        display: grid;
+        grid-template-columns: repeat(14, 1fr);
+        grid-column-gap: 16px;
+    }
+    .grid-child {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    .main-container {
+        grid-column: 1 / span 14;
+        //grid-row: 1 / span 2;
+    }
+
+    .l-row {
+        width: auto;
+        margin: 0;
+        max-width: none;
+        display: contents;
+    }
+    .hero__content {
+        //grid-column: 3 / span 5;
+        //grid-row: 1 / span 1;
+    }
+
+*/
+
+
+    /*
+    .row {
+        grid-column-gap: 5px;
+        grid-row-gap: 7px;
+        padding: 5px;
+        grid-template-columns: 1fr;
+    }
+        
+    .card {
+        //only if you want your cards to stretch to 100% height of the grid container - otherwise reset to auto;
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+        //abitrary breakpoints, no problem!
+        @media (min-width: 697px) and (max-width: 1099px) {
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            align-items: center;
+
+            .card {
+                height: auto;
+            }
+        }
+
+        //abitrary breakpoints, no problem!
+        @media (min-width: 1100px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 12px;
+            grid-row-gap: 8px;
+        }
+        
+        @media (min-width: 1400px) {
+            //Don't even need to keep these even! Try different combinations!
+            grid-template-columns: 1.1fr 2fr 1.3fr 1.1fr;
+            grid-column-gap: 3px;
+            grid-row-gap: 8px;
+        }
+    }
+    */
+}
+
+ 

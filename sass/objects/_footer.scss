@@ -6,27 +6,46 @@
     padding-left: 80px;
     padding-bottom: 12rem;
     padding-right: 4rem;
-    padding-top: 28rem;
+    padding-top: 16rem;
     min-height: 90vh;
     background: $brand-color-bg;
+
+    margin-top: -20vh;
+    @include media(medium, $gemini-screens) {
+        margin-top: -50vw;
+        padding-top: 18rem;
+    }
     @include background-image(linear-gradient(to bottom right, $brand-color-bg, $brand-color-2-bg));
 }
 .footer__image {
+    display: block;
     @include media(xlarge, $gemini-screens) {
-        margin-top: 12rem
+        margin-top: 12rem;
+        display: inline-block;
+        vertical-align: top;
     }
 }
 .footer__content {
-    margin-top: 4.5em;
+    display: block;
+    @include media(medium, $gemini-screens) {
+        //float: left;
+        display: inline-block;
+        margin-top: 4.5em;
+    }
     @include media(xlarge, $gemini-screens) {
         font-size: 1.5em;
         margin-top: 21rem;
+        vertical-align: top;
     }
 }
 .footer__h2 {
     margin-bottom: 0;
-    font-size: 4.5em;
+    font-size: 3.5em;
+    line-height: 1.2em;
     text-transform: uppercase;
+    @include media(medium, $gemini-screens) {
+        font-style: 4.5em;
+    }
 }
 .footer__link {
     color: $navigation;

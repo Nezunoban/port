@@ -12,12 +12,23 @@
 }
 
 .angleport__container {
+	position: relative;
+	margin-top: -24rem;
+    width: 141%;
+    transform: rotateX(-34deg) rotateY(45deg);
+    margin-left: -20%;
+    z-index: 9; // Safari OSX - z-index inconsistency fix
+	
+	@include media(medium, $gemini-screens) {
+		margin-top: -10rem;
+	}
 	@include media(large, $gemini-screens) {
-		width: 150vh;
+		width: auto;
 		// Pure css rotation
 		transform: rotateX(-30deg) rotateY(45deg);
-		position: relative;
 		margin-top: -200px;
+		margin-bottom: 200px;
+		margin-left: 9vw;
 		z-index: 10; // Safari OSX - z-index inconsistency fix
     }
 }
@@ -30,12 +41,26 @@
 }
 
 .anglegrid__item {
-  transform-origin: 0 0;
-  position: relative;
-  display: inline-block;
-  width: 30%;
-  margin-bottom: 2em;
-  margin-right: 3%;
+
+
+    display: inline-block;
+	width: 49%;
+	/*
+	margin: 0;
+	overflow: hidden;
+    min-height: 250px;
+	display: inline-block;
+		*/
+	overflow: visible;
+	transform-origin: 0 0;
+	
+	@include media(medium) {
+		width: 30%;
+		//min-height: none;
+		margin-bottom: 2em;
+		margin-right: 3%;
+	}
+
 
 }
 
@@ -66,8 +91,15 @@
 .anglegrid__title {
 	font-size: 0.65em;
 	font-weight: 600;
+	
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+	background-color: rgba(255,255,255,.85);
+	padding: .5rem;
+	
 	@include media(large, $gemini-screens) {
-		position: absolute;
+		//position: absolute;
 		z-index: -3;
 		left: -220px;
 		bottom: 200px;
@@ -75,8 +107,10 @@
 		text-align: left;
 		letter-spacing: 2px;
 		text-transform: uppercase;
+		padding: 0;
 		opacity: 0;
-		color: #F06B6A;
+		background-color: transparent;
+		color: $orange;
 		transition: transform 0.3s;
 		transform: rotate(-180deg);
 		transform-origin: top right;
@@ -112,6 +146,7 @@
 
 	.layer {
 		display: none;
+
 		@include media(large, $gemini-screens) {
 			display: block;
 			-webkit-transform-style: preserve-3d;
@@ -121,19 +156,28 @@
 		}
 	}
 	.layer-1 { 
+
 		@include media(large, $gemini-screens) {
-		transform: rotateY(30deg);
+			transform: rotateY(30deg);
 		}
 	}
 	.layer-2 { 
+
 		@include media(large, $gemini-screens) {
-		transform: rotateY(0deg);
+			transform: rotateY(0deg);
 		}
 	}
 	.layer-3 { 
 		display: block;
+		//max-width: 300%;
+		//position: absolute;
+		//height: 300px;
+		//width: auto;
+		//max-width: none;
+
 		@include media(large, $gemini-screens) {
-		transform: rotateY(-30deg);
+			//position: relative;
+			transform: rotateY(-30deg);
 		}
 	}
 }
@@ -183,11 +227,12 @@
 .anglegrid__item.aos-animate:hover {
 	
 	.anglegrid__title {
-		opacity: 1;
-		transform: rotate(-90deg);
-		//z-index: auto;
-		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-				
+		@include media(large, $gemini-screens) {
+			opacity: 1;
+			transform: rotate(-90deg);
+			//z-index: auto;
+			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+		}		
 	}
 	.layer {
 
@@ -213,17 +258,6 @@
 
 }
 
-
-
-
-.work__intro-row {
-	
-	position: absolute;
-    top: 26vh;
-    width: 100%;
-	display: block;
-	overflow: visible;
-}
 
 
 

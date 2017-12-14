@@ -56,6 +56,8 @@
 @import "mixins/truncate";
 @import "mixins/gradients";
 @import "mixins/vendor";
+@import "mixins/flexbox";
+//@import "mixins/css-grid";
 // Angles from https://github.com/NigelOToole/angled-edges
 @import "mixins/angled-edges";
 
@@ -108,6 +110,7 @@
 @import "objects/pure-drawer";
 @import "objects/copy";
 @import "objects/angled-portfolio";
+@import "objects/slider";
 @import "objects/hero";
 @import "objects/footer";
 //@import "objects/scrollhead";
@@ -149,4 +152,5 @@
 //@import "theme/hero";
 //@import "theme/colors";
 //@import "theme/footer";
-@import "theme/shame"
+@import "theme/shame";
+@import "theme/grid-layout";

@@ -167,6 +167,19 @@
 }
 
 
+/* Mobile Only Angles */
+.angle--both-left-right--mobile {
+    /*
+    @include media-query(0,$medium-end) {
+        border: 5px solid orange;
+        @include angle-edge($angle: 15, $angle-position-y: 'both', $angle-position-x: 'left', $angle-position-bottom-x: 'right');
+    }
+    */
+    
+}
+
+
+
 
 .angle__content {
     display: block;
