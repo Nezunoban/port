@@ -10,12 +10,18 @@
     min-height: 90vh;
     background: $brand-color-bg;
 
-    margin-top: -20vh;
+    //margin-top: -20vh;
     @include media(medium, $gemini-screens) {
-        margin-top: -50vw;
+        //margin-top: -50vw;
         padding-top: 18rem;
     }
     @include background-image(linear-gradient(to bottom right, $brand-color-bg, $brand-color-2-bg));
+}
+.footer-homepage {
+    margin-top: -20vh;
+    @include media(medium, $gemini-screens) {
+        margin-top: -50vw;
+    }
 }
 .footer__image {
     display: block;

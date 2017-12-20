@@ -154,7 +154,7 @@ $gemini-grid: extend((
  * @modifier [.l-col--{screen}-push-reset] Reset the push on the specified screen size
  * @modifier [.l-col--end] Floats the last column to the left
  */
-[class*="l-column"] {
+[class*="l-col"] {
   @include clearfix;
   position: relative;
   padding: 0 (get(gutter, $gemini-grid) / 2);
@@ -164,9 +164,11 @@ $gemini-grid: extend((
 }
 
 //Float the last column to the right
-[class*="l-column"] + [class*="l-column"]:last-child {
-  float: right;
+[class*="l-col"] + [class*="l-col"]:last-child {
 
+  @include media(medium, $gemini-screens){
+    float: right;
+  }
   // Unless the last column is specified as end
   &.l-col--end {
     float: left;
@@ -192,6 +194,15 @@ $gemini-grid: extend((
 
 @media print{
   @include screen-grid('print');
+}
+
+
+/****** fix for reseting offset above small screen sizes   *****/
+.l-col--medium-offset-0 {
+  @include media(medium, $gemini-screens){
+    margin-left: inherit;
+    margin-right: inherit;
+  }
 }
 
 /**

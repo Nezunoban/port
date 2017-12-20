@@ -36,7 +36,8 @@
     width: 300px;
     @include media(large, $gemini-screens)  {
       width: 500px;
-      margin: 180px 0 100px 0;
+      margin: 280px 0 100px 0;
+      margin-top: 50vh;
     }
   }
 

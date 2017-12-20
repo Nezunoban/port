@@ -16,6 +16,14 @@ b {
     font-style: normal;
 }
 
+
+
+.figcaption {
+    font-size: .75em;
+    color: lighten($color,60%);
+}
+
+
 /* For fixing FOIT and font loading inconsistencies: font-loaded class */
 
 .fonts-loaded body {
@@ -51,7 +59,7 @@ b {
 .homepage__work,
 .homepage__self {
     position: relative;
-    padding-left: 80px;
+    //padding-left: 80px;
     
     @include media(medium, $gemini-screens) {
         padding-left: 120px;
@@ -61,11 +69,6 @@ b {
     margin-top: -50vh;
     @include media(medium, $gemini-screens) {
         margin-top: 10em;
-    }
-}
-.self__intro {
-    @include media(medium, $gemini-screens) {
-        padding-top: 18rem;
     }
 }
 
@@ -89,6 +92,7 @@ b {
         position: absolute;
         padding: 300px 100px;
         z-index: 0;
+        min-height: 150vh;
     }
 
     @media screen and (min-aspect-ratio: 19/6) {
@@ -99,6 +103,12 @@ b {
 
 .l-intro--left {
     padding: 4em 2em;
+}
+
+.self__intro {
+    @include media(medium, $gemini-screens) {
+        padding-top: 40vh;
+    }
 }
 /*
 .angle-work__bg {
@@ -198,9 +208,13 @@ b {
     @extend %overlay;
     @include gradient-directional($brand-bp-bg, $brand-p-bg, 90deg);
 }
-.overlay--pink {
+.overlay--pink-reverse {
     @extend %overlay;
     @include gradient-directional($brand-pink-bg, $brand-p-bg, 90deg);
+}
+.overlay--pink {
+    @extend %overlay;
+    @include gradient-directional(rgba($brand-color-2-bg, .8), rgba($brand-pink-bg, .45), 90deg);
 }
 .overlay--blue {
     @extend %overlay;
@@ -224,11 +238,16 @@ b {
 .homepage__self-angle__content {
     display: block;
     padding: 4em 5em;
+    position: absolute;
+    right: 0;
+    @include media(large, $gemini-screens) {
+        padding-right: 1em;
+    }
 }
 
 .homepage__work-angle__content {
     @include media(large, $gemini-screens) {
-        padding: 30vw 2em;
+        padding: 30vw 1em;
     }
 }
 
@@ -391,9 +410,56 @@ $dur:  8s;
   //100%  { -webkit-clip-path: polygon(/*1*/ 0% 100%, /*2*/ $border 100%, /*3*/ $border 100%, /*4*/ $border 100%, /*5*/ $border 100%, /*6*/ $border 100%, /*7*/ $border 100%, /*8*/ $border 100%, /*9*/ $border 100%, /*10*/ 0% 100%); }
 //}
 
+/*     */
+
+.work__work {
+    @include media(medium, $gemini-screens){
+        margin-top: -50vw;
+    }
+}
 
 
+.story__img__mobile {
+    @include media(medium, $gemini-screens) {
+        max-width: 20%;
+        position: absolute;
+        right: 10%;
+        bottom: 0;
+    }
+}
 
+.story__img__desktop {
+    padding-bottom: 6em;
+}
+.story__figcaption {
+    @include media(medium, $gemini-screens) {
+        /*
+        transform: rotate(-28deg);
+        margin-right: 0%;
+        margin-top: -12%;
+        padding-left: 35%;
+        */
+    }
+}
+
+.story__feature-img {
+
+    margin-top: -80vw;
+    padding-bottom: 5em;
+    @include media(medium, $gemini-screens){
+        margin-top: -60vw;
+        padding-bottom: 0;
+    }
+}
+
+.story__phase {
+    padding-top: 2em;
+    padding-bottom: 4em;
+    @include media(medium, $gemini-screens){
+        padding-top: 5em;
+        padding-bottom: 8em;
+    }
+}
 
 /* 
  *  Display FlexBox

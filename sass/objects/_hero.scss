@@ -4,7 +4,7 @@
 .hero {
     color: $navigation;
     background-color: $brand-color-2;
-    padding-left: 80px;
+    padding-left: 70px;
     padding-right: 4rem;
     padding-top: 8rem;
     min-height: 90vh;
@@ -15,11 +15,15 @@
     }
     @include media(medium, $gemini-screens) { 
         //min-height: 90vh;
-        padding-top: 13rem;
+        padding-top: 10rem;
         padding-bottom: 12rem;
-
         padding-left: 120px;
     }
+    @media screen and (min-aspect-ratio: 1/1) {
+        min-height: 100vh;
+        padding-top: 8rem;
+    }
+
     @include media(large, $gemini-screens) { 
         //min-height: 90vh;
         padding-top: 13rem;
@@ -32,9 +36,7 @@
     }
     
 
-    @media screen and (min-aspect-ratio: 1/1) {
-        min-height: 100vh;
-    }
+    
 
     @media screen and (min-aspect-ratio: 8/5) {
         min-height: 120vh;
@@ -71,15 +73,20 @@
 }
 
 .hero__content {
+    padding: 0;
+    @include media (medium, $gemini-screens) {
+        padding: 0 12px;
+    }
     @include media(xlarge, $gemini-screens) {
         font-size: 1.5em;
     }
 }
 h2.hero__h2 {
-    margin-bottom: 0;
+    margin-bottom: .25em;
+    line-height: 1.15em;
 }
 h2.margin-w {
-    margin-left: -.2rem;
+    text-indent: -.2rem;
 }
 .fonts-loaded h2.hero__h2 {
     // To be replaced by twentieth century pro medium

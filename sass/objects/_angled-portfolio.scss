@@ -13,25 +13,39 @@
 
 .angleport__container {
 	position: relative;
-	margin-top: -24rem;
+	margin-top: -24rem; //allowing for background of quote area to move up too
+	//top: -24rem;
     width: 141%;
     transform: rotateX(-34deg) rotateY(45deg);
     margin-left: -20%;
     z-index: 9; // Safari OSX - z-index inconsistency fix
 	
 	@include media(medium, $gemini-screens) {
-		margin-top: -10rem;
+		margin-top: 0;  //inline block offset correction
+		top: -10rem;	//allowing anglegrid to move upward into previous div without inline block interfering in chrome (with inline block flow on certain browsers not supporting grid/flex)
 	}
 	@include media(large, $gemini-screens) {
 		width: auto;
 		// Pure css rotation
 		transform: rotateX(-30deg) rotateY(45deg);
-		margin-top: -200px;
+		//margin-top: -200px; fix for inline block issue
+		margin-top: 0;
+		top: -200px;
+
 		margin-bottom: 200px;
 		margin-left: 9vw;
 		z-index: 10; // Safari OSX - z-index inconsistency fix
     }
 }
+
+.work__work {
+	.angleport__container {
+		@include media(large, $gemini-screens) {
+			top: 0;
+		}
+	}
+}
+	
 
 .anglegrid {
 	position: relative;
