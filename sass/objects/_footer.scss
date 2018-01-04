@@ -17,10 +17,12 @@
     }
     @include background-image(linear-gradient(to bottom right, $brand-color-bg, $brand-color-2-bg));
 }
-.footer-homepage {
+.footer--quotes {
     margin-top: -20vh;
+    padding-bottom: 10vh;
     @include media(medium, $gemini-screens) {
         margin-top: -50vw;
+        padding-bottom: 25vw;
     }
 }
 .footer__image {

@@ -18,7 +18,7 @@
 $gemini-grid: () !default;
 
 $gemini-grid: extend((
-  max-width:         get(xlarge, $gemini-screens),
+  max-width:         get(xxlarge, $gemini-screens),
   gutter:            get(spacing),
   columns:           12,
   medium-breakpoint: get(medium, $gemini-screens),

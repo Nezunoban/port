@@ -57,15 +57,19 @@ b {
 }
 
 .homepage__work,
-.homepage__self {
+.section-self {
     position: relative;
-    //padding-left: 80px;
-    
+}
+
+.section {
     @include media(medium, $gemini-screens) {
         padding-left: 120px;
     }
+    @include media(xxlarge, $gemini-screens) {
+        padding-left: 0;
+    }
 }
-.homepage__self {
+.section-self {
     margin-top: -50vh;
     @include media(medium, $gemini-screens) {
         margin-top: 10em;
@@ -235,7 +239,7 @@ b {
     position: relative;
 }
 .homepage__work-angle__content,
-.homepage__self-angle__content {
+.section-self-angle__content {
     display: block;
     padding: 4em 5em;
     position: absolute;
@@ -277,7 +281,7 @@ main section {
     font-size: 1.5rem;
 }
 
-.homepage__self {
+.section-self {
     @include media(medium, $gemini-screens){
         padding-bottom: 70vw;
     }
@@ -451,7 +455,6 @@ $dur:  8s;
         padding-bottom: 0;
     }
 }
-
 .story__phase {
     padding-top: 2em;
     padding-bottom: 4em;

@@ -34,6 +34,8 @@
   position: absolute !important;
   left: -999% !important;
   top: -999% !important;
+  left: -9999% !important;
+  top: -9999% !important;
 }
 
 //For Javascript
@@ -77,6 +79,8 @@
     position: absolute !important;
     left: -999% !important;
     top: -999% !important;
+    left: -9999% !important;
+    top: -9999% !important;
   }
   %visible-large {
     position: static !important;

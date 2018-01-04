@@ -1,0 +1,192 @@
+/**
+ ********************************
+ * _SELF-Page.SCSS
+ ********************************
+ */
+
+ // 
+
+
+ .chart__dl {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+  }
+  
+  .chart__dt {
+    align-self: flex-start;
+    width: 100%;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-left: 130px;
+  }
+  
+  .chart__text {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 130px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    justify-content: flex-end;
+    text-align: right;
+  }
+  .chart__percentage {
+    font-size: 1em;
+    line-height: 1;
+    width: auto;
+    height: 40px;
+    margin-left: 130px;
+    /*background: repeating-linear-gradient(
+    to right,
+    #ddd,
+    #ddd 1px,
+    #fff 1px,
+    #fff 5%
+  );*/
+    
+    &:after {
+      content: "";
+      display: block;
+      //background-color: #3d9970;
+      overflow: hidden;
+      //background: url("../img/starry-bg.jpg") no-repeat center center fixed #181d25;
+      @include gradient-directional($brand-bp-bg, $brand-p-bg, 90deg);
+      width: 50px;
+      margin-bottom: 10px;
+      height: 90%;
+      position: relative;
+      //top: 50%;
+      transform: translateY(-50%);
+      transition: background-color .3s ease;
+      cursor: pointer;
+
+    }
+    &:hover,
+    &:focus {
+      &:after {
+         background-color: #aaa; 
+      }
+    }
+  }
+.chart__percentage {
+    &:after {
+
+    }
+}
+  @for $i from 1 through 100 {
+    .chart__percentage-#{$i} {
+      &:after {
+        $value: ($i * 1%);
+        width: $value;
+      }
+    }
+  }
+  
+
+.anglechart {
+
+}
+.anglechart__dl {
+   position: relative;
+   -ms-transform: skewY(-30deg); /* IE 9 */
+   -webkit-transform: skewY(-30deg); /* Safari */
+   transform: skewY(-30deg); /* Standard syntax */
+   z-index: -1;
+   margin-top: 4em;
+   @include media(medium, $gemini-screens) {
+       margin-top: 0;
+   }
+}
+
+.anglechart__text {
+    margin-top: -68px;
+    -ms-transform: skewY(30deg); /* IE 9 */
+    -webkit-transform: skewY(30deg); /* Safari */
+    transform: skewY(30deg); /* Standard syntax */
+}
+
+.anglechart__figcaption {
+    position: relative;
+    z-index: 3;
+    margin-top: 5em;
+}
+
+
+.self__h4 {
+    font-weight: bold;
+}
+
+.self__impact {
+    //position: relative
+}
+.self__row {
+  padding-top: 2em;
+  padding-bottom: 4em;
+  @include media(medium, $gemini-screens){
+    padding-top: 5em;
+    padding-bottom: 8em;
+  }
+}
+.self__values {
+  padding-top: 0;
+}
+
+.chart__percentage--pink {
+  &:after {
+    @include gradient-directional($brand-pink-text-1, $brand-p-bg, 90deg);
+  }
+}
+.chart__percentage--blue { 
+  &:after {
+    @include gradient-directional($brand-b-bg, $brand-bp-bg, 90deg);
+  }
+}
+.chart__percentage--purple {
+  &:after {
+    @include gradient-directional($brand-bp-bg, $brand-p-bg, 90deg);
+  }
+}
+
+
+.box__text {
+  border: 1px solid $color;
+  display: inline-block;
+  padding: .5em .5em .75em;
+  min-width: 2.5em;
+  text-align: center;
+}
+
+.box__text--pink {
+  border-color: $brand-pink-text-1;
+  color: $brand-pink-text-1;
+}
+.box__text--orange {
+  border-color: $orange;
+  color: $orange;
+}
+.box__text--blue {
+  border-color: $brand-blue-text-1;
+  color: $brand-blue-text-1;
+}
+.box__text--purple {
+  border-color: $brand-color-2-bg;
+  color: $brand-color-2-bg;
+}
+
+.chart__html {
+
+}
+
+.chart__css {
+
+}
