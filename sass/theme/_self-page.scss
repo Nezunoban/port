@@ -94,7 +94,9 @@
   
 
 .anglechart {
-
+  /* align heading with top chart item */
+  margin-top: -2.5em;
+  margin-bottom: 2.5em;
 }
 .anglechart__dl {
    position: relative;

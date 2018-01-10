@@ -204,6 +204,13 @@ $gemini-grid: extend((
     margin-right: inherit;
   }
 }
+@for $i from 1 through get(columns, $gemini-grid) - 2 {
+  @include media(xlarge, $gemini-screens){
+    .l-col--xlarge-offset-#{$i} {
+      margin-left: gridCalc($i, get(columns, $gemini-grid));
+    }
+  }
+}
 
 /**
  * @markup

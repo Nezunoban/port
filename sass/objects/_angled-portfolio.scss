@@ -103,20 +103,21 @@
 
 
 .anglegrid__title {
-	font-size: 0.65em;
+	font-size: 1em;
 	font-weight: 600;
 	
 	position: absolute;
     bottom: 0;
     width: 100%;
-	background-color: rgba(255,255,255,.85);
 	padding: .5rem;
+	background-color: $brand-pink-bg;
+	color: $navigation;
 	
 	@include media(large, $gemini-screens) {
 		//position: absolute;
 		z-index: -3;
 		left: -220px;
-		bottom: 200px;
+		bottom: 180px;
 		width: 200px;
 		text-align: left;
 		letter-spacing: 2px;
@@ -195,6 +196,8 @@
 		}
 	}
 }
+
+
 .anglegrid__item.aos-init.aos-animate {
 	.layer {
 		//transition-duration: .2s;
@@ -219,7 +222,7 @@
 		}
 	}
 }
-
+/*
 [data-aos=slide-left] {
 	@include media(medium) {
 		transform:translateX(450%)
@@ -231,6 +234,7 @@
 		transform:translateX(900%)
 	}
 }
+*/
 
 
 
@@ -271,6 +275,7 @@
 	}
 
 }
+
 
 
 

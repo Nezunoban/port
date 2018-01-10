@@ -87,7 +87,7 @@ b {
     position: relative;
     padding: 300px 0;
 
-    @include media(medium, $gemini-screens)  {
+    @include media(large, $gemini-screens)  {
         display: block;
         top: -400px;
         right: 0;
@@ -96,7 +96,13 @@ b {
         position: absolute;
         padding: 300px 100px;
         z-index: 0;
+        min-height: 125vh;
+        width: 50vw;
+    }
+    @include media(xlarge, $gemini-screens) {
+        width: 60vw;
         min-height: 150vh;
+
     }
 
     @media screen and (min-aspect-ratio: 19/6) {
@@ -105,9 +111,20 @@ b {
     //overflow: hidden;
 }
 
+.angle-self__bg {
+    @include media(medium, $gemini-screens)  {
+        //width: auto;
+    }
+    @include media(large, $gemini-screens)  {
+        //width: 60vw;
+    }
+}
+
 .l-intro--left {
     padding: 4em 2em;
 }
+
+
 
 .self__intro {
     @include media(medium, $gemini-screens) {

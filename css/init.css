@@ -1989,8 +1989,6 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6,
 hgroup,
 .hgroup,
 ul,
@@ -4568,6 +4566,66 @@ object {
   }
 }
 
+@media screen and (min-width: 75em) {
+  /* line 209, ../sass/objects/_grid.scss */
+  .l-col--xlarge-offset-1 {
+    margin-left: 8.33333%;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 209, ../sass/objects/_grid.scss */
+  .l-col--xlarge-offset-2 {
+    margin-left: 16.66667%;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 209, ../sass/objects/_grid.scss */
+  .l-col--xlarge-offset-3 {
+    margin-left: 25%;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 209, ../sass/objects/_grid.scss */
+  .l-col--xlarge-offset-4 {
+    margin-left: 33.33333%;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 209, ../sass/objects/_grid.scss */
+  .l-col--xlarge-offset-5 {
+    margin-left: 41.66667%;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 209, ../sass/objects/_grid.scss */
+  .l-col--xlarge-offset-6 {
+    margin-left: 50%;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 209, ../sass/objects/_grid.scss */
+  .l-col--xlarge-offset-7 {
+    margin-left: 58.33333%;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 209, ../sass/objects/_grid.scss */
+  .l-col--xlarge-offset-8 {
+    margin-left: 66.66667%;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 209, ../sass/objects/_grid.scss */
+  .l-col--xlarge-offset-9 {
+    margin-left: 75%;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 209, ../sass/objects/_grid.scss */
+  .l-col--xlarge-offset-10 {
+    margin-left: 83.33333%;
+  }
+}
 /**
  * @markup
   <div class="l-row">
@@ -9071,20 +9129,21 @@ Copyright (c) 2014 Daniel Eden
 
 /* line 105, ../sass/objects/_angled-portfolio.scss */
 .anglegrid__title {
-  font-size: 0.65em;
+  font-size: 1em;
   font-weight: 600;
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.85);
   padding: .5rem;
+  background-color: rgba(255, 117, 105, 0.66);
+  color: #FFF;
 }
 @media screen and (min-width: 64em) {
   /* line 105, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__title {
     z-index: -3;
     left: -220px;
-    bottom: 200px;
+    bottom: 180px;
     width: 200px;
     text-align: left;
     letter-spacing: 2px;
@@ -9101,14 +9160,14 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-/* line 141, ../sass/objects/_angled-portfolio.scss */
+/* line 142, ../sass/objects/_angled-portfolio.scss */
 .layer {
   position: relative;
   display: block;
 }
 
 @media screen and (min-width: 64em) {
-  /* line 146, ../sass/objects/_angled-portfolio.scss */
+  /* line 147, ../sass/objects/_angled-portfolio.scss */
   .layer:not(:first-child) {
     position: absolute;
     top: 0;
@@ -9116,18 +9175,18 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-/* line 154, ../sass/objects/_angled-portfolio.scss */
+/* line 155, ../sass/objects/_angled-portfolio.scss */
 .anglegrid__item .layer {
   transition: transform 0.3s;
   transform-origin: 0 0;
 }
 
-/* line 161, ../sass/objects/_angled-portfolio.scss */
+/* line 162, ../sass/objects/_angled-portfolio.scss */
 .anglegrid__item .layer {
   display: none;
 }
 @media screen and (min-width: 64em) {
-  /* line 161, ../sass/objects/_angled-portfolio.scss */
+  /* line 162, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer {
     display: block;
     -webkit-transform-style: preserve-3d;
@@ -9137,68 +9196,62 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 172, ../sass/objects/_angled-portfolio.scss */
+  /* line 173, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer-1 {
     transform: rotateY(30deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 178, ../sass/objects/_angled-portfolio.scss */
+  /* line 179, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer-2 {
     transform: rotateY(0deg);
   }
 }
-/* line 184, ../sass/objects/_angled-portfolio.scss */
+/* line 185, ../sass/objects/_angled-portfolio.scss */
 .anglegrid__item .layer-3 {
   display: block;
 }
 @media screen and (min-width: 64em) {
-  /* line 184, ../sass/objects/_angled-portfolio.scss */
+  /* line 185, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer-3 {
     transform: rotateY(-30deg);
   }
 }
 
 @media screen and (min-width: 64em) {
-  /* line 203, ../sass/objects/_angled-portfolio.scss */
+  /* line 206, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item.aos-init.aos-animate .layer-1 {
     transform: rotateY(0deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 209, ../sass/objects/_angled-portfolio.scss */
+  /* line 212, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item.aos-init.aos-animate .layer-2 {
     transform: rotateY(0deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 215, ../sass/objects/_angled-portfolio.scss */
+  /* line 218, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item.aos-init.aos-animate .layer-3 {
     transform: rotateY(0deg);
   }
 }
 
-@media print, screen and (min-width: 30.0625em) {
-  /* line 223, ../sass/objects/_angled-portfolio.scss */
-  [data-aos=slide-left] {
-    transform: translateX(450%);
-  }
+/*
+[data-aos=slide-left] {
+	@include media(medium) {
+		transform:translateX(450%)
+	}
+	@include media(large) {
+		transform:translateX(550%)
+	}
+	@include media(xlarge) {
+		transform:translateX(900%)
+	}
 }
-@media print, screen and (min-width: 64em) {
-  /* line 223, ../sass/objects/_angled-portfolio.scss */
-  [data-aos=slide-left] {
-    transform: translateX(550%);
-  }
-}
-@media print, screen and (min-width: 75em) {
-  /* line 223, ../sass/objects/_angled-portfolio.scss */
-  [data-aos=slide-left] {
-    transform: translateX(900%);
-  }
-}
-
+*/
 @media screen and (min-width: 64em) {
-  /* line 243, ../sass/objects/_angled-portfolio.scss */
+  /* line 247, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .anglegrid__title,
   .anglegrid__item.aos-animate:hover .anglegrid__title {
     opacity: 1;
@@ -9206,28 +9259,28 @@ Copyright (c) 2014 Daniel Eden
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   }
 }
-/* line 251, ../sass/objects/_angled-portfolio.scss */
+/* line 255, ../sass/objects/_angled-portfolio.scss */
 .anglegrid__item:hover .layer,
 .anglegrid__item.aos-animate:hover .layer {
   transition-duration: .2s;
   transition-delay: 0s;
 }
 @media screen and (min-width: 64em) {
-  /* line 257, ../sass/objects/_angled-portfolio.scss */
+  /* line 261, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .layer-1,
   .anglegrid__item.aos-animate:hover .layer-1 {
     transform: rotateY(40deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 262, ../sass/objects/_angled-portfolio.scss */
+  /* line 266, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .layer-2,
   .anglegrid__item.aos-animate:hover .layer-2 {
     transform: rotateY(0deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 267, ../sass/objects/_angled-portfolio.scss */
+  /* line 271, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .layer-3,
   .anglegrid__item.aos-animate:hover .layer-3 {
     transform: rotateY(-40deg);
@@ -9235,19 +9288,19 @@ Copyright (c) 2014 Daniel Eden
 }
 
 /* Loading effect */
-/* line 280, ../sass/objects/_angled-portfolio.scss */
+/* line 285, ../sass/objects/_angled-portfolio.scss */
 .js .grid {
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 
-/* line 286, ../sass/objects/_angled-portfolio.scss */
+/* line 291, ../sass/objects/_angled-portfolio.scss */
 .js .grid.grid--loaded {
   opacity: 1;
 }
 
-/* line 290, ../sass/objects/_angled-portfolio.scss */
+/* line 295, ../sass/objects/_angled-portfolio.scss */
 .js body::after {
   content: '';
   position: fixed;
@@ -9279,7 +9332,7 @@ Copyright (c) 2014 Daniel Eden
     transform: rotate(360deg);
   }
 }
-/* line 324, ../sass/objects/_angled-portfolio.scss */
+/* line 329, ../sass/objects/_angled-portfolio.scss */
 .js body.grid-loaded::after {
   opacity: 0;
 }
@@ -11214,7 +11267,7 @@ b {
   position: relative;
   padding: 300px 0;
 }
-@media screen and (min-width: 30.0625em) {
+@media screen and (min-width: 64em) {
   /* line 83, ../sass/theme/_shame.scss */
   .angle-work__bg,
   .angle-self__bg {
@@ -11226,6 +11279,15 @@ b {
     position: absolute;
     padding: 300px 100px;
     z-index: 0;
+    min-height: 125vh;
+    width: 50vw;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 83, ../sass/theme/_shame.scss */
+  .angle-work__bg,
+  .angle-self__bg {
+    width: 60vw;
     min-height: 150vh;
   }
 }
@@ -11237,13 +11299,13 @@ b {
   }
 }
 
-/* line 108, ../sass/theme/_shame.scss */
+/* line 123, ../sass/theme/_shame.scss */
 .l-intro--left {
   padding: 4em 2em;
 }
 
 @media screen and (min-width: 30.0625em) {
-  /* line 112, ../sass/theme/_shame.scss */
+  /* line 129, ../sass/theme/_shame.scss */
   .self__intro {
     padding-top: 40vh;
   }
@@ -11282,12 +11344,12 @@ b {
 }
 */
 /* Isometric grid */
-/* line 152, ../sass/theme/_shame.scss */
+/* line 169, ../sass/theme/_shame.scss */
 .header__star-bg {
   position: relative;
 }
 
-/* line 156, ../sass/theme/_shame.scss */
+/* line 173, ../sass/theme/_shame.scss */
 .star-bg {
   overflow: hidden;
   background: url("../img/starry-bg.jpg") no-repeat center center fixed #181d25;
@@ -11297,7 +11359,7 @@ b {
   background-size: cover;
 }
 
-/* line 167, ../sass/theme/_shame.scss */
+/* line 184, ../sass/theme/_shame.scss */
 .overlay--grid-1, .overlay--grid-2, .overlay--purple, .overlay--pink-reverse, .overlay--pink, .overlay--blue {
   content: "";
   position: absolute;
@@ -11307,7 +11369,7 @@ b {
   bottom: 0;
 }
 
-/* line 173, ../sass/theme/_shame.scss */
+/* line 190, ../sass/theme/_shame.scss */
 .overlay--grid-1, .overlay--grid-2 {
   background-attachment: fixed;
   background-color: transparent;
@@ -11315,17 +11377,17 @@ b {
   background-size: 100px 56px;
 }
 
-/* line 179, ../sass/theme/_shame.scss */
+/* line 196, ../sass/theme/_shame.scss */
 .overlay--grid-1 {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 1%, rgba(0, 0, 0, 0) 2%, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0)), linear-gradient(30deg, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 97%, rgba(255, 255, 255, 0.05) 98%, rgba(255, 255, 255, 0.05) 99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0)), linear-gradient(150deg, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 97%, rgba(255, 255, 255, 0.05) 98%, rgba(255, 255, 255, 0.05) 99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0));
 }
 
-/* line 186, ../sass/theme/_shame.scss */
+/* line 203, ../sass/theme/_shame.scss */
 .overlay--grid-2 {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.09) 1%, rgba(0, 0, 0, 0) 2%, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.09) 50%, rgba(255, 255, 255, 0.09) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0)), linear-gradient(30deg, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.09) 50%, rgba(255, 255, 255, 0.09) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 97%, rgba(255, 255, 255, 0.09) 98%, rgba(255, 255, 255, 0.09) 99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0)), linear-gradient(150deg, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.09) 50%, rgba(255, 255, 255, 0.09) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 97%, rgba(255, 255, 255, 0.09) 98%, rgba(255, 255, 255, 0.09) 99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0));
 }
 
-/* line 193, ../sass/theme/_shame.scss */
+/* line 210, ../sass/theme/_shame.scss */
 .overlay--grid-1 {
   background-attachment: fixed;
   background-color: transparent;
@@ -11333,7 +11395,7 @@ b {
   background-size: 100px 56px;
 }
 
-/* line 211, ../sass/theme/_shame.scss */
+/* line 228, ../sass/theme/_shame.scss */
 .overlay--purple {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(90deg, rgba(75, 47, 144, 0.8), rgba(92, 16, 115, 0.8));
@@ -11341,7 +11403,7 @@ b {
   background-image: linear-gradient(90deg, rgba(75, 47, 144, 0.8), rgba(92, 16, 115, 0.8));
 }
 
-/* line 215, ../sass/theme/_shame.scss */
+/* line 232, ../sass/theme/_shame.scss */
 .overlay--pink-reverse {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(90deg, rgba(255, 117, 105, 0.66), rgba(92, 16, 115, 0.8));
@@ -11349,7 +11411,7 @@ b {
   background-image: linear-gradient(90deg, rgba(255, 117, 105, 0.66), rgba(92, 16, 115, 0.8));
 }
 
-/* line 219, ../sass/theme/_shame.scss */
+/* line 236, ../sass/theme/_shame.scss */
 .overlay--pink {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(90deg, rgba(92, 16, 115, 0.8), rgba(255, 117, 105, 0.45));
@@ -11357,7 +11419,7 @@ b {
   background-image: linear-gradient(90deg, rgba(92, 16, 115, 0.8), rgba(255, 117, 105, 0.45));
 }
 
-/* line 223, ../sass/theme/_shame.scss */
+/* line 240, ../sass/theme/_shame.scss */
 .overlay--blue {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(90deg, rgba(48, 95, 189, 0.8), rgba(75, 47, 144, 0.8));
@@ -11374,12 +11436,12 @@ b {
         linear-gradient(150deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent);
 }
 */
-/* line 238, ../sass/theme/_shame.scss */
+/* line 255, ../sass/theme/_shame.scss */
 .angle-container__content {
   position: relative;
 }
 
-/* line 241, ../sass/theme/_shame.scss */
+/* line 258, ../sass/theme/_shame.scss */
 .homepage__work-angle__content,
 .section-self-angle__content {
   display: block;
@@ -11388,7 +11450,7 @@ b {
   right: 0;
 }
 @media screen and (min-width: 64em) {
-  /* line 241, ../sass/theme/_shame.scss */
+  /* line 258, ../sass/theme/_shame.scss */
   .homepage__work-angle__content,
   .section-self-angle__content {
     padding-right: 1em;
@@ -11396,13 +11458,13 @@ b {
 }
 
 @media screen and (min-width: 64em) {
-  /* line 252, ../sass/theme/_shame.scss */
+  /* line 269, ../sass/theme/_shame.scss */
   .homepage__work-angle__content {
     padding: 30vw 1em;
   }
 }
 
-/* line 258, ../sass/theme/_shame.scss */
+/* line 275, ../sass/theme/_shame.scss */
 .delay-500 {
   transition-delay: 500ms;
 }
@@ -11410,19 +11472,19 @@ b {
 /*
 * Base Gradients
 */
-/* line 280, ../sass/theme/_shame.scss */
+/* line 297, ../sass/theme/_shame.scss */
 .main__h2 {
   font-size: 1.5rem;
 }
 
 @media screen and (min-width: 30.0625em) {
-  /* line 284, ../sass/theme/_shame.scss */
+  /* line 301, ../sass/theme/_shame.scss */
   .section-self {
     padding-bottom: 70vw;
   }
 }
 
-/* line 292, ../sass/theme/_shame.scss */
+/* line 309, ../sass/theme/_shame.scss */
 .g-button {
   border: 0 none transparent;
   color: #FFF;
@@ -11435,7 +11497,7 @@ b {
   background-image: linear-gradient(to bottom right, #ed6a6a, #5c1073);
 }
 
-/* line 300, ../sass/theme/_shame.scss */
+/* line 317, ../sass/theme/_shame.scss */
 .g-button:hover {
   color: #FFF;
   background: #F06B6A;
@@ -11447,24 +11509,24 @@ b {
   background-image: linear-gradient(to bottom right, #ed6a6a, #f06b6a);
 }
 
-/* line 306, ../sass/theme/_shame.scss */
+/* line 323, ../sass/theme/_shame.scss */
 .main__button {
   background: transparent;
 }
 
-/* line 310, ../sass/theme/_shame.scss */
+/* line 327, ../sass/theme/_shame.scss */
 .main__button.c-pink-1 {
   border-color: #A53151;
   color: #A53151;
 }
 
-/* line 314, ../sass/theme/_shame.scss */
+/* line 331, ../sass/theme/_shame.scss */
 .main__button.c-blue-1 {
   border-color: #39548E;
   color: #39548E;
 }
 
-/* line 318, ../sass/theme/_shame.scss */
+/* line 335, ../sass/theme/_shame.scss */
 .main__button.c-purple-1 {
   border-color: #4F1649;
   color: #4F1649;
@@ -11554,14 +11616,14 @@ $dur:  8s;
 */
 /*     */
 @media screen and (min-width: 30.0625em) {
-  /* line 419, ../sass/theme/_shame.scss */
+  /* line 436, ../sass/theme/_shame.scss */
   .work__work {
     margin-top: -50vw;
   }
 }
 
 @media screen and (min-width: 30.0625em) {
-  /* line 426, ../sass/theme/_shame.scss */
+  /* line 443, ../sass/theme/_shame.scss */
   .story__img__mobile {
     max-width: 20%;
     position: absolute;
@@ -11570,13 +11632,13 @@ $dur:  8s;
   }
 }
 
-/* line 435, ../sass/theme/_shame.scss */
+/* line 452, ../sass/theme/_shame.scss */
 .story__img__desktop {
   padding-bottom: 6em;
 }
 
 @media screen and (min-width: 30.0625em) {
-  /* line 438, ../sass/theme/_shame.scss */
+  /* line 455, ../sass/theme/_shame.scss */
   .story__figcaption {
     /*
     transform: rotate(-28deg);
@@ -11587,26 +11649,26 @@ $dur:  8s;
   }
 }
 
-/* line 449, ../sass/theme/_shame.scss */
+/* line 466, ../sass/theme/_shame.scss */
 .story__feature-img {
   margin-top: -80vw;
   padding-bottom: 5em;
 }
 @media screen and (min-width: 30.0625em) {
-  /* line 449, ../sass/theme/_shame.scss */
+  /* line 466, ../sass/theme/_shame.scss */
   .story__feature-img {
     margin-top: -60vw;
     padding-bottom: 0;
   }
 }
 
-/* line 458, ../sass/theme/_shame.scss */
+/* line 475, ../sass/theme/_shame.scss */
 .story__phase {
   padding-top: 2em;
   padding-bottom: 4em;
 }
 @media screen and (min-width: 30.0625em) {
-  /* line 458, ../sass/theme/_shame.scss */
+  /* line 475, ../sass/theme/_shame.scss */
   .story__phase {
     padding-top: 5em;
     padding-bottom: 8em;
@@ -11620,16 +11682,16 @@ $dur:  8s;
  *
  *
  */
-/* line 475, ../sass/theme/_shame.scss */
+/* line 492, ../sass/theme/_shame.scss */
 .scaling-svg-container {
   max-width: 100%;
 }
-/* line 477, ../sass/theme/_shame.scss */
+/* line 494, ../sass/theme/_shame.scss */
 .scaling-svg-container svg {
   max-width: 100%;
 }
 
-/* line 482, ../sass/theme/_shame.scss */
+/* line 499, ../sass/theme/_shame.scss */
 .l-flex-container {
   /* We first create a flex layout context */
   display: -webkit-box;
@@ -11651,7 +11713,7 @@ $dur:  8s;
   justify-content: flex-start;
 }
 
-/* line 495, ../sass/theme/_shame.scss */
+/* line 512, ../sass/theme/_shame.scss */
 .l-flex-item--50 {
   -webkit-box-flex: 1 auto;
   -moz-box-flex: 1 auto;
@@ -12319,7 +12381,14 @@ $dur:  8s;
   width: 100%;
 }
 
-/* line 99, ../sass/theme/_self-page.scss */
+/* line 96, ../sass/theme/_self-page.scss */
+.anglechart {
+  /* align heading with top chart item */
+  margin-top: -2.5em;
+  margin-bottom: 2.5em;
+}
+
+/* line 101, ../sass/theme/_self-page.scss */
 .anglechart__dl {
   position: relative;
   -ms-transform: skewY(-30deg);
@@ -12332,13 +12401,13 @@ $dur:  8s;
   margin-top: 4em;
 }
 @media screen and (min-width: 30.0625em) {
-  /* line 99, ../sass/theme/_self-page.scss */
+  /* line 101, ../sass/theme/_self-page.scss */
   .anglechart__dl {
     margin-top: 0;
   }
 }
 
-/* line 111, ../sass/theme/_self-page.scss */
+/* line 113, ../sass/theme/_self-page.scss */
 .anglechart__text {
   margin-top: -68px;
   -ms-transform: skewY(30deg);
@@ -12349,37 +12418,37 @@ $dur:  8s;
   /* Standard syntax */
 }
 
-/* line 118, ../sass/theme/_self-page.scss */
+/* line 120, ../sass/theme/_self-page.scss */
 .anglechart__figcaption {
   position: relative;
   z-index: 3;
   margin-top: 5em;
 }
 
-/* line 125, ../sass/theme/_self-page.scss */
+/* line 127, ../sass/theme/_self-page.scss */
 .self__h4 {
   font-weight: bold;
 }
 
-/* line 132, ../sass/theme/_self-page.scss */
+/* line 134, ../sass/theme/_self-page.scss */
 .self__row {
   padding-top: 2em;
   padding-bottom: 4em;
 }
 @media screen and (min-width: 30.0625em) {
-  /* line 132, ../sass/theme/_self-page.scss */
+  /* line 134, ../sass/theme/_self-page.scss */
   .self__row {
     padding-top: 5em;
     padding-bottom: 8em;
   }
 }
 
-/* line 140, ../sass/theme/_self-page.scss */
+/* line 142, ../sass/theme/_self-page.scss */
 .self__values {
   padding-top: 0;
 }
 
-/* line 145, ../sass/theme/_self-page.scss */
+/* line 147, ../sass/theme/_self-page.scss */
 .chart__percentage--pink:after {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(90deg, #A53151, rgba(92, 16, 115, 0.8));
@@ -12387,7 +12456,7 @@ $dur:  8s;
   background-image: linear-gradient(90deg, #a53151, rgba(92, 16, 115, 0.8));
 }
 
-/* line 150, ../sass/theme/_self-page.scss */
+/* line 152, ../sass/theme/_self-page.scss */
 .chart__percentage--blue:after {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(90deg, rgba(48, 95, 189, 0.8), rgba(75, 47, 144, 0.8));
@@ -12395,7 +12464,7 @@ $dur:  8s;
   background-image: linear-gradient(90deg, rgba(48, 95, 189, 0.8), rgba(75, 47, 144, 0.8));
 }
 
-/* line 155, ../sass/theme/_self-page.scss */
+/* line 157, ../sass/theme/_self-page.scss */
 .chart__percentage--purple:after {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(90deg, rgba(75, 47, 144, 0.8), rgba(92, 16, 115, 0.8));
@@ -12403,7 +12472,7 @@ $dur:  8s;
   background-image: linear-gradient(90deg, rgba(75, 47, 144, 0.8), rgba(92, 16, 115, 0.8));
 }
 
-/* line 161, ../sass/theme/_self-page.scss */
+/* line 163, ../sass/theme/_self-page.scss */
 .box__text {
   border: 1px solid #333;
   display: inline-block;
@@ -12412,25 +12481,25 @@ $dur:  8s;
   text-align: center;
 }
 
-/* line 169, ../sass/theme/_self-page.scss */
+/* line 171, ../sass/theme/_self-page.scss */
 .box__text--pink {
   border-color: #A53151;
   color: #A53151;
 }
 
-/* line 173, ../sass/theme/_self-page.scss */
+/* line 175, ../sass/theme/_self-page.scss */
 .box__text--orange {
   border-color: #ff7159;
   color: #ff7159;
 }
 
-/* line 177, ../sass/theme/_self-page.scss */
+/* line 179, ../sass/theme/_self-page.scss */
 .box__text--blue {
   border-color: #39548E;
   color: #39548E;
 }
 
-/* line 181, ../sass/theme/_self-page.scss */
+/* line 183, ../sass/theme/_self-page.scss */
 .box__text--purple {
   border-color: #5C1073;
   color: #5C1073;
