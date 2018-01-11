@@ -113,13 +113,33 @@ body {
 }
 
 /* line 34, ../../sass/theme/_colors.scss */
+.c-pink-2 {
+  color: #76304C;
+}
+
+/* line 37, ../../sass/theme/_colors.scss */
 .c-blue-1 {
   color: #39548E;
 }
 
-/* line 38, ../../sass/theme/_colors.scss */
+/* line 40, ../../sass/theme/_colors.scss */
+.c-blue-2 {
+  color: #305FBD;
+}
+
+/* line 44, ../../sass/theme/_colors.scss */
 .c-purple-1 {
   color: #371A5C;
+}
+
+/* line 47, ../../sass/theme/_colors.scss */
+.c-purple-2 {
+  color: #5C1073;
+}
+
+/* line 51, ../../sass/theme/_colors.scss */
+.c-orange-1 {
+  color: #ff7159;
 }
 
 /**
@@ -10729,6 +10749,69 @@ h2.margin-w {
 /**
  * Responsive helper declerations
  */
+@media print, screen and (min-width: 30.0625em) {
+  /* line 42, ../../sass/helpers/_align.scss */
+  .align-medium-left {
+    text-align: left       !important;
+  }
+
+  /* line 43, ../../sass/helpers/_align.scss */
+  .align-medium-center {
+    text-align: center     !important;
+  }
+
+  /* line 44, ../../sass/helpers/_align.scss */
+  .align-medium-right {
+    text-align: right      !important;
+  }
+
+  /* line 45, ../../sass/helpers/_align.scss */
+  .align-medium-bottom {
+    vertical-align: bottom !important;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  /* line 52, ../../sass/helpers/_align.scss */
+  .align-large-left {
+    text-align: left       !important;
+  }
+
+  /* line 53, ../../sass/helpers/_align.scss */
+  .align-large-center {
+    text-align: center     !important;
+  }
+
+  /* line 54, ../../sass/helpers/_align.scss */
+  .align-large-right {
+    text-align: right      !important;
+  }
+
+  /* line 55, ../../sass/helpers/_align.scss */
+  .align-large-bottom {
+    vertical-align: bottom !important;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 60, ../../sass/helpers/_align.scss */
+  .align-xlarge-left {
+    text-align: left       !important;
+  }
+
+  /* line 61, ../../sass/helpers/_align.scss */
+  .align-xlarge-center {
+    text-align: center     !important;
+  }
+
+  /* line 62, ../../sass/helpers/_align.scss */
+  .align-xlarge-right {
+    text-align: right      !important;
+  }
+
+  /* line 63, ../../sass/helpers/_align.scss */
+  .align-xlarge-bottom {
+    vertical-align: bottom !important;
+  }
+}
 /**
  ********************************
  * _BRAND.SCSS
@@ -12436,13 +12519,13 @@ $dur:  8s;
 }
 
 /* line 466, ../../sass/theme/_shame.scss */
-.story__feature-img {
+.story__img-feature {
   margin-top: -80vw;
   padding-bottom: 5em;
 }
 @media screen and (min-width: 30.0625em) {
   /* line 466, ../../sass/theme/_shame.scss */
-  .story__feature-img {
+  .story__img-feature {
     margin-top: -60vw;
     padding-bottom: 0;
   }
@@ -12459,6 +12542,37 @@ $dur:  8s;
     padding-top: 5em;
     padding-bottom: 8em;
   }
+  @supports (display: flex) {
+    /* line 475, ../../sass/theme/_shame.scss */
+    .story__phase {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (min-width: 30.0625em) {
+  @supports (display: flex) {
+    /* line 486, ../../sass/theme/_shame.scss */
+    .story__text {
+      align-self: center;
+    }
+  }
+}
+
+@media screen and (min-width: 30.0625em) {
+  @supports (display: flex) {
+    /* line 493, ../../sass/theme/_shame.scss */
+    .story__text--final {
+      align-self: top;
+    }
+  }
+}
+
+@media screen and (min-width: 75em) {
+  /* line 505, ../../sass/theme/_shame.scss */
+  .footer--story {
+    margin-top: -50rem;
+  }
 }
 
 /* 
@@ -12468,16 +12582,16 @@ $dur:  8s;
  *
  *
  */
-/* line 492, ../../sass/theme/_shame.scss */
+/* line 522, ../../sass/theme/_shame.scss */
 .scaling-svg-container {
   max-width: 100%;
 }
-/* line 494, ../../sass/theme/_shame.scss */
+/* line 524, ../../sass/theme/_shame.scss */
 .scaling-svg-container svg {
   max-width: 100%;
 }
 
-/* line 499, ../../sass/theme/_shame.scss */
+/* line 529, ../../sass/theme/_shame.scss */
 .l-flex-container {
   /* We first create a flex layout context */
   display: -webkit-box;
@@ -12499,7 +12613,7 @@ $dur:  8s;
   justify-content: flex-start;
 }
 
-/* line 512, ../../sass/theme/_shame.scss */
+/* line 542, ../../sass/theme/_shame.scss */
 .l-flex-item--50 {
   -webkit-box-flex: 1 auto;
   -moz-box-flex: 1 auto;
