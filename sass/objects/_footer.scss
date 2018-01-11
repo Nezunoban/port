@@ -52,7 +52,7 @@
     line-height: 1.2em;
     text-transform: uppercase;
     @include media(medium, $gemini-screens) {
-        font-style: 4.5em;
+        font-size: 4.5em;
     }
 }
 .footer__link {
@@ -63,6 +63,9 @@
         color: $navigation;
         border: 1px solid $brand-color;
         text-decoration: none;
+    }
+    @include media(large, $gemini-screens) {
+        font-size: 1.25em;
     }
 }
 

@@ -9792,7 +9792,7 @@ h2.margin-w {
 @media screen and (min-width: 30.0625em) {
   /* line 49, ../sass/objects/_footer.scss */
   .footer__h2 {
-    font-style: 4.5em;
+    font-size: 4.5em;
   }
 }
 
@@ -9807,6 +9807,12 @@ h2.margin-w {
   color: #FFF;
   border: 1px solid #F06B6A;
   text-decoration: none;
+}
+@media screen and (min-width: 64em) {
+  /* line 58, ../sass/objects/_footer.scss */
+  .footer__link {
+    font-size: 1.25em;
+  }
 }
 
 /**
@@ -11089,7 +11095,7 @@ h2.margin-w {
 }
 
 /* line 73, ../sass/theme/_navigation.scss */
-.nav__link--is-active {
+.nav__item--is-active {
   background: #1f0f34;
 }
 
