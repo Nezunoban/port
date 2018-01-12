@@ -67,6 +67,7 @@
 		*/
 	overflow: visible;
 	transform-origin: 0 0;
+	cursor: pointer;
 	
 	@include media(medium) {
 		width: 30%;
@@ -81,9 +82,13 @@
 .anglegrid__link {
     width: auto;
 	position: relative;
+	display: block;
+	cursor: pointer;
 }
 .anglegrid__img {
 	width: 100%;
+	display: block;
+	max-width: 100%;
 }
 
 .js .anglegrid__item {
@@ -91,15 +96,7 @@
     backface-visibility: hidden;
 }
 
-.anglegrid__link {
-	position: relative;
-	display: block;
-}
 
-.anglegrid__img {
-	display: block;
-	max-width: 100%;
-}
 
 
 .anglegrid__title {
@@ -169,6 +166,7 @@
 			transition-duration: .5s;
 			transition-delay: .2s;
 		}
+		
 	}
 	.layer-1 { 
 

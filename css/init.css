@@ -9108,6 +9108,7 @@ Copyright (c) 2014 Daniel Eden
   		*/
   overflow: visible;
   transform-origin: 0 0;
+  cursor: pointer;
 }
 @media print, screen and (min-width: 30.0625em) {
   /* line 57, ../sass/objects/_angled-portfolio.scss */
@@ -9118,36 +9119,28 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-/* line 81, ../sass/objects/_angled-portfolio.scss */
+/* line 82, ../sass/objects/_angled-portfolio.scss */
 .anglegrid__link {
   width: auto;
   position: relative;
+  display: block;
+  cursor: pointer;
 }
 
-/* line 85, ../sass/objects/_angled-portfolio.scss */
+/* line 88, ../sass/objects/_angled-portfolio.scss */
 .anglegrid__img {
   width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
-/* line 89, ../sass/objects/_angled-portfolio.scss */
+/* line 94, ../sass/objects/_angled-portfolio.scss */
 .js .anglegrid__item {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-/* line 94, ../sass/objects/_angled-portfolio.scss */
-.anglegrid__link {
-  position: relative;
-  display: block;
-}
-
-/* line 99, ../sass/objects/_angled-portfolio.scss */
-.anglegrid__img {
-  display: block;
-  max-width: 100%;
-}
-
-/* line 105, ../sass/objects/_angled-portfolio.scss */
+/* line 102, ../sass/objects/_angled-portfolio.scss */
 .anglegrid__title {
   font-size: 1em;
   font-weight: 600;
@@ -9159,7 +9152,7 @@ Copyright (c) 2014 Daniel Eden
   color: #FFF;
 }
 @media screen and (min-width: 64em) {
-  /* line 105, ../sass/objects/_angled-portfolio.scss */
+  /* line 102, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__title {
     z-index: -3;
     left: -220px;
@@ -9180,14 +9173,14 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-/* line 142, ../sass/objects/_angled-portfolio.scss */
+/* line 139, ../sass/objects/_angled-portfolio.scss */
 .layer {
   position: relative;
   display: block;
 }
 
 @media screen and (min-width: 64em) {
-  /* line 147, ../sass/objects/_angled-portfolio.scss */
+  /* line 144, ../sass/objects/_angled-portfolio.scss */
   .layer:not(:first-child) {
     position: absolute;
     top: 0;
@@ -9195,18 +9188,18 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-/* line 155, ../sass/objects/_angled-portfolio.scss */
+/* line 152, ../sass/objects/_angled-portfolio.scss */
 .anglegrid__item .layer {
   transition: transform 0.3s;
   transform-origin: 0 0;
 }
 
-/* line 162, ../sass/objects/_angled-portfolio.scss */
+/* line 159, ../sass/objects/_angled-portfolio.scss */
 .anglegrid__item .layer {
   display: none;
 }
 @media screen and (min-width: 64em) {
-  /* line 162, ../sass/objects/_angled-portfolio.scss */
+  /* line 159, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer {
     display: block;
     -webkit-transform-style: preserve-3d;
@@ -9216,42 +9209,42 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 173, ../sass/objects/_angled-portfolio.scss */
+  /* line 171, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer-1 {
     transform: rotateY(30deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 179, ../sass/objects/_angled-portfolio.scss */
+  /* line 177, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer-2 {
     transform: rotateY(0deg);
   }
 }
-/* line 185, ../sass/objects/_angled-portfolio.scss */
+/* line 183, ../sass/objects/_angled-portfolio.scss */
 .anglegrid__item .layer-3 {
   display: block;
 }
 @media screen and (min-width: 64em) {
-  /* line 185, ../sass/objects/_angled-portfolio.scss */
+  /* line 183, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer-3 {
     transform: rotateY(-30deg);
   }
 }
 
 @media screen and (min-width: 64em) {
-  /* line 206, ../sass/objects/_angled-portfolio.scss */
+  /* line 204, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item.aos-init.aos-animate .layer-1 {
     transform: rotateY(0deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 212, ../sass/objects/_angled-portfolio.scss */
+  /* line 210, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item.aos-init.aos-animate .layer-2 {
     transform: rotateY(0deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 218, ../sass/objects/_angled-portfolio.scss */
+  /* line 216, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item.aos-init.aos-animate .layer-3 {
     transform: rotateY(0deg);
   }
@@ -9271,7 +9264,7 @@ Copyright (c) 2014 Daniel Eden
 }
 */
 @media screen and (min-width: 64em) {
-  /* line 247, ../sass/objects/_angled-portfolio.scss */
+  /* line 245, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .anglegrid__title,
   .anglegrid__item.aos-animate:hover .anglegrid__title {
     opacity: 1;
@@ -9279,28 +9272,28 @@ Copyright (c) 2014 Daniel Eden
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   }
 }
-/* line 255, ../sass/objects/_angled-portfolio.scss */
+/* line 253, ../sass/objects/_angled-portfolio.scss */
 .anglegrid__item:hover .layer,
 .anglegrid__item.aos-animate:hover .layer {
   transition-duration: .2s;
   transition-delay: 0s;
 }
 @media screen and (min-width: 64em) {
-  /* line 261, ../sass/objects/_angled-portfolio.scss */
+  /* line 259, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .layer-1,
   .anglegrid__item.aos-animate:hover .layer-1 {
     transform: rotateY(40deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 266, ../sass/objects/_angled-portfolio.scss */
+  /* line 264, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .layer-2,
   .anglegrid__item.aos-animate:hover .layer-2 {
     transform: rotateY(0deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 271, ../sass/objects/_angled-portfolio.scss */
+  /* line 269, ../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .layer-3,
   .anglegrid__item.aos-animate:hover .layer-3 {
     transform: rotateY(-40deg);
@@ -9308,19 +9301,19 @@ Copyright (c) 2014 Daniel Eden
 }
 
 /* Loading effect */
-/* line 285, ../sass/objects/_angled-portfolio.scss */
+/* line 283, ../sass/objects/_angled-portfolio.scss */
 .js .grid {
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 
-/* line 291, ../sass/objects/_angled-portfolio.scss */
+/* line 289, ../sass/objects/_angled-portfolio.scss */
 .js .grid.grid--loaded {
   opacity: 1;
 }
 
-/* line 295, ../sass/objects/_angled-portfolio.scss */
+/* line 293, ../sass/objects/_angled-portfolio.scss */
 .js body::after {
   content: '';
   position: fixed;
@@ -9352,7 +9345,7 @@ Copyright (c) 2014 Daniel Eden
     transform: rotate(360deg);
   }
 }
-/* line 329, ../sass/objects/_angled-portfolio.scss */
+/* line 327, ../sass/objects/_angled-portfolio.scss */
 .js body.grid-loaded::after {
   opacity: 0;
 }
@@ -11266,7 +11259,7 @@ h2.margin-w {
  */
 /* line 10, ../sass/theme/_shame.scss */
 body {
-  font-family: Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Trebuchet, Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* line 14, ../sass/theme/_shame.scss */
