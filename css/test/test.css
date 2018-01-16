@@ -766,6 +766,11 @@ body {
 }
 */
 /**
+ ********************************
+ * _radial-rotation.scss
+ ********************************
+ */
+/**
  * Load Colors
  */
 /**
@@ -10017,27 +10022,33 @@ necessitatibus magnam.</p>
   }
 }
 
-@media screen and (min-width: 64em) {
-  /* line 204, ../../sass/objects/_angled-portfolio.scss */
-  .anglegrid__item.aos-init.aos-animate .layer-1 {
-    transform: rotateY(0deg);
-  }
-}
-@media screen and (min-width: 64em) {
-  /* line 210, ../../sass/objects/_angled-portfolio.scss */
-  .anglegrid__item.aos-init.aos-animate .layer-2 {
-    transform: rotateY(0deg);
-  }
-}
-@media screen and (min-width: 64em) {
-  /* line 216, ../../sass/objects/_angled-portfolio.scss */
-  .anglegrid__item.aos-init.aos-animate .layer-3 {
-    transform: rotateY(0deg);
-  }
+/*
+.anglegrid__item.aos-init.aos-animate {
+	.layer {
+		//transition-duration: .2s;
+		//transition-delay: 0s;
+	}
+	.layer-1 { 
+		//z-index: 3;
+		@include media(large, $gemini-screens) {
+			transform: rotateY(0deg);
+		}
+	}
+	.layer-2 { 
+		//z-index: 2;
+		@include media(large, $gemini-screens) {
+			transform: rotateY(0deg);
+		}
+	}
+	.layer-3 { 
+		//z-index: 1;
+		@include media(large, $gemini-screens) {
+			transform: rotateY(0deg);
+		}
+	}
 }
 
-/*
-[data-aos=slide-left] {
+[data-aos="slide-left"] {
 	@include media(medium) {
 		transform:translateX(450%)
 	}
@@ -10050,7 +10061,7 @@ necessitatibus magnam.</p>
 }
 */
 @media screen and (min-width: 64em) {
-  /* line 245, ../../sass/objects/_angled-portfolio.scss */
+  /* line 244, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .anglegrid__title,
   .anglegrid__item.aos-animate:hover .anglegrid__title {
     opacity: 1;
@@ -10058,82 +10069,32 @@ necessitatibus magnam.</p>
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   }
 }
-/* line 253, ../../sass/objects/_angled-portfolio.scss */
+/* line 252, ../../sass/objects/_angled-portfolio.scss */
 .anglegrid__item:hover .layer,
 .anglegrid__item.aos-animate:hover .layer {
   transition-duration: .2s;
   transition-delay: 0s;
 }
 @media screen and (min-width: 64em) {
-  /* line 259, ../../sass/objects/_angled-portfolio.scss */
+  /* line 258, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .layer-1,
   .anglegrid__item.aos-animate:hover .layer-1 {
     transform: rotateY(40deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 264, ../../sass/objects/_angled-portfolio.scss */
+  /* line 263, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .layer-2,
   .anglegrid__item.aos-animate:hover .layer-2 {
     transform: rotateY(0deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 269, ../../sass/objects/_angled-portfolio.scss */
+  /* line 268, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .layer-3,
   .anglegrid__item.aos-animate:hover .layer-3 {
     transform: rotateY(-40deg);
   }
-}
-
-/* Loading effect */
-/* line 283, ../../sass/objects/_angled-portfolio.scss */
-.js .grid {
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-/* line 289, ../../sass/objects/_angled-portfolio.scss */
-.js .grid.grid--loaded {
-  opacity: 1;
-}
-
-/* line 293, ../../sass/objects/_angled-portfolio.scss */
-.js body::after {
-  content: '';
-  position: fixed;
-  z-index: 1000;
-  top: 50%;
-  left: 50%;
-  width: 70px;
-  height: 70px;
-  margin: -35px 0 0 -35px;
-  pointer-events: none;
-  border: 3px solid #F06B6A;
-  border-right-color: #371A5C;
-  border-radius: 50%;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  -webkit-animation: rotateCircle 0.7s linear infinite forwards;
-  animation: rotateCircle 0.7s linear infinite forwards;
-}
-
-@-webkit-keyframes rotateCircle {
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotateCircle {
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-/* line 327, ../../sass/objects/_angled-portfolio.scss */
-.js body.grid-loaded::after {
-  opacity: 0;
 }
 
 /**
@@ -10141,225 +10102,328 @@ necessitatibus magnam.</p>
  * _SLIDER.SCSS
  ********************************
  */
-/**
- * @module slider [.slider]
- * @description CSS slideshow
- *
- * @modifier .
- */
-/**** slider ****/
-/* line 19, ../../sass/objects/_slider.scss */
-.slider, .slider ul {
-  height: 400px;
-}
-@media screen and (min-width: 64em) {
-  /* line 19, ../../sass/objects/_slider.scss */
-  .slider, .slider ul {
-    width: 500px;
-    height: 240px;
-  }
-}
-
-/* line 27, ../../sass/objects/_slider.scss */
+/* line 13, ../../sass/objects/_slider.scss */
 .slider {
-  overflow: hidden;
-  margin: 180px 0 0 30px;
-  border-radius: 10px;
   position: relative;
   color: #FFF;
+  margin: 180px 0px 0 -30px;
   width: 300px;
+  font-family: 'Lato', 'Muli', Trebuchet, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ /*
+ width: 300px;
+ height: 400px;
+ overflow: hidden;
+ //padding: 20px 20px 20px 0;
+ //border: 1px solid rgba(0, 0, 0, 0.15);
+ border-radius: 10px;
+ //perspective: 1000px;
+ transform-style: preserve-3d;
+ //box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.25);
+
+ //width: 210px;
+ //height: 140px;
+ //position: relative;
+ */
 }
 @media screen and (min-width: 64em) {
-  /* line 27, ../../sass/objects/_slider.scss */
+  /* line 13, ../../sass/objects/_slider.scss */
   .slider {
-    width: 500px;
-    margin: 280px 0 100px 0;
+    width: auto;
+    margin: 280px 0px 100px 0px;
+    margin-top: 30vh;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 13, ../../sass/objects/_slider.scss */
+  .slider {
     margin-top: 50vh;
   }
 }
 
-/* line 44, ../../sass/objects/_slider.scss */
-.slider li {
-  float: left;
+/*
+.slider__carousel {
+  width: 600px;
+  margin-left: -300px;
+  @include media(large, $gemini-screens)  {
+    width: 1000px;
+    margin-left: -500px;
+  }
   position: relative;
-  display: inline-block;
-  width: 300px;
-  height: 400px;
+  transform-style: preserve-3d;
+  //transform: rotateY(0);
+}
+*/
+/* line 64, ../../sass/objects/_slider.scss */
+.slider__carousel {
+  position: relative;
+  display: block;
+  transform-origin: 0 0;
+  z-index: 9;
+}
+@media screen and (min-width: 30.0625em) {
+  /* line 64, ../../sass/objects/_slider.scss */
+  .slider__carousel {
+    margin-left: -100px;
+  }
 }
 @media screen and (min-width: 64em) {
-  /* line 44, ../../sass/objects/_slider.scss */
-  .slider li {
-    width: 500px;
-    height: 240px;
+  /* line 64, ../../sass/objects/_slider.scss */
+  .slider__carousel {
+    margin-left: -50px;
   }
 }
 
-/* line 56, ../../sass/objects/_slider.scss */
-.slider ul {
+/* line 81, ../../sass/objects/_slider.scss */
+.slider__ul {
   list-style: none;
+}
+
+/* line 85, ../../sass/objects/_slider.scss */
+.slider__slide {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  transition: left .3s linear;
-  -moz-transition: left .3s linear;
-  -o-transition: left .3s linear;
-  -webkit-transition: left .3s linear;
-  margin-left: -25px;
-  width: 4500px;
+  display: block;
+  padding: 50px;
+  transform-origin: 0 0;
 }
-@media screen and (min-width: 64em) {
-  /* line 56, ../../sass/objects/_slider.scss */
-  .slider ul {
-    width: 7500px;
+@media screen and (min-width: 30.0625em) {
+  /* line 85, ../../sass/objects/_slider.scss */
+  .slider__slide {
+    padding: 0 0 0 50px;
+  }
+}
+@media screen and (min-width: 75em) {
+  /* line 85, ../../sass/objects/_slider.scss */
+  .slider__slide {
+    height: 300px;
+    width: 600px;
   }
 }
 
-/*** Content ***/
-/* line 76, ../../sass/objects/_slider.scss */
-.slider__container {
-  margin: 0 auto;
-  padding: 0;
-  width: 250px;
-  min-height: 380px;
+  /*
+
+.slider__slide:nth-child(1) { 
+	transform: rotateY(0deg);
 }
-@media screen and (min-width: 64em) {
-  /* line 76, ../../sass/objects/_slider.scss */
-  .slider__container {
-    width: 450px;
-    min-height: 180px;
-  }
+.slider__slide:nth-child(2) { 
+	transform: rotateY($slideRotation * 1);
+}
+.slider__slide:nth-child(3) { 
+	transform: rotateY($slideRotation * 2);
+}
+.slider__slide:nth-child(4) { 
+	transform: rotateY($slideRotation * 3);
+}
+.slider__slide:nth-child(5) { 
+	transform: rotateY($slideRotation * 4);
+}
+*/
+/* line 20, ../../sass/mixins/_radial-rotation.scss */
+.slider__slide:nth-child(1) {
+  transform: rotateY(0deg);
+}
+/* line 20, ../../sass/mixins/_radial-rotation.scss */
+.slider__slide:nth-child(2) {
+  transform: rotateY(72deg);
+}
+/* line 20, ../../sass/mixins/_radial-rotation.scss */
+.slider__slide:nth-child(3) {
+  transform: rotateY(144deg);
+}
+/* line 20, ../../sass/mixins/_radial-rotation.scss */
+.slider__slide:nth-child(4) {
+  transform: rotateY(216deg);
+}
+/* line 20, ../../sass/mixins/_radial-rotation.scss */
+.slider__slide:nth-child(5) {
+  transform: rotateY(288deg);
 }
 
-/* line 94, ../../sass/objects/_slider.scss */
-.slider__container p {
-  margin: 10px 0;
-  font-weight: semi-bold;
+/* line 140, ../../sass/objects/_slider.scss */
+.firstanimation {
+  animation: cycle 40s ease-out infinite;
 }
 
-/* line 100, ../../sass/objects/_slider.scss */
-.slider__footer {
-  margin-top: .5em;
+/* line 143, ../../sass/objects/_slider.scss */
+.slider__slide:nth-child(1) {
+  animation: cycle__opacity-1 40s ease-out infinite;
 }
 
-/*** target hooks ****/
-@-webkit-keyframes slide-animation {
+/* line 146, ../../sass/objects/_slider.scss */
+.slider__slide:nth-child(2) {
+  animation: cycle__opacity-2 40s ease-out infinite;
+}
+
+/* line 149, ../../sass/objects/_slider.scss */
+.slider__slide:nth-child(3) {
+  animation: cycle__opacity-3 40s ease-out infinite;
+}
+
+/* line 152, ../../sass/objects/_slider.scss */
+.slider__slide:nth-child(4) {
+  animation: cycle__opacity-4 40s ease-out infinite;
+}
+
+/* line 155, ../../sass/objects/_slider.scss */
+.slider__slide:nth-child(5) {
+  animation: cycle__opacity-5 40s ease-out infinite;
+}
+
+@keyframes cycle {
   0% {
-    opacity: 0;
+    transform: rotateX(-34deg) rotateY(0deg);
+  }
+  /* When you start the slide, the first image is already visible */
+  15% {
+    transform: rotateX(-34deg) rotateY(0deg);
+  }
+  /* When you start the slide, the first image is already visible */
+  20% {
+    transform: rotateX(-34deg) rotateY(-72deg);
+  }
+  /* When you start the slide, the first image is already visible */
+  35% {
+    transform: rotateX(-34deg) rotateY(-72deg);
+  }
+  /* When you start the slide, the first image is already visible */
+  40% {
+    transform: rotateX(-34deg) rotateY(-144deg);
+  }
+  /* When you start the slide, the first image is already visible */
+  55% {
+    transform: rotateX(-34deg) rotateY(-144deg);
+  }
+  /* When you start the slide, the first image is already visible */
+  60% {
+    transform: rotateX(-34deg) rotateY(-216deg);
+  }
+  /* When you start the slide, the first image is already visible */
+  75% {
+    transform: rotateX(-34deg) rotateY(-216deg);
+  }
+  /* When you start the slide, the first image is already visible */
+  80% {
+    transform: rotateX(-34deg) rotateY(-288deg);
+  }
+  /* When you start the slide, the first image is already visible */
+  95% {
+    transform: rotateX(-34deg) rotateY(-288deg);
+  }
+  /* When you start the slide, the first image is already visible */
+  100% {
+    transform: rotateX(-34deg) rotateY(-360deg);
+  }
+  /* When you start the slide, the first image is already visible */
+}
+@keyframes cycle__opacity-1 {
+  0% {
+    opacity: 0.5;
   }
   2% {
     opacity: 1;
   }
+  15% {
+    opacity: 1;
+  }
   20% {
-    left: 0px;
+    opacity: 0;
+  }
+  93% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+}
+@keyframes cycle__opacity-2 {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  22% {
     opacity: 1;
   }
-  22.5% {
-    opacity: 0.6;
-  }
-  25% {
-    left: -300px;
+  35% {
     opacity: 1;
   }
-  45% {
-    left: -300px;
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cycle__opacity-3 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  42% {
     opacity: 1;
   }
-  47.5% {
-    opacity: 0.6;
-  }
-  50% {
-    left: -600px;
+  55% {
     opacity: 1;
   }
-  70% {
-    left: -600px;
-    opacity: 1;
+  60% {
+    opacity: 0;
   }
-  72.5% {
-    opacity: 0.6;
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cycle__opacity-4 {
+  0% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  62% {
+    opacity: 1;
   }
   75% {
-    left: -900px;
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cycle__opacity-5 {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  82% {
     opacity: 1;
   }
   95% {
     opacity: 1;
   }
-  98% {
-    left: -900px;
-    opacity: 0;
-  }
   100% {
-    left: 0px;
     opacity: 0;
   }
 }
-@media screen and (min-width: 64em) {
-  @-webkit-keyframes slide-animation {
-    0% {
-      opacity: 0;
-    }
-    2% {
-      opacity: 1;
-    }
-    20% {
-      left: 0px;
-      opacity: 1;
-    }
-    22.5% {
-      opacity: 0.6;
-    }
-    25% {
-      left: -500px;
-      opacity: 1;
-    }
-    45% {
-      left: -500px;
-      opacity: 1;
-    }
-    47.5% {
-      opacity: 0.6;
-    }
-    50% {
-      left: -1000px;
-      opacity: 1;
-    }
-    70% {
-      left: -1000px;
-      opacity: 1;
-    }
-    72.5% {
-      opacity: 0.6;
-    }
-    75% {
-      left: -1500px;
-      opacity: 1;
-    }
-    95% {
-      opacity: 1;
-    }
-    98% {
-      left: -1500px;
-      opacity: 0;
-    }
-    100% {
-      left: 0px;
-      opacity: 0;
-    }
-  }
-}
-/* line 143, ../../sass/objects/_slider.scss */
-.slider ul {
-  -webkit-animation: slide-animation 40s infinite;
-}
-
 /* use to paused the content on mouse over */
-/* line 149, ../../sass/objects/_slider.scss */
-.slider ul:hover {
-  -moz-animation-play-state: paused;
-  -webkit-animation-play-state: paused;
-}
-
 /**
  * @markup
  */
@@ -12050,7 +12114,7 @@ a {
 
 /* line 13, ../../sass/theme/_shame.scss */
 body {
-  font-family: Trebuchet, Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Muli', Trebuchet, Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* line 17, ../../sass/theme/_shame.scss */
@@ -12066,19 +12130,19 @@ b {
 }
 
 /* For fixing FOIT and font loading inconsistencies: font-loaded class */
-/* line 32, ../../sass/theme/_shame.scss */
+/*
 .fonts-loaded body {
-  font-family: 'Muli', Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Muli', Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-/* line 36, ../../sass/theme/_shame.scss */
+*/
+/* line 37, ../../sass/theme/_shame.scss */
 .main-container {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-/* line 42, ../../sass/theme/_shame.scss */
+/* line 43, ../../sass/theme/_shame.scss */
 .w-global-logo {
   position: fixed;
   top: 0;
@@ -12090,7 +12154,7 @@ b {
   text-align: center;
 }
 @media print, screen and (min-width: 30.0625em) {
-  /* line 42, ../../sass/theme/_shame.scss */
+  /* line 43, ../../sass/theme/_shame.scss */
   .w-global-logo {
     max-width: 70px;
     padding: 10px 12px;
@@ -12098,41 +12162,41 @@ b {
   }
 }
 
-/* line 58, ../../sass/theme/_shame.scss */
+/* line 59, ../../sass/theme/_shame.scss */
 .main-container {
   position: relative;
 }
 
-/* line 62, ../../sass/theme/_shame.scss */
+/* line 63, ../../sass/theme/_shame.scss */
 .homepage__work,
 .section-self {
   position: relative;
 }
 
 @media screen and (min-width: 30.0625em) {
-  /* line 67, ../../sass/theme/_shame.scss */
+  /* line 68, ../../sass/theme/_shame.scss */
   .section {
     padding-left: 120px;
   }
 }
 
-/* line 75, ../../sass/theme/_shame.scss */
+/* line 76, ../../sass/theme/_shame.scss */
 .section-self {
   margin-top: -50vh;
 }
 @media screen and (min-width: 30.0625em) {
-  /* line 75, ../../sass/theme/_shame.scss */
+  /* line 76, ../../sass/theme/_shame.scss */
   .section-self {
     margin-top: 10em;
   }
 }
 
-/* line 82, ../../sass/theme/_shame.scss */
+/* line 83, ../../sass/theme/_shame.scss */
 .angle-work__bg {
   display: none;
 }
 
-/* line 86, ../../sass/theme/_shame.scss */
+/* line 87, ../../sass/theme/_shame.scss */
 .angle-work__bg,
 .angle-self__bg {
   width: 100%;
@@ -12141,7 +12205,7 @@ b {
   padding: 300px 0;
 }
 @media screen and (min-width: 64em) {
-  /* line 86, ../../sass/theme/_shame.scss */
+  /* line 87, ../../sass/theme/_shame.scss */
   .angle-work__bg,
   .angle-self__bg {
     display: block;
@@ -12157,7 +12221,7 @@ b {
   }
 }
 @media screen and (min-width: 75em) {
-  /* line 86, ../../sass/theme/_shame.scss */
+  /* line 87, ../../sass/theme/_shame.scss */
   .angle-work__bg,
   .angle-self__bg {
     width: 60vw;
@@ -12165,20 +12229,20 @@ b {
   }
 }
 @media screen and (min-aspect-ratio: 19 / 6) {
-  /* line 86, ../../sass/theme/_shame.scss */
+  /* line 87, ../../sass/theme/_shame.scss */
   .angle-work__bg,
   .angle-self__bg {
     top: -700px;
   }
 }
 
-/* line 126, ../../sass/theme/_shame.scss */
+/* line 127, ../../sass/theme/_shame.scss */
 .l-intro--left {
   padding: 4em 2em;
 }
 
 @media screen and (min-width: 30.0625em) {
-  /* line 132, ../../sass/theme/_shame.scss */
+  /* line 133, ../../sass/theme/_shame.scss */
   .self__intro {
     padding-top: 40vh;
   }
@@ -12217,12 +12281,12 @@ b {
 }
 */
 /* Isometric grid */
-/* line 172, ../../sass/theme/_shame.scss */
+/* line 173, ../../sass/theme/_shame.scss */
 .header__star-bg {
   position: relative;
 }
 
-/* line 176, ../../sass/theme/_shame.scss */
+/* line 177, ../../sass/theme/_shame.scss */
 .star-bg {
   overflow: hidden;
   background: url("../img/starry-bg.jpg") no-repeat center center fixed #181d25;
@@ -12232,7 +12296,7 @@ b {
   background-size: cover;
 }
 
-/* line 187, ../../sass/theme/_shame.scss */
+/* line 188, ../../sass/theme/_shame.scss */
 .overlay--grid-1, .overlay--grid-2, .overlay--purple, .overlay--pink-reverse, .overlay--pink, .overlay--blue {
   content: "";
   position: absolute;
@@ -12242,7 +12306,7 @@ b {
   bottom: 0;
 }
 
-/* line 193, ../../sass/theme/_shame.scss */
+/* line 194, ../../sass/theme/_shame.scss */
 .overlay--grid-1, .overlay--grid-2 {
   background-attachment: fixed;
   background-color: transparent;
@@ -12250,17 +12314,17 @@ b {
   background-size: 100px 56px;
 }
 
-/* line 199, ../../sass/theme/_shame.scss */
+/* line 200, ../../sass/theme/_shame.scss */
 .overlay--grid-1 {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 1%, rgba(0, 0, 0, 0) 2%, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0)), linear-gradient(30deg, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 97%, rgba(255, 255, 255, 0.05) 98%, rgba(255, 255, 255, 0.05) 99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0)), linear-gradient(150deg, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 97%, rgba(255, 255, 255, 0.05) 98%, rgba(255, 255, 255, 0.05) 99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0));
 }
 
-/* line 206, ../../sass/theme/_shame.scss */
+/* line 207, ../../sass/theme/_shame.scss */
 .overlay--grid-2 {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.09) 1%, rgba(0, 0, 0, 0) 2%, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.09) 50%, rgba(255, 255, 255, 0.09) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0)), linear-gradient(30deg, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.09) 50%, rgba(255, 255, 255, 0.09) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 97%, rgba(255, 255, 255, 0.09) 98%, rgba(255, 255, 255, 0.09) 99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0)), linear-gradient(150deg, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.09) 50%, rgba(255, 255, 255, 0.09) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 97%, rgba(255, 255, 255, 0.09) 98%, rgba(255, 255, 255, 0.09) 99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0));
 }
 
-/* line 213, ../../sass/theme/_shame.scss */
+/* line 214, ../../sass/theme/_shame.scss */
 .overlay--grid-1 {
   background-attachment: fixed;
   background-color: transparent;
@@ -12268,7 +12332,7 @@ b {
   background-size: 100px 56px;
 }
 
-/* line 231, ../../sass/theme/_shame.scss */
+/* line 232, ../../sass/theme/_shame.scss */
 .overlay--purple {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(90deg, rgba(75, 47, 144, 0.8), rgba(92, 16, 115, 0.8));
@@ -12276,7 +12340,7 @@ b {
   background-image: linear-gradient(90deg, rgba(75, 47, 144, 0.8), rgba(92, 16, 115, 0.8));
 }
 
-/* line 235, ../../sass/theme/_shame.scss */
+/* line 236, ../../sass/theme/_shame.scss */
 .overlay--pink-reverse {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(90deg, rgba(255, 117, 105, 0.66), rgba(92, 16, 115, 0.8));
@@ -12284,7 +12348,7 @@ b {
   background-image: linear-gradient(90deg, rgba(255, 117, 105, 0.66), rgba(92, 16, 115, 0.8));
 }
 
-/* line 239, ../../sass/theme/_shame.scss */
+/* line 240, ../../sass/theme/_shame.scss */
 .overlay--pink {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(90deg, rgba(92, 16, 115, 0.8), rgba(255, 117, 105, 0.45));
@@ -12292,7 +12356,7 @@ b {
   background-image: linear-gradient(90deg, rgba(92, 16, 115, 0.8), rgba(255, 117, 105, 0.45));
 }
 
-/* line 243, ../../sass/theme/_shame.scss */
+/* line 244, ../../sass/theme/_shame.scss */
 .overlay--blue {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(90deg, rgba(48, 95, 189, 0.8), rgba(75, 47, 144, 0.8));
@@ -12309,12 +12373,12 @@ b {
         linear-gradient(150deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent);
 }
 */
-/* line 258, ../../sass/theme/_shame.scss */
+/* line 259, ../../sass/theme/_shame.scss */
 .angle-container__content {
   position: relative;
 }
 
-/* line 261, ../../sass/theme/_shame.scss */
+/* line 262, ../../sass/theme/_shame.scss */
 .homepage__work-angle__content,
 .section-self-angle__content {
   display: block;
@@ -12323,7 +12387,7 @@ b {
   right: 0;
 }
 @media screen and (min-width: 64em) {
-  /* line 261, ../../sass/theme/_shame.scss */
+  /* line 262, ../../sass/theme/_shame.scss */
   .homepage__work-angle__content,
   .section-self-angle__content {
     padding-right: 1em;
@@ -12331,33 +12395,30 @@ b {
 }
 
 @media screen and (min-width: 64em) {
-  /* line 272, ../../sass/theme/_shame.scss */
+  /* line 273, ../../sass/theme/_shame.scss */
   .homepage__work-angle__content {
     padding: 30vw 1em;
   }
 }
 
-/* line 278, ../../sass/theme/_shame.scss */
+/* line 279, ../../sass/theme/_shame.scss */
 .delay-500 {
   transition-delay: 500ms;
 }
 
-/*
-* Base Gradients
-*/
-/* line 300, ../../sass/theme/_shame.scss */
+/* line 291, ../../sass/theme/_shame.scss */
 .main__h2 {
   font-size: 1.5rem;
 }
 
 @media screen and (min-width: 30.0625em) {
-  /* line 304, ../../sass/theme/_shame.scss */
+  /* line 295, ../../sass/theme/_shame.scss */
   .section-self {
     padding-bottom: 70vw;
   }
 }
 
-/* line 312, ../../sass/theme/_shame.scss */
+/* line 303, ../../sass/theme/_shame.scss */
 .g-button {
   border: 0 none transparent;
   color: #FFF;
@@ -12370,7 +12431,7 @@ b {
   background-image: linear-gradient(to bottom right, #ed6a6a, #5c1073);
 }
 
-/* line 320, ../../sass/theme/_shame.scss */
+/* line 311, ../../sass/theme/_shame.scss */
 .g-button:hover {
   color: #FFF;
   background: #F06B6A;
@@ -12382,24 +12443,24 @@ b {
   background-image: linear-gradient(to bottom right, #ed6a6a, #f06b6a);
 }
 
-/* line 326, ../../sass/theme/_shame.scss */
+/* line 317, ../../sass/theme/_shame.scss */
 .main__button {
   background: transparent;
 }
 
-/* line 330, ../../sass/theme/_shame.scss */
+/* line 321, ../../sass/theme/_shame.scss */
 .main__button.c-pink-1 {
   border-color: #A53151;
   color: #A53151;
 }
 
-/* line 334, ../../sass/theme/_shame.scss */
+/* line 325, ../../sass/theme/_shame.scss */
 .main__button.c-blue-1 {
   border-color: #39548E;
   color: #39548E;
 }
 
-/* line 338, ../../sass/theme/_shame.scss */
+/* line 329, ../../sass/theme/_shame.scss */
 .main__button.c-purple-1 {
   border-color: #4F1649;
   color: #4F1649;
@@ -12489,14 +12550,14 @@ $dur:  8s;
 */
 /*     */
 @media screen and (min-width: 30.0625em) {
-  /* line 439, ../../sass/theme/_shame.scss */
+  /* line 430, ../../sass/theme/_shame.scss */
   .work__work {
     margin-top: -50vw;
   }
 }
 
 @media screen and (min-width: 30.0625em) {
-  /* line 446, ../../sass/theme/_shame.scss */
+  /* line 437, ../../sass/theme/_shame.scss */
   .story__img__mobile {
     max-width: 20%;
     position: absolute;
@@ -12505,13 +12566,13 @@ $dur:  8s;
   }
 }
 
-/* line 455, ../../sass/theme/_shame.scss */
+/* line 446, ../../sass/theme/_shame.scss */
 .story__img__desktop {
   padding-bottom: 6em;
 }
 
 @media screen and (min-width: 30.0625em) {
-  /* line 458, ../../sass/theme/_shame.scss */
+  /* line 449, ../../sass/theme/_shame.scss */
   .story__figcaption {
     /*
     transform: rotate(-28deg);
@@ -12522,32 +12583,32 @@ $dur:  8s;
   }
 }
 
-/* line 469, ../../sass/theme/_shame.scss */
+/* line 460, ../../sass/theme/_shame.scss */
 .story__img-feature {
   margin-top: -80vw;
   padding-bottom: 5em;
 }
 @media screen and (min-width: 30.0625em) {
-  /* line 469, ../../sass/theme/_shame.scss */
+  /* line 460, ../../sass/theme/_shame.scss */
   .story__img-feature {
     margin-top: -60vw;
     padding-bottom: 0;
   }
 }
 
-/* line 478, ../../sass/theme/_shame.scss */
+/* line 469, ../../sass/theme/_shame.scss */
 .story__phase {
   padding-top: 2em;
   padding-bottom: 4em;
 }
 @media screen and (min-width: 30.0625em) {
-  /* line 478, ../../sass/theme/_shame.scss */
+  /* line 469, ../../sass/theme/_shame.scss */
   .story__phase {
     padding-top: 5em;
     padding-bottom: 8em;
   }
   @supports (display: flex) {
-    /* line 478, ../../sass/theme/_shame.scss */
+    /* line 469, ../../sass/theme/_shame.scss */
     .story__phase {
       display: flex;
     }
@@ -12556,7 +12617,7 @@ $dur:  8s;
 
 @media screen and (min-width: 30.0625em) {
   @supports (display: flex) {
-    /* line 489, ../../sass/theme/_shame.scss */
+    /* line 480, ../../sass/theme/_shame.scss */
     .story__text {
       align-self: center;
     }
@@ -12565,7 +12626,7 @@ $dur:  8s;
 
 @media screen and (min-width: 30.0625em) {
   @supports (display: flex) {
-    /* line 496, ../../sass/theme/_shame.scss */
+    /* line 487, ../../sass/theme/_shame.scss */
     .story__text--final {
       align-self: top;
     }
@@ -12573,7 +12634,7 @@ $dur:  8s;
 }
 
 @media screen and (min-width: 75em) {
-  /* line 508, ../../sass/theme/_shame.scss */
+  /* line 499, ../../sass/theme/_shame.scss */
   .footer--story {
     margin-top: -50rem;
   }
@@ -12586,16 +12647,16 @@ $dur:  8s;
  *
  *
  */
-/* line 525, ../../sass/theme/_shame.scss */
+/* line 516, ../../sass/theme/_shame.scss */
 .scaling-svg-container {
   max-width: 100%;
 }
-/* line 527, ../../sass/theme/_shame.scss */
+/* line 518, ../../sass/theme/_shame.scss */
 .scaling-svg-container svg {
   max-width: 100%;
 }
 
-/* line 532, ../../sass/theme/_shame.scss */
+/* line 523, ../../sass/theme/_shame.scss */
 .l-flex-container {
   /* We first create a flex layout context */
   display: -webkit-box;
@@ -12617,7 +12678,7 @@ $dur:  8s;
   justify-content: flex-start;
 }
 
-/* line 545, ../../sass/theme/_shame.scss */
+/* line 536, ../../sass/theme/_shame.scss */
 .l-flex-item--50 {
   -webkit-box-flex: 1 auto;
   -moz-box-flex: 1 auto;

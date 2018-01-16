@@ -195,7 +195,7 @@
 	}
 }
 
-
+/*
 .anglegrid__item.aos-init.aos-animate {
 	.layer {
 		//transition-duration: .2s;
@@ -220,8 +220,8 @@
 		}
 	}
 }
-/*
-[data-aos=slide-left] {
+
+[data-aos="slide-left"] {
 	@include media(medium) {
 		transform:translateX(450%)
 	}
@@ -233,7 +233,6 @@
 	}
 }
 */
-
 
 
 
@@ -277,53 +276,3 @@
 
 
 
-
-
-/* Loading effect */
-.js .grid {
-	opacity: 0;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
-}
-
-.js .grid.grid--loaded {
-	opacity: 1;
-}
-
-.js body::after {
-	content: '';
-	position: fixed;
-	z-index: 1000;
-	top: 50%;
-	left: 50%;
-	width: 70px;
-	height: 70px;
-	margin: -35px 0 0 -35px;
-	pointer-events: none;
-	border: 3px solid $brand-color;
-	border-right-color: $brand-color-2;
-	border-radius: 50%;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
-	-webkit-animation: rotateCircle 0.7s linear infinite forwards;
-	animation: rotateCircle 0.7s linear infinite forwards;
-}
-
-@-webkit-keyframes rotateCircle {
-	to {
-		-webkit-transform: rotate(360deg);
-		transform: rotate(360deg);
-	}
-}
-
-@keyframes rotateCircle {
-	to {
-		-webkit-transform: rotate(360deg);
-		transform: rotate(360deg);
-	}
-}
-
-
-.js body.grid-loaded::after {
-	opacity: 0;
-}
