@@ -97,6 +97,7 @@
     @include media(xlarge, $gemini-screens){
       height: 300px;
       width: 600px;
+      padding: 0 0 0 100px;
       //padding: 0;
     }
   }
