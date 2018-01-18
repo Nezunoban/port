@@ -212,6 +212,13 @@ $gemini-grid: extend((
   }
 }
 
+.l-col--xlarge-offset-0 {
+  @include media(xlarge, $gemini-screens){
+    margin-left: inherit;
+    margin-right: inherit;
+  }
+}
+
 /**
  * @markup
   <div class="l-row">

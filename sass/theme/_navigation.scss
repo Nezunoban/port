@@ -74,12 +74,12 @@
     background: darken($brand-color-2, 10%);
 }
 .nav__link:hover {
-    color: $navigation;
+    color: $white;
     background: rgba($brand-color-2, 0.67);
     background: $brand-color-bg;
     @include gradient-horizontal($brand-color-bg, $brand-color-2);
     text-decoration: none;
-    color: $navigation;
+    color: $white;
 }
 .primary-nav__list {
     position: relative;
@@ -96,10 +96,10 @@
     }
 }
 .nav__link {
-    color: $navigation;
+    color: $white;
 }
 .secondary-nav__link {
-    color: $navigation;
+    color: $white;
     background: rgba($brand-color-2, 0.67);
 }
 .secondary-nav {

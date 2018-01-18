@@ -22,7 +22,7 @@
 	
 	@include media(medium, $gemini-screens) {
 		margin-top: 0;  //inline block offset correction
-		top: -10rem;	//allowing anglegrid to move upward into previous div without inline block interfering in chrome (with inline block flow on certain browsers not supporting grid/flex)
+		top: -7rem;	//allowing anglegrid to move upward into previous div without inline block interfering in chrome (with inline block flow on certain browsers not supporting grid/flex)
 	}
 	@include media(large, $gemini-screens) {
 		width: auto;
@@ -40,6 +40,9 @@
 
 .work__work {
 	.angleport__container {
+		@include media(medium, $gemini-screens) {
+			top: 0;
+		}
 		@include media(large, $gemini-screens) {
 			top: 0;
 		}
@@ -108,7 +111,7 @@
     width: 100%;
 	padding: .5rem;
 	background-color: $brand-pink-bg;
-	color: $navigation;
+	color: $white;
 	
 	@include media(large, $gemini-screens) {
 		//position: absolute;

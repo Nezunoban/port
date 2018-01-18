@@ -21,6 +21,10 @@
     margin-top: -20vh;
     padding-bottom: 10vh;
     @include media(medium, $gemini-screens) {
+        margin-top: -90vw;
+        padding-bottom: 25vw;
+    }
+    @include media(large, $gemini-screens) {
         margin-top: -50vw;
         padding-bottom: 25vw;
     }
@@ -52,20 +56,20 @@
     line-height: 1.2em;
     text-transform: uppercase;
     @include media(medium, $gemini-screens) {
-        font-size: 4.5em;
+        //font-size: 4.5em;
     }
 }
 .footer__link {
-    color: $navigation;
+    color: $white;
     padding: .125em .5em 0.25em .5em;
     border: 1px solid transparent;
     &:hover {
-        color: $navigation;
+        color: $white;
         border: 1px solid $brand-color;
         text-decoration: none;
     }
     @include media(large, $gemini-screens) {
-        font-size: 1.25em;
+        //font-size: 1.25em;
     }
 }
 

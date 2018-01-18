@@ -2,7 +2,7 @@
 /// Hero
 
 .hero {
-    color: $navigation;
+    color: $white;
     background-color: $brand-color-2;
     padding-left: 70px;
     padding-right: 4rem;
@@ -55,6 +55,15 @@
     }
 
 }
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Ipad Alignment Fix for Hero */
+    .hero {
+        min-height: 60vh;
+    }
+}
+
 .hero__button {
     text-transform: uppercase;
     text-decoration: none;

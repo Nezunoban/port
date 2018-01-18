@@ -42,7 +42,7 @@ $gemini-headings: extend((
   micro:       get(font-size) * 0.75,
 
   line-height: 1.3,
-  responsive: false,
+  responsive: true,
 ), $gemini-headings);
 
 /**
@@ -94,7 +94,9 @@ $mapped-headings: (
 
   .#{$class},
   .#{$class}-medium,
-  .#{$class}-large {
+  .#{$class}-large,
+  .#{$class}-xlarge,
+  .#{$class}-xxlarge {
     @extend %heading-line-height;
   }
 
@@ -131,6 +133,32 @@ $mapped-headings: (
     @each $class, $el in $mapped-headings {
 
       .#{$class}-large {
+        font-size: get($class, $gemini-headings) !important;
+      }
+
+    }
+
+  }
+
+  // X-Large screens
+  @include media(xlarge){
+
+    @each $class, $el in $mapped-headings {
+
+      .#{$class}-xlarge {
+        font-size: get($class, $gemini-headings) !important;
+      }
+
+    }
+
+  }
+
+  // XX-Large screens
+  @include media(xxlarge){
+
+    @each $class, $el in $mapped-headings {
+
+      .#{$class}-xxlarge {
         font-size: get($class, $gemini-headings) !important;
       }
 

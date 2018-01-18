@@ -21,8 +21,8 @@ $background-color:    #FFF;
 $border-color:        #76304C;
 
 
-$navigation:          #FFF;
-$navigation-hover:    #F7B5B5;
+$white:          #FFF;
+$white-hover:    #F7B5B5;
 
 
 $violet: #D78DED;
@@ -39,6 +39,12 @@ $orange: #ff7159;
 }
 .c-blue-2 {
     color:  $brand-blue;
+}
+.c-white-1 {
+    color: $white;
+}
+.c-border-white {
+    //border-color: $white;
 }
 
 .c-purple-1 {
