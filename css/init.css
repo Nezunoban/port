@@ -9236,32 +9236,26 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-/*
-.anglegrid__item.aos-init.aos-animate {
-	.layer {
-		//transition-duration: .2s;
-		//transition-delay: 0s;
-	}
-	.layer-1 { 
-		//z-index: 3;
-		@include media(large, $gemini-screens) {
-			transform: rotateY(0deg);
-		}
-	}
-	.layer-2 { 
-		//z-index: 2;
-		@include media(large, $gemini-screens) {
-			transform: rotateY(0deg);
-		}
-	}
-	.layer-3 { 
-		//z-index: 1;
-		@include media(large, $gemini-screens) {
-			transform: rotateY(0deg);
-		}
-	}
+@media screen and (min-width: 64em) {
+  /* line 204, ../sass/objects/_angled-portfolio.scss */
+  .anglegrid__item .layer-1 {
+    transform: rotateY(0deg);
+  }
+}
+@media screen and (min-width: 64em) {
+  /* line 210, ../sass/objects/_angled-portfolio.scss */
+  .anglegrid__item .layer-2 {
+    transform: rotateY(0deg);
+  }
+}
+@media screen and (min-width: 64em) {
+  /* line 216, ../sass/objects/_angled-portfolio.scss */
+  .anglegrid__item .layer-3 {
+    transform: rotateY(0deg);
+  }
 }
 
+/*
 [data-aos="slide-left"] {
 	@include media(medium) {
 		transform:translateX(450%)
@@ -9771,6 +9765,162 @@ h2.margin-w {
   font-weight: 200;
 }
 
+/* line 103, ../sass/objects/_hero.scss */
+.shooting-container-1, .shooting-container-2, .shooting-container-3 {
+  position: absolute;
+  top: 0%;
+  height: 492px;
+  width: 945px;
+}
+@media only screen and (max-height: 500px) {
+  /* line 103, ../sass/objects/_hero.scss */
+  .shooting-container-1, .shooting-container-2, .shooting-container-3 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 103, ../sass/objects/_hero.scss */
+  .shooting-container-1, .shooting-container-2, .shooting-container-3 {
+    display: none;
+  }
+}
+
+/* line 119, ../sass/objects/_hero.scss */
+.shooting-container-2 {
+  left: 320px;
+}
+
+/* line 123, ../sass/objects/_hero.scss */
+.shooting-container-3 {
+  left: -476px;
+}
+
+/* line 128, ../sass/objects/_hero.scss */
+.shooting-1, .shooting-2, .shooting-3 {
+  position: relative;
+  height: 80px;
+  width: 2px;
+  background-color: #fff;
+  -moz-box-shadow: 0px 0px 30px #fff;
+  -webkit-box-shadow: 0px 0px 30px #fff;
+  box-shadow: 0px 0px 30px #fff;
+  opacity: 0;
+  transform-origin: 10% 0%;
+  top: -20px;
+  left: -50px;
+  -moz-transform: rotate(120deg) scale(0);
+  -ms-transform: rotate(120deg) scale(0);
+  -webkit-transform: rotate(120deg) scale(0);
+  transform: rotate(120deg) scale(0);
+}
+
+@media only screen and (min-width: 480px) {
+  /* line 140, ../sass/objects/_hero.scss */
+  .shooting-1 {
+    -moz-animation: shootingStarAnimation;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-delay: 1.5s;
+    -webkit-animation: shootingStarAnimation;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 1.5s;
+    animation: shootingStarAnimation;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  /* line 146, ../sass/objects/_hero.scss */
+  .shooting-2 {
+    -moz-animation: shootingStarAnimation;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-delay: 2.5s;
+    -webkit-animation: shootingStarAnimation;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 2.5s;
+    animation: shootingStarAnimation;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  /* line 152, ../sass/objects/_hero.scss */
+  .shooting-3 {
+    -moz-animation: shootingStarAnimation;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-fill-mode: forwards;
+    -moz-animation-delay: 3.5s;
+    -webkit-animation: shootingStarAnimation;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 3.5s;
+    animation: shootingStarAnimation;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s;
+  }
+}
+
+@keyframes shootingStarAnimation {
+  0% {
+    height: 20px;
+    opacity: 1;
+    top: -20px;
+    left: -50px;
+    -moz-transform: rotate(120deg) scale(1);
+    -ms-transform: rotate(120deg) scale(1);
+    -webkit-transform: rotate(120deg) scale(1);
+    transform: rotate(120deg) scale(1);
+  }
+  25% {
+    height: 120px;
+    -moz-transform: rotate(120deg) scale(1);
+    -ms-transform: rotate(120deg) scale(1);
+    -webkit-transform: rotate(120deg) scale(1);
+    transform: rotate(120deg) scale(1);
+  }
+  30% {
+    top: 110%;
+    left: 100%;
+    height: 0px;
+  }
+  35% {
+    height: 0px;
+    -moz-transform: rotate(120deg) scale(1);
+    -ms-transform: rotate(120deg) scale(1);
+    -webkit-transform: rotate(120deg) scale(1);
+    transform: rotate(120deg) scale(1);
+  }
+  50% {
+    height: 0px;
+    top: 110%;
+    left: 100%;
+    -moz-transform: rotate(120deg) scale(0);
+    -ms-transform: rotate(120deg) scale(0);
+    -webkit-transform: rotate(120deg) scale(0);
+    transform: rotate(120deg) scale(0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /* line 4, ../sass/objects/_footer.scss */
 .footer {
   color: #fff;

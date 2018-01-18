@@ -10,7 +10,7 @@
   <!-- CSS -->
 
   <link rel="stylesheet" type="text/css" href="css/init.css">
-  <link rel="stylesheet" href="css/aos.css" />
+  <!--<link rel="stylesheet" href="css/aos.css" />-->
   <!-- animsition.css -->
   <link rel="stylesheet" href="css/animsition.min.css">
 
@@ -211,9 +211,16 @@
   <div class="grid-parent">
     <main class="main-container grid-subgrid">
       <section class="section hero grid-subgrid angle--bottom-right grid-star-bg star-bg bcg">
-        <div class="overlay hero__overlay-2 overlay--purple" role="img" aria-label="purple gradient" title="overlay"></div>
-        <div class="overlay hero__overlay-1 overlay--grid-1" role="img" aria-label="Isometric grid" title="overlay"></div>
-        
+        <div class="shooting-container-1" role="img" aria-label="purple gradient">
+          <div class="shooting-1" role="img" aria-label="purple gradient"></div>
+        </div><div class="shooting-container-2" role="img" aria-label="purple gradient">
+          <div class="shooting-2" role="img" aria-label="purple gradient"></div>
+        </div>
+        <div class="shooting-container-3" role="img" aria-label="purple gradient">
+            <div class="shooting-3" role="img" aria-label="purple gradient"></div>
+        </div>
+        <div class="overlay hero__overlay-2 overlay--purple" role="img" aria-label="purple gradient"></div>
+        <div class="overlay hero__overlay-1 overlay--grid-1" role="img" aria-label="Isometric grid" ></div>
         <div class="l-row">
           <div class="hero__content angle-container__content l-col--medium-6 l-col--large-4">
             <h2 class="hero__h2 margin-w">
@@ -233,12 +240,12 @@
 
         <div class="l-row">
           <div class="angle-work__bg grid-star-bg star-bg angle--both-right-left" data-aos="fade-up-left">
-              <div class="overlay overlay--pink-reverse" role="img" aria-label="pink gradient" title="overlay"></div>
-              <div class="overlay overlay--grid-2" role="img" aria-label="Isometric grid" title="overlay">
-              </div>
-              <div class="homepage__work-angle__content angle-container__content">                
-                <img class="hidden-small" src="img/port-right.png" alt="portfolio icon" height="42" width="42">
-              </div>
+            <div class="overlay overlay--pink-reverse" role="img" aria-label="pink gradient"></div>
+            <div class="overlay overlay--grid-2" role="img" aria-label="Isometric grid">
+            </div>
+            <div class="homepage__work-angle__content angle-container__content">                
+              <img class="hidden-small" src="img/port-right.png" alt="portfolio icon" height="42" width="42">
+            </div>
           </div>
           <div class="work__intro intro l-intro--left hidden-xs hidden-small hidden-medium l-col--medium-4 l-col--large-3">
             <h2 class="main__h2 margin-w c-pink-1">
@@ -317,8 +324,8 @@
 
         <div class="l-row">
           <div class="angle-self__bg grid-star-bg star-bg angle--both-left-right bcg" > <!--data-aos="fade-down-left"-->
-              <div class="overlay overlay--blue" role="img" aria-label="blue gradient" title="overlay"></div>
-              <div class="overlay overlay--grid-1" role="img" aria-label="Isometric grid" title="overlay">
+              <div class="overlay overlay--blue" role="img" aria-label="blue gradient"></div>
+              <div class="overlay overlay--grid-1" role="img" aria-label="Isometric grid">
               </div>
               <div class="section-self-angle__content angle-container__content">                
                 <img class="hidden-small" src="img/port-right.png" alt="portfolio icon" height="42" width="42">
@@ -548,17 +555,10 @@
   </script>
 
   <!--<script src="js/imagesloaded.pkgd.min.js"></script>-->
-  <script src="js/aos.js"></script>
+  <!--<script src="js/aos.js"></script>-->
   <!--<script src="js/dynamics.min.js"></script>-->
   <!--<script src="js/classie.js"></script>-->
-  <script>
-    AOS.init({
-      duration: 1200,
-      easing: 'ease-in-sine',
-      delay: 0,
-      //disable: window.innerWidth < 1024,
-    });
-  </script>
+
   <!--
   <script>
     AOS.init({

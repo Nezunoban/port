@@ -195,8 +195,8 @@
 	}
 }
 
-/*
-.anglegrid__item.aos-init.aos-animate {
+.anglegrid__item {
+//.anglegrid__item.aos-init.aos-animate {
 	.layer {
 		//transition-duration: .2s;
 		//transition-delay: 0s;
@@ -220,7 +220,7 @@
 		}
 	}
 }
-
+/*
 [data-aos="slide-left"] {
 	@include media(medium) {
 		transform:translateX(450%)
