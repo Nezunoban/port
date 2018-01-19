@@ -142,6 +142,7 @@
 .layer {
 	position: relative;
 	display: block;
+	will-change: transform;
 }
 
 .layer:not(:first-child) {

@@ -232,19 +232,21 @@
               I'd love to get to know you . . . 
             </p>
             <form action="/handling-form-page" method="post">
-              <div>
+              <div class="form-item">
               <label for="name">Name:</label>
                 <input type="text" id="name" name="user_name">
               </div>
-              <div>
+              <div class="form-item">
               <label for="mail">E-mail:</label>
                 <input type="email" id="mail" name="user_email">
               </div>
-              <div>
+              <div class="form-item">
               <label for="msg">Message:</label>
                 <textarea id="msg" name="user_message"></textarea>
               </div>
-              <button class="button coolBeans" type="submit">Send your message</button>
+              <div class="form-item">
+                <button class="button coolBeans coolBeans-white" type="submit">Send your message</button>
+              </div>
             </form>
             <!-- hero__button button g-button -->
             <!--<a class="hero__button bu tton-_-granimate button" href="/work.html"><span>see all work</span></a>-->
@@ -264,19 +266,21 @@
         <div class="l-row story__phase">
           <div class="story__text l-intro--left l-col--small-10 l-col--small-offset-1 l-col--medium-6 l-col--medium-offset-0 l-col--large-6">
             <form action="/handling-form-page" method="post">
-              <div>
+              <div class="form-item">
               <label for="name">Name:</label>
                 <input type="text" id="name" name="user_name">
               </div>
-              <div>
+              <div class="form-item">
               <label for="mail">E-mail:</label>
                 <input type="email" id="mail" name="user_email">
               </div>
-              <div>
+              <div class="form-item">
               <label for="msg">Message:</label>
                 <textarea id="msg" name="user_message"></textarea>
               </div>
-              <button class="button coolBeans" type="submit">Send your message</button>
+              <div class="form-item">
+                <button class="button coolBeans coolBeans-orange" type="submit">Send your message</button>
+              </div>
             </form>
           </div>
         </div>
@@ -407,7 +411,7 @@
       $(document).ready(function() {
         $(".animsition").animsition({
           inClass: 'fade-in-down-sm',
-          outClass: 'fade-out-down-sm',
+          outClass: 'fade-out-up-sm',
           inDuration: 1500,
           outDuration: 800,
           linkElement: '.animsition-link',

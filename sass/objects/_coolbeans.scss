@@ -38,6 +38,7 @@
 
    .coolBeans {
     border: 2px solid currentColor;
+    background-color: transparent;
     color: $orange;
     font-weight: 100;
     overflow: hidden;
@@ -81,6 +82,52 @@
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
     will-change: transform;
+  }
+
+
+
+  .coolBeans-blue {
+    color: $brand-blue-text-1;
+  }
+  .coolBeans-blue::after {
+    background-color: $brand-blue-text-1;
+  }
+  .coolBeans-pink {
+    color: $brand-pink-text-1;
+  }
+  .coolBeans-pink::after {
+    background-color: $brand-pink-text-1;
+  }
+  .coolBeans-purple {
+    color: $brand-color-2;
+  }
+  .coolBeans-purple::after {
+    background-color: $brand-color-2;
+  }
+  .coolBeans-orange {
+    color: $link-color;
+  }
+  .coolBeans-orange::after {
+    background-color: $link-color;
+  }
+  .coolBeans-white {
+    color: $white;
+  }
+  .coolBeans-white::after {
+    background-color: $white;
+  }
+
+
+
+  .coolBeans-blue:hover,
+  .coolBeans-pink:hover,
+  .coolBeans-purple:hover,
+  .coolBeans-orange:hover {
+    color: $white;
+  }
+
+  .coolBeans-white:hover {
+    color: $brand-color-2;
   }
   
 

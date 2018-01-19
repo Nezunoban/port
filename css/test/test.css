@@ -10177,10 +10177,11 @@ necessitatibus magnam.</p>
 .layer {
   position: relative;
   display: block;
+  will-change: transform;
 }
 
 @media screen and (min-width: 64em) {
-  /* line 147, ../../sass/objects/_angled-portfolio.scss */
+  /* line 148, ../../sass/objects/_angled-portfolio.scss */
   .layer:not(:first-child) {
     position: absolute;
     top: 0;
@@ -10188,18 +10189,18 @@ necessitatibus magnam.</p>
   }
 }
 
-/* line 155, ../../sass/objects/_angled-portfolio.scss */
+/* line 156, ../../sass/objects/_angled-portfolio.scss */
 .anglegrid__item .layer {
   transition: transform 0.3s;
   transform-origin: 0 0;
 }
 
-/* line 162, ../../sass/objects/_angled-portfolio.scss */
+/* line 163, ../../sass/objects/_angled-portfolio.scss */
 .anglegrid__item .layer {
   display: none;
 }
 @media screen and (min-width: 64em) {
-  /* line 162, ../../sass/objects/_angled-portfolio.scss */
+  /* line 163, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer {
     display: block;
     -webkit-transform-style: preserve-3d;
@@ -10209,42 +10210,42 @@ necessitatibus magnam.</p>
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 174, ../../sass/objects/_angled-portfolio.scss */
+  /* line 175, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer-1 {
     transform: rotateY(30deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 180, ../../sass/objects/_angled-portfolio.scss */
+  /* line 181, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer-2 {
     transform: rotateY(0deg);
   }
 }
-/* line 186, ../../sass/objects/_angled-portfolio.scss */
+/* line 187, ../../sass/objects/_angled-portfolio.scss */
 .anglegrid__item .layer-3 {
   display: block;
 }
 @media screen and (min-width: 64em) {
-  /* line 186, ../../sass/objects/_angled-portfolio.scss */
+  /* line 187, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer-3 {
     transform: rotateY(-30deg);
   }
 }
 
 @media screen and (min-width: 64em) {
-  /* line 207, ../../sass/objects/_angled-portfolio.scss */
+  /* line 208, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer-1 {
     transform: rotateY(0deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 213, ../../sass/objects/_angled-portfolio.scss */
+  /* line 214, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer-2 {
     transform: rotateY(0deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 219, ../../sass/objects/_angled-portfolio.scss */
+  /* line 220, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer-3 {
     transform: rotateY(0deg);
   }
@@ -10264,7 +10265,7 @@ necessitatibus magnam.</p>
 }
 */
 @media screen and (min-width: 64em) {
-  /* line 247, ../../sass/objects/_angled-portfolio.scss */
+  /* line 248, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .anglegrid__title,
   .anglegrid__item.aos-animate:hover .anglegrid__title {
     opacity: 1;
@@ -10272,28 +10273,28 @@ necessitatibus magnam.</p>
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   }
 }
-/* line 255, ../../sass/objects/_angled-portfolio.scss */
+/* line 256, ../../sass/objects/_angled-portfolio.scss */
 .anglegrid__item:hover .layer,
 .anglegrid__item.aos-animate:hover .layer {
   transition-duration: .2s;
   transition-delay: 0s;
 }
 @media screen and (min-width: 64em) {
-  /* line 261, ../../sass/objects/_angled-portfolio.scss */
+  /* line 262, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .layer-1,
   .anglegrid__item.aos-animate:hover .layer-1 {
     transform: rotateY(40deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 266, ../../sass/objects/_angled-portfolio.scss */
+  /* line 267, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .layer-2,
   .anglegrid__item.aos-animate:hover .layer-2 {
     transform: rotateY(0deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 271, ../../sass/objects/_angled-portfolio.scss */
+  /* line 272, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .layer-3,
   .anglegrid__item.aos-animate:hover .layer-3 {
     transform: rotateY(-40deg);
@@ -10751,10 +10752,8 @@ necessitatibus magnam.</p>
 }
 /* line 67, ../../sass/objects/_hero.scss */
 .hero__button {
-  text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  letter-spacing: 2px;
   background-color: transparent;
   font-weight: bold;
   border: 2px solid #ff7159;
@@ -11092,6 +11091,7 @@ h2.margin-w {
 /* line 39, ../../sass/objects/_coolbeans.scss */
 .coolBeans {
   border: 2px solid currentColor;
+  background-color: transparent;
   color: #ff7159;
   font-weight: 100;
   overflow: hidden;
@@ -11106,7 +11106,7 @@ h2.margin-w {
   z-index: 0;
 }
 
-/* line 54, ../../sass/objects/_coolbeans.scss */
+/* line 55, ../../sass/objects/_coolbeans.scss */
 .coolBeans::after {
   background-color: #ff7159;
   content: '';
@@ -11128,19 +11128,82 @@ h2.margin-w {
   z-index: -1;
 }
 
-/* line 74, ../../sass/objects/_coolbeans.scss */
+/* line 75, ../../sass/objects/_coolbeans.scss */
 .coolBeans:hover::after {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 
-/* line 78, ../../sass/objects/_coolbeans.scss */
+/* line 79, ../../sass/objects/_coolbeans.scss */
 .coolBeans:hover {
   border: 2px solid transparent;
   color: #371A5C;
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
   will-change: transform;
+}
+
+/* line 89, ../../sass/objects/_coolbeans.scss */
+.coolBeans-blue {
+  color: #39548E;
+}
+
+/* line 92, ../../sass/objects/_coolbeans.scss */
+.coolBeans-blue::after {
+  background-color: #39548E;
+}
+
+/* line 95, ../../sass/objects/_coolbeans.scss */
+.coolBeans-pink {
+  color: #A53151;
+}
+
+/* line 98, ../../sass/objects/_coolbeans.scss */
+.coolBeans-pink::after {
+  background-color: #A53151;
+}
+
+/* line 101, ../../sass/objects/_coolbeans.scss */
+.coolBeans-purple {
+  color: #371A5C;
+}
+
+/* line 104, ../../sass/objects/_coolbeans.scss */
+.coolBeans-purple::after {
+  background-color: #371A5C;
+}
+
+/* line 107, ../../sass/objects/_coolbeans.scss */
+.coolBeans-orange {
+  color: #F06B6A;
+}
+
+/* line 110, ../../sass/objects/_coolbeans.scss */
+.coolBeans-orange::after {
+  background-color: #F06B6A;
+}
+
+/* line 113, ../../sass/objects/_coolbeans.scss */
+.coolBeans-white {
+  color: #FFF;
+}
+
+/* line 116, ../../sass/objects/_coolbeans.scss */
+.coolBeans-white::after {
+  background-color: #FFF;
+}
+
+/* line 122, ../../sass/objects/_coolbeans.scss */
+.coolBeans-blue:hover,
+.coolBeans-pink:hover,
+.coolBeans-purple:hover,
+.coolBeans-orange:hover {
+  color: #FFF;
+}
+
+/* line 129, ../../sass/objects/_coolbeans.scss */
+.coolBeans-white:hover {
+  color: #371A5C;
 }
 
 /**
@@ -12976,35 +13039,31 @@ b {
   background: transparent;
 }
 
-/* line 358, ../../sass/theme/_shame.scss */
+/*
 .main__button.c-pink-1 {
-  border-color: #A53151;
-  color: #A53151;
+    border-color: $brand-pink-text-1;
+    color: $brand-pink-text-1;
 }
-
-/* line 362, ../../sass/theme/_shame.scss */
 .main__button.c-blue-1 {
-  border-color: #39548E;
-  color: #39548E;
+    border-color: $brand-blue-text-1;
+    color: $brand-blue-text-1
 }
-
-/* line 366, ../../sass/theme/_shame.scss */
 .main__button.c-purple-1 {
-  border-color: #4F1649;
-  color: #4F1649;
+    border-color: $brand-p-text-1;
+    color: $brand-p-text-1;
 }
-
-/* line 371, ../../sass/theme/_shame.scss */
+*/
+/* line 373, ../../sass/theme/_shame.scss */
 .c-border-white {
   border-color: #FFF;
 }
 
-/* line 374, ../../sass/theme/_shame.scss */
+/* line 376, ../../sass/theme/_shame.scss */
 .c-white-1 {
   color: #FFF;
 }
 
-/* line 380, ../../sass/theme/_shame.scss */
+/* line 382, ../../sass/theme/_shame.scss */
 .main__blockquote:before {
   content: "\201C";
   font-size: 200px;
@@ -13015,12 +13074,12 @@ b {
   margin-left: -70px;
 }
 
-/* line 391, ../../sass/theme/_shame.scss */
+/* line 393, ../../sass/theme/_shame.scss */
 .self__values .story__text {
   /* margin-left: 120px; */
 }
 @media screen and (min-width: 481px) and (max-width: 1023px) {
-  /* line 391, ../../sass/theme/_shame.scss */
+  /* line 393, ../../sass/theme/_shame.scss */
   .self__values .story__text {
     padding-left: 120px;
     margin-left: 8.33333%;
@@ -13029,14 +13088,14 @@ b {
 }
 
 @media screen and (min-width: 30.0625em) {
-  /* line 400, ../../sass/theme/_shame.scss */
+  /* line 402, ../../sass/theme/_shame.scss */
   .work__work {
     margin-top: -50vw;
   }
 }
 
 @media screen and (min-width: 30.0625em) {
-  /* line 407, ../../sass/theme/_shame.scss */
+  /* line 409, ../../sass/theme/_shame.scss */
   .story__img__mobile {
     max-width: 20%;
     position: absolute;
@@ -13045,13 +13104,13 @@ b {
   }
 }
 
-/* line 416, ../../sass/theme/_shame.scss */
+/* line 418, ../../sass/theme/_shame.scss */
 .story__img__desktop {
   padding-bottom: 6em;
 }
 
 @media screen and (min-width: 30.0625em) {
-  /* line 419, ../../sass/theme/_shame.scss */
+  /* line 421, ../../sass/theme/_shame.scss */
   .story__figcaption {
     /*
     transform: rotate(-28deg);
@@ -13062,32 +13121,32 @@ b {
   }
 }
 
-/* line 430, ../../sass/theme/_shame.scss */
+/* line 432, ../../sass/theme/_shame.scss */
 .story__img-feature {
   margin-top: -80vw;
   padding-bottom: 5em;
 }
 @media screen and (min-width: 30.0625em) {
-  /* line 430, ../../sass/theme/_shame.scss */
+  /* line 432, ../../sass/theme/_shame.scss */
   .story__img-feature {
     margin-top: -60vw;
     padding-bottom: 0;
   }
 }
 
-/* line 439, ../../sass/theme/_shame.scss */
+/* line 441, ../../sass/theme/_shame.scss */
 .story__phase {
   padding-top: 2em;
   padding-bottom: 4em;
 }
 @media screen and (min-width: 30.0625em) {
-  /* line 439, ../../sass/theme/_shame.scss */
+  /* line 441, ../../sass/theme/_shame.scss */
   .story__phase {
     padding-top: 5em;
     padding-bottom: 8em;
   }
   @supports (display: flex) {
-    /* line 439, ../../sass/theme/_shame.scss */
+    /* line 441, ../../sass/theme/_shame.scss */
     .story__phase {
       display: flex;
     }
@@ -13096,7 +13155,7 @@ b {
 
 @media screen and (min-width: 30.0625em) {
   @supports (display: flex) {
-    /* line 450, ../../sass/theme/_shame.scss */
+    /* line 452, ../../sass/theme/_shame.scss */
     .story__text {
       align-self: center;
     }
@@ -13105,7 +13164,7 @@ b {
 
 @media screen and (min-width: 30.0625em) {
   @supports (display: flex) {
-    /* line 457, ../../sass/theme/_shame.scss */
+    /* line 459, ../../sass/theme/_shame.scss */
     .story__text--final {
       align-self: top;
     }
@@ -13113,10 +13172,15 @@ b {
 }
 
 @media screen and (min-width: 75em) {
-  /* line 469, ../../sass/theme/_shame.scss */
+  /* line 471, ../../sass/theme/_shame.scss */
   .footer--story {
     margin-top: -50rem;
   }
+}
+
+/* line 482, ../../sass/theme/_shame.scss */
+.form-item {
+  margin-bottom: 1em;
 }
 
 /* 
@@ -13126,16 +13190,16 @@ b {
  *
  *
  */
-/* line 486, ../../sass/theme/_shame.scss */
+/* line 495, ../../sass/theme/_shame.scss */
 .scaling-svg-container {
   max-width: 100%;
 }
-/* line 488, ../../sass/theme/_shame.scss */
+/* line 497, ../../sass/theme/_shame.scss */
 .scaling-svg-container svg {
   max-width: 100%;
 }
 
-/* line 493, ../../sass/theme/_shame.scss */
+/* line 502, ../../sass/theme/_shame.scss */
 .l-flex-container {
   /* We first create a flex layout context */
   display: -webkit-box;
@@ -13157,7 +13221,7 @@ b {
   justify-content: flex-start;
 }
 
-/* line 506, ../../sass/theme/_shame.scss */
+/* line 515, ../../sass/theme/_shame.scss */
 .l-flex-item--50 {
   -webkit-box-flex: 1 auto;
   -moz-box-flex: 1 auto;

@@ -355,6 +355,7 @@ main section {
     background: transparent;
 }
 
+/*
 .main__button.c-pink-1 {
     border-color: $brand-pink-text-1;
     color: $brand-pink-text-1;
@@ -367,6 +368,7 @@ main section {
     border-color: $brand-p-text-1;
     color: $brand-p-text-1;
 }
+*/
 
 .c-border-white {
     border-color: $white;
@@ -474,6 +476,13 @@ main section {
         margin-top: -80rem;
     }
 }
+
+
+
+.form-item {
+    margin-bottom: 1em;
+}
+
 
 /* 
  *  Display FlexBox
