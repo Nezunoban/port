@@ -9771,7 +9771,7 @@ Copyright (c) 2014 Daniel Eden
 @media screen and (min-width: 75em) {
   /* line 13, ../sass/objects/_slider.scss */
   .slider {
-    margin-top: 15vw;
+    margin-top: 20vw;
     margin-bottom: 30vw;
     position: absolute;
     top: auto;
@@ -12439,12 +12439,6 @@ a {
   /* line 15, ../sass/theme/_shame.scss */
   body {
     font-size: 1.125rem;
-  }
-}
-@media screen and (min-width: 75em) {
-  /* line 15, ../sass/theme/_shame.scss */
-  body {
-    font-size: 1.25rem;
   }
 }
 @media screen and (min-width: 106.25em) {
