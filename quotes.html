@@ -85,10 +85,17 @@
 </style>
 
 
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/modernizr.custom.js"></script>
+  <!-- jQuery -->
+  
+  <!-- jquery & iScroll -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <!-- drawer.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
 
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+  <script src="js/modernizr.custom.js"></script>
 
 
   <!-- Favicons -->
@@ -139,7 +146,7 @@
 
   <!-- Meta -->
   <meta name="description" content="good communication, usability, representation, improvement, learning, sharing, teaching, fun interaction and the beauty powerfully subtle symbolism.">
-  <meta name="author" content="Nathan Freemyer - Abut Myself">
+  <meta name="author" content="Nathan Freemyer">
 
   <!-- Analytics 
     <script>
@@ -149,68 +156,53 @@
 
 <!-- This is a comment -->
 
-<body>
+<body class="drawer drawer--right" data-effect="drawer-effect-flipY">
 
           <!--[if lt IE 9]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="pure-container" data-effect="pure-effect-flipY">
-            <input type="checkbox" id="pure-toggle-right" class="pure-toggle" data-toggle="right"/>
-            <label class="pure-toggle-label" for="pure-toggle-right" data-toggle-label="right"><span class="pure-toggle-text">menu</span><span class="pure-toggle-icon"></span></label>
+                    
+            <div class="animsition">
 
-            <nav class="pure-drawer" data-position="right">
-                <div class="row collapse">
-                    <div class="large-12 columns l-nav__flex-container">
-                        <ul class="nav-primary nav nav--stacked ">
-                            <li class="nav__item"><a href="/" class="nav__link animsition-link">home</a></li>
-                            <li class="nav__item"><a href="/work.html" class="nav__link animsition-link">work</a></li>
-                            <li class="nav__item nav__item--is-active"><a href="/self.html" class="nav__link">self</a></li>
-                            <li class="nav__item"><a href="/contact.html" class="nav__link animsition-link">contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
-            <div class="pure-pusher-container">
-                <div class="pure-pusher">
-                    <div class="animsition">
-
-  <header navigation class="header nav-down">
-
-
-    <nav role="navigation" class="primary-nav star-bg">
-      
-      <!--
-        <div class="overlay overlay-_-purple" role="img" aria-label="purple gradient" title="overlay"></div>
-        <div class="overlay overlay-_-grid-1" role="img" aria-label="Isometric grid" title="overlay"></div>
-      -->
-        <div class="w-global-logo">
-          <a href="index.html" class="w-global-logo__link scaling-svg-container animsition-link" alt="Home">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="scaling-svg w-global-logo__svg"
-              width="126" height="346" viewBox="0 0 126 346">
-              <defs>
-                <radialGradient id="a" cx="88.2" cy="236.9" r="321.46" gradientTransform="matrix(1, 0, 0, -1, 0, 348)" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#ff7569" />
-                  <stop offset="0.31" stop-color="#d0586c" />
-                  <stop offset="1" stop-color="#5c1073" />
-                </radialGradient>
-              </defs>
-              <title>NF-logo</title>
-              <path d="M2.29,125.27V2.71l123.36,60V247l-29.33-15.4V113.92l29.33-13.65L30.65,54l0,58Z" fill="#fff" />
-              <path d="M96.32,195.2,35.8,223.46V185.22L125.65,143v-42.7L2.29,157.7V342.53l33.47-16.3L35.62,260l60.7-28.36Z" fill="url(#a)"
-              />
-              <image src="img/logo-w.png" xlink:href="" class="svg__img--hide-on-fallback"></image>
-            </svg>
-          </a>
-        </div>
-        
-
+  <header role="banner">
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <!--<span class="sr-only">menu</span>-->
+      <!--<span class="drawer-hamburger-icon"></span>--><span class="drawer-toggle-text">menu</span><span class="drawer-hamburger-icon pure-toggle-icon"></span>
+    </button>
+    <nav class="drawer-nav" role="navigation">
+        <ul class="nav-primary nav nav--stacked ">
+            <li class="nav__item"><a href="/" class="nav__link animsition-link">home</a></li>
+            <li class="nav__item"><a href="/work.html" class="nav__link animsition-link">work</a></li>
+            <li class="nav__item nav__item--is-active"><a href="/self.html" class="nav__link animsition-link">self</a></li>
+            <li class="nav__item"><a href="/contact.html" class="nav__link animsition-link">contact</a></li>
+        </ul>
     </nav>
+    
+    <div class="w-global-logo">
+      <a href="index.html" class="w-global-logo__link scaling-svg-container animsition-link" alt="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="scaling-svg w-global-logo__svg"
+          width="126" height="346" viewBox="0 0 126 346">
+          <defs>
+            <radialGradient id="a" cx="88.2" cy="236.9" r="321.46" gradientTransform="matrix(1, 0, 0, -1, 0, 348)" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#ff7569" />
+              <stop offset="0.31" stop-color="#d0586c" />
+              <stop offset="1" stop-color="#5c1073" />
+            </radialGradient>
+          </defs>
+          <title>NF-logo</title>
+          <path d="M2.29,125.27V2.71l123.36,60V247l-29.33-15.4V113.92l29.33-13.65L30.65,54l0,58Z" fill="#fff" />
+          <path d="M96.32,195.2,35.8,223.46V185.22L125.65,143v-42.7L2.29,157.7V342.53l33.47-16.3L35.62,260l60.7-28.36Z" fill="url(#a)"
+          />
+          <image src="img/logo-w.png" xlink:href="" class="svg__img-_-hide-on-fallback"></image>
+        </svg>
+      </a>
+    </div>
+  </header>
 
-  <div class="grid-parent">
-    <main class="main-container grid-subgrid">
-      
+  <main role="main">
+    <div class="grid-parent">
+
       <section class="section hero grid-subgrid angle--bottom-right grid-star-bg star-bg bcg">
 
         <div class="shooting-container-1" role="img" aria-label="purple gradient">
@@ -222,8 +214,8 @@
             <div class="shooting-3" role="img" aria-label="purple gradient"></div>
         </div>
         
-        <div class="overlay hero__overlay-2 overlay--blue" role="img" aria-label="blue gradient" title="overlay"></div>
-        <div class="overlay hero__overlay-1 overlay--grid-1" role="img" aria-label="Isometric grid" title="overlay"></div>
+        <div class="overlay hero__overlay-2 overlay--blue" role="img" aria-label="blue gradient"></div>
+        <div class="overlay hero__overlay-1 overlay--grid-1" role="img" aria-label="Isometric grid"></div>
         
         <div class="l-row">
           <div class="hero__content angle-container__content l-col--medium-6 l-col--large-4">
@@ -241,8 +233,8 @@
       <section class="section story__img-feature work__work">
           <div class="l-row">
             <div class="l-col--small-4 l-col--small-push-7 l-col--medium-6 l-col--medium-push-6 l-col--large-6 l-col--large-push-6">
-                <img class="story__img__desktop bcg hidden-small" src="img/stories/cbc-iso-desktop.png" alt="CBC Website on Desktop" />
-                <img class="story__img__mobile bcg" src="img/stories/cbc-phone.png" alt="CBC Website on Mobile" />
+                <img class="story__img__desktop bcg hidden-small" src="img/stories/cbc-iso-desktop.png" alt="What they say" />
+                <img class="story__img__mobile bcg" src="img/stories/cbc-phone.png" alt="What they say" />
             </div>
           </div>
       </section>
@@ -284,7 +276,7 @@
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
-            <blockquote class="main__blockquote">
+            <blockquote  id="trigger-mouse-scroll" class="main__blockquote">
                 <p>As a designer and mentor, Nathan is about more than achieving graceful and functional design. He strives to develop his team artistically and professionally, while implementing innovations for the benefit of both team and client.</p>
                 <footer class="slider__footer">
                 — <cite class="slider__citation"><span class="slider__author"><b>Nathan Keelor </b></span><span class="slider__title">Director of Digital Media, TQI</span></cite>
@@ -293,20 +285,27 @@
             <p>&nbsp;</p>
           </div>
         </div>
+        <a class="mouse__container--up" href="#main" data-aos="fade-up" data-aos-anchor="#trigger-mouse-scroll">
+          <span class="chevron__container">
+            <span class="chevron"></span>
+            <!--<span class="chevron chevron-_-down"></span>-->
+          </span>
+          <span class="hidden">Scroll to see more</span>
+          <span class="mouse">
+              <span class="scroll-wheel"></span>
+          </span>
+        </a>
+      </section>
+
       <aside>
-
       </aside>
-    </main>
 
-
-    <footer class="footer footer angle--top-right">
-      <div class="footer__container">
-        <!--<div class="l-col-_-large-8">-->
+      <footer class="footer angle--top-right footer--story">
+        <div class="footer__container">
           <div class="footer__image">
             <h2 class="footer__h2">Let's Talk</h2>
             <div class="w-contact-airplane aos-item aos-init aos-animate delay-500" data-aos="fade-up-right">
               <a href="contact.html" class="w-contact-airplane__link scaling-svg-container animsition-link" alt="Contact">
-                  <!--removed global-logo img- -left -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="354" height="280" viewBox="10 50 364 280">
                   <title>Contact Paper Airplane</title>
                   <g id="bc8f46f1-a6b9-4483-97c3-af8b9aa75da4" data-name="Layer 1">
@@ -328,91 +327,21 @@
                 <a href="mailto:nathanfreemyer@gmail.com&subject=Hi%20Nathan&We%20would%20love%20to%20start%20a%20conversation%20with%20you%20about%20how%20you%20might%20be%20able%20to%20help%20us%46" class="email__address footer__link">nathanfreemyer@gmail.com</a>
             </div>
           </div>
-        <!--</div>-->
-      </div>
-    </footer>     
-  </div> <!-- TODO:CSS Grid Container Pending (support for subgrid) -->
-
-            </div> <!-- Animsition Container -->
-          </div> <!-- pure-pusher  -->
-        </div> <!-- pure-pusher-container -->
-        <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
-      </div> <!-- Pure Container  -->
-
-  <script>
-    /* fontfaceobserver Copyright (c) 2014 - Bram Stein https://github.com/bramstein/fontfaceobserver/*/
-    (function () {
-      'use strict'; function f(a) { this.a = k; this.b = void 0; this.d = []; var b = this; try { a(function (a) { l(b, a) }, function (a) { m(b, a) }) } catch (c) { m(b, c) } } var k = 2; function n(a) { return new f(function (b, c) { c(a) }) } function p(a) { return new f(function (b) { b(a) }) }
-      function l(a, b) { if (a.a === k) { if (b === a) throw new TypeError("Promise resolved with itself."); var c = !1; try { var d = b && b.then; if (null !== b && "object" === typeof b && "function" === typeof d) { d.call(b, function (b) { c || l(a, b); c = !0 }, function (b) { c || m(a, b); c = !0 }); return } } catch (e) { c || m(a, e); return } a.a = 0; a.b = b; q(a) } } function m(a, b) { if (a.a === k) { if (b === a) throw new TypeError("Promise rejected with itself."); a.a = 1; a.b = b; q(a) } }
-      function q(a) { setTimeout(function () { if (a.a !== k) for (; a.d.length;) { var b = a.d.shift(), c = b[0], d = b[1], e = b[2], b = b[3]; try { 0 === a.a ? "function" === typeof c ? e(c.call(void 0, a.b)) : e(a.b) : 1 === a.a && ("function" === typeof d ? e(d.call(void 0, a.b)) : b(a.b)) } catch (g) { b(g) } } }, 0) } f.prototype.e = function (a) { return this.c(void 0, a) }; f.prototype.c = function (a, b) { var c = this; return new f(function (d, e) { c.d.push([a, b, d, e]); q(c) }) };
-      function r(a) { return new f(function (b, c) { function d(c) { return function (d) { g[c] = d; e += 1; e === a.length && b(g) } } var e = 0, g = []; 0 === a.length && b(g); for (var h = 0; h < a.length; h += 1)a[h].c(d(h), c) }) } function s(a) { return new f(function (b, c) { for (var d = 0; d < a.length; d += 1)a[d].c(b, c) }) }; window.Promise || (window.Promise = f, window.Promise.resolve = p, window.Promise.reject = n, window.Promise.race = s, window.Promise.all = r, window.Promise.prototype.then = f.prototype.c, window.Promise.prototype["catch"] = f.prototype.e);    
-    }());
-        (function () {      
-    'use strict'; function e(a) {
-          this.a = document.createElement("div"); this.a.setAttribute("aria-hidden", "true"); this.a.appendChild(document.createTextNode(a)); this.b = document.createElement("span"); this.c = document.createElement("span"); this.f = document.createElement("span"); this.e = document.createElement("span"); this.d = -1; this.b.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;"; this.c.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;";
-            this.e.style.cssText = "display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;"; this.f.style.cssText = "display:inline-block;width:200%;height:200%;"; this.b.appendChild(this.f); this.c.appendChild(this.e); this.a.appendChild(this.b); this.a.appendChild(this.c)
-          } function r(a, b, c) { a.a.style.cssText = "min-width:20px;min-height:20px;display:inline-block;visibility:hidden;position:absolute;width:auto;margin:0;padding:0;top:0;white-space:nowrap;font-size:100px;font-family:" + b + ";" + c }
-          function s(a) { var b = a.a.offsetWidth, c = b + 100; a.e.style.width = c + "px"; a.c.scrollLeft = c; a.b.scrollLeft = a.b.scrollWidth + 100; return a.d !== b ? (a.d = b, !0) : !1 } function t(a, b) { a.b.addEventListener("scroll", function () { s(a) && null !== a.a.parentNode && b(a.d) }, !1); a.c.addEventListener("scroll", function () { s(a) && null !== a.a.parentNode && b(a.d) }, !1); s(a) }; function u(a, b) { this.family = a; this.style = b.style || "normal"; this.variant = b.variant || "normal"; this.weight = b.weight || "normal"; this.stretch = b.stretch || "stretch"; this.featureSettings = b.featureSettings || "normal" } var v = null;
-          u.prototype.a = function (a) {
-            a = a || "BESbswy"; var b = "font-style:" + this.style + ";font-variant:" + this.variant + ";font-weight:" + this.weight + ";font-stretch:" + this.stretch + ";font-feature-settings:" + this.featureSettings + ";-moz-font-feature-settings:" + this.featureSettings + ";-webkit-font-feature-settings:" + this.featureSettings + ";", c = document.createElement("div"), k = new e(a), l = new e(a), m = new e(a), f = -1, d = -1, g = -1, n = -1, p = -1, q = -1, h = this; r(k, "sans-serif", b); r(l, "serif", b); r(m, "monospace", b); c.appendChild(k.a); c.appendChild(l.a);
-            c.appendChild(m.a); document.body.appendChild(c); n = k.a.offsetWidth; p = l.a.offsetWidth; q = m.a.offsetWidth; return new Promise(function (a, y) {          
-    function w() { null !== c.parentNode && document.body.removeChild(c) } function x() {
-                if (-1 !== f && -1 !== d && -1 !== g && f === d && d === g) {              
-    if (null === v) { var b = /AppleWeb[kK]it\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent); v = !!b && (536 > parseInt(b[1], 10) || 536 === parseInt(b[1], 10) && 11 >= parseInt(b[2], 10)) } v ? f === n && d === n && g === n || f === p && d === p && g === p || f === q && d === q && g === q || (w(), a(h)) : (w(),
-                    a(h))            
-    }
-              } setTimeout(function () { w(); y(h) }, 3E3); t(k, function (a) { f = a; x() }); r(k, h.family + ",sans-serif", b); t(l, function (a) { d = a; x() }); r(l, h.family + ",serif", b); t(m, function (a) { g = a; x() }); r(m, h.family + ",monospace", b)        
-    })
-      }; window.FontFaceObserver = u; window.FontFaceObserver.prototype.check = u.prototype.a;
-    }());
-    /*
-    Fonts are loaded through @font-face rules in the CSS whenever an element references them.
-    FontFaceObserver creates a referencing element to trigger the font request, and lsisten for font load events.
-    When all 3 fonts are loaded, we enable them by adding a class to the html element
-    */
-    (function (w) {
-      // if the class is already set, we're good.
-      if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
-        return;
-      }
-      var fontA = new w.FontFaceObserver("Muli", {
-        weight: 400
-      });
-      var fontB = new w.FontFaceObserver("Muli", {
-        weight: 600
-      });
-      var fontC = new w.FontFaceObserver("Muli", {
-        weight: 300
-      });
-      //var fontC = new w.FontFaceObserver( "Muli", {
-      //	weight: 400,
-      //	style: "italic"
-      //});
-      w.Promise
-        .all([fontA.check(), fontB.check(), fontC.check()])
-        .then(function () {
-          w.document.documentElement.className += " fonts-loaded";
-        });
-    }(this));
-
-    /*
-    Inline SVG Check
-    */
-
-    function supportsSvg() {
-      var div = document.createElement('div');
-      div.innerHTML = '<svg/>';
-      return (div.firstChild && div.firstChild.namespaceURI) == 'http://www.w3.org/2000/svg';
-    };
-
-    if (!supportsSvg()) {
-      document.documentElemement.classList.add("no-svg");
-      // or even .className += " no-svg"; for deeper support
-    }
-  </script>
-
-  <!-- animsition.js -->
-  <script src="js/animsition.min.js"></script>
+        </div>
+      </footer>
+    </div> <!-- TODO:CSS Grid Container Pending (support for subgrid) -->
+  </main>     
+    
+              </div> <!-- Animsition Container -->
+  
+    <!-- animsition.js -->
+    <script src="js/animsition.min.js"></script>
+    <script src="js/aos.js"></script>
+    <!--<script src="js/classie.js"></script>-->
+    <!--<script src="js/dynamics.min.js"></script>-->
+    <!--<script src="js/imagesloaded.pkgd.min.js"></script>-->
+  
+    
   <script>
       $(document).ready(function() {
         $(".animsition").animsition({
@@ -438,23 +367,30 @@
           transition: function(url){ window.location.href = url; }
         });
       });
-  </script>
-
-  <!--<script src="js/imagesloaded.pkgd.min.js"></script>-->
-  <!--<script src="js/aos.js"></script>-->
-  <!--<script src="js/dynamics.min.js"></script>-->
-  <!--<script src="js/classie.js"></script>-->
-  
-  <!--
-  <script>
+    /*
+    Inline SVG Check
+    */
+    function supportsSvg() {
+      var div = document.createElement('div');
+      div.innerHTML = '<svg/>';
+      return (div.firstChild && div.firstChild.namespaceURI) == 'http://www.w3.org/2000/svg';
+    };
+    if (!supportsSvg()) {
+      document.documentElemement.classList.add("no-svg");
+      // or even .className += " no-svg"; for deeper support
+    }
+    $(document).ready(function() {
+      $('.drawer').drawer();
+    });
     AOS.init({
-      //easing: 'ease-in-out-sine',
-      //disable: 'mobile'
+      duration: 1200,
+      disable: window.innerWidth < 1024,
+      disable: 'mobile',
+    })
+    $(window).on('load', function() {
+      AOS.refresh();
     });
   </script>
-  -->
-  <!--<script src="js/animOnScroll.js"></script>-->
-  
 </body>
 
 </html>

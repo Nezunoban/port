@@ -1,0 +1,630 @@
+
+
+/**************
+## Variables Pure Effects##
+**************/
+
+$show-drawer: 'all' !default;
+
+$drawer-animation-duration: 500ms !default;
+$drawer-animation-duration-slide: $drawer-animation-duration !default;
+$drawer-animation-duration-reveal: $drawer-animation-duration !default;
+$drawer-animation-duration-slideAlong: $drawer-animation-duration !default;
+$drawer-animation-duration-reverseSlide: $drawer-animation-duration !default;
+$drawer-animation-duration-scaleDown: $drawer-animation-duration !default;
+$drawer-animation-duration-scaleUp: $drawer-animation-duration !default;
+$drawer-animation-duration-scaleRotate: $drawer-animation-duration !default;
+$drawer-animation-duration-fall: $drawer-animation-duration !default;
+$drawer-animation-duration-push: $drawer-animation-duration !default;
+$drawer-animation-duration-bounce: 1000ms !default;
+$drawer-animation-duration-fade: 1000ms !default;
+$drawer-animation-duration-flipX: 1000ms !default;
+$drawer-animation-duration-flipY: 1000ms !default;
+$drawer-animation-duration-zoom: 1000ms !default;
+
+$toggler-color: lighten($brand-color, 20%) !default;
+$toggler-checked-color: $brand-color !default;
+$toggler-focus-color: $brand-color !default;
+
+$drawer-bgcolor: $brand-color-2 !default;
+
+// For 'left' and 'right' positioned drawers.
+//$drawer-width-small: 100% !default;
+$drawer-width-small: 80% !default;
+$drawer-width-medium: 300px !default;
+$drawer-width-large: 300px !default;
+
+// For 'top' positioned drawers.
+//$drawer-height-small: 100% !default;
+$drawer-height-small: auto !default;
+$drawer-height-medium: 100% !default;
+$drawer-height-large: 100px !default;
+
+$pusher-bgcolor: transparent;
+
+$overlay-bgcolor: rgba(0,0,0,0.4) !default;
+
+//@import "./variables";
+
+@import "drawer/effects/effect-flipY";
+//@import "drawer/effects/effect-zoom";
+
+@import "drawer/vendor/animate";
+
+/**************
+## Variables ##
+**************/
+
+
+$drawer-width: 20rem;
+$drawer-width-md: 18rem;
+$drawer-width-lg: $drawer-width !default;
+$drawer-navbar-dropdown-width: $drawer-width !default;
+$drawer-container-maxWidth-sm: 48rem !default;
+$drawer-container-maxWidth-md: 60rem !default;
+$drawer-container-maxWidth-lg: 70rem !default;
+$drawer-navbar-height: 3.75rem !default;
+$drawer-top-nav-maxHeight: 100% !default;
+$drawer-transitionDuration: .6s !default;
+//$drawer-transitionFunction: cubic-bezier(0.190, 1.000, 0.220, 1.000) !default;
+$drawer-transitionFunction: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+$drawer-gutter-x: .75rem !default;
+$drawer-fontSize: 2.5rem;
+
+$drawer-borderColor: $brand-color-2;
+$drawer-color: lighten($brand-color, 20%);
+$drawer-bgColor: $brand-color-2;
+$drawer-link-color: $white !default;
+$drawer-hover-color: $white;
+$drawer-hover-bgColor: transparent !default;
+$drawer-focus-color: $brand-color;
+$drawer-focus-bgColor: darken($brand-color-2, 20%);
+
+$drawer-brand-fontSize: 1.5rem !default;
+$drawer-brand-fontWeight: bold !default;
+$drawer-brand-color: $brand-color;
+$drawer-hamburger-color: lighten($brand-color, 20%);;
+$drawer-hamburger-width: 3.5rem;
+$drawer-hamburger-bgColor: transparent !default;
+$drawer-hamburger-hover-bgColor: transparent !default;
+$drawer-dropdown-color: $drawer-link-color !default;
+$drawer-dropdown-bgColor: $drawer-bgColor !default;
+$drawer-dropdown-hover-color: $drawer-hover-color !default;
+$drawer-dropdown-hover-bgColor: transparent !default;
+$drawer-pageContents-bgColor:$brand-color;
+$drawer-overlay-bgColor: rgba(0, 0, 0, .2) !default;
+$drawer-overlay-zIndex: 100 !default;
+$drawer-nav-zIndex: ($drawer-overlay-zIndex + 1) !default;
+$drawer-navbar-zIndex: ($drawer-overlay-zIndex + 2) !default;
+$drawer-brand-zIndex: ($drawer-overlay-zIndex + 3) !default;
+$drawer-hamburger-zIndex: ($drawer-overlay-zIndex + 4) !default;
+
+
+
+$drawer-viewport-sm: '(min-width: 40em)' !default;
+$drawer-viewport-md: '(min-width: 64em)' !default;
+$drawer-viewport-lg: '(min-width: 75em)' !default;
+
+
+
+//@import "./base";
+/*!------------------------------------*\
+    Base
+\*!------------------------------------*/
+
+.drawer-open {
+    //overflow: hidden !important;
+  }
+  
+  .drawer-nav {
+    position: fixed;
+    z-index: $drawer-nav-zIndex;
+    top: 0;
+    overflow: hidden;
+    width: $drawer-width;
+    height: 100%;
+    color: $drawer-color;
+    background-color: $drawer-bgColor;
+  }
+  
+  .drawer-brand {
+    font-size: $drawer-brand-fontSize;
+    font-weight: bold;
+    line-height: $drawer-navbar-height;
+    display: block;
+    padding-right: $drawer-gutter-x;
+    padding-left: $drawer-gutter-x;
+    text-decoration: none;
+    color: $drawer-brand-color;
+  }
+  
+  .drawer-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .drawer-menu-item {
+    font-size: $drawer-fontSize;
+    display: block;
+    padding: $drawer-gutter-x;
+    text-decoration: none;
+    color: $drawer-link-color;
+  }
+  
+  .drawer-menu-item:hover {
+    text-decoration: underline;
+    color: $drawer-hover-color;
+    background-color: $drawer-hover-bgColor;
+  }
+  
+  /*! overlay */
+  .drawer-overlay {
+    position: fixed;
+    z-index: $drawer-overlay-zIndex;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: $drawer-overlay-bgColor;
+  }
+  
+  .drawer-open .drawer-overlay {
+    display: block;
+  }
+  
+
+//@import "./position-top";
+/*!------------------------------------*\
+    Top
+\*!------------------------------------*/
+/*
+.drawer--top .drawer-nav {
+    top: (0 - $drawer-top-nav-maxHeight);
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-height: $drawer-top-nav-maxHeight;
+    transition: top $drawer-transitionDuration $drawer-transitionFunction;
+  }
+  
+  .drawer--top.drawer-open .drawer-nav {
+    top: 0;
+  }
+  
+  .drawer--top .drawer-hamburger,
+  .drawer--top.drawer-open .drawer-hamburger {
+    right: 0;
+  }
+  */
+//@import "./position-left";
+/*!------------------------------------*\
+    Left
+\*!------------------------------------*/
+/*
+.drawer--left .drawer-nav {
+    left: (0 - $drawer-width);
+    transition: left $drawer-transitionDuration $drawer-transitionFunction;
+  }
+  
+  .drawer--left.drawer-open .drawer-nav,
+  .drawer--left .drawer-hamburger,
+  .drawer--left.drawer-open .drawer-navbar .drawer-hamburger {
+    left: 0;
+  }
+  
+  .drawer--left.drawer-open .drawer-hamburger {
+    left: $drawer-width;
+  }
+  
+*/
+
+//@import "./position-right";
+/*!------------------------------------*\
+    Right
+\*!------------------------------------*/
+.drawer--right .drawer-nav {
+    right: 0;
+    //right: (0 - $drawer-width);
+    //transition: right $drawer-transitionDuration $drawer-transitionFunction;
+  }
+  
+  .drawer--right.drawer-open .drawer-nav,
+  .drawer--right .drawer-hamburger,
+  .drawer--right.drawer-open .drawer-navbar .drawer-hamburger {
+    right: 0;
+    //right: 0;
+  }
+  
+  .drawer--right.drawer-open .drawer-hamburger {
+    right: 0;
+    //right: $drawer-width;
+  }
+  
+//@import "./hamburger";
+/*!------------------------------------*\
+    Hamburger
+\*!------------------------------------*/
+    /*
+.drawer-hamburger {
+
+    position: fixed;
+    z-index: $drawer-hamburger-zIndex;
+    top: 0;
+    display: block;
+    box-sizing: content-box;
+    width: $drawer-hamburger-width;
+    padding: 0;
+    padding-top: 18px;
+    padding-right: $drawer-gutter-x;
+    padding-bottom: 30px;
+    padding-left: $drawer-gutter-x;
+    transition: all $drawer-transitionDuration $drawer-transitionFunction;
+    transform: translate3d(0, 0, 0);
+    border: 0;
+    outline: 0;
+    background-color: $drawer-hamburger-bgColor;
+  }
+  
+  .drawer-hamburger:hover {
+    cursor: pointer;
+    background-color: $drawer-hamburger-hover-bgColor;
+  }
+  
+  .drawer-hamburger-icon {
+    //position: relative;
+    //display: block;
+    //margin-top: 10px;
+  }
+  
+  .drawer-hamburger-icon,
+  .drawer-hamburger-icon:before,
+  .drawer-hamburger-icon:after {
+    //width: 100%;
+    //height: 2px;
+    //transition: all $drawer-transitionDuration $drawer-transitionFunction;
+    //background-color: $drawer-hamburger-color;
+  }
+  
+  .drawer-hamburger-icon:before,
+  .drawer-hamburger-icon:after {
+    //position: absolute;
+    //top: -10px;
+    //left: 0;
+    //content: ' ';
+  }
+  
+  .drawer-hamburger-icon:after {
+    //top: 10px;
+  }
+  
+  .drawer-open .drawer-hamburger-icon {
+    //background-color: transparent;
+  }
+  
+  .drawer-open .drawer-hamburger-icon:before,
+  .drawer-open .drawer-hamburger-icon:after {
+    //top: 0;
+  }
+  
+  .drawer-open .drawer-hamburger-icon:before {
+    //transform: rotate(45deg);
+  }
+  
+  .drawer-open .drawer-hamburger-icon:after {
+    //transform: rotate(-45deg);
+  }
+
+  */
+  
+
+//@import "./accessibility";
+/*!------------------------------------*\
+    accessibility
+\*!------------------------------------*/
+
+/*!
+ * Only display content to screen readers
+ * See: http://a11yproject.com/posts/how-to-hide-content
+ */
+ /*
+ .sr-only {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+  */
+  /*!
+   * Use in conjunction with .sr-only to only display content when it's focused.
+   * Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+   * Credit: HTML5 Boilerplate
+   */
+   /*
+  .sr-only-focusable:active,
+  .sr-only-focusable:focus {
+    position: static;
+    overflow: visible;
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
+  */
+  
+
+
+//@import "./sidebar";
+/*!------------------------------------*\
+    Sidebar
+\*!------------------------------------*/
+.drawer--sidebar {
+    background-color: $drawer-bgColor;
+  }
+  
+  .drawer--sidebar .drawer-contents {
+    background-color: $drawer-pageContents-bgColor;
+  }
+  
+  @media #{$drawer-viewport-md} {
+    .drawer--sidebar .drawer-hamburger {
+      //display: none;
+      //visibility: hidden;
+    }
+  
+    .drawer--sidebar .drawer-nav {
+      display: block;
+      transform: none;
+      position: fixed;
+      width: $drawer-width-md;
+      height: 100%;
+    }
+  
+    /*! Left */
+    .drawer--sidebar.drawer--left .drawer-nav {
+      left: 0;
+      border-right: 1px solid $drawer-borderColor;
+    }
+  
+    .drawer--sidebar.drawer--left .drawer-contents {
+      margin-left: $drawer-width-md;
+    }
+  
+    /*! Right */
+    .drawer--sidebar.drawer--right .drawer-nav {
+      right: 0;
+      border-left: 1px solid $drawer-borderColor;
+    }
+  
+    .drawer--sidebar.drawer--right .drawer-contents {
+      margin-right: $drawer-width-md;
+    }
+  
+    /*! container */
+    .drawer--sidebar .drawer-container {
+      max-width: $drawer-container-maxWidth-sm;
+    }
+  }
+  
+  @media #{$drawer-viewport-lg} {
+    .drawer--sidebar .drawer-nav {
+      width: $drawer-width-lg;
+    }
+  
+    .drawer--sidebar.drawer--left .drawer-contents {
+      //margin-left: $drawer-width-lg;
+    }
+  
+    .drawer--sidebar.drawer--right .drawer-contents {
+      //margin-right: $drawer-width-lg;
+    }
+  
+    /*! container */
+    .drawer--sidebar .drawer-container {
+      max-width: $drawer-container-maxWidth-md;
+    }
+  }
+  
+
+
+
+//@import "./navbar";
+/*!------------------------------------*\
+    Navbar
+\*!------------------------------------*/
+.drawer--navbarTopGutter {
+    padding-top: $drawer-navbar-height;
+  }
+  
+  .drawer-navbar .drawer-navbar-header {
+    border-bottom: 1px solid $drawer-borderColor;
+    background-color: $drawer-bgColor;
+  }
+  
+  .drawer-navbar {
+    z-index: $drawer-navbar-zIndex;
+    top: 0;
+    width: 100%;
+  }
+  
+  /*! .drawer-navbar modifier */
+  .drawer-navbar--fixed {
+    position: fixed;
+  }
+  
+  .drawer-navbar-header {
+    position: relative;
+    z-index: $drawer-navbar-zIndex;
+    box-sizing: border-box;
+    width: 100%;
+    height: $drawer-navbar-height;
+    padding: 0 $drawer-gutter-x;
+    text-align: center;
+  }
+  
+  .drawer-navbar .drawer-brand {
+    line-height: $drawer-navbar-height;
+    display: inline-block;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-decoration: none;
+  }
+  
+  .drawer-navbar .drawer-brand:hover {
+    background-color: transparent;
+  }
+  
+  .drawer-navbar .drawer-nav {
+    padding-top: $drawer-navbar-height;
+  }
+  
+  .drawer-navbar .drawer-menu {
+    padding-bottom: ($drawer-navbar-height * 2);
+  }
+  
+  @media #{$drawer-viewport-md} {
+    .drawer-navbar {
+      height: $drawer-navbar-height;
+      border-bottom: 1px solid $drawer-borderColor;
+      background-color: $drawer-bgColor;
+    }
+  
+    .drawer-navbar .drawer-navbar-header {
+      position: relative;
+      display: block;
+      float: left;
+      width: auto;
+      padding: 0;
+      border: 0;
+    }
+  
+    .drawer-navbar .drawer-menu--right {
+      float: right;
+    }
+  
+    .drawer-navbar .drawer-menu li {
+      float: left;
+    }
+  
+    .drawer-navbar .drawer-menu-item {
+      line-height: $drawer-navbar-height;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  
+    .drawer-navbar .drawer-hamburger {
+      display: none;
+    }
+  
+    .drawer-navbar .drawer-nav {
+      position: relative;
+      left: 0;
+      overflow: visible;
+      width: auto;
+      height: $drawer-navbar-height;
+      padding-top: 0;
+      transform: translate3d(0, 0, 0);
+    }
+  
+    .drawer-navbar .drawer-menu {
+      padding: 0;
+    }
+  
+    /*! dropdown */
+    .drawer-navbar .drawer-dropdown-menu {
+      position: absolute;
+      width: $drawer-navbar-dropdown-width;
+      border: 1px solid $drawer-borderColor;
+    }
+  
+    .drawer-navbar .drawer-dropdown-menu-item {
+      padding-left: $drawer-gutter-x;
+    }
+  }
+  
+
+//@import "./dropdown";
+/*!------------------------------------*\
+    Dropdown
+\*!------------------------------------*/
+.drawer-dropdown-menu {
+    display: none;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: $drawer-dropdown-bgColor;
+  }
+  
+  .drawer-dropdown-menu > li {
+    width: 100%;
+    list-style: none;
+  }
+  
+  .drawer-dropdown-menu-item {
+    line-height: $drawer-navbar-height;
+    display: block;
+    padding: 0;
+    padding-right: $drawer-gutter-x;
+    padding-left: ($drawer-gutter-x * 2);
+    text-decoration: none;
+    color: $drawer-dropdown-color;
+  }
+  
+  .drawer-dropdown-menu-item:hover {
+    text-decoration: underline;
+    color: $drawer-dropdown-hover-color;
+    background-color: $drawer-dropdown-hover-bgColor;
+  }
+  
+  /*! open */
+  .drawer-dropdown.open > .drawer-dropdown-menu {
+    display: block;
+  }
+  
+  /*! drawer-caret */
+  .drawer-dropdown .drawer-caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 4px;
+    transition: transform .2s ease, opacity .2s ease;
+    transform: rotate(0deg);
+    vertical-align: middle;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+  
+  /*! open */
+  .drawer-dropdown.open .drawer-caret {
+    transform: rotate(180deg);
+  }
+  
+
+//@import "./container";
+/*!------------------------------------*\
+    Container
+\*!------------------------------------*/
+.drawer-container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media #{$drawer-viewport-md} {
+    .drawer-container {
+      max-width: $drawer-container-maxWidth-md;
+    }
+  }
+  
+  @media #{$drawer-viewport-lg} {
+    .drawer-container {
+      max-width: $drawer-container-maxWidth-lg;
+    }
+  }
+  

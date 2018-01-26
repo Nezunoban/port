@@ -60,6 +60,11 @@ $medium-end:             get(large, $gemini-screens) - 1px;
     @include media-query(get(xlarge, $gemini-screens), 99999, $print) { @content; }
 
   }
+  @if $media-query == xxlarge {
+
+    @include media-query(get(xxlarge, $gemini-screens), 99999, $print) { @content; }
+
+  }
 
   @if $media-query == visible-small {
 

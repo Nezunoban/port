@@ -10,6 +10,13 @@
     transform-style: preserve-3d;
     //perspective: 20rem;
 }
+.angleport {
+	position: relative;
+	z-index: 100;
+	@media screen and (min-width: 30.0625em) and (orientation: portrait) {
+		transform: translateY(-100px);
+	}
+}
 
 .angleport__container {
 	position: relative;
@@ -68,7 +75,7 @@
     min-height: 250px;
 	display: inline-block;
 		*/
-	overflow: visible;
+	//overflow: visible;
 	transform-origin: 0 0;
 	cursor: pointer;
 	
@@ -112,9 +119,12 @@
 	padding: .5rem;
 	background-color: $brand-pink-bg;
 	color: $white;
+
+	transform: translate3d(-400px,-380px,400px);
 	
 	@include media(large, $gemini-screens) {
 		//position: absolute;
+		transform: translate3d(0,0,0);
 		z-index: -3;
 		left: -220px;
 		bottom: 180px;
@@ -126,6 +136,7 @@
 		opacity: 0;
 		background-color: transparent;
 		color: $orange;
+
 		transition: transform 0.3s;
 		transform: rotate(-180deg);
 		transform-origin: top right;

@@ -27,13 +27,29 @@
     @include media(large, $gemini-screens)  {
       //width: 500px;
       width: auto;
-      margin: 280px 0px 480px 0px;
-      margin-top: 30vh;
+      margin: 180px 0px 480px 0px;
+      //margin-top: 30vh;
       //height: 240px;
+      position: relative
+
     }
     @include media(xlarge, $gemini-screens) {
-      margin-top: 50vh;
+      //margin-top: 40vh;
+      //margin-bottom: 30vw;
+      margin-top: 15vw;
       margin-bottom: 30vw;
+      position: absolute;
+      top: auto;
+      bottom: auto;
+    }
+    @include media(xxlarge, $gemini-screens) {
+      margin-top: 30vw;
+      margin-bottom: 30vw;
+      position: absolute;
+      top: auto;
+      bottom: auto;
+      //margin-top: 50vh;
+      //margin-bottom: 30vw;
     }
     /*
     width: 300px;
@@ -103,6 +119,12 @@
       padding: 0 20px 0 50px;
     }
     @include media(xlarge, $gemini-screens){
+      height: 300px;
+      width: 600px;
+      padding: 0 0 100px 50px;
+      //padding: 0;
+    }
+    @include media(xxlarge, $gemini-screens){
       height: 300px;
       width: 600px;
       padding: 0 0 100px 100px;

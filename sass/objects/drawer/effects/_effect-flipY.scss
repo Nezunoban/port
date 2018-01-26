@@ -1,0 +1,61 @@
+/*******************
+## Effect - FlipY ##
+*******************/
+
+@mixin effect-flipY() {
+	
+    /* DRAWER */
+    
+	[data-effect="drawer-effect-flipY"].drawer .drawer-nav {
+	    z-index: 103;	
+        -webkit-animation-duration: $drawer-animation-duration-flipY;
+        animation-duration: $drawer-animation-duration-flipY;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both; 
+             
+        /* Door Flip changes - NF */
+        -ms-transform-origin-x: 100%; /* IE 9 */
+        -webkit-transform-origin-x: 100%; /* Chrome, Safari, Opera */
+        transform-origin-x: 100%;
+	}
+
+    /*[data-effect="drawer-effect-flipY"] .pure-toggle[data-toggle='left']:checked ~ .drawer[data-position='left'],
+    [data-effect="drawer-effect-flipY"] .pure-toggle[data-toggle='right']:checked ~ .drawer[data-position='right'],
+    [data-effect="drawer-effect-flipY"] .pure-toggle[data-toggle='top']:checked ~ .drawer[data-position='top'] { */
+    [data-effect="drawer-effect-flipY"].drawer-open .drawer-nav{
+        visibility: visible; 
+    }
+
+    /*
+	[data-effect="drawer-effect-flipY"] .drawer[data-position='left'] { @extend .flipOutY; }
+    [data-effect="drawer-effect-flipY"] .drawer[data-position='right'] { @extend .flipOutY; }
+    [data-effect="drawer-effect-flipY"] .drawer[data-position='top'] { @extend .flipOutY; }
+    */
+    [data-effect="drawer-effect-flipY"].drawer .drawer-nav{
+        @extend .flipOutY; 
+    }
+    
+    /*
+	[data-effect="drawer-effect-flipY"] .pure-toggle[data-toggle='left']:checked ~ .drawer[data-position='left'] { @extend .flipInY; }
+    [data-effect="drawer-effect-flipY"] .pure-toggle[data-toggle='right']:checked ~ .drawer[data-position='right'] { @extend .flipInY; }
+    [data-effect="drawer-effect-flipY"] .pure-toggle[data-toggle='top']:checked ~ .drawer[data-position='top'] { @extend .flipInY; }
+    */
+    [data-effect="drawer-effect-flipY"].drawer.drawer-open .drawer-nav{
+        @extend .flipInY; 
+    }
+    /* OVERLAY 
+
+    [data-effect="drawer-effect-flipY"] .pure-overlay {
+        transition-duration: $drawer-animation-duration-flipY;
+        transition-delay: $drawer-animation-duration-flipY / 2; 
+    }*/
+}
+
+@if($show-drawer == 'all') {
+	@include effect-flipY;
+} @else {
+	@media #{$show-drawer} {
+		@include effect-flipY;
+	}	
+}
+
