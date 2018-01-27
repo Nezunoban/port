@@ -439,11 +439,13 @@ main section {
     padding-top: 2em;
     padding-bottom: 4em;
     @include media(medium, $gemini-screens){
-        padding-top: 5em;
         padding-bottom: 8em;
         @supports(display: flex) {
             display: flex;
         }
+    }
+    @include media(xlarge, $gemini-screens){
+        padding-top: 5em;
     }
 }
 .story__text {
