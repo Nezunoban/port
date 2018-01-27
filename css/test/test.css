@@ -13732,6 +13732,10 @@ b {
   }
 }
 
+/* line 468, ../../sass/theme/_shame.scss */
+.footer--story {
+  clear: left;
+}
 @media screen and (min-width: 75em) {
   /* line 468, ../../sass/theme/_shame.scss */
   .footer--story {
@@ -13745,7 +13749,7 @@ b {
   }
 }
 
-/* line 479, ../../sass/theme/_shame.scss */
+/* line 480, ../../sass/theme/_shame.scss */
 .form-item {
   margin-bottom: 1em;
 }
@@ -13757,16 +13761,16 @@ b {
  *
  *
  */
-/* line 492, ../../sass/theme/_shame.scss */
+/* line 493, ../../sass/theme/_shame.scss */
 .scaling-svg-container {
   max-width: 100%;
 }
-/* line 494, ../../sass/theme/_shame.scss */
+/* line 495, ../../sass/theme/_shame.scss */
 .scaling-svg-container svg {
   max-width: 100%;
 }
 
-/* line 499, ../../sass/theme/_shame.scss */
+/* line 500, ../../sass/theme/_shame.scss */
 .l-flex-container {
   /* We first create a flex layout context */
   display: -webkit-box;
@@ -13788,7 +13792,7 @@ b {
   justify-content: flex-start;
 }
 
-/* line 512, ../../sass/theme/_shame.scss */
+/* line 513, ../../sass/theme/_shame.scss */
 .l-flex-item--50 {
   -webkit-box-flex: 1 auto;
   -moz-box-flex: 1 auto;
@@ -13800,13 +13804,38 @@ b {
 
 /* AOS Print Fix */
 @media print {
-  /* line 523, ../../sass/theme/_shame.scss */
+  /* line 524, ../../sass/theme/_shame.scss */
   [data-aos] {
     display: block !important;
     opacity: 1 !important;
     transform: translate(0) scale(1) !important;
   }
 }
+/* AOS  Custom */
+/* line 532, ../../sass/theme/_shame.scss */
+.purple {
+  fill: url(#n);
+}
+
+/* line 536, ../../sass/theme/_shame.scss */
+[data-aos="purplefy-svg"] defs #n stop {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+/* line 543, ../../sass/theme/_shame.scss */
+[data-aos="purplefy-svg"].aos-animate defs #n {
+  /* Use the color stops to transition to */
+}
+/* line 545, ../../sass/theme/_shame.scss */
+[data-aos="purplefy-svg"].aos-animate defs #n stop:first-child {
+  stop-color: #305fbd;
+}
+/* line 548, ../../sass/theme/_shame.scss */
+[data-aos="purplefy-svg"].aos-animate defs #n stop:last-child {
+  stop-color: #5c1073;
+}
+
 /* CSS Grid */
 /**
  ********************************

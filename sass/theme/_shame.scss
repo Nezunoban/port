@@ -466,6 +466,7 @@ main section {
 }
 
 .footer--story {
+    clear: left;
     @include media(xlarge, $gemini-screens) {
         margin-top: -50rem;
     }
@@ -526,6 +527,29 @@ main section {
         transform: translate(0) scale(1) !important;
     }
 }
+
+/* AOS  Custom */
+.purple {
+    fill: url(#n);
+}
+[data-aos="purplefy-svg"] defs #n {
+    stop {
+        -webkit-transition: .3s ease;
+        transition: .3s ease;
+    }
+    
+}
+
+[data-aos="purplefy-svg"].aos-animate defs #n {
+    /* Use the color stops to transition to */
+    stop:first-child {
+        stop-color: #305fbd;
+    }
+    stop:last-child {
+        stop-color: #5c1073;
+    }
+}
+  
 
 
 
