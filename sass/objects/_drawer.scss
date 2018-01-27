@@ -114,66 +114,66 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
 
 .drawer-open {
     //overflow: hidden !important;
-  }
-  
-  .drawer-nav {
-    position: fixed;
-    z-index: $drawer-nav-zIndex;
-    top: 0;
-    overflow: hidden;
-    width: $drawer-width;
-    height: 100%;
-    color: $drawer-color;
-    background-color: $drawer-bgColor;
-  }
-  
-  .drawer-brand {
-    font-size: $drawer-brand-fontSize;
-    font-weight: bold;
-    line-height: $drawer-navbar-height;
-    display: block;
-    padding-right: $drawer-gutter-x;
-    padding-left: $drawer-gutter-x;
-    text-decoration: none;
-    color: $drawer-brand-color;
-  }
-  
-  .drawer-menu {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  .drawer-menu-item {
-    font-size: $drawer-fontSize;
-    display: block;
-    padding: $drawer-gutter-x;
-    text-decoration: none;
-    color: $drawer-link-color;
-  }
-  
-  .drawer-menu-item:hover {
-    text-decoration: underline;
-    color: $drawer-hover-color;
-    background-color: $drawer-hover-bgColor;
-  }
-  
-  /*! overlay */
-  .drawer-overlay {
-    position: fixed;
-    z-index: $drawer-overlay-zIndex;
-    top: 0;
-    left: 0;
-    display: none;
-    width: 100%;
-    height: 100%;
-    background-color: $drawer-overlay-bgColor;
-  }
-  
-  .drawer-open .drawer-overlay {
-    display: block;
-  }
-  
+}
+
+.drawer-nav {
+  position: fixed;
+  z-index: $drawer-nav-zIndex;
+  top: 0;
+  overflow: hidden;
+  width: $drawer-width;
+  height: 100%;
+  color: $drawer-color;
+  background-color: $drawer-bgColor;
+}
+
+.drawer-brand {
+  font-size: $drawer-brand-fontSize;
+  font-weight: bold;
+  line-height: $drawer-navbar-height;
+  display: block;
+  padding-right: $drawer-gutter-x;
+  padding-left: $drawer-gutter-x;
+  text-decoration: none;
+  color: $drawer-brand-color;
+}
+
+.drawer-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.drawer-menu-item {
+  font-size: $drawer-fontSize;
+  display: block;
+  padding: $drawer-gutter-x;
+  text-decoration: none;
+  color: $drawer-link-color;
+}
+
+.drawer-menu-item:hover {
+  text-decoration: underline;
+  color: $drawer-hover-color;
+  background-color: $drawer-hover-bgColor;
+}
+
+/*! overlay */
+.drawer-overlay {
+  position: fixed;
+  z-index: $drawer-overlay-zIndex;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: $drawer-overlay-bgColor;
+}
+
+.drawer-open .drawer-overlay {
+  display: block;
+}
+
 
 //@import "./position-top";
 /*!------------------------------------*\
@@ -233,12 +233,12 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
   .drawer--right.drawer-open .drawer-nav,
   .drawer--right .drawer-hamburger,
   .drawer--right.drawer-open .drawer-navbar .drawer-hamburger {
-    right: 0;
+    //right: 0;
     //right: 0;
   }
   
   .drawer--right.drawer-open .drawer-hamburger {
-    right: 0;
+    //right: 0;
     //right: $drawer-width;
   }
   
@@ -364,72 +364,72 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
     Sidebar
 \*!------------------------------------*/
 .drawer--sidebar {
-    background-color: $drawer-bgColor;
+  background-color: $drawer-bgColor;
+}
+
+.drawer--sidebar .drawer-contents {
+  background-color: $drawer-pageContents-bgColor;
+}
+
+@media #{$drawer-viewport-md} {
+  .drawer--sidebar .drawer-hamburger {
+    //display: none;
+    //visibility: hidden;
   }
-  
-  .drawer--sidebar .drawer-contents {
-    background-color: $drawer-pageContents-bgColor;
+
+  .drawer--sidebar .drawer-nav {
+    display: block;
+    transform: none;
+    position: fixed;
+    width: $drawer-width-md;
+    height: 100%;
   }
-  
-  @media #{$drawer-viewport-md} {
-    .drawer--sidebar .drawer-hamburger {
-      //display: none;
-      //visibility: hidden;
-    }
-  
-    .drawer--sidebar .drawer-nav {
-      display: block;
-      transform: none;
-      position: fixed;
-      width: $drawer-width-md;
-      height: 100%;
-    }
-  
-    /*! Left */
-    .drawer--sidebar.drawer--left .drawer-nav {
-      left: 0;
-      border-right: 1px solid $drawer-borderColor;
-    }
-  
-    .drawer--sidebar.drawer--left .drawer-contents {
-      margin-left: $drawer-width-md;
-    }
-  
-    /*! Right */
-    .drawer--sidebar.drawer--right .drawer-nav {
-      right: 0;
-      border-left: 1px solid $drawer-borderColor;
-    }
-  
-    .drawer--sidebar.drawer--right .drawer-contents {
-      margin-right: $drawer-width-md;
-    }
-  
-    /*! container */
-    .drawer--sidebar .drawer-container {
-      max-width: $drawer-container-maxWidth-sm;
-    }
+
+  /*! Left */
+  .drawer--sidebar.drawer--left .drawer-nav {
+    left: 0;
+    border-right: 1px solid $drawer-borderColor;
   }
-  
-  @media #{$drawer-viewport-lg} {
-    .drawer--sidebar .drawer-nav {
-      width: $drawer-width-lg;
-    }
-  
-    .drawer--sidebar.drawer--left .drawer-contents {
-      //margin-left: $drawer-width-lg;
-    }
-  
-    .drawer--sidebar.drawer--right .drawer-contents {
-      //margin-right: $drawer-width-lg;
-    }
-  
-    /*! container */
-    .drawer--sidebar .drawer-container {
-      max-width: $drawer-container-maxWidth-md;
-    }
+
+  .drawer--sidebar.drawer--left .drawer-contents {
+    margin-left: $drawer-width-md;
   }
-  
+
+  /*! Right */
+  .drawer--sidebar.drawer--right .drawer-nav {
+    right: 0;
+    border-left: 1px solid $drawer-borderColor;
+  }
+
+  .drawer--sidebar.drawer--right .drawer-contents {
+    margin-right: $drawer-width-md;
+  }
+
+  /*! container */
+  .drawer--sidebar .drawer-container {
+    max-width: $drawer-container-maxWidth-sm;
+  }
+}
+
+@media #{$drawer-viewport-lg} {
+  .drawer--sidebar .drawer-nav {
+    width: $drawer-width-lg;
+  }
+
+  .drawer--sidebar.drawer--left .drawer-contents {
+    //margin-left: $drawer-width-lg;
+  }
+
+  .drawer--sidebar.drawer--right .drawer-contents {
+    //margin-right: $drawer-width-lg;
+  }
+
+  /*! container */
+  .drawer--sidebar .drawer-container {
+    max-width: $drawer-container-maxWidth-md;
+  }
+}
+
 
 
 
@@ -486,7 +486,7 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
   .drawer-navbar .drawer-menu {
     padding-bottom: ($drawer-navbar-height * 2);
   }
-  
+  /*
   @media #{$drawer-viewport-md} {
     .drawer-navbar {
       height: $drawer-navbar-height;
@@ -534,8 +534,10 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
     .drawer-navbar .drawer-menu {
       padding: 0;
     }
+    */
   
     /*! dropdown */
+    /*
     .drawer-navbar .drawer-dropdown-menu {
       position: absolute;
       width: $drawer-navbar-dropdown-width;
@@ -546,12 +548,13 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
       padding-left: $drawer-gutter-x;
     }
   }
-  
+  */
 
 //@import "./dropdown";
 /*!------------------------------------*\
     Dropdown
 \*!------------------------------------*/
+/*
 .drawer-dropdown-menu {
     display: none;
     box-sizing: border-box;
@@ -582,12 +585,10 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
     background-color: $drawer-dropdown-hover-bgColor;
   }
   
-  /*! open */
   .drawer-dropdown.open > .drawer-dropdown-menu {
     display: block;
   }
   
-  /*! drawer-caret */
   .drawer-dropdown .drawer-caret {
     display: inline-block;
     width: 0;
@@ -601,10 +602,11 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
     border-left: 4px solid transparent;
   }
   
-  /*! open */
   .drawer-dropdown.open .drawer-caret {
     transform: rotate(180deg);
   }
+
+  */
   
 
 //@import "./container";
@@ -612,19 +614,19 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
     Container
 \*!------------------------------------*/
 .drawer-container {
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media #{$drawer-viewport-md} {
+  .drawer-container {
+    max-width: $drawer-container-maxWidth-md;
   }
-  
-  @media #{$drawer-viewport-md} {
-    .drawer-container {
-      max-width: $drawer-container-maxWidth-md;
-    }
+}
+
+@media #{$drawer-viewport-lg} {
+  .drawer-container {
+    max-width: $drawer-container-maxWidth-lg;
   }
-  
-  @media #{$drawer-viewport-lg} {
-    .drawer-container {
-      max-width: $drawer-container-maxWidth-lg;
-    }
-  }
+}
   
