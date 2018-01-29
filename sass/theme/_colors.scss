@@ -1,32 +1,35 @@
 
-$brand-color:         #F06B6A;
-$brand-color-bg:      #ED6A6A;
-$brand-pink-text-1:      #A53151;
-$brand-color-2:       #371A5C;
-$brand-color-2-bg:    #5C1073;
+$brand-color:           #F06B6A;
+$brand-color-bg:        #ED6A6A;
+$brand-pink-text-1:     #A53151;
+$brand-color-2:         #371A5C;
+$brand-color-2-bg:      #5C1073;
 //$brand-pink-bg:       rgba(237, 106, 106, 0.46);  //#ED6A6A
-$brand-pink-bg:       rgba(255, 117, 105, 0.66);  //#FF7569
-$brand-p-bg:          rgba(92, 16, 115, 0.8);  //#5C1073
+$brand-pink-bg:         rgba(255, 117, 105, 0.66);  //#FF7569
+$brand-p-bg:            rgba(92, 16, 115, 0.8);  //#5C1073
 $brand-p-text-1:        #4F1649;
-$brand-b-bg:          rgba(48, 95, 189, 0.8);  //#305FBD
-$brand-bp-bg:         rgba(75, 47, 144, 0.8); //#4B2F90
-$brand-blue:          #305FBD;
-$brand-blue-text-1:      #39548E;
+$brand-b-bg:            rgba(48, 95, 189, 0.8);  //#305FBD
+$brand-bp-bg:           rgba(75, 47, 144, 0.8); //#4B2F90
+$brand-blue:            #305FBD;
+$brand-blue-text-1:     #39548E;
+
+$dark-red:              rgba(155, 40, 40, 0.8);
+$dark-purple:           rgba(61, 10, 77, 0.8);
 
 
 
-$link-color:          #F06B6A;
-$color:               #333;
-$background-color:    #FFF;
-$border-color:        #76304C;
+$link-color:            #F06B6A;
+$color:                 #333;
+$background-color:      #FFF;
+$border-color:          #76304C;
 
 
-$white:          #FFF;
-$white-hover:    #F7B5B5;
+$white:             #FFF;
+$white-hover:       #F7B5B5;
 
 
-$violet: #D78DED;
-$orange: #ff7159;
+$violet:            #D78DED;
+$orange:            #ff7159;
 
 .c-pink-1 {
     color: $brand-pink-text-1;

@@ -92,7 +92,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
   <!-- drawer.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
-
+  <!-- micromodal.js -->
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+  
+  
 
   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
   <script src="js/modernizr.custom.js"></script>
@@ -254,7 +257,8 @@
       
       <section class="section story__img-feature work__work">
           <div class="l-row">
-            <div class="l-col--small-4 l-col--small-push-7 l-col--medium-6 l-col--medium-push-6 l-col--large-6 l-col--large-push-6">
+            <div class="l-col--small-4 l-col--small-push-7 l-col--medium-6 l-col--medium-push-6 l-col--large-6 l-col--large-push-6 clickable" data-micromodal-trigger="modal-1">
+
                 <img class="story__img__desktop bcg hidden-small" src="img/stories/cbc-iso-desktop.png" alt="CBC Website on Desktop" />
                 <img class="story__img__mobile bcg" src="img/stories/cbc-phone.png" alt="CBC Website on Mobile" />
             </div>
@@ -276,7 +280,7 @@
             </p>
           </div>
           <figure class="story__figure l-figure--left l-col--small-10 l-col--small-offset-1 l-col--medium-offset-0 l-col--medium-6 l-col--large-8  l-col--medium-pull-6 l-col--large-pull-4">
-            <img class="story__img bcg" src="img/stories/cbc/cbc-data.png" alt="Data from current website" />
+            <img class="story__img bcg clickable" src="img/stories/cbc/cbc-data.png" alt="Data from current website" data-micromodal-trigger="modal-1"/>
             <figcaption class="figcaption story__figcaption hidden">We began by analyzing user behavior on the site.</figcaption>
           </figure>
           
@@ -362,6 +366,7 @@
             <p class="main__p">
               Client moves the design into production, planning video and photographic production to compliment the design. 
             </p>
+            <a href="#" class="main__button button c-pink-1 coolBeans coolBeans-pink clickable" data-micromodal-trigger="modal-1">see the final design</a>
           </div>
           <figure class="story__figure--final l-figure--right l-col--small-10 l-col--small-offset-1 l-col--medium-6 l-col--medium-offset-0 l-col--large-8">
               <img class="story__img bcg story__img-final" src="img/stories/cbc/cbc-final.png" alt="Wireframes featuring the personal calls to action" />
@@ -372,7 +377,7 @@
             <span class="chevron"></span>
             <!--<span class="chevron chevron-_-down"></span>-->
           </span>
-          <span class="hidden">Scroll to see more</span>
+          <span class="hidden">Scroll to top</span>
           <span class="mouse">
               <span class="scroll-wheel"></span>
           </span>
@@ -381,6 +386,8 @@
 
       <aside>
       </aside>
+
+
 
       <footer class="footer angle--top-right footer--story">
         <div class="footer__container">
@@ -412,7 +419,38 @@
         </div>
       </footer>
     </div> <!-- TODO:CSS Grid Container Pending (support for subgrid) -->
-  </main>     
+
+  </main>   
+  <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-1-title">
+            CBC Site Design
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <main class="modal__content" id="modal-1-content">
+          <p>
+            Homepage design to show that the flip side of CBC's solutions is success. 
+          </p>
+            <img class="bcg" src="img/stories/cbc/cbc-home-1920.png" alt="CBC Homepage Design" />
+          <p>
+          </br>
+          Success stories featuring client images and testimonials about beneficial services to show client centered approach. 
+          </p>
+            <img class="bcg" src="img/stories/cbc/cbc-story-1920.png" alt="Success Story Layout Design" />
+          <!--<p>
+            Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.
+          </p>-->
+        </main>
+        <!--<footer class="modal__footer">
+          <button class="modal__btn modal__btn-primary">Continue</button>
+          <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+        </footer>-->
+      </div>
+    </div>
+  </div>  
   
             </div> <!-- Animsition Container -->
 
@@ -425,6 +463,7 @@
 
   
 <script>
+  // Loading and Fade in/out on page load or link activation
     $(document).ready(function() {
       $(".animsition").animsition({
         inClass: 'fade-in-down-sm',
@@ -461,9 +500,13 @@
       document.documentElemement.classList.add("no-svg");
       // or even .className += " no-svg"; for deeper support
     }
+
+    // Drawer Master Navigation
     $(document).ready(function() {
       $('.drawer').drawer();
     });
+
+    // Animate on scroll 
     AOS.init({
       duration: 1200,
       disable: window.innerWidth < 1024,
@@ -472,7 +515,13 @@
     $(window).on('load', function() {
       AOS.refresh();
     });
+
+    // Micro Modal Accessible Modal popups
+    MicroModal.init();
   </script>
+
+  
+
 </body>
 
 </html>

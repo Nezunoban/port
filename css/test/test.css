@@ -97,7 +97,7 @@
 @font-face {
 }
 */
-/* line 175, ../../sass/_defaults.scss */
+/* line 176, ../../sass/_defaults.scss */
 body {
   font-family: sans-serif;
 }
@@ -107,47 +107,47 @@ body {
   font-family: 'Muli', sans-serif;
 }
 */
-/* line 183, ../../sass/_defaults.scss */
+/* line 184, ../../sass/_defaults.scss */
 body {
   font-family: 'Muli', Trebuchet, Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* line 31, ../../sass/theme/_colors.scss */
+/* line 34, ../../sass/theme/_colors.scss */
 .c-pink-1 {
   color: #A53151;
 }
 
-/* line 34, ../../sass/theme/_colors.scss */
+/* line 37, ../../sass/theme/_colors.scss */
 .c-pink-2 {
   color: #76304C;
 }
 
-/* line 37, ../../sass/theme/_colors.scss */
+/* line 40, ../../sass/theme/_colors.scss */
 .c-blue-1 {
   color: #39548E;
 }
 
-/* line 40, ../../sass/theme/_colors.scss */
+/* line 43, ../../sass/theme/_colors.scss */
 .c-blue-2 {
   color: #305FBD;
 }
 
-/* line 43, ../../sass/theme/_colors.scss */
+/* line 46, ../../sass/theme/_colors.scss */
 .c-white-1 {
   color: #FFF;
 }
 
-/* line 50, ../../sass/theme/_colors.scss */
+/* line 53, ../../sass/theme/_colors.scss */
 .c-purple-1 {
   color: #371A5C;
 }
 
-/* line 53, ../../sass/theme/_colors.scss */
+/* line 56, ../../sass/theme/_colors.scss */
 .c-purple-2 {
   color: #5C1073;
 }
 
-/* line 57, ../../sass/theme/_colors.scss */
+/* line 60, ../../sass/theme/_colors.scss */
 .c-orange-1 {
   color: #ff7159;
 }
@@ -10249,7 +10249,6 @@ necessitatibus magnam.</p>
   /* line 21, ../../sass/objects/_angled-portfolio.scss */
   .angleport__container {
     width: auto;
-    transform: rotateX(-30deg) rotateY(45deg);
     margin-top: 0;
     top: -200px;
     margin-bottom: 200px;
@@ -10379,28 +10378,30 @@ necessitatibus magnam.</p>
 .anglegrid__item .layer {
   transition: transform 0.3s;
   transform-origin: 0 0;
+  will-change: transform;
 }
 
-/* line 176, ../../sass/objects/_angled-portfolio.scss */
+/* line 177, ../../sass/objects/_angled-portfolio.scss */
 .anglegrid__item .layer {
   transition-duration: .2s;
   transition-delay: 0s;
   transition-timing-function: ease-out;
+  will-change: transform;
 }
 @media screen and (min-width: 64em) {
-  /* line 181, ../../sass/objects/_angled-portfolio.scss */
+  /* line 183, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer-1 {
     transform: rotateY(0deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 186, ../../sass/objects/_angled-portfolio.scss */
+  /* line 188, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer-2 {
     transform: rotateY(0deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 191, ../../sass/objects/_angled-portfolio.scss */
+  /* line 193, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item .layer-3 {
     transform: rotateY(0deg);
   }
@@ -10434,71 +10435,71 @@ necessitatibus magnam.</p>
 	}
 }
 */
-/* line 229, ../../sass/objects/_angled-portfolio.scss */
+/* line 231, ../../sass/objects/_angled-portfolio.scss */
 .anglegrid__item.aos-init.aos-animate .layer {
   transition-duration: .2s;
   transition-delay: 0s;
   transition-timing-function: ease-out;
 }
 @media screen and (min-width: 64em) {
-  /* line 234, ../../sass/objects/_angled-portfolio.scss */
+  /* line 236, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item.aos-init.aos-animate .layer-1 {
     animation: layer1 1.6s 0s ease-out;
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 242, ../../sass/objects/_angled-portfolio.scss */
+  /* line 244, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item.aos-init.aos-animate .layer-2 {
     transform: rotateY(0deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 248, ../../sass/objects/_angled-portfolio.scss */
+  /* line 250, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item.aos-init.aos-animate .layer-3 {
     animation: layer3 1.6s 0s ease-out;
   }
 }
 
 @media print, screen and (min-width: 30.0625em) {
-  /* line 258, ../../sass/objects/_angled-portfolio.scss */
+  /* line 260, ../../sass/objects/_angled-portfolio.scss */
   [data-aos="slide-left"].anglegrid__item.aos-init {
     transform: translateX(450%);
   }
 }
 @media print, screen and (min-width: 64em) {
-  /* line 258, ../../sass/objects/_angled-portfolio.scss */
+  /* line 260, ../../sass/objects/_angled-portfolio.scss */
   [data-aos="slide-left"].anglegrid__item.aos-init {
     transform: translateX(550%);
   }
 }
 @media print, screen and (min-width: 75em) {
-  /* line 258, ../../sass/objects/_angled-portfolio.scss */
+  /* line 260, ../../sass/objects/_angled-portfolio.scss */
   [data-aos="slide-left"].anglegrid__item.aos-init {
     transform: translateX(900%);
   }
 }
 
 @media print, screen and (min-width: 30.0625em) {
-  /* line 269, ../../sass/objects/_angled-portfolio.scss */
+  /* line 271, ../../sass/objects/_angled-portfolio.scss */
   [data-aos="slide-left"].anglegrid__item.aos-init.aos-animate {
     transform: translateX(0);
   }
 }
 @media print, screen and (min-width: 64em) {
-  /* line 269, ../../sass/objects/_angled-portfolio.scss */
+  /* line 271, ../../sass/objects/_angled-portfolio.scss */
   [data-aos="slide-left"].anglegrid__item.aos-init.aos-animate {
     transform: translateX(0);
   }
 }
 @media print, screen and (min-width: 75em) {
-  /* line 269, ../../sass/objects/_angled-portfolio.scss */
+  /* line 271, ../../sass/objects/_angled-portfolio.scss */
   [data-aos="slide-left"].anglegrid__item.aos-init.aos-animate {
     transform: translateX(0);
   }
 }
 
 @media screen and (min-width: 64em) {
-  /* line 289, ../../sass/objects/_angled-portfolio.scss */
+  /* line 291, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .anglegrid__title,
   .anglegrid__item.aos-animate:hover .anglegrid__title {
     opacity: 1;
@@ -10507,21 +10508,21 @@ necessitatibus magnam.</p>
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 301, ../../sass/objects/_angled-portfolio.scss */
+  /* line 303, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .layer-1,
   .anglegrid__item.aos-animate:hover .layer-1 {
     transform: rotateY(40deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 306, ../../sass/objects/_angled-portfolio.scss */
+  /* line 308, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .layer-2,
   .anglegrid__item.aos-animate:hover .layer-2 {
     transform: rotateY(0deg);
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 311, ../../sass/objects/_angled-portfolio.scss */
+  /* line 313, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .layer-3,
   .anglegrid__item.aos-animate:hover .layer-3 {
     transform: rotateY(-40deg);
@@ -11720,6 +11721,194 @@ h2.margin-w {
   color: #371A5C;
 }
 
+/**
+ ********************************
+ * _MICROMODAL.SCSS
+ ********************************
+ */
+/**************************\
+  Basic Modal Styles
+\**************************/
+/* line 17, ../../sass/objects/_micromodal.scss */
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 0, 5, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 29, ../../sass/objects/_micromodal.scss */
+.modal__container {
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient(45deg, rgba(61, 10, 77, 0.8), rgba(155, 40, 40, 0.8));
+  background-image: -o-linear-gradient(45deg, rgba(61, 10, 77, 0.8), rgba(155, 40, 40, 0.8));
+  background-image: linear-gradient(45deg, rgba(61, 10, 77, 0.8), rgba(155, 40, 40, 0.8));
+  padding: 30px;
+  max-width: 500px;
+  max-height: 100vh;
+  border-radius: 4px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* line 40, ../../sass/objects/_micromodal.scss */
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 46, ../../sass/objects/_micromodal.scss */
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: #FFF;
+  box-sizing: border-box;
+}
+
+/* line 56, ../../sass/objects/_micromodal.scss */
+.modal__close {
+  background: transparent;
+  border: 0;
+}
+
+/* line 61, ../../sass/objects/_micromodal.scss */
+.modal__header .modal__close:before {
+  content: "\2715";
+  color: #F06B6A;
+}
+
+/* line 66, ../../sass/objects/_micromodal.scss */
+.modal__content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  color: #FFF;
+}
+
+/* line 73, ../../sass/objects/_micromodal.scss */
+.modal__btn {
+  font-size: .875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: rgba(155, 40, 40, 0.8);
+  color: #FFF;
+  border-radius: .25rem;
+  border-style: none;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-appearance: button;
+  text-transform: none;
+  overflow: visible;
+  line-height: 1.15;
+  margin: 0;
+  will-change: transform;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  transition: -webkit-transform .25s ease-out;
+  transition: transform .25s ease-out;
+  transition: transform .25s ease-out,-webkit-transform .25s ease-out;
+}
+
+/* line 101, ../../sass/objects/_micromodal.scss */
+.modal__btn:focus, .modal__btn:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/* line 106, ../../sass/objects/_micromodal.scss */
+.modal__btn-primary {
+  background-color: #F06B6A;
+  color: #FFF;
+}
+
+/**************************\
+  Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes mmslideIn {
+  from {
+    transform: translateY(15%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes mmslideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10%);
+  }
+}
+/* line 136, ../../sass/objects/_micromodal.scss */
+.micromodal-slide {
+  display: none;
+}
+
+/* line 140, ../../sass/objects/_micromodal.scss */
+.micromodal-slide.is-open {
+  display: block;
+}
+
+/* line 144, ../../sass/objects/_micromodal.scss */
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* line 148, ../../sass/objects/_micromodal.scss */
+.micromodal-slide[aria-hidden="false"] .modal__container {
+  animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* line 152, ../../sass/objects/_micromodal.scss */
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* line 156, ../../sass/objects/_micromodal.scss */
+.micromodal-slide[aria-hidden="true"] .modal__container {
+  animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* line 160, ../../sass/objects/_micromodal.scss */
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
+}
+
+/**
+ * @markup
+ */
 /**
  ********************************
  * _TEXT-INPUTS.SCSS
@@ -13572,7 +13761,7 @@ b {
 
 /* line 240, ../../sass/theme/_shame.scss */
 .overlay--grid-1 {
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 1%, rgba(0, 0, 0, 0) 2%, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0)), linear-gradient(30deg, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 97%, rgba(255, 255, 255, 0.05) 98%, rgba(255, 255, 255, 0.05) 99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0)), linear-gradient(150deg, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 97%, rgba(255, 255, 255, 0.05) 98%, rgba(255, 255, 255, 0.05) 99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0));
+  background-image: linear-f(90deg, transparent 0%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 1%, transparent 2%, transparent 49%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 51%, transparent 52%, transparent), linear-gradient(30deg, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 97%, rgba(255, 255, 255, 0.05) 98%, rgba(255, 255, 255, 0.05) 99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0)), linear-gradient(150deg, rgba(0, 0, 0, 0) 49%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.05) 51%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 97%, rgba(255, 255, 255, 0.05) 98%, rgba(255, 255, 255, 0.05) 99%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0));
 }
 
 /* line 247, ../../sass/theme/_shame.scss */
@@ -13836,7 +14025,7 @@ b {
 @media screen and (min-width: 75em) {
   /* line 470, ../../sass/theme/_shame.scss */
   .footer--story {
-    margin-top: -50rem;
+    margin-top: -40rem;
   }
 }
 @media screen and (min-width: 106.25em) {
