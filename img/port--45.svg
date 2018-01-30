@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="374" height="354" viewBox="0 0 374 354"><title>Icons</title><g id="82150103-01ab-4d1b-8406-9e6ca4ef4e48" data-name="Layer 1"><polygon points="71 90.55 226 202.84 226 337.28 71 224.99 71 90.55" fill="#ccc"/><polygon points="85 108.98 226 182.82 226 284.73 85 197.32 85 108.98" fill="#b4b4b4"/><polygon points="85 62.88 271 160.29 271 294.73 85 197.32 85 62.88" fill="#ebebeb"/><polygon points="103 72.61 271 117.61 271 225.67 271 230 103 171.37 103 72.61" fill="#b4b4b4"/><polygon points="103 36.93 312 92.91 312 227.35 103 171.37 103 36.93" fill="#fff"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="374" height="354" viewBox="0 0 374 354">
+	<title>
+		Icons
+	</title>
+	<g id="82150103-01ab-4d1b-8406-9e6ca4ef4e48" data-name="Layer 1">
+		<polygon points="71 90.55 226 202.84 226 337.28 71 224.99 71 90.55" fill="#ccc" />
+		<polygon points="85 108.98 226 182.82 226 284.73 85 197.32 85 108.98" fill="#b4b4b4" />
+		<polygon points="85 62.88 271 160.29 271 294.73 85 197.32 85 62.88" fill="#ebebeb" />
+		<polygon points="103 72.61 271 117.61 271 225.67 271 230 103 171.37 103 72.61" fill="#b4b4b4" />
+		<polygon points="103 36.93 312 92.91 312 227.35 103 171.37 103 36.93" fill="#fff" />
+	</g>
+</svg>

@@ -24,6 +24,7 @@ $gemini-grid: extend((
   medium-breakpoint: get(medium, $gemini-screens),
   large-breakpoint:  get(large, $gemini-screens),
   xlarge-breakpoint: get(xlarge, $gemini-screens),
+  xxlarge-breakpoint: get(xxlarge, $gemini-screens),
 ), $gemini-grid);
 
 /**
@@ -191,6 +192,9 @@ $gemini-grid: extend((
 @include media-query(get(xlarge-breakpoint, $gemini-grid)) {
   @include screen-grid('xlarge');
 }
+@include media-query(get(xxlarge-breakpoint, $gemini-grid)) {
+  @include screen-grid('xxlarge');
+}
 
 @media print{
   @include screen-grid('print');
@@ -207,6 +211,11 @@ $gemini-grid: extend((
 @for $i from 1 through get(columns, $gemini-grid) - 2 {
   @include media(xlarge, $gemini-screens){
     .l-col--xlarge-offset-#{$i} {
+      margin-left: gridCalc($i, get(columns, $gemini-grid));
+    }
+  }
+  @include media(xxlarge, $gemini-screens){
+    .l-col--xxlarge-offset-#{$i} {
       margin-left: gridCalc($i, get(columns, $gemini-grid));
     }
   }

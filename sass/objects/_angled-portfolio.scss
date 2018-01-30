@@ -159,6 +159,9 @@
 }
 
 .layer:not(:first-child) {
+	position: absolute;
+	top: 0;
+	left: 0;
 	@include media(large, $gemini-screens) {
 		//display: block;
 		position: absolute;

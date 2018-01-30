@@ -240,7 +240,7 @@ b {
 %grid-1{
     // dark grid bg
     background-image:  
-    linear-f(90deg, transparent 0%, rgba(255, 255, 255, .05) 0%, rgba(255, 255, 255, .05) 1%, transparent 2%, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent), 
+    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .05) 0%, rgba(255, 255, 255, .05) 1%, transparent 2%, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent), 
     linear-gradient(30deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent), 
     linear-gradient(150deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent);
 }
@@ -250,12 +250,6 @@ b {
     linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .09) 0%, rgba(255, 255, 255, .09) 1%, transparent 2%, transparent 49%, rgba(255, 255, 255, .09) 50%, rgba(255, 255, 255, .09) 51%, transparent 52%, transparent), 
     linear-gradient(30deg, transparent 49%, rgba(255, 255, 255, .09) 50%, rgba(255, 255, 255, .09) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .09) 98%, rgba(255, 255, 255, .09) 99%, transparent 100%, transparent), 
     linear-gradient(150deg, transparent 49%, rgba(255, 255, 255, .09) 50%, rgba(255, 255, 255, .09) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .09) 98%, rgba(255, 255, 255, .09) 99%, transparent 100%, transparent);
-}
-.overlay--grid-1 {
-    background-attachment: fixed;
-    background-color: transparent;
-    height:100%;
-    background-size:100px 56px; 
 }
 
 .overlay--grid-1 {
@@ -402,6 +396,14 @@ main section {
     }
 }
 
+.project__story {
+    top: -12vw;
+    position: relative;
+    @include media(xxlarge, $gemini-screens){
+        top: -18rem;
+    }
+}
+
 
 .story__img__mobile {
     @include media(medium, $gemini-screens) {
@@ -415,19 +417,19 @@ main section {
 .story__img__desktop {
     padding-bottom: 6em;
 }
+/*
 .story__figcaption {
     @include media(medium, $gemini-screens) {
-        /*
         transform: rotate(-28deg);
         margin-right: 0%;
         margin-top: -12%;
         padding-left: 35%;
-        */
+        
     }
 }
+*/
 
 .story__img-feature {
-
     margin-top: -80vw;
     padding-bottom: 5em;
     @include media(medium, $gemini-screens){
@@ -439,12 +441,18 @@ main section {
     padding-top: 2em;
     padding-bottom: 4em;
     @include media(medium, $gemini-screens){
-        padding-bottom: 8em;
+        padding-bottom: 5em;
         @supports(display: flex) {
             display: flex;
         }
     }
+    @include media(large, $gemini-screens){
+        padding-bottom: 1em
+    }
     @include media(xlarge, $gemini-screens){
+        padding-top: 1em;
+    }
+    @include media(xxlarge, $gemini-screens) {
         padding-top: 5em;
     }
 }
@@ -473,14 +481,58 @@ main section {
         margin-top: -40rem;
     }
     @include media(xxlarge, $gemini-screens) {
-        margin-top: -80rem;
+        margin-top: -70rem;
+        padding-bottom: 20rem;
     }
 }
 
+.hero__feature-icon {
+    margin-top: -80vw;
+    padding-bottom: 70vw;
+    @include media(medium, $gemini-screens){
+        margin-top: -65vw;
+        padding-bottom: 50vw;
+    }
+    /*
+    @include media(large, $gemini-screens) {
+        margin-top: -51vw;
+        padding-bottom: 48vw;
+    }
+    */
+    @include media(xlarge, $gemini-screens) {
+        margin-top: -60vw;
+        padding-bottom: 52vw;
+        .scaling-svg-container svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+    @include media(xxlarge, $gemini-screens) {
+        margin-top: -57vw;
+        padding-bottom: 52vw;
+    }
 
+    @media all and (min-width:2336px) {
+        margin-top: -52vw;
+        padding-bottom: 50vw;
+    }
+
+}
+
+
+@include media(xxlarge, $gemini-screens) {
+    .l-col--xxlarge-push-9 {
+        left: 75%;
+    }
+}
 
 .form-item {
     margin-bottom: 1em;
+    margin-right: 10px;
+    display: inline-block
+}
+.form__submit {
+    display: block
 }
 
 
