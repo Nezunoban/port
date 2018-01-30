@@ -83,7 +83,7 @@ b {
     @include media(medium, $gemini-screens) {
         padding-left: 120px;
     }
-    @include media(xxlarge, $gemini-screens) {
+    @media all and (min-width: 1900px) {
         padding-left: 0;
     }
 }

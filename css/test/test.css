@@ -13876,7 +13876,7 @@ b {
     padding-left: 120px;
   }
 }
-@media screen and (min-width: 106.25em) {
+@media all and (min-width: 1900px) {
   /* line 82, ../../sass/theme/_shame.scss */
   .section {
     padding-left: 0;
@@ -14618,7 +14618,7 @@ b {
 
 /* line 43, ../../sass/theme/_self-page.scss */
 .chart__percentage {
-  font-size: 1em;
+  font-size: .75em;
   line-height: 1;
   width: auto;
   height: 40px;
