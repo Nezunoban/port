@@ -11245,6 +11245,7 @@ h2.margin-w {
 /* line 17, ../sass/objects/_micromodal.scss */
 .modal__overlay {
   position: fixed;
+  z-index: 105;
   top: 0;
   left: 0;
   right: 0;
@@ -11255,7 +11256,7 @@ h2.margin-w {
   align-items: center;
 }
 
-/* line 29, ../sass/objects/_micromodal.scss */
+/* line 30, ../sass/objects/_micromodal.scss */
 .modal__container {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient(45deg, rgba(61, 10, 77, 0.8), rgba(155, 40, 40, 0.8));
@@ -11268,15 +11269,27 @@ h2.margin-w {
   overflow-y: auto;
   box-sizing: border-box;
 }
+@media screen and (min-width: 64em) {
+  /* line 30, ../sass/objects/_micromodal.scss */
+  .modal__container {
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 106.25em) {
+  /* line 30, ../sass/objects/_micromodal.scss */
+  .modal__container {
+    max-width: 1200px;
+  }
+}
 
-/* line 40, ../sass/objects/_micromodal.scss */
+/* line 47, ../sass/objects/_micromodal.scss */
 .modal__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* line 46, ../sass/objects/_micromodal.scss */
+/* line 53, ../sass/objects/_micromodal.scss */
 .modal__title {
   margin-top: 0;
   margin-bottom: 0;
@@ -11287,19 +11300,19 @@ h2.margin-w {
   box-sizing: border-box;
 }
 
-/* line 56, ../sass/objects/_micromodal.scss */
+/* line 63, ../sass/objects/_micromodal.scss */
 .modal__close {
   background: transparent;
   border: 0;
 }
 
-/* line 61, ../sass/objects/_micromodal.scss */
+/* line 68, ../sass/objects/_micromodal.scss */
 .modal__header .modal__close:before {
   content: "\2715";
   color: #F06B6A;
 }
 
-/* line 66, ../sass/objects/_micromodal.scss */
+/* line 73, ../sass/objects/_micromodal.scss */
 .modal__content {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -11307,7 +11320,7 @@ h2.margin-w {
   color: #FFF;
 }
 
-/* line 73, ../sass/objects/_micromodal.scss */
+/* line 80, ../sass/objects/_micromodal.scss */
 .modal__btn {
   font-size: .875rem;
   padding-left: 1rem;
@@ -11336,13 +11349,13 @@ h2.margin-w {
   transition: transform .25s ease-out,-webkit-transform .25s ease-out;
 }
 
-/* line 101, ../sass/objects/_micromodal.scss */
+/* line 108, ../sass/objects/_micromodal.scss */
 .modal__btn:focus, .modal__btn:hover {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 
-/* line 106, ../sass/objects/_micromodal.scss */
+/* line 113, ../sass/objects/_micromodal.scss */
 .modal__btn-primary {
   background-color: #F06B6A;
   color: #FFF;
@@ -11383,37 +11396,37 @@ h2.margin-w {
     transform: translateY(-10%);
   }
 }
-/* line 136, ../sass/objects/_micromodal.scss */
+/* line 143, ../sass/objects/_micromodal.scss */
 .micromodal-slide {
   display: none;
 }
 
-/* line 140, ../sass/objects/_micromodal.scss */
+/* line 147, ../sass/objects/_micromodal.scss */
 .micromodal-slide.is-open {
   display: block;
 }
 
-/* line 144, ../sass/objects/_micromodal.scss */
+/* line 151, ../sass/objects/_micromodal.scss */
 .micromodal-slide[aria-hidden="false"] .modal__overlay {
   animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-/* line 148, ../sass/objects/_micromodal.scss */
+/* line 155, ../sass/objects/_micromodal.scss */
 .micromodal-slide[aria-hidden="false"] .modal__container {
   animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-/* line 152, ../sass/objects/_micromodal.scss */
+/* line 159, ../sass/objects/_micromodal.scss */
 .micromodal-slide[aria-hidden="true"] .modal__overlay {
   animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-/* line 156, ../sass/objects/_micromodal.scss */
+/* line 163, ../sass/objects/_micromodal.scss */
 .micromodal-slide[aria-hidden="true"] .modal__container {
   animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
 }
 
-/* line 160, ../sass/objects/_micromodal.scss */
+/* line 167, ../sass/objects/_micromodal.scss */
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: transform;
@@ -13384,6 +13397,8 @@ b {
 /* line 345, ../sass/theme/_shame.scss */
 .main__button {
   background: transparent;
+  margin-right: .5em;
+  margin-bottom: .5em;
 }
 
 /*
@@ -13400,17 +13415,17 @@ b {
     color: $brand-p-text-1;
 }
 */
-/* line 364, ../sass/theme/_shame.scss */
+/* line 366, ../sass/theme/_shame.scss */
 .c-border-white {
   border-color: #FFF;
 }
 
-/* line 367, ../sass/theme/_shame.scss */
+/* line 369, ../sass/theme/_shame.scss */
 .c-white-1 {
   color: #FFF;
 }
 
-/* line 373, ../sass/theme/_shame.scss */
+/* line 375, ../sass/theme/_shame.scss */
 .main__blockquote:before {
   content: "\201C";
   font-size: 200px;
@@ -13421,12 +13436,12 @@ b {
   margin-left: -70px;
 }
 
-/* line 384, ../sass/theme/_shame.scss */
+/* line 386, ../sass/theme/_shame.scss */
 .self__values .story__text {
   /* margin-left: 120px; */
 }
 @media screen and (min-width: 481px) and (max-width: 1023px) {
-  /* line 384, ../sass/theme/_shame.scss */
+  /* line 386, ../sass/theme/_shame.scss */
   .self__values .story__text {
     padding-left: 120px;
     margin-left: 8.33333%;
@@ -13435,26 +13450,26 @@ b {
 }
 
 @media screen and (min-width: 30.0625em) {
-  /* line 393, ../sass/theme/_shame.scss */
+  /* line 395, ../sass/theme/_shame.scss */
   .work__work {
     margin-top: -50vw;
   }
 }
 
-/* line 399, ../sass/theme/_shame.scss */
+/* line 401, ../sass/theme/_shame.scss */
 .project__story {
   top: -12vw;
   position: relative;
 }
 @media screen and (min-width: 106.25em) {
-  /* line 399, ../sass/theme/_shame.scss */
+  /* line 401, ../sass/theme/_shame.scss */
   .project__story {
     top: -18rem;
   }
 }
 
 @media screen and (min-width: 30.0625em) {
-  /* line 408, ../sass/theme/_shame.scss */
+  /* line 410, ../sass/theme/_shame.scss */
   .story__img__mobile {
     max-width: 20%;
     position: absolute;
@@ -13463,7 +13478,7 @@ b {
   }
 }
 
-/* line 417, ../sass/theme/_shame.scss */
+/* line 419, ../sass/theme/_shame.scss */
 .story__img__desktop {
   padding-bottom: 6em;
 }
@@ -13479,50 +13494,50 @@ b {
     }
 }
 */
-/* line 432, ../sass/theme/_shame.scss */
+/* line 434, ../sass/theme/_shame.scss */
 .story__img-feature {
   margin-top: -80vw;
   padding-bottom: 5em;
 }
 @media screen and (min-width: 30.0625em) {
-  /* line 432, ../sass/theme/_shame.scss */
+  /* line 434, ../sass/theme/_shame.scss */
   .story__img-feature {
     margin-top: -60vw;
     padding-bottom: 0;
   }
 }
 
-/* line 440, ../sass/theme/_shame.scss */
+/* line 442, ../sass/theme/_shame.scss */
 .story__phase {
   padding-top: 2em;
   padding-bottom: 4em;
 }
 @media screen and (min-width: 30.0625em) {
-  /* line 440, ../sass/theme/_shame.scss */
+  /* line 442, ../sass/theme/_shame.scss */
   .story__phase {
     padding-bottom: 5em;
   }
   @supports (display: flex) {
-    /* line 440, ../sass/theme/_shame.scss */
+    /* line 442, ../sass/theme/_shame.scss */
     .story__phase {
       display: flex;
     }
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 440, ../sass/theme/_shame.scss */
+  /* line 442, ../sass/theme/_shame.scss */
   .story__phase {
     padding-bottom: 1em;
   }
 }
 @media screen and (min-width: 75em) {
-  /* line 440, ../sass/theme/_shame.scss */
+  /* line 442, ../sass/theme/_shame.scss */
   .story__phase {
     padding-top: 1em;
   }
 }
 @media screen and (min-width: 106.25em) {
-  /* line 440, ../sass/theme/_shame.scss */
+  /* line 442, ../sass/theme/_shame.scss */
   .story__phase {
     padding-top: 5em;
   }
@@ -13530,7 +13545,7 @@ b {
 
 @media screen and (min-width: 30.0625em) {
   @supports (display: flex) {
-    /* line 459, ../sass/theme/_shame.scss */
+    /* line 461, ../sass/theme/_shame.scss */
     .story__text {
       align-self: center;
     }
@@ -13539,32 +13554,32 @@ b {
 
 @media screen and (min-width: 30.0625em) {
   @supports (display: flex) {
-    /* line 466, ../sass/theme/_shame.scss */
+    /* line 468, ../sass/theme/_shame.scss */
     .story__text--final {
       align-self: top;
     }
   }
 }
 
-/* line 478, ../sass/theme/_shame.scss */
+/* line 480, ../sass/theme/_shame.scss */
 .footer--story {
   clear: left;
 }
 @media screen and (min-width: 75em) {
-  /* line 478, ../sass/theme/_shame.scss */
+  /* line 480, ../sass/theme/_shame.scss */
   .footer--story {
     margin-top: -40rem;
   }
 }
 @media screen and (min-width: 106.25em) {
-  /* line 478, ../sass/theme/_shame.scss */
+  /* line 480, ../sass/theme/_shame.scss */
   .footer--story {
     margin-top: -70rem;
     padding-bottom: 20rem;
   }
 }
 
-/* line 489, ../sass/theme/_shame.scss */
+/* line 491, ../sass/theme/_shame.scss */
 .hero__feature-icon {
   margin-top: -80vw;
   padding-bottom: 70vw;
@@ -13576,33 +13591,33 @@ b {
   */
 }
 @media screen and (min-width: 30.0625em) {
-  /* line 489, ../sass/theme/_shame.scss */
+  /* line 491, ../sass/theme/_shame.scss */
   .hero__feature-icon {
     margin-top: -65vw;
     padding-bottom: 50vw;
   }
 }
 @media screen and (min-width: 75em) {
-  /* line 489, ../sass/theme/_shame.scss */
+  /* line 491, ../sass/theme/_shame.scss */
   .hero__feature-icon {
     margin-top: -60vw;
     padding-bottom: 52vw;
   }
-  /* line 505, ../sass/theme/_shame.scss */
+  /* line 507, ../sass/theme/_shame.scss */
   .hero__feature-icon .scaling-svg-container svg {
     width: 100%;
     height: auto;
   }
 }
 @media screen and (min-width: 106.25em) {
-  /* line 489, ../sass/theme/_shame.scss */
+  /* line 491, ../sass/theme/_shame.scss */
   .hero__feature-icon {
     margin-top: -57vw;
     padding-bottom: 52vw;
   }
 }
 @media all and (min-width: 2336px) {
-  /* line 489, ../sass/theme/_shame.scss */
+  /* line 491, ../sass/theme/_shame.scss */
   .hero__feature-icon {
     margin-top: -52vw;
     padding-bottom: 50vw;
@@ -13610,19 +13625,19 @@ b {
 }
 
 @media screen and (min-width: 106.25em) {
-  /* line 524, ../sass/theme/_shame.scss */
+  /* line 526, ../sass/theme/_shame.scss */
   .l-col--xxlarge-push-9 {
     left: 75%;
   }
 }
-/* line 529, ../sass/theme/_shame.scss */
+/* line 531, ../sass/theme/_shame.scss */
 .form-item {
   margin-bottom: 1em;
   margin-right: 10px;
   display: inline-block;
 }
 
-/* line 534, ../sass/theme/_shame.scss */
+/* line 536, ../sass/theme/_shame.scss */
 .form__submit {
   display: block;
 }
@@ -13634,16 +13649,16 @@ b {
  *
  *
  */
-/* line 547, ../sass/theme/_shame.scss */
+/* line 549, ../sass/theme/_shame.scss */
 .scaling-svg-container {
   max-width: 100%;
 }
-/* line 549, ../sass/theme/_shame.scss */
+/* line 551, ../sass/theme/_shame.scss */
 .scaling-svg-container svg {
   max-width: 100%;
 }
 
-/* line 554, ../sass/theme/_shame.scss */
+/* line 556, ../sass/theme/_shame.scss */
 .l-flex-container {
   /* We first create a flex layout context */
   display: -webkit-box;
@@ -13665,7 +13680,7 @@ b {
   justify-content: flex-start;
 }
 
-/* line 567, ../sass/theme/_shame.scss */
+/* line 569, ../sass/theme/_shame.scss */
 .l-flex-item--50 {
   -webkit-box-flex: 1 auto;
   -moz-box-flex: 1 auto;
@@ -13677,7 +13692,7 @@ b {
 
 /* AOS Print Fix */
 @media print {
-  /* line 578, ../sass/theme/_shame.scss */
+  /* line 580, ../sass/theme/_shame.scss */
   [data-aos] {
     display: block !important;
     opacity: 1 !important;
@@ -13685,26 +13700,26 @@ b {
   }
 }
 /* AOS  Custom */
-/* line 586, ../sass/theme/_shame.scss */
+/* line 588, ../sass/theme/_shame.scss */
 .purple {
   fill: url(#n);
 }
 
-/* line 590, ../sass/theme/_shame.scss */
+/* line 592, ../sass/theme/_shame.scss */
 [data-aos="purplefy-svg"] defs #n stop {
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
 
-/* line 597, ../sass/theme/_shame.scss */
+/* line 599, ../sass/theme/_shame.scss */
 [data-aos="purplefy-svg"].aos-animate defs #n {
   /* Use the color stops to transition to */
 }
-/* line 599, ../sass/theme/_shame.scss */
+/* line 601, ../sass/theme/_shame.scss */
 [data-aos="purplefy-svg"].aos-animate defs #n stop:first-child {
   stop-color: #305fbd;
 }
-/* line 602, ../sass/theme/_shame.scss */
+/* line 604, ../sass/theme/_shame.scss */
 [data-aos="purplefy-svg"].aos-animate defs #n stop:last-child {
   stop-color: #5c1073;
 }

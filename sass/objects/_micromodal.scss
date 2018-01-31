@@ -15,7 +15,8 @@
 }
 
 .modal__overlay {
-  position: fixed;
+  position: fixed; 
+  z-index: 105;
   top: 0;
   left: 0;
   right: 0;
@@ -35,6 +36,12 @@
   border-radius: 4px;
   overflow-y: auto;
   box-sizing: border-box;
+  @include media(large, $gemini-screens){
+    max-width: 50%;
+  }
+  @include media(xxlarge, $gemini-screens){
+    max-width: 1200px;
+  }
 }
 
 .modal__header {
