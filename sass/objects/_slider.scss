@@ -99,6 +99,13 @@
     }
   }
 
+  .slider_link-wrapper {
+    color: $white;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
 
   
   .slider__ul {

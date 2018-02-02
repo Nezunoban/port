@@ -10236,12 +10236,22 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
+/* line 102, ../sass/objects/_slider.scss */
+.slider_link-wrapper {
+  color: #FFF;
+}
 /* line 104, ../sass/objects/_slider.scss */
+.slider_link-wrapper:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* line 111, ../sass/objects/_slider.scss */
 .slider__ul {
   list-style: none;
 }
 
-/* line 108, ../sass/objects/_slider.scss */
+/* line 115, ../sass/objects/_slider.scss */
 .slider__slide {
   position: absolute;
   display: block;
@@ -10249,19 +10259,19 @@ Copyright (c) 2014 Daniel Eden
   transform-origin: 0 0;
 }
 @media screen and (min-width: 30.0625em) {
-  /* line 108, ../sass/objects/_slider.scss */
+  /* line 115, ../sass/objects/_slider.scss */
   .slider__slide {
     padding: 0 0 0 7rem;
   }
 }
 @media screen and (min-width: 64em) {
-  /* line 108, ../sass/objects/_slider.scss */
+  /* line 115, ../sass/objects/_slider.scss */
   .slider__slide {
     padding: 0 20px 0 50px;
   }
 }
 @media screen and (min-width: 75em) {
-  /* line 108, ../sass/objects/_slider.scss */
+  /* line 115, ../sass/objects/_slider.scss */
   .slider__slide {
     height: 300px;
     width: 600px;
@@ -10269,7 +10279,7 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 @media screen and (min-width: 106.25em) {
-  /* line 108, ../sass/objects/_slider.scss */
+  /* line 115, ../sass/objects/_slider.scss */
   .slider__slide {
     height: 300px;
     width: 600px;
@@ -10277,13 +10287,13 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-/* line 141, ../sass/objects/_slider.scss */
+/* line 148, ../sass/objects/_slider.scss */
 .slider__button {
   z-index: 9;
   position: relative;
   background-color: transparent;
 }
-/* line 146, ../sass/objects/_slider.scss */
+/* line 153, ../sass/objects/_slider.scss */
 .slider__button:hover {
   color: #FFF;
 }
@@ -10327,32 +10337,32 @@ Copyright (c) 2014 Daniel Eden
   transform: rotateY(288deg);
 }
 
-/* line 183, ../sass/objects/_slider.scss */
+/* line 190, ../sass/objects/_slider.scss */
 .firstanimation {
   animation: cycle 40s ease-out infinite;
 }
 
-/* line 186, ../sass/objects/_slider.scss */
+/* line 193, ../sass/objects/_slider.scss */
 .slider__slide:nth-child(1) {
   animation: cycle__opacity-1 40s ease-out infinite;
 }
 
-/* line 189, ../sass/objects/_slider.scss */
+/* line 196, ../sass/objects/_slider.scss */
 .slider__slide:nth-child(2) {
   animation: cycle__opacity-2 40s ease-out infinite;
 }
 
-/* line 192, ../sass/objects/_slider.scss */
+/* line 199, ../sass/objects/_slider.scss */
 .slider__slide:nth-child(3) {
   animation: cycle__opacity-3 40s ease-out infinite;
 }
 
-/* line 195, ../sass/objects/_slider.scss */
+/* line 202, ../sass/objects/_slider.scss */
 .slider__slide:nth-child(4) {
   animation: cycle__opacity-4 40s ease-out infinite;
 }
 
-/* line 198, ../sass/objects/_slider.scss */
+/* line 205, ../sass/objects/_slider.scss */
 .slider__slide:nth-child(5) {
   animation: cycle__opacity-5 40s ease-out infinite;
 }
@@ -11121,7 +11131,7 @@ h2.margin-w {
   border: 2px solid currentColor;
   background-color: transparent;
   color: #ff7159;
-  font-weight: 100;
+  font-weight: 300;
   overflow: hidden;
   padding: .5rem 1rem;
   position: relative;
@@ -11327,7 +11337,7 @@ h2.margin-w {
   padding-right: 1rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  background-color: rgba(155, 40, 40, 0.8);
+  background-color: #371A5C;
   color: #FFF;
   border-radius: .25rem;
   border-style: none;
@@ -11357,7 +11367,7 @@ h2.margin-w {
 
 /* line 113, ../sass/objects/_micromodal.scss */
 .modal__btn-primary {
-  background-color: #F06B6A;
+  background-color: #ff7159;
   color: #FFF;
 }
 
