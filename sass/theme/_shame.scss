@@ -324,8 +324,15 @@ main section {
 }
 .main__h2 {
     //font-size: 1.5rem;
+    &.h-group {
+        margin-bottom: .2em;
+    }
 }
 
+.main__h6.h-group {
+    text-transform: uppercase;
+    font-weight: 700;
+}
 
 
 .g-button {
