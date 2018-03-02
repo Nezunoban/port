@@ -11347,7 +11347,8 @@ necessitatibus magnam.</p>
   color: #ff7159;
 }
 /* line 16, ../../sass/objects/_hero.scss */
-.hero input {
+.hero input,
+.hero textarea {
   color: #292b2c;
 }
 @media screen and (min-width: 30.0625em) {
@@ -11411,12 +11412,12 @@ necessitatibus magnam.</p>
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   /* Ipad Alignment Fix for Hero */
-  /* line 65, ../../sass/objects/_hero.scss */
+  /* line 66, ../../sass/objects/_hero.scss */
   .hero {
     min-height: 60vh;
   }
 }
-/* line 70, ../../sass/objects/_hero.scss */
+/* line 71, ../../sass/objects/_hero.scss */
 .hero__button {
   text-decoration: none;
   text-align: center;
@@ -11425,52 +11426,52 @@ necessitatibus magnam.</p>
   border: 2px solid #ff7159;
   font-size: .85em;
 }
-/* line 82, ../../sass/objects/_hero.scss */
+/* line 83, ../../sass/objects/_hero.scss */
 .hero__button:hover {
   text-decoration: none;
 }
 
-/* line 87, ../../sass/objects/_hero.scss */
+/* line 88, ../../sass/objects/_hero.scss */
 .hero__content {
   padding: 0;
 }
 @media screen and (min-width: 30.0625em) {
-  /* line 87, ../../sass/objects/_hero.scss */
+  /* line 88, ../../sass/objects/_hero.scss */
   .hero__content {
     padding: 0 12px;
   }
 }
 @media screen and (min-width: 75em) {
-  /* line 87, ../../sass/objects/_hero.scss */
+  /* line 88, ../../sass/objects/_hero.scss */
   .hero__content {
     font-size: 1.125em;
   }
 }
 
-/* line 96, ../../sass/objects/_hero.scss */
+/* line 97, ../../sass/objects/_hero.scss */
 h2.hero__h2 {
   margin-bottom: .25em;
   line-height: 1.15em;
 }
 
-/* line 100, ../../sass/objects/_hero.scss */
+/* line 101, ../../sass/objects/_hero.scss */
 h2.margin-w {
   text-indent: -.2rem;
 }
 
-/* line 103, ../../sass/objects/_hero.scss */
+/* line 104, ../../sass/objects/_hero.scss */
 .fonts-loaded h2.hero__h2 {
   font-family: 'Muli', Futura, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
   font-weight: 600;
   font-size: 2em;
 }
 
-/* line 109, ../../sass/objects/_hero.scss */
+/* line 110, ../../sass/objects/_hero.scss */
 .fonts-loaded .hero__p {
   font-weight: 200;
 }
 
-/* line 115, ../../sass/objects/_hero.scss */
+/* line 116, ../../sass/objects/_hero.scss */
 .shooting-container-1, .shooting-container-2, .shooting-container-3 {
   position: absolute;
   top: 0%;
@@ -11478,29 +11479,29 @@ h2.margin-w {
   width: 945px;
 }
 @media only screen and (max-height: 500px) {
-  /* line 115, ../../sass/objects/_hero.scss */
+  /* line 116, ../../sass/objects/_hero.scss */
   .shooting-container-1, .shooting-container-2, .shooting-container-3 {
     display: none;
   }
 }
 @media only screen and (max-width: 500px) {
-  /* line 115, ../../sass/objects/_hero.scss */
+  /* line 116, ../../sass/objects/_hero.scss */
   .shooting-container-1, .shooting-container-2, .shooting-container-3 {
     display: none;
   }
 }
 
-/* line 131, ../../sass/objects/_hero.scss */
+/* line 132, ../../sass/objects/_hero.scss */
 .shooting-container-2 {
   left: 320px;
 }
 
-/* line 135, ../../sass/objects/_hero.scss */
+/* line 136, ../../sass/objects/_hero.scss */
 .shooting-container-3 {
   left: -476px;
 }
 
-/* line 140, ../../sass/objects/_hero.scss */
+/* line 141, ../../sass/objects/_hero.scss */
 .shooting-1, .shooting-2, .shooting-3 {
   position: relative;
   height: 80px;
@@ -11520,7 +11521,7 @@ h2.margin-w {
 }
 
 @media only screen and (min-width: 480px) {
-  /* line 152, ../../sass/objects/_hero.scss */
+  /* line 153, ../../sass/objects/_hero.scss */
   .shooting-1 {
     -moz-animation: shootingStarAnimation;
     -moz-animation-duration: 4000ms;
@@ -11541,7 +11542,7 @@ h2.margin-w {
 }
 
 @media only screen and (min-width: 480px) {
-  /* line 158, ../../sass/objects/_hero.scss */
+  /* line 159, ../../sass/objects/_hero.scss */
   .shooting-2 {
     -moz-animation: shootingStarAnimation;
     -moz-animation-duration: 4000ms;
@@ -11562,7 +11563,7 @@ h2.margin-w {
 }
 
 @media only screen and (min-width: 480px) {
-  /* line 164, ../../sass/objects/_hero.scss */
+  /* line 165, ../../sass/objects/_hero.scss */
   .shooting-3 {
     -moz-animation: shootingStarAnimation;
     -moz-animation-duration: 4000ms;
@@ -11626,7 +11627,7 @@ h2.margin-w {
     opacity: 0;
   }
 }
-/* line 207, ../../sass/objects/_hero.scss */
+/* line 208, ../../sass/objects/_hero.scss */
 .mouse__container--down,
 .mouse__container--up {
   bottom: 1rem;
@@ -11636,7 +11637,7 @@ h2.margin-w {
   top: -999%;
 }
 @media screen and (min-width: 30.0625em) {
-  /* line 207, ../../sass/objects/_hero.scss */
+  /* line 208, ../../sass/objects/_hero.scss */
   .mouse__container--down,
   .mouse__container--up {
     position: fixed;
@@ -11647,7 +11648,7 @@ h2.margin-w {
   }
 }
 
-/* line 224, ../../sass/objects/_hero.scss */
+/* line 225, ../../sass/objects/_hero.scss */
 .mouse {
   display: block;
   margin: 0 auto;
@@ -11657,7 +11658,7 @@ h2.margin-w {
   border: 2px solid #FFF;
 }
 
-/* line 233, ../../sass/objects/_hero.scss */
+/* line 234, ../../sass/objects/_hero.scss */
 .scroll-wheel {
   display: block;
   margin: 6px auto;
@@ -11676,7 +11677,7 @@ h2.margin-w {
   animation-name: mouse-scroll;
 }
 
-/* line 250, ../../sass/objects/_hero.scss */
+/* line 251, ../../sass/objects/_hero.scss */
 .chevron {
   display: block;
   -webkit-animation-duration: 1.5s;
@@ -11689,7 +11690,7 @@ h2.margin-w {
   animation-name: mouse-scroll;
 }
 
-/* line 262, ../../sass/objects/_hero.scss */
+/* line 263, ../../sass/objects/_hero.scss */
 .chevron:before {
   border-color: #FFF;
   border-style: solid;
@@ -11705,31 +11706,31 @@ h2.margin-w {
   width: 20px;
 }
 
-/* line 277, ../../sass/objects/_hero.scss */
+/* line 278, ../../sass/objects/_hero.scss */
 .chevron.chevron--down:before {
   top: 0;
   transform: rotate(135deg);
 }
 
-/* line 281, ../../sass/objects/_hero.scss */
+/* line 282, ../../sass/objects/_hero.scss */
 .chevron:not(:first-child) {
   margin-top: -15px;
 }
 
-/* line 289, ../../sass/objects/_hero.scss */
+/* line 290, ../../sass/objects/_hero.scss */
 .mouse__container--up .mouse {
   border: 3px solid #F06B6A;
 }
-/* line 292, ../../sass/objects/_hero.scss */
+/* line 293, ../../sass/objects/_hero.scss */
 .mouse__container--up .chevron {
   -webkit-animation-name: mouse-scroll--up;
   animation-name: mouse-scroll--up;
 }
-/* line 295, ../../sass/objects/_hero.scss */
+/* line 296, ../../sass/objects/_hero.scss */
 .mouse__container--up .chevron:before {
   border-color: #F06B6A;
 }
-/* line 299, ../../sass/objects/_hero.scss */
+/* line 300, ../../sass/objects/_hero.scss */
 .mouse__container--up .scroll-wheel {
   -webkit-animation-name: mouse-scroll--up;
   animation-name: mouse-scroll--up;

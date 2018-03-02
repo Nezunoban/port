@@ -13,7 +13,8 @@
     a {
         color: $orange;
     }
-    input {
+    input,
+    textarea {
         color: #292b2c;
     }
     @include media(medium, $gemini-screens) { 
