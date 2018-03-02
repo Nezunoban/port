@@ -13,6 +13,9 @@
     a {
         color: $orange;
     }
+    input {
+        color: #292b2c;
+    }
     @include media(medium, $gemini-screens) { 
         //min-height: 90vh;
         padding-top: 10rem;
