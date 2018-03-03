@@ -92,6 +92,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
   <!-- drawer.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+  <script src="js/aws-sdk.min.js"></script>
+  <script type="text/javascript">
+      var LPAWS = {};
+
+      // Initialize the Amazon Cognito credentials provider
+      AWS.config.region = 'us-west-2'; // Region
+      AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+          IdentityPoolId: 'us-west-2:9533e416-bcaf-4de0-ad1f-46ccf133f227',
+      });
+
+      LPAWS.sendToTopic = function() {
+          var sns = new AWS.SNS();
+          var params = {
+              //Message: 'Hello topic', /* required */
+              Message: document.querySelector('#input-msg').value,
+              Subject: 'Browser SNS publish - contact form',
+              TopicArn: 'arn:aws:sns:us-west-2:772747582107:nf_contact_form'
+          };
+          sns.publish(params, function(err, data) {
+              if (err) console.log(err, err.stack); // an error occurred
+              else     console.log(data);           // successful response
+          });
+      };
+  </script>
 
 
   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
@@ -222,7 +246,14 @@
             <h2 class="hero__h2 beta-xlarge margin-w">
               Conversation Starter
             </h2>
-            <form action="/handling-form-page" method="post">
+
+
+            <form>
+                <input type="text" name="msg" id="input-msg"/>
+                <button onclick="LPAWS.sendToTopic(); return false;">Send to SNS topic</button>
+            </form>
+            <!--
+            <form action="http://examplebucket.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
               <div class="form-item">
               <label for="name">Name:</label>
                 <input type="text" id="name" name="user_name">
@@ -236,9 +267,10 @@
                 <textarea id="msg" name="user_message"></textarea>
               </div>
               <div class="form__submit">
-                <button class="button coolBeans coolBeans-white" type="submit">Send your message</button>
+                <button onclick="LPAWS.sendToTopic(); return false;"class="button coolBeans coolBeans-white" type="submit" >Send it</button>
               </div>
             </form>
+          -->
             <!-- hero__button button g-button -->
             <!--<a class="hero__button bu tton-_-granimate button" href="/work.html"><span>see all work</span></a>-->
           </div>
