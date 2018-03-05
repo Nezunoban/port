@@ -536,10 +536,17 @@ main section {
 }
 
 .form-item {
+    //margin-bottom: 1em;
+    //margin-right: 10px;
+    display: inline-block;
     margin-bottom: 1em;
-    margin-right: 10px;
-    display: inline-block
+    margin-right: .25em;
 }
+input, textarea, select {
+    padding: .375em .5em;
+}
+
+
 .form__submit {
     display: block
 }

@@ -244,12 +244,31 @@
         
         <div class="l-row">
           <div class="hero__content angle-container__content l-col--medium-6 l-col--large-6">
-            <h2 class="hero__h2 beta-xlarge margin-w">
+            <h2 class="beta-xlarge margin-w">
               Conversation Starter
             </h2>
 
 
-            <form action="https://formspree.io/nathanfreeemyer@gmail.com" method="post" >
+            <form method="POST" action="https://formspree.io/nathanfreemyer@gmail.com">
+              <div class="form-item">
+                <label for="name" class="hidden">Name:</label>
+                <input type="text" name="name" placeholder="Your name">
+              </div>
+              <div class="form-item">
+                <label for="mail" class="hidden">Email:</label>
+                <input type="email" name="email" placeholder="Your email">
+              </div>  
+              <div class="form-item">
+                <label for="msg" class="hidden">Message:</label>
+                <textarea name="message" placeholder="Your message"></textarea>
+              </div>
+              <div class="form__submit">
+                <button type="submit" class="button coolBeans coolBeans-white">Send it</button>
+              </div>
+              
+            </form>
+            <!--
+            <form action="https://formspree.io/nathanfreeemyer@gmail.com" method="POST">
                 <div class="form-item">
                   <label for="name">Name:</label>
                   <input type="text" id="name" name="user_name">
@@ -261,16 +280,16 @@
                 <div class="form-item">
                   <label for="msg">Message:</label>
                   <textarea id="msg" name="user_message"></textarea>
-                  <!--<input type="text" name="msg" id="input-msg"/>-->
-                </div>
+                </div>-->
                 <!--
                 <div class="form__submit">
                   <button onclick="LPAWS.sendToTopic(); return false;" class="button coolBeans coolBeans-white" type="submit">Send it</button>
                 </div>
-                -->
+
                 <div class="form__submit">
                   <button class="button coolBeans coolBeans-white" type="submit" >Send it</button>
                 </div>
+                -->
             </form>
             <!--
             <form action="http://examplebucket.s3.amazonaws.com/" method="post" enctype="multipart/form-data">

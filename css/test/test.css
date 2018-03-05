@@ -14444,12 +14444,16 @@ b {
 }
 /* line 538, ../../sass/theme/_shame.scss */
 .form-item {
-  margin-bottom: 1em;
-  margin-right: 10px;
   display: inline-block;
+  margin-bottom: 1em;
 }
 
-/* line 543, ../../sass/theme/_shame.scss */
+/* line 544, ../../sass/theme/_shame.scss */
+input, textarea, select {
+  padding: .375em .5em;
+}
+
+/* line 549, ../../sass/theme/_shame.scss */
 .form__submit {
   display: block;
 }
@@ -14461,16 +14465,16 @@ b {
  *
  *
  */
-/* line 556, ../../sass/theme/_shame.scss */
+/* line 562, ../../sass/theme/_shame.scss */
 .scaling-svg-container {
   max-width: 100%;
 }
-/* line 558, ../../sass/theme/_shame.scss */
+/* line 564, ../../sass/theme/_shame.scss */
 .scaling-svg-container svg {
   max-width: 100%;
 }
 
-/* line 563, ../../sass/theme/_shame.scss */
+/* line 569, ../../sass/theme/_shame.scss */
 .l-flex-container {
   /* We first create a flex layout context */
   display: -webkit-box;
@@ -14492,7 +14496,7 @@ b {
   justify-content: flex-start;
 }
 
-/* line 576, ../../sass/theme/_shame.scss */
+/* line 582, ../../sass/theme/_shame.scss */
 .l-flex-item--50 {
   -webkit-box-flex: 1 auto;
   -moz-box-flex: 1 auto;
@@ -14504,7 +14508,7 @@ b {
 
 /* AOS Print Fix */
 @media print {
-  /* line 587, ../../sass/theme/_shame.scss */
+  /* line 593, ../../sass/theme/_shame.scss */
   [data-aos] {
     display: block !important;
     opacity: 1 !important;
@@ -14512,26 +14516,26 @@ b {
   }
 }
 /* AOS  Custom */
-/* line 595, ../../sass/theme/_shame.scss */
+/* line 601, ../../sass/theme/_shame.scss */
 .purple {
   fill: url(#n);
 }
 
-/* line 599, ../../sass/theme/_shame.scss */
+/* line 605, ../../sass/theme/_shame.scss */
 [data-aos="purplefy-svg"] defs #n stop {
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
 
-/* line 606, ../../sass/theme/_shame.scss */
+/* line 612, ../../sass/theme/_shame.scss */
 [data-aos="purplefy-svg"].aos-animate defs #n {
   /* Use the color stops to transition to */
 }
-/* line 608, ../../sass/theme/_shame.scss */
+/* line 614, ../../sass/theme/_shame.scss */
 [data-aos="purplefy-svg"].aos-animate defs #n stop:first-child {
   stop-color: #305fbd;
 }
-/* line 611, ../../sass/theme/_shame.scss */
+/* line 617, ../../sass/theme/_shame.scss */
 [data-aos="purplefy-svg"].aos-animate defs #n stop:last-child {
   stop-color: #5c1073;
 }
