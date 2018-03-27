@@ -85,41 +85,22 @@
   </style>
 
 
+  
   <!-- jQuery -->
   
   <!-- jquery & iScroll -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
   <!-- drawer.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
-  <script src="js/aws-sdk.min.js"></script>
-  <script type="text/javascript">
-      var LPAWS = {};
-
-      // Initialize the Amazon Cognito credentials provider
-      AWS.config.region = 'us-west-2'; // Region
-      AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-          IdentityPoolId: 'us-west-2:9533e416-bcaf-4de0-ad1f-46ccf133f227',
-      });
-
-      LPAWS.sendToTopic = function() {
-          var sns = new AWS.SNS();
-          var params = {
-              //Message: 'Hello topic', /* required */
-              Message: document.querySelector('#input-msg').value,
-              Message: document.querySelector('#mail').value,
-              Subject: 'Browser SNS publish - contact form',
-              TopicArn: 'arn:aws:sns:us-west-2:772747582107:nf_contact_form'
-          };
-          sns.publish(params, function(err, data) {
-              if (err) console.log(err, err.stack); // an error occurred
-              else     console.log(data);           // successful response
-          });
-      };
-  </script>
-
-
   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+  <script async src="js/modernizr.custom.js"></script>
+
+  <script src="js/aws-sdk.min.js"></script>
+  
+
+
+  <!--<script src="js/jquery-3.3.1.min.js"></script>-->
   <script src="js/modernizr.custom.js"></script>
 
 

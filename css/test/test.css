@@ -10677,7 +10677,6 @@ necessitatibus magnam.</p>
 .anglegrid__item .layer {
   transition: transform 0.3s;
   transform-origin: 0 0;
-  will-change: transform;
 }
 
 /* line 180, ../../sass/objects/_angled-portfolio.scss */
@@ -10685,7 +10684,6 @@ necessitatibus magnam.</p>
   transition-duration: .2s;
   transition-delay: 0s;
   transition-timing-function: ease-out;
-  will-change: transform;
 }
 @media screen and (min-width: 64em) {
   /* line 186, ../../sass/objects/_angled-portfolio.scss */

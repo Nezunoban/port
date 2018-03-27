@@ -172,7 +172,7 @@
 .anglegrid__item .layer {
     transition: transform 0.3s;
 	transform-origin: 0 0;
-	will-change: transform;
+	//will-change: transform;
 }
 
 
@@ -181,7 +181,7 @@
 		transition-duration: .2s;
 		transition-delay: 0s;
 		transition-timing-function: ease-out;
-		will-change: transform;
+		//will-change: transform;
 	}
 	.layer-1 { 
 		@include media(large, $gemini-screens) {

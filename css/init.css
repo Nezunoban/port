@@ -9891,7 +9891,6 @@ Copyright (c) 2014 Daniel Eden
 .anglegrid__item .layer {
   transition: transform 0.3s;
   transform-origin: 0 0;
-  will-change: transform;
 }
 
 /* line 180, ../sass/objects/_angled-portfolio.scss */
@@ -9899,7 +9898,6 @@ Copyright (c) 2014 Daniel Eden
   transition-duration: .2s;
   transition-delay: 0s;
   transition-timing-function: ease-out;
-  will-change: transform;
 }
 @media screen and (min-width: 64em) {
   /* line 186, ../sass/objects/_angled-portfolio.scss */
