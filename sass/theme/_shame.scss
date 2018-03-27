@@ -105,6 +105,9 @@ b {
         margin-top: 10em;
         padding-left: 120px;
     }
+    @media screen and (min-width: 1900px){
+        padding-left: 0;
+    }
 }
 
 .angle-work__bg {
