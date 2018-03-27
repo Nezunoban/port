@@ -478,6 +478,8 @@ h4 {
     }
 }
 .story__text {
+    position: relative;
+    z-index: 2;
     @include media(medium, $gemini-screens){
         @supports(display: flex) {
             align-self: center;
