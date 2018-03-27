@@ -44,6 +44,10 @@ b {
     font-family: 'Muli', Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 */
+.hero__h2, .main__h2, .footer__h2 {
+    font-family: 'Quicksand', Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}
 
 .main-container {
     position: relative;
@@ -329,9 +333,13 @@ main section {
     }
 }
 
-.main__h6.h-group {
+.main__h6 {
     text-transform: uppercase;
     font-weight: 700;
+    color: $color-light;
+}
+h4 {
+    color: $color-light;
 }
 
 
@@ -381,6 +389,7 @@ main section {
 .main__blockquote {
     &:before {
         content: "\201C";
+        font-family: 'Quicksand', Helvetica, arial, sans-serif;
         font-size: 200px;
         position: absolute;
         color: #f4f4f4;
@@ -547,10 +556,32 @@ input, textarea, select {
 }
 
 
+
 .form__submit {
     display: block
 }
 
+
+
+/* Inline icon for button */
+
+.inline-text {
+    vertical-align:  middle;
+    display:  inline-block;
+}
+.inline-icon-container {
+    vertical-align:  middle;
+    display:  inline-block;
+    height: 60px;
+    width: auto;
+    padding: 0;
+    margin-left: 5px
+}
+@include media(medium, $gemini-screens) {
+    .inline-icon-container {
+        //height: 60px;
+    }
+}
 
 /* 
  *  Display FlexBox

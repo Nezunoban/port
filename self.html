@@ -31,13 +31,13 @@
   }
 
   @font-face {
-    font-family: 'fonts/muli-semi-webfont';
-    src: url('fonts/muli-semi-webfont.eot');
-    src: url('fonts/muli-semi-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/muli-semi-webfont.woff2') format('woff2'),
-    url('fonts/muli-semi-webfont.woff') format('woff'),
-    url('fonts/muli-semi-webfont.svg#Muli-SemiBold') format('svg');
-    font-weight: 600;
+    font-family:'Muli';
+    src: url('muli-bold.eot');
+    src: url('muli-bold.eot?#iefix') format('embedded-opentype'),
+      url('muli-bold.woff2') format('woff2'),
+      url('muli-bold.woff') format('woff'),
+      url('muli-bold.svg#Muli Bold') format('svg');
+    font-weight: 700;
     font-style: normal;
     font-stretch: normal;
     unicode-range: U+0020-2044;
@@ -70,18 +70,19 @@
     unicode-range: U+0020-2044;
   }
 
+
   @font-face {
-    font-family: 'Muli';
-    src: url('fonts/muli-lighter-webfont.eot');
-    src: url('fonts/muli-lighter-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/muli-lighter-webfont.woff2') format('woff2'),
-    url('fonts/muli-lighter-webfont.woff') format('woff'),
-    url('fonts/muli-lighter-webfont.svg#Muli-ExtraLight') format('svg');
-    font-weight: 200;
+    font-family:'Quicksand';
+    src: url('quicksand-light.eot');
+    src: url('quicksand-light.eot?#iefix') format('embedded-opentype'),
+      url('quicksand-light.woff2') format('woff2'),
+      url('quicksand-light.woff') format('woff'),
+      url('quicksand-light.svg#Quicksand Light') format('svg');
+    font-weight: 300;
     font-style: normal;
     font-stretch: normal;
     unicode-range: U+0020-2044;
-  }
+  }     
 </style>
 
 
@@ -230,9 +231,25 @@
             <p class="hero__p">
               Here's a little bit about who I am and what I value.
             </p>
-            <!-- hero__button button g-button 
-            <a class="hero__button button animsition-link coolBeans" href="/work.html"><span>download resume / cv</span></a>
-              -->
+            <!-- hero__button button g-button -->
+            <a class="hero__button button animsition-link coolBeans icon-button" href="/pdf/resume-20180326.pdf"><span class="inline-text">download resume / cv</span>     
+              <div class="inline-icon-container scaling-svg-container">
+                <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="60" viewBox="0 0 50 60">
+                  <title>Resume PDF icon</title>
+                  <g class="pdf-icon__graphic">
+                    <path class="shape--pink" d="M36.0552,2.7292H8.81A3.3867,3.3867,0,0,0,5.5233,6.16V53.6138A3.3234,3.3234,0,0,0,8.81,56.9728H44.4635a3.3233,3.3233,0,0,0,3.287-3.359V14.4245Z" fill="#a83f6f"/>
+                    <path class="shape--orange" d="M1.9272,20.7348H34.395a1.4272,1.4272,0,0,1,1.4272,1.4272V35.5773a1.4273,1.4273,0,0,1-1.4273,1.4273H1.9273A1.4273,1.4273,0,0,1,.5,35.5773V22.162A1.4272,1.4272,0,0,1,1.9272,20.7348Z" fill="#f06b6a"/>
+                    <path class="shape--orange" d="M36.0552,10.9935a3.3867,3.3867,0,0,0,3.2871,3.4309h8.4082L36.0552,2.7291Z" fill="#f06b6a"/>
+                    <g class="pdf-icon__text">
+                      <path d="M8.2077,29.709v3.215H7.05V24.3286H9.5872a4.76,4.76,0,0,1,1.4186.189,2.727,2.727,0,0,1,.9987.5368,2.1651,2.1651,0,0,1,.5908.84,2.9582,2.9582,0,0,1,.195,1.0977,2.798,2.798,0,0,1-.21,1.0977,2.36,2.36,0,0,1-.6148.8577,2.8544,2.8544,0,0,1-1.0047.5608,4.3142,4.3142,0,0,1-1.3736.201Zm0-.9237H9.5872a2.6807,2.6807,0,0,0,.8788-.132,1.8023,1.8023,0,0,0,.6388-.3688,1.5328,1.5328,0,0,0,.39-.5669,1.9368,1.9368,0,0,0,.132-.7258,1.6494,1.6494,0,0,0-.5068-1.2836,2.2128,2.2128,0,0,0-1.5326-.4618H8.2077Z" fill="#fff"/>
+                      <path d="M21.71,28.6293a4.8386,4.8386,0,0,1-.306,1.7575,3.8973,3.8973,0,0,1-.8637,1.3556,3.8506,3.8506,0,0,1-1.3376.8727,4.6513,4.6513,0,0,1-1.7275.3089H14.26V24.3286h3.215a4.6534,4.6534,0,0,1,1.7275.3089,3.8312,3.8312,0,0,1,1.3376.8758,3.9283,3.9283,0,0,1,.8637,1.3585A4.8394,4.8394,0,0,1,21.71,28.6293Zm-1.1937,0A4.3165,4.3165,0,0,0,20.3,27.2137a2.9845,2.9845,0,0,0-.6118-1.0556,2.6122,2.6122,0,0,0-.96-.66,3.3169,3.3169,0,0,0-1.2537-.2279H15.4294v6.7119h2.0453a3.3169,3.3169,0,0,0,1.2537-.2279,2.6293,2.6293,0,0,0,.96-.6568A2.953,2.953,0,0,0,20.3,30.0449,4.3152,4.3152,0,0,0,20.5158,28.6293Z" fill="#fff"/>
+                      <path d="M28.5893,24.3286v.9477H24.4624v3.0051h3.527v.9478h-3.527V32.924h-1.17V24.3286Z" fill="#fff"/>
+                    </g>
+                  </g>
+                  <image src="img/pdf.png" xlink:href="" class="svg__img--hide-on-fallback"></image>
+                </svg>   
+              </div>
+            </a>
           </div>
         </div>
 
@@ -257,10 +274,10 @@
           </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="main__content">
         <div class="l-row self__row">
           <div class="story__text l-intro--right l-col--small-10 l-col--small-offset-1 l-col--medium-offset-1 l-col--medium-5 l-col--large-4 l-col--xlarge-offset-0">
-            <h2 class="main__h2 gamma-medium alpha-large c-pink-1">
+            <h2 class="main__h2 h-group gamma-medium alpha-large c-pink-1">
               Experience
             </h2>
             <h4 class="main__h4 self__h4"> 
@@ -270,7 +287,24 @@
                 From interface and experience design to traditional graphic design and marketing to behavioral psychology, the work and the people have all taught me a great deal about interaction, process, work, and life.
             </p>
             
-            <a class="hero__button button animsition-link coolBeans c-blue-1" href="/work.html"><span>see some of my work</span></a>
+            <a class="button animsition-link coolBeans icon-button" href="/pdf/resume-20180326.pdf"><span class="inline-text">download full resume / cv</span>     
+              <div class="inline-icon-container scaling-svg-container">
+                <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="60" viewBox="0 0 50 60">
+                  <title>Resume PDF icon</title>
+                  <g class="pdf-icon__graphic">
+                    <path class="shape--pink" d="M36.0552,2.7292H8.81A3.3867,3.3867,0,0,0,5.5233,6.16V53.6138A3.3234,3.3234,0,0,0,8.81,56.9728H44.4635a3.3233,3.3233,0,0,0,3.287-3.359V14.4245Z" fill="#a83f6f"/>
+                    <path class="shape--orange" d="M1.9272,20.7348H34.395a1.4272,1.4272,0,0,1,1.4272,1.4272V35.5773a1.4273,1.4273,0,0,1-1.4273,1.4273H1.9273A1.4273,1.4273,0,0,1,.5,35.5773V22.162A1.4272,1.4272,0,0,1,1.9272,20.7348Z" fill="#f06b6a"/>
+                    <path class="shape--orange" d="M36.0552,10.9935a3.3867,3.3867,0,0,0,3.2871,3.4309h8.4082L36.0552,2.7291Z" fill="#f06b6a"/>
+                    <g class="pdf-icon__text">
+                      <path d="M8.2077,29.709v3.215H7.05V24.3286H9.5872a4.76,4.76,0,0,1,1.4186.189,2.727,2.727,0,0,1,.9987.5368,2.1651,2.1651,0,0,1,.5908.84,2.9582,2.9582,0,0,1,.195,1.0977,2.798,2.798,0,0,1-.21,1.0977,2.36,2.36,0,0,1-.6148.8577,2.8544,2.8544,0,0,1-1.0047.5608,4.3142,4.3142,0,0,1-1.3736.201Zm0-.9237H9.5872a2.6807,2.6807,0,0,0,.8788-.132,1.8023,1.8023,0,0,0,.6388-.3688,1.5328,1.5328,0,0,0,.39-.5669,1.9368,1.9368,0,0,0,.132-.7258,1.6494,1.6494,0,0,0-.5068-1.2836,2.2128,2.2128,0,0,0-1.5326-.4618H8.2077Z" fill="#fff"/>
+                      <path d="M21.71,28.6293a4.8386,4.8386,0,0,1-.306,1.7575,3.8973,3.8973,0,0,1-.8637,1.3556,3.8506,3.8506,0,0,1-1.3376.8727,4.6513,4.6513,0,0,1-1.7275.3089H14.26V24.3286h3.215a4.6534,4.6534,0,0,1,1.7275.3089,3.8312,3.8312,0,0,1,1.3376.8758,3.9283,3.9283,0,0,1,.8637,1.3585A4.8394,4.8394,0,0,1,21.71,28.6293Zm-1.1937,0A4.3165,4.3165,0,0,0,20.3,27.2137a2.9845,2.9845,0,0,0-.6118-1.0556,2.6122,2.6122,0,0,0-.96-.66,3.3169,3.3169,0,0,0-1.2537-.2279H15.4294v6.7119h2.0453a3.3169,3.3169,0,0,0,1.2537-.2279,2.6293,2.6293,0,0,0,.96-.6568A2.953,2.953,0,0,0,20.3,30.0449,4.3152,4.3152,0,0,0,20.5158,28.6293Z" fill="#fff"/>
+                      <path d="M28.5893,24.3286v.9477H24.4624v3.0051h3.527v.9478h-3.527V32.924h-1.17V24.3286Z" fill="#fff"/>
+                    </g>
+                  </g>
+                  <image src="img/pdf.png" xlink:href="" class="svg__img--hide-on-fallback"></image>
+                </svg>   
+              </div>
+            </a>
           </div>
           <figure class="story__figure anglechart l-figure--left l-col--small-10 l-col--small-offset-1 l-col--medium-offset-0 l-col--medium-6 l-col--large-6">
               <dl class="chart__dl anglechart__dl">
@@ -291,7 +325,7 @@
           <div class="story__text l-intro--right l-col--small-10 l-col--small-offset-1 l-col--medium-offset-1 l-col--medium-5 l-col--large-4 l-col--xlarge-offset-0">
             
             <a id="trigger-logo-color" href="#"></a>
-            <h2 class="main__h2 gamma-medium alpha-large c-blue-1">
+            <h2 class="main__h2 h-group gamma-medium alpha-large c-blue-1">
               Skills
             </h2>
             <h4 class="main__h4 self__h4"> 
@@ -300,6 +334,9 @@
             <p class="main__p">
                 The emergence of so many amazing tools for creative collaboration really has opened a new world of feedback, inspiration, rapid iteration, and accountability to creatives. I'm always excited to continue adding to my current skillsets.
             </p>
+            <a class="button animsition-link coolBeans coolBeans-blue" href="/work.html">
+              <span>see some of my work</span>
+            </a>
           </div>
           <figure class="story__figure anglechart l-figure--left l-col--small-10 l-col--small-offset-1 l-col--medium-offset-0 l-col--medium-6 l-col--large-6">
               <dl class="chart__dl anglechart__dl">
