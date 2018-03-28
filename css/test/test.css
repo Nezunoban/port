@@ -14498,7 +14498,7 @@ input, textarea, select {
 .inline-icon-container {
   vertical-align: middle;
   display: inline-block;
-  height: 60px;
+  height: 40px;
   width: auto;
   padding: 0;
   margin-left: 5px;
