@@ -352,7 +352,7 @@
       <section class="section section-self homepage__self">
         
 
-        <div class="l-row">
+        <div class="l-row angle-self-row-link">
           <!--<a id="trigger-logo-color" href="#"></a>-->
           <div id="trigger-logo-color" class="angle-self__bg grid-star-bg star-bg angle--both-left-right bcg">
             <div class="overlay overlay--blue" role="img" aria-label="blue gradient"></div>
@@ -577,6 +577,15 @@
     $(window).on('load', function() {
       AOS.refresh();
     });
+    $('.angle-self-row-link').on('touchstart', function(){
+      window.location = '/quotes.html';
+    });
+    $('.slider__carousel').on('click', function() {
+      window.location = '/quotes.html';
+    });
+
+
+    
   </script>
 </body>
 

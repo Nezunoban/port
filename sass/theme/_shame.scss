@@ -110,6 +110,10 @@ b {
     }
 }
 
+.slider__carousel:hover {
+    cursor: pointer;
+}
+
 .angle-work__bg {
     display: none; 
 }
@@ -581,6 +585,10 @@ input, textarea, select {
     width: auto;
     padding: 0;
     margin-left: 5px
+}
+.pdf-icon {
+    width: auto;
+    height: 40px;
 }
 @include media(medium, $gemini-screens) {
     .inline-icon-container {

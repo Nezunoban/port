@@ -424,7 +424,7 @@
             </ul>
           </div>
         </div>
-        <div class="l-row self__row self__impact">
+        <div class="l-row self__row self__impact angle-self-row-link">
           <div class="angle-self__bg grid-star-bg star-bg angle--both-left-right bcg">
               <div class="overlay overlay--blue" role="img" aria-label="blue gradient"></div>
               <div class="overlay overlay--grid-1" role="img" aria-label="Isometric grid">
@@ -642,6 +642,12 @@
     })
     $(window).on('load', function() {
       AOS.refresh();
+    });
+    $('.angle-self-row-link').on('touchstart', function(){
+      window.location = '/quotes.html';
+    });
+    $('.slider__carousel').on('click', function() {
+      window.location = '/quotes.html';
     });
   </script>
 </body>

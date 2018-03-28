@@ -86,17 +86,20 @@
 </style>
 
 
-  <!-- jQuery -->
+
+
   
+
+
+  <!-- jQuery -->
   <!-- jquery & iScroll -->
   <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
   <!-- drawer.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
-
-
-  <!--<script src="js/jquery-3.3.1.min.js"></script>-->
-  <script src="js/modernizr.custom.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+  <script async src="js/modernizr.custom.js"></script>
+  
 
 
   <!-- Favicons -->
@@ -231,7 +234,7 @@
               What They Say
             </h2>
             <p class="hero__p">
-              Kind quotes from some great people:
+              Scroll down to read some kind quotes from some great people.
             </p>
             <!-- hero__button button g-button -->
             <a class="hero__button button animsition-link coolBeans c-blue-1" href="/self.html"><span>learn more about me</span></a>
@@ -414,36 +417,33 @@
     <!-- animsition.js -->
     <script src="js/animsition.min.js"></script>
     <script src="js/aos.js"></script>
-    <!--<script src="js/classie.js"></script>-->
-    <!--<script src="js/dynamics.min.js"></script>-->
-    <!--<script src="js/imagesloaded.pkgd.min.js"></script>-->
   
-    
+     
   <script>
-      $(document).ready(function() {
-        $(".animsition").animsition({
-          inClass: 'fade-in-down-sm',
-          outClass: 'fade-out-up-sm',
-          inDuration: 1500,
-          outDuration: 800,
-          linkElement: '.animsition-link',
-          // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-          loading: true,
-          loadingParentElement: 'body', //animsition wrapper element
-          loadingClass: 'animsition-loading',
-          loadingInner: '', // e.g '<img src="loading.svg" />'
-          timeout: false,
-          timeoutCountdown: 5000,
-          onLoadEvent: true,
-          browser: [ 'animation-duration', '-webkit-animation-duration'],
-          // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-          // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-          overlay : false,
-          overlayClass : 'animsition-overlay-slide',
-          overlayParentElement : 'body',
-          transition: function(url){ window.location.href = url; }
-        });
+    $(document).ready(function() {
+      $(".animsition").animsition({
+        inClass: 'fade-in-down-sm',
+        outClass: 'fade-out-up-sm',
+        inDuration: 1500,
+        outDuration: 800,
+        linkElement: '.animsition-link',
+        // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+        loading: true,
+        loadingParentElement: 'body', //animsition wrapper element
+        loadingClass: 'animsition-loading',
+        loadingInner: '', // e.g '<img src="loading.svg" />'
+        timeout: false,
+        timeoutCountdown: 5000,
+        onLoadEvent: true,
+        browser: [ 'animation-duration', '-webkit-animation-duration'],
+        // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+        // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+        overlay : false,
+        overlayClass : 'animsition-overlay-slide',
+        overlayParentElement : 'body',
+        transition: function(url){ window.location.href = url; }
       });
+    });
     /*
     Inline SVG Check
     */
