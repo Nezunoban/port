@@ -110,7 +110,8 @@ b {
     }
 }
 
-.slider__carousel:hover {
+.slider__carousel:hover,
+.angle-self-row-link:hover {
     cursor: pointer;
 }
 
@@ -664,6 +665,9 @@ input, textarea, select {
     }
 }
   
+.animsition {
+    overflow: hidden;
+}
 
 
 
