@@ -92,21 +92,29 @@ b {
     }
 }
 .section-self {
-    margin-top: -50vh;
+    //margin-top: -50vh;
     
     @include media(medium, $gemini-screens) {
-        padding-bottom: 70vw;
-        margin-top: -25vw;
+        //margin-top: -25vw;
         padding-top: 0;
         padding-left: 0px;
     }
 
     @include media(large, $gemini-screens) {
+        padding-bottom: 70vw;
         margin-top: 10em;
         padding-left: 120px;
     }
     @media screen and (min-width: 1900px){
         padding-left: 0;
+    }
+
+}
+
+.section-self.homepage__self {
+    margin-top: -50vh;
+    @include media(large, $gemini-screens) {
+        margin-top: 10em;
     }
 }
 

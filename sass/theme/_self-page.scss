@@ -97,12 +97,13 @@
   /* align heading with top chart item *
   margin-top: -2.5em;
   margin-bottom: 2.5em;*/
-
-
   padding-top: 40rem;
   margin-top: -40rem;
-  padding-bottom: 40rem;
-  margin-bottom: -40rem;
+  @include media(large, $gemini-screens) {
+    padding-bottom: 40rem;
+    margin-bottom: -40rem;
+  }
+
   overflow: hidden;
 }
 .anglechart__dl {
