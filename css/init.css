@@ -10286,13 +10286,18 @@ Copyright (c) 2014 Daniel Eden
   }
 }
 
-/* line 151, ../sass/objects/_slider.scss */
+/* line 143, ../sass/objects/_slider.scss */
+.slider__container {
+  transform: rotateY(30deg);
+}
+
+/* line 152, ../sass/objects/_slider.scss */
 .slider__button {
   z-index: 9;
   position: relative;
   background-color: transparent;
 }
-/* line 156, ../sass/objects/_slider.scss */
+/* line 157, ../sass/objects/_slider.scss */
 .slider__button:hover {
   color: #FFF;
 }
@@ -10336,32 +10341,32 @@ Copyright (c) 2014 Daniel Eden
   transform: rotateY(288deg);
 }
 
-/* line 193, ../sass/objects/_slider.scss */
+/* line 194, ../sass/objects/_slider.scss */
 .firstanimation {
   animation: cycle 40s ease-out infinite;
 }
 
-/* line 196, ../sass/objects/_slider.scss */
+/* line 197, ../sass/objects/_slider.scss */
 .slider__slide:nth-child(1) {
   animation: cycle__opacity-1 40s ease-out infinite;
 }
 
-/* line 199, ../sass/objects/_slider.scss */
+/* line 200, ../sass/objects/_slider.scss */
 .slider__slide:nth-child(2) {
   animation: cycle__opacity-2 40s ease-out infinite;
 }
 
-/* line 202, ../sass/objects/_slider.scss */
+/* line 203, ../sass/objects/_slider.scss */
 .slider__slide:nth-child(3) {
   animation: cycle__opacity-3 40s ease-out infinite;
 }
 
-/* line 205, ../sass/objects/_slider.scss */
+/* line 206, ../sass/objects/_slider.scss */
 .slider__slide:nth-child(4) {
   animation: cycle__opacity-4 40s ease-out infinite;
 }
 
-/* line 208, ../sass/objects/_slider.scss */
+/* line 209, ../sass/objects/_slider.scss */
 .slider__slide:nth-child(5) {
   animation: cycle__opacity-5 40s ease-out infinite;
 }
@@ -10674,7 +10679,7 @@ h2.margin-w {
 
 /* line 104, ../sass/objects/_hero.scss */
 .fonts-loaded h2.hero__h2 {
-  font-family: 'Quicksand', Futura, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  font-family: 'Muli', Futura, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
   font-weight: 700;
   font-size: 2em;
 }

@@ -141,6 +141,7 @@
   }
 
   .slider__container {
+    transform: rotateY(30deg);
     @include media(large, $gemini-screens)  {
       //padding-left: 120px;
     }
