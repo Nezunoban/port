@@ -1,0 +1,215 @@
+/**
+ ********************************
+ * _dimension-mobile.SCSS
+ ********************************
+ */
+
+/**
+ * Makes rotating 3D phone mockup for screenshots
+ */
+
+
+
+.dimension-mobile {
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -75px 0 0 -48px;
+    /*perspective: 500px;*/
+  }
+  .shadow {
+    position: absolute;
+    width: 60px;
+    height: 0px;
+    left: 40px;
+    top: 360px;
+    
+    transform: rotateX(-34deg) rotateY(-34deg) rotateZ(0deg);
+    box-shadow: 0 0 60px 40px rgba(0,0,0,0.3);
+    animation: shadow 7s ease;
+    transition: transform 0.3s;
+  }
+  
+  .dimension-mobile:hover .shadow,
+  .dimension-mobile:focus .shadow {
+    transform: rotateX(-34deg) rotateY(0deg) rotateZ(0deg);
+  }
+  
+  .inner {
+    z-index: 20;
+    position: absolute;
+    width: 150px;
+    height: 300px;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    transform: rotateX(-34deg) rotateY(-45deg);
+    animation: rotate 7s ease;
+    transition: transform 0.3s;
+  }
+  .dimension-mobile:hover .inner,
+  .dimension-mobile:focus .inner {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  
+  .screen {
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 18px;
+    background: #ddd;
+    transform-style: preserve-3d;
+    transform-origin: 50% 93px;
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    /*animation: lid-screen infinite 7s ease;*/
+    background-image: linear-gradient(45deg, rgba(0,0,0,0.34) 0%,rgba(0,0,0,0) 100%);
+    background-position: left bottom;
+    background-size: 300px 300px;
+    box-shadow: inset 0 3px 7px rgba(255,255,255,0.5);
+  }
+  .screen .face-one {
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 18px;
+    background: #fefefe;
+    transform: translateZ(2px);
+    background-image: linear-gradient(45deg,rgba(0,0,0,0.24) 0%,rgba(0,0,0,0) 100%);
+  }
+  .screen .face-one .display {
+    width: 140px;
+    height: 290px;
+    margin: 5px;
+    /*background: url("http://nathanfreemyer.com/img/stories/movie/movie-crop.png") no-repeat center center #fff;*/
+    background-size: 100% 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 0 2px rgba(0,0,0,1);
+  }
+  .screen .face-one .display .shade {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130px;
+    height: 74px;
+    background: linear-gradient(-135deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.1) 47%,rgba(255,255,255,0) 48%);
+    /*animation: screen-shade infinite 7s ease;*/
+    background-size: 300px 200px;
+    background-position: 0px 0px;
+  }
+  .screen .face-one span {
+    position: absolute;
+    top: 85px;
+    left: 57px;
+    font-size: 6px;
+    color: #ddd
+  }
+  
+  .dimension-mobile-body {
+    width: 150px;
+    height: 96px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 18px 18px 0 0;
+    background: #eee;
+    transform-style: preserve-3d;
+    transform-origin: 50% bottom;
+    transform: rotateX(0deg);
+    /*animation: lid-body infinite 7s ease;*/
+    background-image: linear-gradient(45deg, rgba(0,0,0,0.04) 0%,rgba(0,0,0,0) 100%);
+  }
+  .dimension-mobile-body .face-one {
+    width: 150px;
+    height: 96px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 7px;
+    transform-style: preserve-3d;
+    background: #dfdfdf;
+    /*animation: lid-keyboard-area infinite 7s ease;*/
+    transform: translateZ(-2px);
+    background-image: linear-gradient(30deg, rgba(0,0,0,0.04) 0%,rgba(0,0,0,0) 100%);
+  }
+  .dimension-mobile-body .touchpad {
+    width: 40px;
+    height: 31px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 4px;
+    margin: -44px 0 0 -18px;
+    background: #dfdfdf;
+    background-image: linear-gradient(30deg, rgba(0,0,0,0.04) 0%,rgba(0,0,0,0) 100%);
+    box-shadow: inset 0 0 3px #888;
+  }
+  
+  @keyframes rotate {
+   
+    0% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    20% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    65% {
+      transform: rotateX(-34deg) rotateY(-45deg);
+    }
+    100% {
+      transform: rotateX(-34deg) rotateY(-45deg);
+    }
+  }
+  
+  @keyframes screen-shade {
+    0% {
+      background-position: -20px 0px;
+    }
+    5% {
+      background-position: -40px 0px;
+    }
+    20% {
+      background-position: 200px 0;
+    }
+    50% {
+      background-position: -200px 0;
+    }
+    80% {
+      background-position: 0px 0px;
+    }
+    85% {
+      background-position: -30px 0;
+    }
+    90% {
+      background-position: -20px 0;
+    }
+    100% {
+      background-position: -20px 0px;
+    }
+  }
+  @keyframes shadow {
+    0% {
+      transform: rotateX(-34deg) rotateY(0deg);
+    }
+    20% {
+      transform: rotateX(-34deg) rotateY(0deg);
+    }
+    65% {
+      transform: rotateX(-34deg) rotateY(-34deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(-34deg) rotateY(-34deg) rotateZ(0deg);
+    }
+  }
+  .links {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
