@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (If someone is looking at this in IE 8 or IE9, then I don't think I want them to find me) <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>Nathan Freemyer | About Myself </title>
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="css/aos.css" />
+<link rel="stylesheet" type="text/css" href="css/init.css">
+<!-- animsition.css -->
+<link rel="stylesheet" href="css/animsition.min.css">
+
+<!--<link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,400i,700,700i" rel="stylesheet">-->
+
+<style>
+  @font-face {
+    font-family: 'Muli';
+    src: url('fonts/muli-webfont.eot');
+    src: url('fonts/muli-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/muli-webfont.woff2') format('woff2'),
+    url('fonts/muli-webfont.woff') format('woff'),
+    url('fonts/muli-webfont.svg#Muli') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+  }
+
+  @font-face {
+    font-family:'Muli';
+    src: url('fonts/muli-bold.eot');
+    src: url('fonts/muli-bold.eot?#iefix') format('embedded-opentype'),
+      url('fonts/muli-bold.woff2') format('woff2'),
+      url('fonts/muli-bold.woff') format('woff'),
+      url('fonts/muli-bold.svg#Muli Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+  }
+
+  @font-face {
+    font-family: 'Muli';
+    src: url('fonts/muli-light-webfont.eot');
+    src: url('fonts/muli-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/muli-light-webfont.woff2') format('woff2'),
+    url('fonts/muli-light-webfont.woff') format('woff'),
+    url('fonts/muli-light-webfont.svg#Muli-Bold') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+  }
+
+
+  @font-face {
+    font-family: 'Muli';
+    src: url('fonts/muli-lightit-webfont.eot');
+    src: url('fonts/muli-lightit-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/muli-lightit-webfont.woff2') format('woff2'),
+    url('fonts/muli-lightit-webfont.woff') format('woff'),
+    url('fonts/muli-lightit-webfont.svg#Muli-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    unicode-range: U+0020-2044;
+  }
+
+
+
+/*
+    @font-face {
+      font-family:'Quicksand';
+      src: url('fonts/quicksand-light.eot');
+      src: url('fonts/quicksand-light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/quicksand-light.woff2') format('woff2'),
+        url('fonts/quicksand-light.woff') format('woff'),
+        url('fonts/quicksand-light.svg#Quicksand Light') format('svg');
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      unicode-range: U+0020-2044;
+    }
+*/  
+</style>
+
+
+  <!-- jQuery -->
+  
+  <!-- jquery & iScroll -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <!-- drawer.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+
+
+  <!--<script src="js/jquery-3.3.1.min.js"></script>-->
+  <script src="js/modernizr.custom.js"></script>
+
+
+  <!-- Favicons -->
+    <!-- iPhone(first generation or 2G), iPhone 3G, iPhone 3GS -->
+    <link rel="apple-touch-icon" sizes="57x57" href="touch-icon-iphone.png">
+    <!-- iPad and iPad mini @1x -->
+    <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+    <!-- iPhone 4, iPhone 4s, iPhone 5, iPhone 5c, iPhone 5s, iPhone 6, iPhone 6s, iPhone 7, iPhone 7s, iPhone8 -->
+    <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+    <!-- iPad and iPad mini @2x -->
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+    <!-- iPad Pro -->
+    <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-pro.png">
+    <!-- iPhone X, iPhone 8 Plus, iPhone 7 Plus, iPhone 6s Plus, iPhone 6 Plus -->
+    <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-6-plus.png">
+    <!-- Android Devices High Resolution -->
+    <link rel="icon" sizes="192x192" href="icon-hd.png">
+    <!-- Android Devices Normal Resolution -->
+    <link rel="icon" sizes="128x128" href="icon.png">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- RSS 
+  <link rel="alternate" type="application/rss+xml" title="RSS for Official Bootstrap Blog" href="/feed.xml">
+  -->
+
+  <!-- Twitter -->
+  <meta name="twitter:site" content="@NathanFreemyer">
+  <meta name="twitter:creator" content="@NathanFreemyer">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Nathan Freemyer">
+  <meta name="twitter:description" content="">
+  <!--<meta name="twitter:image" content="http://blog.getbootstrap.com/img/bootstrap-social-logo.png">-->
+
+
+  <!-- Facebook -->
+
+  <!--  <meta property="og:url" content="http://blog.getbootstrap.com/2017/08/10/bootstrap-4-beta/">
+      <meta property="og:title" content="Bootstrap 4 Beta">
+      <meta property="og:description" content=""> 
+    
+    <meta property="og:image" content="http://blog.getbootstrap.com/img/bootstrap-social.png"> -->
+
+  <!-- Meta -->
+  <meta name="description" content="good communication, usability, representation, improvement, learning, sharing, teaching, fun interaction and the beauty powerfully subtle symbolism.">
+  <meta name="author" content="Nathan Freemyer">
+
+  <!-- Analytics 
+    <script>
+    </script>-->
+
+</head>
+
+<!-- This is a comment -->
+
+<body class="drawer drawer--right" data-effect="drawer-effect-flipY">
+
+          <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+                    
+<div class="animsition">
+
+  <header role="banner">
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <!--<span class="sr-only">menu</span>-->
+      <!--<span class="drawer-hamburger-icon"></span>--><span class="drawer-toggle-text">menu</span><span class="drawer-hamburger-icon pure-toggle-icon"></span>
+    </button>
+    <nav class="drawer-nav" role="navigation">
+      <ul class="nav-primary nav nav--stacked ">
+        <li class="nav__item"><a href="/" class="nav__link animsition-link">home</a></li>
+        <li class="nav__item"><a href="/work.html" class="nav__link animsition-link">work</a></li>
+        <li class="nav__item nav__item--is-active"><a href="/self.html" class="nav__link">self</a></li>
+        <li class="nav__item"><a href="/contact.html" class="nav__link animsition-link">contact</a></li>
+      </ul>
+    </nav>
+    
+    
+    <div class="w-global-logo">
+        <a href="/" class="w-global-logo__link scaling-svg-container" alt="Home" data-aos="purplefy-svg" data-aos-anchor="#trigger-logo-color">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="scaling-svg w-global-logo__svg"
+            width="126" height="346" viewBox="0 0 126 346">
+            <path class="purple" d="M2.29,125.27V2.71l123.36,60V247l-29.33-15.4V113.92l29.33-13.65L30.65,54l0,58Z"/>
+            <path d="M96.32,195.2,35.8,223.46V185.22L125.65,143v-42.7L2.29,157.7V342.53l33.47-16.3L35.62,260l60.7-28.36Z" fill="url(#f)"
+            />
+            <defs>
+              <radialGradient id="n" cx="-76.9" cy="293.76" r="359.12" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#fff"/>
+                <stop offset="1" stop-color="#fff"/>
+              </radialGradient>
+              
+              <radialGradient id="f" cx="88.2" cy="236.9" r="321.46" gradientTransform="matrix(1, 0, 0, -1, 0, 348)" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#ff7569" />
+                <stop offset="0.31" stop-color="#d0586c" />
+                <stop offset="1" stop-color="#5c1073" />
+              </radialGradient>
+            </defs>
+            
+            <title>NF-logo</title>
+            <image src="img/logo-w.png" xlink:href="" class="svg__img--hide-on-fallback"></image>
+          </svg>
+        </a>
+      </div>
+  </header>
+
+  <main role="main">
+    <div class="grid-parent">
+      
+      <section id="hero" class="section hero grid-subgrid angle--bottom-right grid-star-bg star-bg bcg">
+        <div class="shooting-container-1" role="img" aria-label="purple gradient">
+          <div class="shooting-1" role="img" aria-label="purple gradient"></div>
+        </div>
+        <div class="shooting-container-2" role="img" aria-label="purple gradient">
+          <div class="shooting-2" role="img" aria-label="purple gradient"></div>
+        </div>
+        <div class="shooting-container-3" role="img" aria-label="purple gradient">
+            <div class="shooting-3" role="img" aria-label="purple gradient"></div>
+        </div>
+        <div class="overlay hero__overlay-2 overlay--blue" role="img" aria-label="blue gradient"></div>
+        <div class="overlay hero__overlay-1 overlay--grid-1" role="img" aria-label="Isometric grid"></div>
+        <div class="l-row">
+          <div class="hero__content angle-container__content l-col--medium-6 l-col--large-4">
+            <h2 class="hero__h2 beta-xlarge margin-w">
+              Hello There
+            </h2>
+            <p class="hero__p">
+              Here's a little bit about who I am, what I do, and what I value.
+            </p>
+            <!-- hero__button button g-button -->
+            <a class="hero__button button coolBeans icon-button" href="/pdf/nathanfreemyer-resume.pdf" target="_blank"><span class="inline-text">download resume / cv</span>     
+              <div class="inline-icon-container scaling-svg-container">
+                <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="60" viewBox="0 0 50 60">
+                  <title>Resume PDF icon</title>
+                  <g class="pdf-icon__graphic">
+                    <path class="shape--pink" d="M36.0552,2.7292H8.81A3.3867,3.3867,0,0,0,5.5233,6.16V53.6138A3.3234,3.3234,0,0,0,8.81,56.9728H44.4635a3.3233,3.3233,0,0,0,3.287-3.359V14.4245Z" fill="#a83f6f"/>
+                    <path class="shape--orange" d="M1.9272,20.7348H34.395a1.4272,1.4272,0,0,1,1.4272,1.4272V35.5773a1.4273,1.4273,0,0,1-1.4273,1.4273H1.9273A1.4273,1.4273,0,0,1,.5,35.5773V22.162A1.4272,1.4272,0,0,1,1.9272,20.7348Z" fill="#f06b6a"/>
+                    <path class="shape--orange" d="M36.0552,10.9935a3.3867,3.3867,0,0,0,3.2871,3.4309h8.4082L36.0552,2.7291Z" fill="#f06b6a"/>
+                    <g class="pdf-icon__text">
+                      <path d="M8.2077,29.709v3.215H7.05V24.3286H9.5872a4.76,4.76,0,0,1,1.4186.189,2.727,2.727,0,0,1,.9987.5368,2.1651,2.1651,0,0,1,.5908.84,2.9582,2.9582,0,0,1,.195,1.0977,2.798,2.798,0,0,1-.21,1.0977,2.36,2.36,0,0,1-.6148.8577,2.8544,2.8544,0,0,1-1.0047.5608,4.3142,4.3142,0,0,1-1.3736.201Zm0-.9237H9.5872a2.6807,2.6807,0,0,0,.8788-.132,1.8023,1.8023,0,0,0,.6388-.3688,1.5328,1.5328,0,0,0,.39-.5669,1.9368,1.9368,0,0,0,.132-.7258,1.6494,1.6494,0,0,0-.5068-1.2836,2.2128,2.2128,0,0,0-1.5326-.4618H8.2077Z" fill="#fff"/>
+                      <path d="M21.71,28.6293a4.8386,4.8386,0,0,1-.306,1.7575,3.8973,3.8973,0,0,1-.8637,1.3556,3.8506,3.8506,0,0,1-1.3376.8727,4.6513,4.6513,0,0,1-1.7275.3089H14.26V24.3286h3.215a4.6534,4.6534,0,0,1,1.7275.3089,3.8312,3.8312,0,0,1,1.3376.8758,3.9283,3.9283,0,0,1,.8637,1.3585A4.8394,4.8394,0,0,1,21.71,28.6293Zm-1.1937,0A4.3165,4.3165,0,0,0,20.3,27.2137a2.9845,2.9845,0,0,0-.6118-1.0556,2.6122,2.6122,0,0,0-.96-.66,3.3169,3.3169,0,0,0-1.2537-.2279H15.4294v6.7119h2.0453a3.3169,3.3169,0,0,0,1.2537-.2279,2.6293,2.6293,0,0,0,.96-.6568A2.953,2.953,0,0,0,20.3,30.0449,4.3152,4.3152,0,0,0,20.5158,28.6293Z" fill="#fff"/>
+                      <path d="M28.5893,24.3286v.9477H24.4624v3.0051h3.527v.9478h-3.527V32.924h-1.17V24.3286Z" fill="#fff"/>
+                    </g>
+                  </g>
+                  <image src="img/pdf.png" xlink:href="" class="svg__img--hide-on-fallback"></image>
+                </svg>   
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a class="mouse__container--down" href="#main__content">
+          <span class="mouse">
+              <span class="scroll-wheel"></span>
+          </span>
+          <span class="hidden">Scroll to see more</span>
+          <span class="chevron__container">
+            <span class="chevron chevron--down"></span>
+            <!--<span class="chevron chevron-_-down"></span>-->
+          </span>
+        </a>
+      </section>
+
+      <section class="section story__img-feature work__work">
+          <div class="l-row">
+            <div class="l-col--small-4 l-col--small-push-7 l-col--medium-6 l-col--medium-push-6 l-col--large-6 l-col--large-push-6">
+                <img class="story__img__desktop bcg hidden-small" src="img/stories/cbc-iso-desktop.png" alt="Myself" />
+                <img class="story__img__mobile bcg" src="img/stories/cbc-phone.png" alt="Myself" />
+            </div>
+          </div>
+      </section>
+
+      <section class="section" id="main__content">
+        <div class="l-row self__row">
+          <div class="story__text l-intro--right l-col--small-10 l-col--small-offset-1 l-col--medium-offset-1 l-col--medium-5 l-col--large-4 l-col--xlarge-offset-0">
+            <h2 class="main__h2 h-group gamma-medium alpha-large c-pink-1">
+              Experience
+            </h2>
+            <h4 class="main__h4 self__h4"> 
+                Learning through Doing &amp; Leading by Example
+            </h4>
+            <p class="main__p">
+                From interface and experience design to traditional graphic design and marketing to behavioral psychology, the work and the people have all taught me a great deal about interaction, process, work, and life.
+            </p>
+            
+            <a class="button coolBeans icon-button" href="/pdf/nathanfreemyer-resume.pdf" target="_blank"><span class="inline-text">download full resume / cv</span>     
+              <div class="inline-icon-container scaling-svg-container">
+                <svg class="pdf-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="60" viewBox="0 0 50 60">
+                  <title>Resume PDF icon</title>
+                  <g class="pdf-icon__graphic">
+                    <path class="shape--pink" d="M36.0552,2.7292H8.81A3.3867,3.3867,0,0,0,5.5233,6.16V53.6138A3.3234,3.3234,0,0,0,8.81,56.9728H44.4635a3.3233,3.3233,0,0,0,3.287-3.359V14.4245Z" fill="#a83f6f"/>
+                    <path class="shape--orange" d="M1.9272,20.7348H34.395a1.4272,1.4272,0,0,1,1.4272,1.4272V35.5773a1.4273,1.4273,0,0,1-1.4273,1.4273H1.9273A1.4273,1.4273,0,0,1,.5,35.5773V22.162A1.4272,1.4272,0,0,1,1.9272,20.7348Z" fill="#f06b6a"/>
+                    <path class="shape--orange" d="M36.0552,10.9935a3.3867,3.3867,0,0,0,3.2871,3.4309h8.4082L36.0552,2.7291Z" fill="#f06b6a"/>
+                    <g class="pdf-icon__text">
+                      <path d="M8.2077,29.709v3.215H7.05V24.3286H9.5872a4.76,4.76,0,0,1,1.4186.189,2.727,2.727,0,0,1,.9987.5368,2.1651,2.1651,0,0,1,.5908.84,2.9582,2.9582,0,0,1,.195,1.0977,2.798,2.798,0,0,1-.21,1.0977,2.36,2.36,0,0,1-.6148.8577,2.8544,2.8544,0,0,1-1.0047.5608,4.3142,4.3142,0,0,1-1.3736.201Zm0-.9237H9.5872a2.6807,2.6807,0,0,0,.8788-.132,1.8023,1.8023,0,0,0,.6388-.3688,1.5328,1.5328,0,0,0,.39-.5669,1.9368,1.9368,0,0,0,.132-.7258,1.6494,1.6494,0,0,0-.5068-1.2836,2.2128,2.2128,0,0,0-1.5326-.4618H8.2077Z" fill="#fff"/>
+                      <path d="M21.71,28.6293a4.8386,4.8386,0,0,1-.306,1.7575,3.8973,3.8973,0,0,1-.8637,1.3556,3.8506,3.8506,0,0,1-1.3376.8727,4.6513,4.6513,0,0,1-1.7275.3089H14.26V24.3286h3.215a4.6534,4.6534,0,0,1,1.7275.3089,3.8312,3.8312,0,0,1,1.3376.8758,3.9283,3.9283,0,0,1,.8637,1.3585A4.8394,4.8394,0,0,1,21.71,28.6293Zm-1.1937,0A4.3165,4.3165,0,0,0,20.3,27.2137a2.9845,2.9845,0,0,0-.6118-1.0556,2.6122,2.6122,0,0,0-.96-.66,3.3169,3.3169,0,0,0-1.2537-.2279H15.4294v6.7119h2.0453a3.3169,3.3169,0,0,0,1.2537-.2279,2.6293,2.6293,0,0,0,.96-.6568A2.953,2.953,0,0,0,20.3,30.0449,4.3152,4.3152,0,0,0,20.5158,28.6293Z" fill="#fff"/>
+                      <path d="M28.5893,24.3286v.9477H24.4624v3.0051h3.527v.9478h-3.527V32.924h-1.17V24.3286Z" fill="#fff"/>
+                    </g>
+                  </g>
+                  <image src="img/pdf.png" xlink:href="" class="svg__img--hide-on-fallback"></image>
+                </svg>   
+              </div>
+            </a>
+          </div>
+          <figure class="story__figure anglechart l-figure--left l-col--small-10 l-col--small-offset-1 l-col--medium-offset-0 l-col--medium-6 l-col--large-6">
+              <dl class="chart__dl anglechart__dl">
+                <!--<dt class="chart__dt">
+                  Browser market share June 2015
+                </dt>-->
+                <dd class="chart__percentage chart__percentage--pink chart__percentage-81"><span class="chart__text anglechart__text">Interaction Design</span><span class="chart__number hidden">: 81%</span></dd>
+                <dd class="chart__percentage chart__percentage--pink chart__percentage-72"><span class="chart__text anglechart__text">Creative Leadership</span><span class="chart__number hidden">: 71%</span></dd>
+                <dd class="chart__percentage chart__percentage--pink chart__percentage-83"><span class="chart__text anglechart__text">Visual Design<span class="chart__number hidden">: 83%</span></span></dd>
+                <dd class="chart__percentage chart__percentage--pink chart__percentage-38"><span class="chart__text anglechart__text">Marketing<span class="chart__number hidden">: 38%</span></span></dd>
+                <dd class="chart__percentage chart__percentage--pink chart__percentage-45"><span class="chart__text anglechart__text">Teaching / Training<span class="chart__number hidden">: 45%</span></span></dd>
+                <dd class="chart__percentage chart__percentage--pink chart__percentage-15"><span class="chart__text anglechart__text">Behavioral Psychology<span class="chart__number hidden">: 15%</span></span></dd>
+              </dl>
+            <!--<figcaption class="figcaption story__figcaption anglechart__figcaption">Site data &amp; demographics were assessed to define and guide goals.</figcaption>-->
+          </figure>
+        </div>
+        <div class="l-row self__row">
+          <div class="story__text l-intro--right l-col--small-10 l-col--small-offset-1 l-col--medium-offset-1 l-col--medium-5 l-col--large-4 l-col--xlarge-offset-0">
+            
+            <a id="trigger-logo-color" href="#"></a>
+            <h2 class="main__h2 h-group gamma-medium alpha-large c-blue-1">
+              Skills
+            </h2>
+            <h4 class="main__h4 self__h4"> 
+                Pointed Axes
+            </h4>
+            <p class="main__p">
+                The emergence of so many amazing tools for creative collaboration really has opened a new world of feedback, inspiration, rapid iteration, and accountability to creatives. I'm always excited to continue adding to my current skillsets.
+            </p>
+            <a class="button animsition-link coolBeans coolBeans-blue" href="/work.html">
+              <span>see some of my work</span>
+            </a>
+          </div>
+          <figure class="story__figure anglechart l-figure--left l-col--small-10 l-col--small-offset-1 l-col--medium-offset-0 l-col--medium-6 l-col--large-6">
+              <dl class="chart__dl anglechart__dl">
+                <!--<dt class="chart__dt">
+                  Browser market share June 2015
+                </dt>-->
+                <dd class="chart__percentage chart__percentage--blue chart__percentage-81"><span class="chart__text anglechart__text"><span class="box__text box__text--pink">Xd</span></span><span class="chart__number hidden">: 75%</span></dd>
+                <dd class="chart__percentage chart__percentage--blue chart__percentage-81"><span class="chart__text anglechart__text"><span class="box__text box__text--orange">Ai</span></span><span class="chart__number hidden">: 81%</span></dd>
+                <dd class="chart__percentage chart__percentage--blue chart__percentage-73"><span class="chart__text anglechart__text"><span class="box__text box__text--blue">Ps</span></span><span class="chart__number hidden">: 73%</span></dd>
+                <dd class="chart__percentage chart__percentage--blue chart__percentage-69"><span class="chart__text anglechart__text"><span class="box__text box__text--purple">Id</span></span><span class="chart__number hidden">: 69%</span></dd>
+                <dd class="chart__percentage chart__percentage--blue chart__percentage-71"><span class="chart__text anglechart__text chart__html">HTML<span class="chart__number hidden">: 71%</span></span></dd>
+                <dd class="chart__percentage chart__percentage--blue chart__percentage-80"><span class="chart__text anglechart__text  chart__css">CSS<span class="chart__number hidden">: 80%</span></span></dd>
+                <dd class="chart__percentage chart__percentage--blue chart__percentage-50"><span class="chart__text anglechart__text">Project Management Software<span class="chart__number hidden">: 50%</span></span></dd>
+                <dd class="chart__percentage chart__percentage--blue chart__percentage-30"><span class="chart__text anglechart__text">Git<span class="chart__number hidden">: 30%</span></span></dd>
+              </dl>
+            <!--<figcaption class="figcaption story__figcaption anglechart__figcaption">Site data &amp; demographics were assessed to define and guide goals.</figcaption>-->
+          </figure>
+        </div>
+        <div class="l-row">
+          <div class="story__text l-intro--right l-col--small-10 l-col--small-offset-1 l-col--medium-offset-1 l-col--medium-5 l-col--large-4 l-col--xlarge-offset-0">
+            <h2 class="main__h2 gamma-medium alpha-large c-purple-1">
+              Education
+            </h2>
+            <h5 class="main__h5 self__h5 c-purple-1 hgroup"> 
+              Bachelor of Science
+            </h5>
+            <h4 class="main__h4 self__h4 gamma c-purple-1 hgroup"> 
+                Computer Graphics
+            </h4>
+            <h6 class="main__h6 self__h6 l-flex-container"> 
+                <span class="l-flex-item--50">Indiana Wesleyan University</span><span class="l-flex-item--50 align-right">2008</span>
+            </h4>
+            <p class="main__p">
+                Cum laude with electives in Creative Writing, Motion Graphics, 3D Design, Computer Science, &amp; History
+            </p><br/>
+            
+            <h5 class="main__h5 self__h5 c-purple-1 h-group"> 
+                Continued Learning
+            </h5>
+            <ul>
+              <li>3D Modeling &amp; Design</li>
+              <li>Game Design (GDC &amp; Indiecade game design tracks)</li>
+              <li>Accessibilitly</li>
+              <li>Community-Oriented Design </li>
+              <li>Augmented Reality </li>
+              <li>Psychology of Interaction </li>
+              <li>Javascript </li>
+              <li>Ancient History </li>
+              <li>History of China </li>
+              <li>History of Central America </li>
+              <li>History of the Eastern Roman Empire </li>
+              <li>Carpentry</li>
+            </ul>
+          </div>
+          <figure class="story__figure anglechart l-figure--left l-col--small-10 l-col--small-offset-1 l-col--medium-offset-0 l-col--medium-6 l-col--large-6 l-col--xlarge-offset-0">
+              <dl class="chart__dl anglechart__dl">
+                <!--<dt class="chart__dt">
+                  Browser market share June 2015
+                </dt>-->
+                <dd class="chart__percentage chart__percentage--purple chart__percentage-81"><span class="chart__text anglechart__text">Visual Design</span><span class="chart__number hidden">: 81%</span></dd>
+                <dd class="chart__percentage chart__percentage--purple chart__percentage-72"><span class="chart__text anglechart__text">Experience Design</span><span class="chart__number hidden">: 72%</span></dd>
+                <dd class="chart__percentage chart__percentage--purple chart__percentage-41"><span class="chart__text anglechart__text">3D Design<span class="chart__number hidden">: 41%</span></span></dd>
+                <dd class="chart__percentage chart__percentage--purple chart__percentage-38"><span class="chart__text anglechart__text">Motion Graphics<span class="chart__number hidden">: 38%</span></span></dd>
+                <dd class="chart__percentage chart__percentage--purple chart__percentage-25"><span class="chart__text anglechart__text">Game Design<span class="chart__number hidden">: 25%</span></span></dd>
+                <dd class="chart__percentage chart__percentage--purple chart__percentage-20"><span class="chart__text anglechart__text">History<span class="chart__number hidden">: 20%</span></span></dd>
+                <dd class="chart__percentage chart__percentage--purple chart__percentage-15"><span class="chart__text anglechart__text">Computer Science<span class="chart__number hidden">: 15%</span></span></dd>
+                <dd class="chart__percentage chart__percentage--purple chart__percentage-15"><span class="chart__text anglechart__text">Writing<span class="chart__number hidden">: 15%</span></span></dd>
+              </dl>
+            <!--<figcaption class="figcaption story__figcaption anglechart__figcaption">Site data &amp; demographics were assessed to define and guide goals.</figcaption>-->
+          </figure>
+        </div>
+      </section>
+      
+      <section id="self-page__self" class="section section-self self-page__self">
+        <div class="l-row self__row self__values">
+          <div class="story__text l-intro--right l-col--small-10 l-col--small-offset-1 l-col--medium-offset-0 l-col--medium-6 l-col--large-4 l-col--xlarge-offset-0">
+            <h2 id="trigger-mouse-scroll" class="main__h2 gamma-medium alpha-large c-blue-1">
+              Values
+            </h2>
+            <ul>
+              <li>Impactful &amp; Understandable Design</li>
+              <li>Mutual Inspiration &amp; Growth</li>
+              <li>Honesty &amp; Integration</li>
+              <li>Effective &amp; Efficient Communication</li>
+            </ul>
+          </div>
+        </div>
+        <div class="l-row self__row self__impact angle-self-row-link">
+          <div class="angle-self__bg grid-star-bg star-bg angle--both-left-right bcg">
+              <div class="overlay overlay--blue" role="img" aria-label="blue gradient"></div>
+              <div class="overlay overlay--grid-1" role="img" aria-label="Isometric grid">
+              </div>
+              <div class="section-self-angle__content angle-container__content">                
+                              
+                
+                  <a href="/quotes.html" alt='read more quotes'>
+                    <div class="self__shirt scaling-svg-container">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 374 354">
+                        <title>
+                            Testimonials
+                        </title>
+                        <g id="0e341981-6505-4f3d-aa4f-b2a8e7ae1666" data-name="Layer 1">
+                          <polygon points="281 53.83 238 60.15 134 120.2 92 159.95 115 328.17 261 243.87 281 53.83" fill="#fff" />
+                          <polygon points="281 52.83 186 267.18 183 288.91 261 243.87 281 52.83" fill="#ebebeb" />
+                          <polygon points="186 120.68 198.5 88.46 186 84.68 186 120.68" fill="#b4b4b4" />
+                          <polygon points="171 119.34 183.5 87.12 171 83.34 135 120.12 171 119.34" fill="#b4b4b4" />
+                          <polygon points="214.33 64.32 198.13 87.92 205.39 96.67 239.5 59.79 214.33 64.32" fill="#b4b4b4" />
+                          <polygon points="48.33 241.66 92 160.45 121.77 252.42 48.33 241.66" fill="#dcdcdc" />
+                          <polygon points="92 161.95 187 266.6 190 284.87 115 328.17 92 161.95" fill="#ebebeb" />
+                          <polygon points="190 100.37 185.33 114.48 186 282.18 210 237.32 190 100.37" fill="#b4b4b4" />
+                          <polygon points="334.67 75.34 281 53.33 270 166.68 334.67 75.34" fill="#dcdcdc" />
+                          <polygon points="186 116.68 198.5 84.46 186 80.68 186 116.68" fill="#dcdcdc" />
+                          <polygon points="186 116.68 173.5 98.89 186 80.68 186 116.68" fill="#fff" />
+                          <polygon points="171 112.34 183.5 85.33 171 83.84 171 112.34" fill="#b4b4b4" />
+                          <polygon points="144.5 79.64 183 84.41 168 116.07 134 119.7 144.5 79.64" fill="#fff" />
+                          <polygon points="186 118.18 186 278.18 166 260.22 182.25 117.22 186 118.18" fill="#fff" />
+                          <polygon points="227.5 31.72 189 80.94 204 95.28 238 59.65 227.5 31.72" fill="#ebebeb" />
+                          <polyline points="203.78 235.82 189.32 114.04 186 118.18 186 278" fill="#dcdcdc" />
+                          <polygon points="281 53.33 270 166.68 286.33 140.5 281 53.33" fill="#b4b4b4" />
+                        </g>
+                        <image src="img/shirt-45.png" xlink:href="" class="svg__img--hide-on-fallback"></image>
+                      </svg>                  
+                    </div>
+                  </a>
+              </div>
+            
+            
+              <div class="slider">
+                <ul class="slider__carousel slider__ul preserve-3d firstanimation">
+                  <li class="slider__slide">
+                    <div class="slider__container">
+                      <blockquote>
+                        <p>Nathan is an amazing designer and creative director and has pushed me to be so much better over the past year. I have an incredible amount of respect for him, both as a person and as a designer.</p>
+                        <footer class="slider__footer">
+                        — <cite class="slider__citation"><span class="slider__author"><b>Kim Ciolkosz </b></span><span class="slider__title">Designer, TQI</span></cite>
+                        </footer>
+                      </blockquote>
+                      <p><a class="slider__button button c-white-1 c-border-white animsition-link" href="/quotes.html">see all</a></p>
+                    </div>
+                  </li>
+                  <li class="slider__slide">
+                    <div class="slider__container">
+                      <blockquote>
+                          <p>Always attentive and reliable, Nathan has directed the design and presentation of our online services with skillfulness and flexibility.</p>
+                        <footer class="slider__footer">
+                        — <cite class="slider__citation"><span class="slider__author"><b>Chris Nichols </b></span><span class="slider__title">Chief Strategy Officer, CenterState Bank</span></cite>
+                        </footer>
+                      </blockquote>
+                      <p><a class="slider__button button c-white-1 c-border-white animsition-link" href="/quotes.html">see all</a></p>
+                    </div>
+                  </li>
+                  <li class="slider__slide">
+                    <div class="slider__container">
+                      <blockquote>
+                          <p>From marketing to design, from branding to user experience, Nathan's insights and dedication to excellence have benefited Urban Initiatives every step of the way. Nathan not only took time to understand our needs, but relentlessly worked to meet those needs and the needs of our users. We welcome the opportunity to work with him again.</p>
+                          <footer class="slider__footer">
+                          — <cite class="slider__citation"><span class="slider__author"><b>Joe Colletti </b></span><span class="slider__title">Executive Director, Urban Initiatives</span></cite>
+                          </footer>
+                      </blockquote>
+                      <p><a class="slider__button button c-white-1 c-border-white animsition-link" href="/quotes.html">see all</a></p>
+                    </div>
+                  </li>
+                  <li class="slider__slide">
+                    <div class="slider__container">
+                      <blockquote>
+                          <p>Here is a man whose work is not only marked by a deep respect for the influence of design and quality in visual presentation, but whose heart for people also shows through in his work. </p>
+                          <footer class="slider__footer">
+                          — <cite class="slider__citation"><span class="slider__author"><b>Jean Bouchebel </b></span><span class="slider__title">President, WAM &amp; Former Director, World Vision Lebanon</span></cite>
+                          </footer>
+                      </blockquote>
+                      <p><a class="slider__button button c-white-1 c-border-white animsition-link" href="/quotes.html">see all</a></p>
+                    </div>
+                  </li>
+                  <li class="slider__slide">
+                    <div class="slider__container">
+                      <blockquote>
+                        <p>As a designer and mentor, Nathan is about more than achieving graceful and functional design. He strives to develop his team artistically and professionally, while implementing innovations for the benefit of both team and client.</p>
+                        <footer class="slider__footer">
+                        — <cite class="slider__citation"><span class="slider__author"><b>Nathan Keelor </b></span><span class="slider__title">Director of Digital Media, TQI</span></cite>
+                        </footer>
+                      </blockquote>
+                      <p><a class="slider__button button c-white-1 c-border-white animsition-link" href="/quotes.html">see all</a></p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            
+          </div>
+          <div class="l-intro--left hidden-xs visible-large l-col--small-offset-1 l-col--medium-offset-0 l-col--xlarge-offset-0 l-col--medium-4 l-col--large-3">
+            <h2 class="main__h2 margin-w gamma c-blue-1">
+              Volunteering
+            </h2>
+            <dl>
+              <dt>WAM Refugee Ministries</dt>
+              <dd>Graphic Design, Communications, Technical Support Volunteer</dd>
+              <dt>Headington Institute Trauma Support</dt>
+              <dd>Graphic Design Volunteer</dd>
+              <dt>Grace Pasadena</dt>
+              <dd>Homeless Support Service Volunteer</dd>
+              <dt>Barry's Kitchen</dt>
+              <dd>Meal Service Volunteer</dd>
+              <dt>Exodus Refugee Ministries (Indianapolis)</dt>
+              <dd>English Instruction Volunteer</dd>
+            </dl>
+          </div>
+        </div>
+        <a class="mouse__container--up" href="#hero" data-aos="fade-up" data-aos-anchor="#trigger-mouse-scroll">
+          <span class="chevron__container">
+            <span class="chevron"></span>
+            <!--<span class="chevron chevron-_-down"></span>-->
+          </span>
+          <span class="hidden">Scroll to see more</span>
+          <span class="mouse">
+              <span class="scroll-wheel"></span>
+          </span>
+        </a>
+      </section>
+
+      <aside>
+      </aside>
+
+      <footer class="footer angle--top-right footer--quotes">
+        <div class="footer__container">
+          <div class="footer__image">
+            <h2 class="footer__h2">Let's Talk</h2>
+            <div class="w-contact-airplane" data-aos="fade-up-right">
+              <a href="#" class="w-contact-airplane__link scaling-svg-container animsition-link" alt="Contact">
+                <svg xmlns="http://www.w3.org/2000/svg" width="354" height="280" viewBox="10 50 364 280">
+                  <title>Contact Paper Airplane</title>
+                  <g id="bc8f46f1-a6b9-4483-97c3-af8b9aa75da4" data-name="Layer 1">
+                    <polygon points="89 263.07 346 88.74 80 189.74 89 263.07" fill="#d0d2d3"/>
+                    <polygon points="89 261.41 125.67 236.74 103 212.07 89 261.41" fill="#e6e7e8"/>
+                    <polygon points="182 290.74 101.67 212.07 346 88.74 182 290.74" fill="#fff"/>
+                    <polygon points="80 189.74 346 88.74 28 139.24 80 189.74" fill="#fff"/>
+                  </g>
+                  <image src="img/airplane.png" xlink:href="" class="svg__img--hide-on-fallback"></image>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer__content">
+            <div class="phone__container">
+                <a href="tel:+1-765-506-8400" class="phone__number footer__link">+1(765)506-8400</a>
+            </div>
+            <div class="email__container">
+                <a href="mailto:nathanfreemyer@gmail.com&subject=Hi%20Nathan&We%20would%20love%20to%20start%20a%20conversation%20with%20you%20about%20how%20you%20might%20be%20able%20to%20help%20us%46" class="email__address footer__link">nathanfreemyer@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+    </div> <!-- TODO:CSS Grid Container Pending (support for subgrid) -->
+  </main>
+</div> <!-- Animsition Container -->
+
+  <!-- animsition.js -->
+  <script src="js/animsition.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script>
+      $(document).ready(function() {
+        $(".animsition").animsition({
+          inClass: 'fade-in-down-sm',
+          outClass: 'fade-out-up-sm',
+          inDuration: 1500,
+          outDuration: 800,
+          linkElement: '.animsition-link',
+          // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+          loading: true,
+          loadingParentElement: 'body', //animsition wrapper element
+          loadingClass: 'animsition-loading',
+          loadingInner: '', // e.g '<img src="loading.svg" />'
+          timeout: true,
+          timeoutCountdown: 5000,
+          onLoadEvent: true,
+          browser: [ 'animation-duration', '-webkit-animation-duration'],
+          // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+          // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+          overlay : false,
+          overlayClass : 'animsition-overlay-slide',
+          overlayParentElement : 'body',
+          transition: function(url){ window.location.href = url; }
+        });
+      });
+    /*
+    Inline SVG Check
+    */
+    function supportsSvg() {
+      var div = document.createElement('div');
+      div.innerHTML = '<svg/>';
+      return (div.firstChild && div.firstChild.namespaceURI) == 'http://www.w3.org/2000/svg';
+    };
+    if (!supportsSvg()) {
+      document.documentElemement.classList.add("no-svg");
+      // or even .className += " no-svg"; for deeper support
+    }
+    $(document).ready(function() {
+      $('.drawer').drawer();
+    });
+    AOS.init({
+      duration: 1200,
+      disable: window.innerWidth < 1024,
+      disable: 'mobile',
+    })
+    $(window).on('load', function() {
+      AOS.refresh();
+    });
+    $('.angle-self-row-link').on('click', function(){
+      window.location = '/quotes.html';
+    });
+    $('.slider__carousel').on('click', function() {
+      window.location = '/quotes.html';
+    });
+
+  </script>
+</body>
+
+</html>

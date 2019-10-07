@@ -49,7 +49,8 @@ blockquote {
   text-indent: -0.41em; //.4em is roughly equal to the width of the opening " that we wish to hang.
 
   p {
-    font-size: get(font-size) * 1.25;
+    //font-size: get(font-size) * 1.25;
+    font-size: 1.125em;
     line-height: 1.5;
 
     &:before {

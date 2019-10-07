@@ -13,7 +13,7 @@
 $gemini-align: () !default;
 
 $gemini-align: extend((
-  responsive: false,
+  responsive: true,
 ), $gemini-align);
 
 /**
@@ -53,6 +53,14 @@ $gemini-align: extend((
     .align-large-center   { text-align: center     !important; }
     .align-large-right    { text-align: right      !important; }
     .align-large-bottom   { vertical-align: bottom !important; }
+
+  }// Large screens
+  @include media(xlarge,  $gemini-screens) {
+
+    .align-xlarge-left     { text-align: left       !important; }
+    .align-xlarge-center   { text-align: center     !important; }
+    .align-xlarge-right    { text-align: right      !important; }
+    .align-xlarge-bottom   { vertical-align: bottom !important; }
 
   }
 }

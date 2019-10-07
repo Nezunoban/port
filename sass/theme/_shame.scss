@@ -1,0 +1,684 @@
+/**
+ ********************************
+ * _SHAME.SCSS
+ ********************************
+ */
+
+ // Temporary location for bad or unsorted code to figure out later
+
+ a {
+     cursor: pointer;
+ }
+
+
+
+body {
+    @include media(large, $gemini-screens) {
+        font-size: 1.125rem;
+    }
+    @include media(xlarge, $gemini-screens) {
+        //font-size: 1.25rem;
+    }
+    @include media(xxlarge, $gemini-screens) {
+        font-size: 1.5rem;
+    }
+}
+
+
+b {
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+.figcaption {
+    font-size: .75em;
+    color: lighten($color,60%);
+}
+
+
+/* For fixing FOIT and font loading inconsistencies: font-loaded class */
+/*
+.fonts-loaded body {
+    font-family: 'Muli', Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+*/
+.hero__h2, .main__h2, .footer__h2 {
+    font-family: 'Muli', Futura, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+
+.main-container {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    //overflow: hidden;
+}
+
+.w-global-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    max-width: 60px;
+    padding: 10px 12px;
+    margin-top: 10px;
+    text-align: center;
+    @include media(medium) {
+        
+        max-width: 70px;
+        padding: 10px 12px;
+        margin: 16px 16px;
+    }
+}
+.main-container {
+    position: relative;
+}
+
+
+
+.homepage__work,
+.section-self {
+    position: relative;
+}
+
+.section {
+    @include media(medium, $gemini-screens) {
+        padding-left: 120px;
+    }
+    @media all and (min-width: 1900px) {
+        padding-left: 0;
+    }
+}
+.section-self {
+    //margin-top: -50vh;
+    
+    @include media(medium, $gemini-screens) {
+        //margin-top: -25vw;
+        padding-top: 0;
+        padding-left: 0px;
+    }
+
+    @include media(large, $gemini-screens) {
+        padding-bottom: 70vw;
+        margin-top: 10em;
+        padding-left: 120px;
+    }
+    @media screen and (min-width: 1900px){
+        padding-left: 0;
+    }
+
+}
+
+.section-self.homepage__self {
+    margin-top: -50vh;
+    @include media(large, $gemini-screens) {
+        margin-top: 10em;
+    }
+}
+
+.slider__carousel:hover,
+.angle-self-row-link:hover {
+    cursor: pointer;
+}
+
+.angle-work__bg {
+    display: none; 
+}
+
+.angle-work__bg,
+.angle-self__bg {
+    width: 100%;
+    z-index: -2;
+    position: relative;
+    padding: 300px 0;
+
+    @include media(large, $gemini-screens)  {
+        display: block;
+        top: -400px;
+        right: 0;
+        width: 60vw;
+        padding: 500px 100px;
+        position: absolute;
+        padding: 300px 100px;
+        z-index: 0;
+        min-height: 125vh;
+        width: 50vw;
+    }
+    @include media(xlarge, $gemini-screens) {
+        width: 60vw;
+        min-height: 170vh;
+
+    }
+
+    @media screen and (min-aspect-ratio: 19/6) {
+        top: -700px;
+    }
+    //overflow: hidden;
+}
+
+.angle-self__bg {
+    @include media(medium, $gemini-screens)  {
+        //width: auto;
+        padding: 200px 0 100px;
+    }
+    @include media(large, $gemini-screens)  {
+        padding: 300px 100px;
+    }
+}
+
+.l-intro--left {
+    padding: 4em 2em;
+    @include media(medium, $gemini-screens) {
+        padding: 0;
+    }
+    @include media(large, $gemini-screens) {
+        padding: 1em;
+        
+    }
+}
+
+
+
+.self__intro {
+    @include media(medium, $gemini-screens) {
+        padding-top: 40vh;
+    }
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    /* Ipad Alignment Fix for Self area */
+    .self__intro {
+        padding-top: 20vh;
+    }
+}
+
+/*
+.angle-work__bg {
+    @include media(medium, $gemini-screens) {
+        //padding: 1000px 100px;
+    }
+    @include media(xlarge, $gemini-screens) {
+        top: -400px;
+    }
+    @media screen and (min-aspect-ratio: 19/6) {
+        top: -700px;
+    }
+}
+
+.angle-self__bg {
+    @include media(medium, $gemini-screens) {
+        top: -300px;
+        padding: 500px 100px;
+    }
+    @include media(xlarge, $gemini-screens) {
+        top: -400px;
+    }
+    
+    @media screen and (min-aspect-ratio: 19/6) {
+        top: -400px;
+    }
+}
+
+.self__intro {
+    margin-top: 400px;
+    margin-bottom: 200px;
+}
+*/
+
+/* Isometric grid */
+
+.header__star-bg  {
+    position: relative;
+}
+
+.star-bg {
+    //@extend %overlay;
+    //overflow: hidden;
+    background: url("../img/starry-bg.jpg") no-repeat center center fixed #181d25;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+%overlay {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+}
+%overlay--grid {
+    background-attachment: fixed;
+    background-color: transparent;
+    height:100%;
+    background-size:100px 56px; 
+}
+%grid-1{
+    // dark grid bg
+    background-image:  
+    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .05) 0%, rgba(255, 255, 255, .05) 1%, transparent 2%, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent), 
+    linear-gradient(30deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent), 
+    linear-gradient(150deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent);
+}
+%grid-2{
+    // light pink grid
+    background-image:  
+    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .09) 0%, rgba(255, 255, 255, .09) 1%, transparent 2%, transparent 49%, rgba(255, 255, 255, .09) 50%, rgba(255, 255, 255, .09) 51%, transparent 52%, transparent), 
+    linear-gradient(30deg, transparent 49%, rgba(255, 255, 255, .09) 50%, rgba(255, 255, 255, .09) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .09) 98%, rgba(255, 255, 255, .09) 99%, transparent 100%, transparent), 
+    linear-gradient(150deg, transparent 49%, rgba(255, 255, 255, .09) 50%, rgba(255, 255, 255, .09) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .09) 98%, rgba(255, 255, 255, .09) 99%, transparent 100%, transparent);
+}
+
+.overlay--grid-1 {
+    @extend %overlay;
+    @extend %overlay--grid;
+    @extend %grid-1;
+}
+.overlay--grid-2 {
+    @extend %overlay;
+    @extend %overlay--grid;
+    @extend %grid-2;
+}
+
+.overlay--purple {
+    @extend %overlay;
+    @include gradient-directional($brand-bp-bg, $brand-p-bg, 90deg);
+}
+.overlay--pink-reverse {
+    @extend %overlay;
+    @include gradient-directional($brand-pink-bg, $brand-p-bg, 90deg);
+}
+.overlay--pink {
+    @extend %overlay;
+    @include gradient-directional(rgba($brand-color-2-bg, .8), rgba($brand-pink-bg, .45), 90deg);
+}
+.overlay--blue {
+    @extend %overlay;
+    @include gradient-directional($brand-b-bg, $brand-bp-bg, 90deg);
+}
+
+/*
+.hero__overlay-3:hover {
+    background-image:  
+        //linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .05) 1%, rgba(255, 255, 255, .05) 2%, transparent 3%, transparent 53%, rgba(255, 255, 255, .05) 54%, rgba(255, 255, 255, .05) 55%, transparent 56%, transparent),
+        linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .05) 0%, rgba(255, 255, 255, .05) 1%, transparent 2%, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent), 
+        linear-gradient(30deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent), 
+        linear-gradient(150deg, transparent 49%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 51%, transparent 52%, transparent 97%, rgba(255, 255, 255, .05) 98%, rgba(255, 255, 255, .05) 99%, transparent 100%, transparent);
+}
+*/
+
+.angle-container__content {
+    position: relative;
+}
+.homepage__work-angle__content,
+.section-self-angle__content {
+    display: block;
+    padding: 4em 5em;
+    position: absolute;
+    right: 0;
+    @include media(large, $gemini-screens) {
+        padding-right: 1em;
+    }
+}
+
+.homepage__work-angle__content {
+    @include media(large, $gemini-screens) {
+        padding: 30vw 1em;
+    }
+}
+
+.delay-500 {
+    transition-delay: 500ms;
+}
+
+
+//   Layout
+
+
+// !REPLACE! with grid system changes for mobile
+main section {
+    //padding-left: 74px;
+}
+.main__h2 {
+    //font-size: 1.5rem;
+    &.h-group {
+        margin-bottom: .2em;
+    }
+}
+
+.main__h6 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $color-light;
+}
+h4 {
+    color: $color-light;
+}
+
+
+.g-button {
+    border: 0 none transparent;
+    color: $white;
+    background: $brand-color-bg;
+    @include background-image(linear-gradient(to bottom right, $brand-color-bg, $brand-color-2-bg));
+    
+}
+
+.g-button:hover {
+    color: $white;
+    background: $brand-color;
+    @include background-image(linear-gradient(to bottom right, $brand-color-bg, $link-color));
+}
+
+.main__button {
+    background: transparent;
+    margin-right: .5em;
+    margin-bottom: .5em;
+}
+
+/*
+.main__button.c-pink-1 {
+    border-color: $brand-pink-text-1;
+    color: $brand-pink-text-1;
+}
+.main__button.c-blue-1 {
+    border-color: $brand-blue-text-1;
+    color: $brand-blue-text-1
+}
+.main__button.c-purple-1 {
+    border-color: $brand-p-text-1;
+    color: $brand-p-text-1;
+}
+*/
+
+.c-border-white {
+    border-color: $white;
+}
+.c-white-1 {
+    color: $white;
+}
+
+
+.main__blockquote {
+    &:before {
+        content: "\201C";
+        font-family: 'Muli', Helvetica, arial, sans-serif;
+        font-size: 200px;
+        position: absolute;
+        color: #f4f4f4;
+        z-index: -1;
+        margin-top: -100px;
+        margin-left: -70px;
+    }
+}
+
+.self__values .story__text {
+    /* margin-left: 120px; */
+    @media screen and (min-width: 481px) and (max-width: 1023px){
+        padding-left: 120px;
+        margin-left: 8.33333%;
+        margin-top: 2rem;
+    }
+}
+
+.work__work {
+    @include media(medium, $gemini-screens){
+        margin-top: -50vw;
+    }
+}
+
+.project__story {
+    top: -12vw;
+    position: relative;
+    @include media(xxlarge, $gemini-screens){
+        top: -18rem;
+    }
+}
+
+
+.story__img__mobile {
+    @include media(medium, $gemini-screens) {
+        max-width: 20%;
+        position: absolute;
+        right: 10%;
+        bottom: 0;
+    }
+}
+
+.story__img__desktop {
+    padding-bottom: 6em;
+}
+/*
+.story__figcaption {
+    @include media(medium, $gemini-screens) {
+        transform: rotate(-28deg);
+        margin-right: 0%;
+        margin-top: -12%;
+        padding-left: 35%;
+        
+    }
+}
+*/
+
+.story__img-feature {
+    margin-top: -80vw;
+    padding-bottom: 5em;
+    @include media(medium, $gemini-screens){
+        margin-top: -60vw;
+        padding-bottom: 0;
+    }
+}
+.story__phase {
+    padding-top: 2em;
+    padding-bottom: 4em;
+    @include media(medium, $gemini-screens){
+        padding-bottom: 5em;
+        @supports(display: flex) {
+            display: flex;
+        }
+    }
+    @include media(large, $gemini-screens){
+        padding-bottom: 1em
+    }
+    @include media(xlarge, $gemini-screens){
+        padding-top: 1em;
+    }
+    @include media(xxlarge, $gemini-screens) {
+        padding-top: 5em;
+    }
+}
+.story__text {
+    position: relative;
+    z-index: 2;
+    @include media(medium, $gemini-screens){
+        @supports(display: flex) {
+            align-self: center;
+        }
+    }
+}
+.story__text--final {
+    @include media(medium, $gemini-screens){
+        @supports(display: flex) {
+            align-self: top;
+        }
+    }
+}
+
+.story__img-final {
+    //margin-bottom: -10rem;
+}
+
+.footer--story {
+    clear: left;
+    @include media(xlarge, $gemini-screens) {
+        margin-top: -40rem;
+    }
+    @include media(xxlarge, $gemini-screens) {
+        margin-top: -70rem;
+        padding-bottom: 20rem;
+    }
+}
+
+.hero__feature-icon {
+    margin-top: -80vw;
+    padding-bottom: 70vw;
+    @include media(medium, $gemini-screens){
+        margin-top: -65vw;
+        padding-bottom: 50vw;
+    }
+    /*
+    @include media(large, $gemini-screens) {
+        margin-top: -51vw;
+        padding-bottom: 48vw;
+    }
+    */
+    @include media(xlarge, $gemini-screens) {
+        margin-top: -60vw;
+        padding-bottom: 52vw;
+        .scaling-svg-container svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+    @include media(xxlarge, $gemini-screens) {
+        margin-top: -57vw;
+        padding-bottom: 52vw;
+    }
+
+    @media all and (min-width:2336px) {
+        margin-top: -52vw;
+        padding-bottom: 50vw;
+    }
+
+}
+
+
+@include media(xxlarge, $gemini-screens) {
+    .l-col--xxlarge-push-9 {
+        left: 75%;
+    }
+}
+
+.form-item {
+    //margin-bottom: 1em;
+    //margin-right: 10px;
+    display: inline-block;
+    margin-bottom: 1em;
+    margin-right: .25em;
+}
+input, textarea, select {
+    padding: .375em .5em;
+}
+
+
+
+.form__submit {
+    display: block
+}
+
+
+
+/* Inline icon for button */
+
+.inline-text {
+    vertical-align:  middle;
+    display:  inline-block;
+}
+.inline-icon-container {
+    vertical-align:  middle;
+    display:  inline-block;
+    height: 40px;
+    width: auto;
+    padding: 0;
+    margin-left: 5px
+}
+.pdf-icon {
+    width: auto;
+    height: 40px;
+}
+@include media(medium, $gemini-screens) {
+    .inline-icon-container {
+        //height: 60px;
+    }
+}
+
+/* 
+ *  Display FlexBox
+ *
+ *
+ *
+ *
+ */
+
+ .scaling-svg-container {
+    max-width: 100%;
+    svg {
+        max-width: 100%;
+    }
+}
+
+ .l-flex-container {
+    /* We first create a flex layout context */
+    @include flexbox();
+ /* Then we define the flow direction and if we allow the items to wrap 
+  * Remember this is the same as:
+  * flex-direction: row;
+  * flex-wrap: wrap;
+  */
+  @include flex-flow (row wrap);
+    /* Then we define how is distributed the remaining space */
+  justify-content: flex-start;
+ }
+
+ .l-flex-item--50 {
+    @include flex(1 auto);
+    max-width: 100%;
+ }
+
+
+
+
+/* AOS Print Fix */
+
+@media print{
+    [data-aos] {
+        display: block !important;
+        opacity: 1 !important;
+        transform: translate(0) scale(1) !important;
+    }
+}
+
+/* AOS  Custom */
+.purple {
+    fill: url(#n);
+}
+[data-aos="purplefy-svg"] defs #n {
+    stop {
+        -webkit-transition: .3s ease;
+        transition: .3s ease;
+    }
+    
+}
+
+[data-aos="purplefy-svg"].aos-animate defs #n {
+    /* Use the color stops to transition to */
+    stop:first-child {
+        stop-color: #305fbd;
+    }
+    stop:last-child {
+        stop-color: #5c1073;
+    }
+}
+  
+.animsition {
+    overflow: hidden;
+}
+
+
+
+ /* CSS Grid */
+
+

@@ -18,12 +18,13 @@
 $gemini-grid: () !default;
 
 $gemini-grid: extend((
-  max-width:         get(xlarge, $gemini-screens),
+  max-width:         get(xxlarge, $gemini-screens),
   gutter:            get(spacing),
   columns:           12,
   medium-breakpoint: get(medium, $gemini-screens),
   large-breakpoint:  get(large, $gemini-screens),
   xlarge-breakpoint: get(xlarge, $gemini-screens),
+  xxlarge-breakpoint: get(xxlarge, $gemini-screens),
 ), $gemini-grid);
 
 /**
@@ -47,54 +48,54 @@ $gemini-grid: extend((
 @mixin screen-grid($screen){
 
   // Center the column
-  .l-column--#{$screen}-centered {
+  .l-col--#{$screen}-centered {
     margin-left: auto;
     margin-right: auto;
     float: none !important;
   }
 
   // Remove the margin that spaces the columns on smaller screens
-  [class*="l-column--#{$screen}"] {
+  [class*="l-col--#{$screen}"] {
     margin-bottom:0;
   }
 
   // Basic column usage
   @for $i from 1 through get(columns, $gemini-grid) {
-    .l-column--#{$screen}-#{$i} {
+    .l-col--#{$screen}-#{$i} {
       width: gridCalc($i, get(columns, $gemini-grid));
     }
   }
 
   // Column offsets
   @for $i from 1 through get(columns, $gemini-grid) - 2 {
-    .l-column--#{$screen}-offset-#{$i} {
+    .l-col--#{$screen}-offset-#{$i} {
       margin-left: gridCalc($i, get(columns, $gemini-grid));
     }
   }
 
   @if $screen != 'small' {
     // Reset pull/push to overwrite the smaller screen setting
-    .l-column--#{$screen}-push-reset {
+    .l-col--#{$screen}-push-reset {
       left: inherit;
     }
-    .l-column--#{$screen}-pull-reset {
+    .l-col--#{$screen}-pull-reset {
       right: inherit;
     }
   }
 
   // Basic push and pulls
   @for $i from 2 through get(columns, $gemini-grid) - 2 {
-    .l-column--#{$screen}-push-#{$i} {
+    .l-col--#{$screen}-push-#{$i} {
       left: gridCalc($i, get(columns, $gemini-grid));
     }
-    .l-column--#{$screen}-pull-#{$i} {
+    .l-col--#{$screen}-pull-#{$i} {
       right: gridCalc($i, get(columns, $gemini-grid));
     }
   }
-    [class*=".l-column--#{$screen}-push"]{
+    [class*=".l-col--#{$screen}-push"]{
       right: auto;
     }
-    [class*=".l-column--#{$screen}-pull"]{
+    [class*=".l-col--#{$screen}-pull"]{
       left: auto;
     }
 }
@@ -109,10 +110,10 @@ $gemini-grid: extend((
  *
  * @markup
     <div class="l-row">
-     <div class="l-column--small-3 l-column--large-9">
+     <div class="l-col--small-3 l-col--large-9">
        <div class="my-class my-class--small">Small: 3, Large: 9</div>
      </div>
-     <div class="l-column--small-9 l-column--large-3">
+     <div class="l-col--small-9 l-col--large-3">
        <div class="my-class my-class--small">Small: 9, Large: 3</div>
      </div>
     </div>
@@ -145,16 +146,16 @@ $gemini-grid: extend((
  * @module Grid Column [.l-column]
  * @description Column within a row. Screen size is mobile first (ie. small applies to medium, large, and xlarge).
  *
- * @modifier [.l-column--{screen}-{number}] The width you want that column to occupy on the specified screen size
- * @modifier [.l-column--{screen}-offset-{number}] The space that you want offset before the column on the specified screen size
- * @modifier [.l-column--{screen}-centered] Center the column on the specified screen size
- * @modifier [.l-column--{screen}-pull-{number}] How many units you want to pull the column to the left on the specified screen size
- * @modifier [.l-column--{screen}-push-{number}] How many units you want to push the column to the right on the specified screen size
- * @modifier [.l-column--{screen}-pull-reset] Reset the pull on the specified screen size
- * @modifier [.l-column--{screen}-push-reset] Reset the push on the specified screen size
- * @modifier [.l-column--end] Floats the last column to the left
+ * @modifier [.l-col--{screen}-{number}] The width you want that column to occupy on the specified screen size
+ * @modifier [.l-col--{screen}-offset-{number}] The space that you want offset before the column on the specified screen size
+ * @modifier [.l-col--{screen}-centered] Center the column on the specified screen size
+ * @modifier [.l-col--{screen}-pull-{number}] How many units you want to pull the column to the left on the specified screen size
+ * @modifier [.l-col--{screen}-push-{number}] How many units you want to push the column to the right on the specified screen size
+ * @modifier [.l-col--{screen}-pull-reset] Reset the pull on the specified screen size
+ * @modifier [.l-col--{screen}-push-reset] Reset the push on the specified screen size
+ * @modifier [.l-col--end] Floats the last column to the left
  */
-[class*="l-column"] {
+[class*="l-col"] {
   @include clearfix;
   position: relative;
   padding: 0 (get(gutter, $gemini-grid) / 2);
@@ -164,11 +165,13 @@ $gemini-grid: extend((
 }
 
 //Float the last column to the right
-[class*="l-column"] + [class*="l-column"]:last-child {
-  float: right;
+[class*="l-col"] + [class*="l-col"]:last-child {
 
+  @include media(medium, $gemini-screens){
+    float: right;
+  }
   // Unless the last column is specified as end
-  &.l-column--end {
+  &.l-col--end {
     float: left;
   }
 }
@@ -189,31 +192,62 @@ $gemini-grid: extend((
 @include media-query(get(xlarge-breakpoint, $gemini-grid)) {
   @include screen-grid('xlarge');
 }
+@include media-query(get(xxlarge-breakpoint, $gemini-grid)) {
+  @include screen-grid('xxlarge');
+}
 
 @media print{
   @include screen-grid('print');
 }
 
+
+/****** fix for reseting offset above small screen sizes   *****/
+.l-col--medium-offset-0 {
+  @include media(medium, $gemini-screens){
+    margin-left: inherit;
+    margin-right: inherit;
+  }
+}
+@for $i from 1 through get(columns, $gemini-grid) - 2 {
+  @include media(xlarge, $gemini-screens){
+    .l-col--xlarge-offset-#{$i} {
+      margin-left: gridCalc($i, get(columns, $gemini-grid));
+    }
+  }
+  @include media(xxlarge, $gemini-screens){
+    .l-col--xxlarge-offset-#{$i} {
+      margin-left: gridCalc($i, get(columns, $gemini-grid));
+    }
+  }
+}
+
+.l-col--xlarge-offset-0 {
+  @include media(xlarge, $gemini-screens){
+    margin-left: inherit;
+    margin-right: inherit;
+  }
+}
+
 /**
  * @markup
   <div class="l-row">
-    <div class="l-column--small-6">
+    <div class="l-col--small-6">
       <div class="l-row">
-        <div class="l-column--small-6"><div class="my-class">6&rarr;6</div></div>
-        <div class="l-column--small-6"><div class="my-class">6&rarr;6</div></div>
+        <div class="l-col--small-6"><div class="my-class">6&rarr;6</div></div>
+        <div class="l-col--small-6"><div class="my-class">6&rarr;6</div></div>
       </div>
     </div>
-    <div class="l-column--small-6"><div class="my-class">6</div></div>
+    <div class="l-col--small-6"><div class="my-class">6</div></div>
   </div>
  */
 
 /**
  * @markup
   <div class="l-row">
-    <div class="l-column--small-3 l-column--small-offset-2">
+    <div class="l-col--small-3 l-col--small-offset-2">
       <div class="my-class">3, offset 2</div>
     </div>
-    <div class="l-column--small-6 l-column--small-offset-1">
+    <div class="l-col--small-6 l-col--small-offset-1">
       <div class="my-class">6, offset 1</div>
     </div>
   </div>
@@ -222,15 +256,20 @@ $gemini-grid: extend((
 /**
  * @markup
   <div class="l-row">
-    <div class="l-column--small-3 l-column--small-push-9
-                l-column--medium-push-reset">
+    <div class="l-col--small-3 l-col--small-push-9
+                l-col--medium-push-reset">
       <div class="inner">3, first</div>
     </div>
-    <div class="l-column--small-9 l-column--small-pull-3
-                l-column--medium-pull-reset">
+    <div class="l-col--small-9 l-col--small-pull-3
+                l-col--medium-pull-reset">
       <div class="inner">9, last</div>
     </div>
   </div>
  */
+
+
+ 
+
+
 
 }//end

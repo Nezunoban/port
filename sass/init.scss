@@ -1,18 +1,18 @@
 /**
  ********************************
- * GEMINI-CSS
+ * GEMINI-CSS + NF
  ********************************
  */
 
 /**
  *
- * Framework used for Carpages.ca
  *
  * Credits/Inspiration:
+ * Gemini
  * SMACSS
  * BEM
  * Inuit.css
- * Bootstrap.css
+ * Bootstrap.css + Bootstrap 4 Beta
  * Foundation.css
  * CSS-Tricks
  * Nicolas Gallagher
@@ -28,7 +28,8 @@
  * Variables
  */
 @import "defaults";
-
+@import "reboot-variables";
+@import "theme/colors";
 /**
  * Functions
  */
@@ -41,6 +42,7 @@
  * Mixins
  */
 @import "mixins/accessibility";
+@import "mixins/hover";
 @import "mixins/arrows";
 @import "mixins/border";
 @import "mixins/clearfix";
@@ -52,7 +54,13 @@
 @import "mixins/media-queries";
 @import "mixins/text-rendering";
 @import "mixins/truncate";
+@import "mixins/gradients";
 @import "mixins/vendor";
+@import "mixins/flexbox";
+//@import "mixins/css-grid";
+// Angles from https://github.com/NigelOToole/angled-edges
+@import "mixins/angled-edges";
+@import "mixins/radial-rotation";
 
 /**
  * Load Colors
@@ -63,7 +71,8 @@
  * Base Styles
  */
 @import "base/normalize";
-@import "base/reset";
+//@import "base/reset";
+@import "base/reboot";
 @import "base/margins";
 @import "base/main";
 @import "base/headings";
@@ -99,11 +108,22 @@
 @import "objects/fit";
 @import "objects/overlay";
 @import "objects/colors";
+@import "objects/drawer";
+//@import "objects/pure-drawer";
 @import "objects/copy";
+@import "objects/angled-portfolio";
+@import "objects/slider";
+@import "objects/hero";
+@import "objects/footer";
+//@import "objects/scrollhead";
+//@import "objects/batman";
+// CoolBeans Button Hover animation | https://codepen.io/brownerd/pen/wWOOqj/
+@import "objects/coolbeans";
+// Micromodal.js | https://micromodal.now.sh Copyright (c) 2017 Indrashish Ghosh
+@import "objects/micromodal";
 
 // Text inputs are an exception to base styles since they extend buttons and tag
 @import "base/text-inputs";
-
 /**
  * Helpers
  */
@@ -127,3 +147,16 @@
 @import "helpers/truncate";
 @import "helpers/user-select";
 @import "helpers/weight";
+
+
+/**
+ * Theme
+ */
+
+@import "theme/navigation";
+//@import "theme/hero";
+//@import "theme/colors";
+//@import "theme/footer";
+@import "theme/shame";
+@import "theme/grid-layout";
+@import "theme/self-page";

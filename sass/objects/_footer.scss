@@ -1,0 +1,76 @@
+
+/// Footer
+
+.footer {
+    color: #fff;
+    padding-left: 80px;
+    padding-bottom: 12rem;
+    padding-right: 4rem;
+    padding-top: 16rem;
+    min-height: 90vh;
+    background: $brand-color-bg;
+
+    //margin-top: -20vh;
+    @include media(medium, $gemini-screens) {
+        //margin-top: -50vw;
+        padding-top: 18rem;
+    }
+    @include background-image(linear-gradient(to bottom right, $brand-color-bg, $brand-color-2-bg));
+}
+.footer--quotes {
+    margin-top: -20vh;
+    padding-bottom: 10vh;
+    @include media(medium, $gemini-screens) {
+        margin-top: -90vw;
+        padding-bottom: 25vw;
+    }
+    @include media(large, $gemini-screens) {
+        margin-top: -50vw;
+        padding-bottom: 25vw;
+    }
+}
+.footer__image {
+    display: block;
+    @include media(xlarge, $gemini-screens) {
+        margin-top: 12rem;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+.footer__content {
+    display: block;
+    @include media(medium, $gemini-screens) {
+        //float: left;
+        display: inline-block;
+        margin-top: 4.5em;
+    }
+    @include media(xlarge, $gemini-screens) {
+        font-size: 1.5em;
+        margin-top: 21rem;
+        vertical-align: top;
+    }
+}
+.footer__h2 {
+    margin-bottom: 0;
+    font-size: 3.5em;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    @include media(medium, $gemini-screens) {
+        //font-size: 4.5em;
+    }
+}
+.footer__link {
+    color: $white;
+    padding: .125em .5em 0.25em .5em;
+    border: 1px solid transparent;
+    &:hover {
+        color: $white;
+        border: 1px solid $brand-color;
+        text-decoration: none;
+    }
+    @include media(large, $gemini-screens) {
+        //font-size: 1.25em;
+    }
+}
+
+

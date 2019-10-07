@@ -1,0 +1,429 @@
+
+
+
+.pseudo-scroller {
+	pointer-events: none;
+}
+.preserve-3d {
+    //position: relative;
+	-webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    //perspective: 20rem;
+}
+.angleport {
+	position: relative;
+	z-index: 100;
+	@media screen and (min-width: 30.0625em) and (orientation: portrait) {
+		transform: translateY(-100px);
+	}
+}
+
+.angleport__container {
+	position: relative;
+	margin-top: -24rem; //allowing for background of quote area to move up too
+	//top: -24rem;
+    width: 141%;
+    transform: rotateX(-34deg) rotateY(45deg);
+    margin-left: -20%;
+    z-index: 9; // Safari OSX - z-index inconsistency fix
+	
+	@include media(medium, $gemini-screens) {
+		margin-top: 0;  //inline block offset correction
+		top: -7rem;	//allowing anglegrid to move upward into previous div without inline block interfering in chrome (with inline block flow on certain browsers not supporting grid/flex)
+	}
+	@include media(large, $gemini-screens) {
+		width: auto;
+		// Pure css rotation
+		//transform: rotateX(-34deg) rotateY(45deg);
+		//margin-top: -200px; fix for inline block issue
+		margin-top: 0;
+		top: -200px;
+
+		margin-bottom: 200px;
+		margin-left: 9vw;
+		z-index: 10; // Safari OSX - z-index inconsistency fix
+    }
+}
+
+.work__work {
+	.angleport__container {
+		@include media(medium, $gemini-screens) {
+			top: 0;
+		}
+		@include media(large, $gemini-screens) {
+			top: 0;
+		}
+	}
+}
+	
+
+.anglegrid {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
+.anglegrid__item {
+
+
+    display: inline-block;
+	width: 49%;
+	/*
+	margin: 0;
+	overflow: hidden;
+    min-height: 250px;
+	display: inline-block;
+		*/
+	//overflow: visible;
+	transform-origin: 0 0;
+	cursor: pointer;
+	
+	@include media(medium) {
+		width: 30%;
+		//min-height: none;
+		margin-bottom: 2em;
+		margin-right: 3%;
+	}
+
+
+}
+
+.anglegrid__link {
+    width: auto;
+	position: relative;
+	display: block;
+	cursor: pointer;
+}
+.anglegrid__img {
+	width: 100%;
+	display: block;
+	max-width: 100%;
+}
+
+.js .anglegrid__item {
+	-webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+
+
+.anglegrid__title {
+	font-size: .85em;
+	font-weight: 700;
+	
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+	padding: .5rem;
+	background-color: $brand-pink-bg;
+	color: $white;
+
+	transform: translate3d(-400px,-380px,400px);
+	
+	@include media(large, $gemini-screens) {
+		//position: absolute;
+		transform: translate3d(0,0,0);
+		z-index: -3;
+		left: -220px;
+		bottom: 180px;
+		width: 200px;
+		text-align: left;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		padding: 0;
+		opacity: 0;
+		background-color: transparent;
+		color: $orange;
+		transition: opacity 0.3s ease-in;
+
+		transition: transform 0.15s;
+		transition-delay: 0.15s;
+		transform: rotate(-115deg);
+		transform-origin: top right;
+		/* Internet Explorer */
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	}
+}
+
+.anglegrid__item:hover .anglegrid__link{
+	//z-index: 9;
+	//position: relative;
+}
+
+.layer {
+	position: relative;
+	display: block;
+	will-change: transform;
+}
+
+.layer:not(:first-child) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include media(large, $gemini-screens) {
+		//display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+.anglegrid__item .layer {
+    transition: transform 0.3s;
+	transform-origin: 0 0;
+	//will-change: transform;
+}
+
+
+.anglegrid__item {
+	.layer {
+		transition-duration: .2s;
+		transition-delay: 0s;
+		transition-timing-function: ease-out;
+		//will-change: transform;
+	}
+	.layer-1 { 
+		@include media(large, $gemini-screens) {
+			transform: rotateY(0deg);
+		}
+	}
+	.layer-2 { 
+		@include media(large, $gemini-screens) {
+			transform: rotateY(0deg);
+		}
+	}
+	.layer-3 { 
+		@include media(large, $gemini-screens) {
+			transform: rotateY(0deg);
+		}
+	}
+}
+/*
+.anglegrid__item.aos-init {
+
+	.layer {
+		@include media(large, $gemini-screens) {
+			transition-duration: .5s;
+			transition-delay: .2s;
+		}
+		
+	}
+	.layer-1 { 
+		@include media(large, $gemini-screens) {
+			transform: rotateY(30deg);
+		}
+	}
+	.layer-2 { 
+		@include media(large, $gemini-screens) {
+			transform: rotateY(0deg);
+		}
+	}
+	.layer-3 { 
+		@include media(large, $gemini-screens) {
+			//position: relative;
+			transform: rotateY(-30deg);
+		}
+	}
+}
+*/
+
+
+
+.anglegrid__item.aos-init.aos-animate {
+	.layer {
+		transition-duration: .2s;
+		transition-delay: 0s;
+		transition-timing-function: ease-out;
+	}
+	.layer-1 { 
+		//z-index: 3;
+		@include media(large, $gemini-screens) {
+			//transform: rotateY(0deg);
+			animation: layer1 1.6s 0s ease-out;
+			//-webkit-animation: layer1 2.4s 0.5s ease-out;
+		}
+	}
+	.layer-2 { 
+		//z-index: 2;
+		@include media(large, $gemini-screens) {
+			transform: rotateY(0deg);
+		}
+	}
+	.layer-3 { 
+		//z-index: 1;
+		@include media(large, $gemini-screens) {
+			//transform: rotateY(0deg);
+			animation: layer3 1.6s 0s ease-out;
+			//-webkit-animation: layer3 2.4s 0.5s ease-out;
+		}
+	}
+}
+
+[data-aos="slide-left"].anglegrid__item.aos-init {
+	@include media(medium) {
+		transform:translateX(450%)
+	}
+	@include media(large) {
+		transform:translateX(550%)
+	}
+	@include media(xlarge) {
+		transform:translateX(900%)
+	}
+}
+[data-aos="slide-left"].anglegrid__item.aos-init.aos-animate {
+	@include media(medium) {
+		transform:translateX(0)
+	}
+	@include media(large) {
+		transform:translateX(0)
+	}
+	@include media(xlarge) {
+		transform:translateX(0)
+	}
+}
+
+
+
+
+
+
+.anglegrid__item:hover,
+.anglegrid__item.aos-animate:hover {
+	
+	.anglegrid__title {
+		@include media(large, $gemini-screens) {
+			opacity: 1;
+			transform: rotate(-90deg);
+			//z-index: auto;
+			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+		}		
+	}
+	.layer {
+		//transition-duration: .2s;
+		//transition-delay: 0s;
+	}
+	.layer-1 { 
+		@include media(large, $gemini-screens) {
+			transform: rotateY(40deg);
+		}
+	}
+	.layer-2 { 
+		@include media(large, $gemini-screens) {
+			transform: rotateY(0deg);
+		}
+	}
+	.layer-3 { 
+		@include media(large, $gemini-screens) {
+			transform: rotateY(-40deg);
+		}
+	}
+
+}
+
+
+
+@keyframes layer1 {
+	0% {
+		-webkit-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+	1% {
+		-webkit-transform: rotateY(30deg);
+			transform: rotateY(30deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+	80% {
+		-webkit-transform: rotateY(30deg);
+			transform: rotateY(30deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+	100% {
+		-webkit-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+}
+@-webkit-keyframes layer1 {
+	0% {
+		-webkit-transform: rotateY(00deg);
+			transform: rotateY(0deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+	1% {
+		-webkit-transform: rotateY(30deg);
+			transform: rotateY(30deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+	80% {
+		-webkit-transform: rotateY(30deg);
+			transform: rotateY(30deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+	100% {
+		-webkit-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+}
+@keyframes layer3 {
+	0% {
+		-webkit-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+	1% {
+		-webkit-transform: rotateY(-30deg);
+			transform: rotateY(-30deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+	80% {
+		-webkit-transform: rotateY(-30deg);
+			transform: rotateY(-30deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+	100% {
+		-webkit-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+}
+@-webkit-keyframes layer3 {
+	0% {
+		-webkit-transform: rotateY()0;
+			transform: rotateY(0deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+	1% {
+		-webkit-transform: rotateY(-30deg);
+			transform: rotateY(-30deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+	80% {
+		-webkit-transform: rotateY(-30deg);
+			transform: rotateY(-30deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+	100% {
+		-webkit-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+		-webkit-animation-timing-function: ease-out;
+			animation-timing-function: ease-out;
+	}
+}

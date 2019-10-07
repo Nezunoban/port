@@ -7,47 +7,47 @@
 @if get(media, $gemini-use) {
 
   /**
-   * @module Media [.media]
+   * @module Media [.o-media]
    * @description Place any image and text-like content side-by-side
    */
-  .media {
+  .o-media {
     display: block;
     margin-bottom: get(spacing);
     @include clearfix;
   }
 
   /**
-   * @submodule Media Image [.media__img]
+   * @submodule Media Image [.o-media__img]
    * @description Image container for media
    *
-   * @modifier [.media__img--rev] Reverse the image location
+   * @modifier [.o-media__img--rev] Reverse the image location
    */
-  .media__img {
+  .o-media__img {
     float: left;
     margin-right: get(spacing);
   }
   /**
    * Reversed image location (right instead of left).
    */
-  .media__img--rev {
+  .o-media__img--rev {
     float: right;
     margin-left: get(spacing);
   }
 
-  .media__img img,
-  .media__img--rev img {
+  .o-media__img img,
+  .o-media__img--rev img {
     display: block;
   }
 
   /**
-   * @submodule Media Body [.media__content]
+   * @submodule Media Body [.o-media__content]
    * @description Body copy associated to the image
    */
-  .media__content {
+  .o-media__content {
     overflow: hidden;
   }
-  .media__content,
-  .media__content > :last-child {
+  .o-media__content,
+  .o-media__content > :last-child {
     margin-bottom: 0;
   }
 

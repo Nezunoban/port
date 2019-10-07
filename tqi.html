@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (If someone is looking at this in IE 8 or IE9, then I don't think I want them to find me) <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <title>Nathan Freemyer | TQI</title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="css/aos.css" />
+  <link rel="stylesheet" type="text/css" href="css/init.css">
+  <!-- animsition.css -->
+  <link rel="stylesheet" href="css/animsition.min.css">
+
+  <!--<link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,400i,700,700i" rel="stylesheet">-->
+
+  <style>
+    @font-face {
+      font-family: 'Muli';
+      src: url('fonts/muli-webfont.eot');
+      src: url('fonts/muli-webfont.eot?#iefix') format('embedded-opentype'),
+      url('fonts/muli-webfont.woff2') format('woff2'),
+      url('fonts/muli-webfont.woff') format('woff'),
+      url('fonts/muli-webfont.svg#Muli') format('svg');
+      font-weight: 400;
+      font-style: normal;
+      font-stretch: normal;
+      unicode-range: U+0020-2044;
+    }
+
+    @font-face {
+      font-family:'Muli';
+      src: url('fonts/muli-bold.eot');
+      src: url('fonts/muli-bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/muli-bold.woff2') format('woff2'),
+        url('fonts/muli-bold.woff') format('woff'),
+        url('fonts/muli-bold.svg#Muli Bold') format('svg');
+      font-weight: 700;
+      font-style: normal;
+      font-stretch: normal;
+      unicode-range: U+0020-2044;
+    }
+
+    @font-face {
+      font-family: 'Muli';
+      src: url('fonts/muli-light-webfont.eot');
+      src: url('fonts/muli-light-webfont.eot?#iefix') format('embedded-opentype'),
+      url('fonts/muli-light-webfont.woff2') format('woff2'),
+      url('fonts/muli-light-webfont.woff') format('woff'),
+      url('fonts/muli-light-webfont.svg#Muli-Bold') format('svg');
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      unicode-range: U+0020-2044;
+    }
+
+
+    @font-face {
+      font-family: 'Muli';
+      src: url('fonts/muli-lightit-webfont.eot');
+      src: url('fonts/muli-lightit-webfont.eot?#iefix') format('embedded-opentype'),
+      url('fonts/muli-lightit-webfont.woff2') format('woff2'),
+      url('fonts/muli-lightit-webfont.woff') format('woff'),
+      url('fonts/muli-lightit-webfont.svg#Muli-LightItalic') format('svg');
+      font-weight: 300;
+      font-style: italic;
+      font-stretch: normal;
+      unicode-range: U+0020-2044;
+    }
+
+/*
+    @font-face {
+      font-family:'Quicksand';
+      src: url('fonts/quicksand-light.eot');
+      src: url('fonts/quicksand-light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/quicksand-light.woff2') format('woff2'),
+        url('fonts/quicksand-light.woff') format('woff'),
+        url('fonts/quicksand-light.svg#Quicksand Light') format('svg');
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      unicode-range: U+0020-2044;
+    }
+*/
+  </style>
+
+
+  <!-- jQuery -->
+  
+  <!-- jquery & iScroll -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <!-- drawer.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+  <!-- micromodal.js -->
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+  
+  
+
+  <!--<script src="js/jquery-3.3.1.min.js"></script>-->
+  <script src="js/modernizr.custom.js"></script>
+
+
+  <!-- Favicons -->
+    <!-- iPhone(first generation or 2G), iPhone 3G, iPhone 3GS -->
+    <link rel="apple-touch-icon" sizes="57x57" href="touch-icon-iphone.png">
+    <!-- iPad and iPad mini @1x -->
+    <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+    <!-- iPhone 4, iPhone 4s, iPhone 5, iPhone 5c, iPhone 5s, iPhone 6, iPhone 6s, iPhone 7, iPhone 7s, iPhone8 -->
+    <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+    <!-- iPad and iPad mini @2x -->
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+    <!-- iPad Pro -->
+    <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-pro.png">
+    <!-- iPhone X, iPhone 8 Plus, iPhone 7 Plus, iPhone 6s Plus, iPhone 6 Plus -->
+    <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-6-plus.png">
+    <!-- Android Devices High Resolution -->
+    <link rel="icon" sizes="192x192" href="icon-hd.png">
+    <!-- Android Devices Normal Resolution -->
+    <link rel="icon" sizes="128x128" href="icon.png">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- RSS 
+  <link rel="alternate" type="application/rss+xml" title="RSS for Official Bootstrap Blog" href="/feed.xml">
+  -->
+
+  <!-- Twitter -->
+  <meta name="twitter:site" content="@NathanFreemyer">
+  <meta name="twitter:creator" content="@NathanFreemyer">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Nathan Freemyer">
+  <meta name="twitter:description" content="">
+  <!--<meta name="twitter:image" content="http://blog.getbootstrap.com/img/bootstrap-social-logo.png">-->
+
+
+  <!-- Facebook -->
+
+  <!--  <meta property="og:url" content="http://blog.getbootstrap.com/2017/08/10/bootstrap-4-beta/">
+      <meta property="og:title" content="Bootstrap 4 Beta">
+      <meta property="og:description" content=""> 
+    
+    <meta property="og:image" content="http://blog.getbootstrap.com/img/bootstrap-social.png"> -->
+
+  <!-- Meta -->
+  <meta name="description" content="good communication, usability, representation, improvement, learning, sharing, teaching, fun interaction and the beauty powerfully subtle symbolism.">
+  <meta name="author" content="Nathan Freemyer">
+
+  <!-- Analytics 
+    <script>
+    </script>-->
+
+</head>
+
+<!-- This is a comment -->
+
+<body class="drawer drawer--right" data-effect="drawer-effect-flipY">
+
+          <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+                    
+            <div class="animsition">
+
+  <header role="banner">
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <!--<span class="sr-only">menu</span>-->
+      <!--<span class="drawer-hamburger-icon"></span>--><span class="drawer-toggle-text">menu</span><span class="drawer-hamburger-icon pure-toggle-icon"></span>
+    </button>
+    <nav class="drawer-nav" role="navigation">
+        <ul class="nav-primary nav nav--stacked ">
+            <li class="nav__item"><a href="/" class="nav__link animsition-link">home</a></li>
+            <li class="nav__item nav__item--is-active"><a href="/work.html" class="nav__link">work</a></li>
+            <li class="nav__item"><a href="/self.html" class="nav__link animsition-link">self</a></li>
+            <li class="nav__item"><a href="/contact.html" class="nav__link animsition-link">contact</a></li>
+        </ul>
+    </nav>
+    
+    
+    <div class="w-global-logo">
+        <a href="/" class="w-global-logo__link scaling-svg-container animsition-link" alt="Home" data-aos="purplefy-svg" data-aos-anchor="#trigger-logo-color">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="scaling-svg w-global-logo__svg"
+            width="126" height="346" viewBox="0 0 126 346">
+            <path class="purple" d="M2.29,125.27V2.71l123.36,60V247l-29.33-15.4V113.92l29.33-13.65L30.65,54l0,58Z"/>
+            <path d="M96.32,195.2,35.8,223.46V185.22L125.65,143v-42.7L2.29,157.7V342.53l33.47-16.3L35.62,260l60.7-28.36Z" fill="url(#f)"
+            />
+            <defs>
+              <radialGradient id="n" cx="-76.9" cy="293.76" r="359.12" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#fff"/>
+                <stop offset="1" stop-color="#fff"/>
+              </radialGradient>
+              
+              <radialGradient id="f" cx="88.2" cy="236.9" r="321.46" gradientTransform="matrix(1, 0, 0, -1, 0, 348)" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#ff7569" />
+                <stop offset="0.31" stop-color="#d0586c" />
+                <stop offset="1" stop-color="#5c1073" />
+              </radialGradient>
+            </defs>
+            
+            <title>NF-logo</title>
+            <image src="img/logo-w.png" xlink:href="" class="svg__img--hide-on-fallback"></image>
+          </svg>
+        </a>
+      </div>
+  </header>
+
+  <main  role="main">
+    <div class="grid-parent">
+      <section id="hero" class="section hero grid-subgrid angle--bottom-right grid-star-bg star-bg bcg">
+        
+        <div class="shooting-container-1" role="img" aria-label="purple gradient">
+          <div class="shooting-1" role="img" aria-label="purple gradient"></div>
+        </div><div class="shooting-container-2" role="img" aria-label="purple gradient">
+          <div class="shooting-2" role="img" aria-label="purple gradient"></div>
+        </div>
+        <div class="shooting-container-3" role="img" aria-label="purple gradient">
+            <div class="shooting-3" role="img" aria-label="purple gradient"></div>
+        </div>
+          
+        <div class="overlay hero__overlay-2 overlay--pink" role="img" aria-label="pink gradient"></div>
+        <div class="overlay hero__overlay-1 overlay--grid-1" role="img" aria-label="Isometric grid"></div>
+        
+        <div class="l-row">
+          <div class="hero__content angle-container__content l-col--medium-6 l-col--large-4">
+            <h2 class="hero__h2 beta-xlarge margin-w">
+              Self &amp; Identity
+            </h2>
+            <p class="hero__p">
+              <ul>
+                <li class="hero__list">Creative Direction</li>
+                <li class="hero__list">Branding</li>
+                <li class="hero__list">Graphic Design</li>
+                <li class="hero__list">Site Design</li>
+                <li class="hero__list">Responsive HTML, SASS, PHP</li>
+              </ul>
+            </p>
+            <!-- hero__button button g-button -->
+            <!--<a class="hero__button bu tton-_-granimate button" href="/work.html"><span>see all work</span></a>-->
+          </div>
+        </div>
+        <a class="mouse__container--down" href="#main__content">
+          <span class="mouse">
+              <span class="scroll-wheel"></span>
+          </span>
+          <span class="hidden">Scroll to see more</span>
+          <span class="chevron__container">
+            <span class="chevron chevron--down"></span>
+            <!--<span class="chevron chevron-_-down"></span>-->
+          </span>
+        </a>
+      </section>
+      
+      <section class="section story__img-feature work__work">
+          <div class="l-row">
+            <div class="l-col--small-4 l-col--small-push-7 l-col--medium-6 l-col--medium-push-6 l-col--large-6 l-col--large-push-6" data-micromodal-trigger="modal-1">
+
+                <img class="story__img__desktop bcg hidden-small clickable" src="img/stories/tqi/iso-desktop.png" alt="TQI Website on Desktop" />
+                <img class="story__img__mobile bcg clickable" src="img/stories/tqi/iso-phone.png" alt="TQI Website on Mobile" />
+            </div>
+          </div>
+      </section>
+
+      <section class="section project__story">
+
+        <div id="main__content" class="l-row story__phase">
+          <div class="story__text l-intro--right l-col--small-10 l-col--small-offset-1 l-col--medium-offset-0 l-col--medium-5 l-col--medium-push-6 l-col--large-3 l-col--large-push-8" data-aos="fade-up">
+            <h2 class="main__h2 gamma-medium alpha-xxlarge h-group margin-w c-blue-2">
+              Reboot
+            </h2>
+            <h6 class="main__h6 h-group"> 
+              New Beginnings
+            </h6>
+            <p class="main__p">
+              In starting this redesign, I felt the power symbol was indicative of both the reboot TQI desired and the kind of new beginnings their clients were often seeking. 
+            </p>
+          </div>
+          <figure class="story__figure l-figure--left l-col--small-10 l-col--small-offset-1 l-col--medium-offset-0 l-col--medium-6 l-col--large-8  l-col--medium-pull-6 l-col--large-pull-4">
+            <img class="story__img bcg clickable" src="img/stories/tqi/q.png" alt="Data from current website" data-micromodal-trigger="modal-1"/>
+            <figcaption class="figcaption story__figcaption hidden">Logo development</figcaption>
+          </figure>
+          
+        </div>
+        <div class="l-row story__phase">
+          <div class="story__text l-intro--left l-col--small-10 l-col--small-offset-1 l-col--medium-6 l-col--medium-offset-0 l-col--large-3" data-aos="fade-up">
+            <h2 class="main__h2 gamma-medium alpha-xxlarge h-group margin-w c-purple-2">
+              Organization
+            </h2>
+            <h6 class="main__h6 h-group"> 
+              The Essence
+            </h6>
+            <p class="main__p">
+              Boiling down TQI from the extensive and far reaching services to the core of who they are, I eventually arrived at a clean, threefold descriptor: Direct, Create, and Support.
+            </p>
+            <a id="trigger-logo-color" href="#"></a>
+          </div>
+          <figure class="story__figure l-figure--right l-col--small-10 l-col--small-offset-1 l-col--medium-6 l-col--medium-offset-0 l-col--large-8">
+              <img class="story__img bcg" src="img/stories/tqi/org.png" alt="Bringing organization to the navigation" />
+            <figcaption class="figcaption story__figcaption hidden">Bringing organization to the navigation</figcaption>
+          </figure>
+        </div>
+
+        <div class="l-row story__phase">
+            <div class="story__text l-intro--right l-col--small-10 l-col--small-offset-1 l-col--medium-offset-0 l-col--medium-5 l-col--medium-push-6 l-col--large-3 l-col--large-push-8" data-aos="fade-up">
+            <h2 id="trigger-mouse-scroll" class="main__h2 gamma-medium alpha-xxlarge h-group margin-w c-pink-2">
+              Pallette
+            </h2>
+            <h6 class="main__h6 h-group"> 
+              Consistency
+            </h6>
+            <p class="main__p">
+              The symbolism now established for the brand then needed to be infused into a design framework for the website and for any other branded materials.
+            </p>
+          </div>
+          <figure class="story__figure l-figure--left l-col--small-10 l-col--small-offset-1 l-col--medium-offset-0 l-col--medium-6 l-col--large-8  l-col--medium-pull-6 l-col--large-pull-4">
+              <img class="story__img bcg" src="img/stories/tqi/pallette.png" alt="Spelling out the design framework" />
+            <figcaption class="figcaption story__figcaption hidden">Spelling out the design framework</figcaption>
+          </figure>
+        </div>
+        <div class="l-row story__phase">
+          <div class="story__text l-intro--left l-col--small-10 l-col--small-offset-1 l-col--medium-6 l-col--medium-offset-0 l-col--large-3" data-aos="fade-up">
+            <h2 class="main__h2 gamma-medium alpha-xxlarge h-group margin-w c-purple-2">
+              Triumvirate
+            </h2>
+            <h6 class="main__h6 h-group"> 
+              Pervading Pillars
+            </h6>
+            <p class="main__p">
+              I guided everything from videos to the organization of the site itself to showcase the three sides of the organization: Direction, Creation, and Support. I carefully oversaw the creation of the hero video for the site to ensure it embodied these three while displaying TQI’s capabilities. 
+            </p>
+            <a id="trigger-logo-color" href="#"></a>
+          </div>
+          <figure class="story__figure l-figure--right l-col--small-10 l-col--small-offset-1 l-col--medium-6 l-col--medium-offset-0 l-col--large-8">
+              <img class="story__img bcg" src="img/stories/tqi/video.png" alt="Video direction" />
+            <figcaption class="figcaption story__figcaption hidden">Video direction</figcaption>
+          </figure>
+        </div>
+
+        <div class="l-row story__phase">
+            <div class="story__text l-intro--right l-col--small-10 l-col--small-offset-1 l-col--medium-offset-0 l-col--medium-5 l-col--medium-push-6 l-col--large-3 l-col--large-push-8" data-aos="fade-up">
+            <h2 id="trigger-mouse-scroll" class="main__h2 gamma-medium alpha-xxlarge h-group margin-w c-pink-2">
+              Bonus Round
+            </h2>
+            <h6 class="main__h6 h-group"> 
+              Collateral Damage
+            </h6>
+            <p class="main__p">
+              I guided the design team through a quick business card sprint, and after some printer experimentation, we created a  set of business cards and extended the new visual framework to all collateral.
+            </p>
+          </div>
+          <figure class="story__figure l-figure--left l-col--small-10 l-col--small-offset-1 l-col--medium-offset-0 l-col--medium-6 l-col--large-8  l-col--medium-pull-6 l-col--large-pull-4">
+              <img class="story__img bcg" src="img/stories/tqi/collateral.png" alt="Print design" />
+            <figcaption class="figcaption story__figcaption hidden">Print design</figcaption>
+          </figure>
+        </div>
+
+        <div class="l-row story__phase story__phase-final">
+          <div class="story__text--final l-intro--left l-col--small-10 l-col--small-offset-1 l-col--medium-6 l-col--medium-offset-0 l-col--large-3" data-aos="fade-up">
+            <h2 class="main__h2 gamma-medium alpha-xxlarge h-group margin-w c-orange-1">
+              The Stories
+            </h2>
+            <p class="main__p">
+              I wanted to create a responsive website that told the stories of what we had done. I set up micro-animations in key areas to enhance a feeling of interaction.  
+            </p>
+            <a href="#" class="main__button button c-pink-1 coolBeans coolBeans-orange clickable" data-micromodal-trigger="modal-1">see the final design</a>
+            <a class="main__button button animsition-link coolBeans coolBeans-pink" href="/work.html"><span>go back to works</span></a>
+          </div>
+          <figure class="story__figure--final l-figure--right l-col--small-10 l-col--small-offset-1 l-col--medium-6 l-col--medium-offset-0 l-col--large-8">
+              <img class="story__img bcg story__img-final clickable" src="img/stories/tqi/finaldesign.gif" alt="Final Website Design" data-micromodal-trigger="modal-1"/>
+          </figure>
+        </div>  
+        <a class="mouse__container--up" href="#hero" data-aos="fade-up" data-aos-anchor="#trigger-mouse-scroll">
+          <span class="chevron__container">
+            <span class="chevron"></span>
+            <!--<span class="chevron chevron-_-down"></span>-->
+          </span>
+          <span class="hidden">Scroll to top</span>
+          <span class="mouse">
+              <span class="scroll-wheel"></span>
+          </span>
+        </a>
+      </section>
+
+      <aside>
+      </aside>
+
+
+
+      <footer class="footer angle--top-right footer--story">
+        <div class="footer__container">
+          <div class="footer__image">
+            <h2 class="footer__h2">Let's Talk</h2>
+            <div class="w-contact-airplane" data-aos="fade-up-right">
+              <a href="contact.html" class="w-contact-airplane__link scaling-svg-container animsition-link" alt="Contact">
+                <svg xmlns="http://www.w3.org/2000/svg" width="354" height="280" viewBox="10 50 364 280">
+                  <title>Contact Paper Airplane</title>
+                  <g id="bc8f46f1-a6b9-4483-97c3-af8b9aa75da4" data-name="Layer 1">
+                    <polygon points="89 263.07 346 88.74 80 189.74 89 263.07" fill="#d0d2d3"/>
+                    <polygon points="89 261.41 125.67 236.74 103 212.07 89 261.41" fill="#e6e7e8"/>
+                    <polygon points="182 290.74 101.67 212.07 346 88.74 182 290.74" fill="#fff"/>
+                    <polygon points="80 189.74 346 88.74 28 139.24 80 189.74" fill="#fff"/>
+                  </g>
+                  <image src="img/airplane.png" xlink:href="" class="svg__img--hide-on-fallback"></image>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer__content">
+            <div class="phone__container">
+                <a href="tel:+1-765-506-8400" class="phone__number footer__link">+1(765)506-8400</a>
+            </div>
+            <div class="email__container">
+                <a href="mailto:nathanfreemyer@gmail.com&subject=Hi%20Nathan&We%20would%20love%20to%20start%20a%20conversation%20with%20you%20about%20how%20you%20might%20be%20able%20to%20help%20us%46" class="email__address footer__link">nathanfreemyer@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div> <!-- TODO:CSS Grid Container Pending (support for subgrid) -->
+
+  </main>   
+  <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-1-title">
+            TQI: Identity to Production
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <main class="modal__content" id="modal-1-content">
+          <p>
+          </br>
+            Per the client, I emphasized alerts and online banking. 
+          </br>
+          </br>
+          </p>
+          <img class="bcg" src="img/stories/tqi/full-1-blue.png" alt="tqi Homepage Design" />
+          <p>
+          </br>
+          </br>
+        </main>
+        <footer class="modal__footer">
+          <button class="modal__btn modal__btn-primary" data-micromodal-close aria-label="Close this dialog window">Close</button>
+        </footer>
+      </div>
+    </div>
+  </div>  
+  
+            </div> <!-- Animsition Container -->
+
+  <!-- animsition.js -->
+  <script src="js/animsition.min.js"></script>
+  <script src="js/aos.js"></script>
+  <!--<script src="js/classie.js"></script>-->
+  <!--<script src="js/dynamics.min.js"></script>-->
+  <!--<script src="js/imagesloaded.pkgd.min.js"></script>-->
+
+  
+<script>
+  // Loading and Fade in/out on page load or link activation
+    $(document).ready(function() {
+      $(".animsition").animsition({
+        inClass: 'fade-in-down-sm',
+        outClass: 'fade-out-up-sm',
+        inDuration: 1500,
+        outDuration: 800,
+        linkElement: '.animsition-link',
+        // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+        loading: true,
+        loadingParentElement: 'body', //animsition wrapper element
+        loadingClass: 'animsition-loading',
+        loadingInner: '', // e.g '<img src="loading.svg" />'
+        timeout: true,
+        timeoutCountdown: 5000,
+        onLoadEvent: true,
+        browser: [ 'animation-duration', '-webkit-animation-duration'],
+        // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+        // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+        overlay : false,
+        overlayClass : 'animsition-overlay-slide',
+        overlayParentElement : 'body',
+        transition: function(url){ window.location.href = url; }
+      });
+    });
+    /*
+    Inline SVG Check
+    */
+    function supportsSvg() {
+      var div = document.createElement('div');
+      div.innerHTML = '<svg/>';
+      return (div.firstChild && div.firstChild.namespaceURI) == 'http://www.w3.org/2000/svg';
+    };
+    if (!supportsSvg()) {
+      document.documentElemement.classList.add("no-svg");
+      // or even .className += " no-svg"; for deeper support
+    }
+
+    // Drawer Master Navigation
+    $(document).ready(function() {
+      $('.drawer').drawer();
+    });
+
+    // Animate on scroll 
+    AOS.init({
+      duration: 1200,
+      disable: window.innerWidth < 1024,
+      disable: 'mobile',
+    })
+    $(window).on('load', function() {
+      AOS.refresh();
+    });
+
+    // Micro Modal Accessible Modal popups
+    MicroModal.init();
+  </script>
+
+  
+
+</body>
+
+</html>
