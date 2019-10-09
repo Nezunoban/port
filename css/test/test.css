@@ -9973,7 +9973,12 @@ Copyright (c) 2014 Daniel Eden
 /*!------------------------------------*\
     Base
 \*!------------------------------------*/
-/* line 119, ../../sass/objects/_drawer.scss */
+/*
+.drawer-open {
+    //overflow: hidden !important;
+}
+*/
+/* line 120, ../../sass/objects/_drawer.scss */
 .drawer-nav {
   position: fixed;
   z-index: 101;
@@ -9982,10 +9987,11 @@ Copyright (c) 2014 Daniel Eden
   width: 20rem;
   height: 100%;
   color: #f9c7c7;
-  background-color: #371A5C;
+  background-color: rgba(55, 26, 92, 0.9);
+  backdrop-filter: blur(5px);
 }
 
-/* line 130, ../../sass/objects/_drawer.scss */
+/* line 132, ../../sass/objects/_drawer.scss */
 .drawer-brand {
   font-size: 1.5rem;
   font-weight: bold;
@@ -9997,14 +10003,14 @@ Copyright (c) 2014 Daniel Eden
   color: #F06B6A;
 }
 
-/* line 141, ../../sass/objects/_drawer.scss */
+/* line 143, ../../sass/objects/_drawer.scss */
 .drawer-menu {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 147, ../../sass/objects/_drawer.scss */
+/* line 149, ../../sass/objects/_drawer.scss */
 .drawer-menu-item {
   font-size: 2.5rem;
   display: block;
@@ -10013,7 +10019,7 @@ Copyright (c) 2014 Daniel Eden
   color: #FFF;
 }
 
-/* line 155, ../../sass/objects/_drawer.scss */
+/* line 157, ../../sass/objects/_drawer.scss */
 .drawer-menu-item:hover {
   text-decoration: underline;
   color: #FFF;
@@ -10021,7 +10027,7 @@ Copyright (c) 2014 Daniel Eden
 }
 
 /*! overlay */
-/* line 162, ../../sass/objects/_drawer.scss */
+/* line 164, ../../sass/objects/_drawer.scss */
 .drawer-overlay {
   position: fixed;
   z-index: 100;
@@ -10033,7 +10039,7 @@ Copyright (c) 2014 Daniel Eden
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* line 173, ../../sass/objects/_drawer.scss */
+/* line 175, ../../sass/objects/_drawer.scss */
 .drawer-open .drawer-overlay {
   display: block;
 }
@@ -10083,11 +10089,24 @@ Copyright (c) 2014 Daniel Eden
 /*!------------------------------------*\
     Right
 \*!------------------------------------*/
-/* line 227, ../../sass/objects/_drawer.scss */
+/* line 229, ../../sass/objects/_drawer.scss */
 .drawer--right .drawer-nav {
   right: 0;
 }
 
+/*
+.drawer--right.drawer-open .drawer-nav,
+.drawer--right .drawer-hamburger,
+.drawer--right.drawer-open .drawer-navbar .drawer-hamburger {
+  //right: 0;
+  //right: 0;
+}
+
+.drawer--right.drawer-open .drawer-hamburger {
+  //right: 0;
+  //right: $drawer-width;
+}
+*/
 /*!------------------------------------*\
     Hamburger
 \*!------------------------------------*/
@@ -10200,18 +10219,24 @@ Copyright (c) 2014 Daniel Eden
 /*!------------------------------------*\
     Sidebar
 \*!------------------------------------*/
-/* line 366, ../../sass/objects/_drawer.scss */
+/* line 369, ../../sass/objects/_drawer.scss */
 .drawer--sidebar {
-  background-color: #371A5C;
+  background-color: rgba(55, 26, 92, 0.9);
 }
 
-/* line 370, ../../sass/objects/_drawer.scss */
+/* line 373, ../../sass/objects/_drawer.scss */
 .drawer--sidebar .drawer-contents {
   background-color: #F06B6A;
 }
 
 @media (min-width: 64em) {
-  /* line 380, ../../sass/objects/_drawer.scss */
+  /*
+  .drawer--sidebar .drawer-hamburger {
+    //display: none;
+    //visibility: hidden;
+  }
+  */
+  /* line 385, ../../sass/objects/_drawer.scss */
   .drawer--sidebar .drawer-nav {
     display: block;
     transform: none;
@@ -10221,43 +10246,52 @@ Copyright (c) 2014 Daniel Eden
   }
 
   /*! Left */
-  /* line 389, ../../sass/objects/_drawer.scss */
+  /* line 394, ../../sass/objects/_drawer.scss */
   .drawer--sidebar.drawer--left .drawer-nav {
     left: 0;
     border-right: 1px solid #371A5C;
   }
 
-  /* line 394, ../../sass/objects/_drawer.scss */
+  /* line 399, ../../sass/objects/_drawer.scss */
   .drawer--sidebar.drawer--left .drawer-contents {
     margin-left: 18rem;
   }
 
   /*! Right */
-  /* line 399, ../../sass/objects/_drawer.scss */
+  /* line 404, ../../sass/objects/_drawer.scss */
   .drawer--sidebar.drawer--right .drawer-nav {
     right: 0;
     border-left: 1px solid #371A5C;
   }
 
-  /* line 404, ../../sass/objects/_drawer.scss */
+  /* line 409, ../../sass/objects/_drawer.scss */
   .drawer--sidebar.drawer--right .drawer-contents {
     margin-right: 18rem;
   }
 
   /*! container */
-  /* line 409, ../../sass/objects/_drawer.scss */
+  /* line 414, ../../sass/objects/_drawer.scss */
   .drawer--sidebar .drawer-container {
     max-width: 48rem;
   }
 }
 @media (min-width: 75em) {
-  /* line 415, ../../sass/objects/_drawer.scss */
+  /* line 420, ../../sass/objects/_drawer.scss */
   .drawer--sidebar .drawer-nav {
     width: 20rem;
   }
 
+  /*
+  .drawer--sidebar.drawer--left .drawer-contents {
+    //margin-left: $drawer-width-lg;
+  }
+
+  .drawer--sidebar.drawer--right .drawer-contents {
+    //margin-right: $drawer-width-lg;
+  }
+  */
   /*! container */
-  /* line 428, ../../sass/objects/_drawer.scss */
+  /* line 435, ../../sass/objects/_drawer.scss */
   .drawer--sidebar .drawer-container {
     max-width: 60rem;
   }
@@ -10265,18 +10299,18 @@ Copyright (c) 2014 Daniel Eden
 /*!------------------------------------*\
     Navbar
 \*!------------------------------------*/
-/* line 440, ../../sass/objects/_drawer.scss */
+/* line 447, ../../sass/objects/_drawer.scss */
 .drawer--navbarTopGutter {
   padding-top: 3.75rem;
 }
 
-/* line 444, ../../sass/objects/_drawer.scss */
+/* line 451, ../../sass/objects/_drawer.scss */
 .drawer-navbar .drawer-navbar-header {
   border-bottom: 1px solid #371A5C;
-  background-color: #371A5C;
+  background-color: rgba(55, 26, 92, 0.9);
 }
 
-/* line 449, ../../sass/objects/_drawer.scss */
+/* line 456, ../../sass/objects/_drawer.scss */
 .drawer-navbar {
   z-index: 102;
   top: 0;
@@ -10284,12 +10318,12 @@ Copyright (c) 2014 Daniel Eden
 }
 
 /*! .drawer-navbar modifier */
-/* line 456, ../../sass/objects/_drawer.scss */
+/* line 463, ../../sass/objects/_drawer.scss */
 .drawer-navbar--fixed {
   position: fixed;
 }
 
-/* line 460, ../../sass/objects/_drawer.scss */
+/* line 467, ../../sass/objects/_drawer.scss */
 .drawer-navbar-header {
   position: relative;
   z-index: 102;
@@ -10300,7 +10334,7 @@ Copyright (c) 2014 Daniel Eden
   text-align: center;
 }
 
-/* line 470, ../../sass/objects/_drawer.scss */
+/* line 477, ../../sass/objects/_drawer.scss */
 .drawer-navbar .drawer-brand {
   line-height: 3.75rem;
   display: inline-block;
@@ -10309,17 +10343,17 @@ Copyright (c) 2014 Daniel Eden
   text-decoration: none;
 }
 
-/* line 478, ../../sass/objects/_drawer.scss */
+/* line 485, ../../sass/objects/_drawer.scss */
 .drawer-navbar .drawer-brand:hover {
   background-color: transparent;
 }
 
-/* line 482, ../../sass/objects/_drawer.scss */
+/* line 489, ../../sass/objects/_drawer.scss */
 .drawer-navbar .drawer-nav {
   padding-top: 3.75rem;
 }
 
-/* line 486, ../../sass/objects/_drawer.scss */
+/* line 493, ../../sass/objects/_drawer.scss */
 .drawer-navbar .drawer-menu {
   padding-bottom: 7.5rem;
 }
@@ -10445,20 +10479,20 @@ Copyright (c) 2014 Daniel Eden
 /*!------------------------------------*\
     Container
 \*!------------------------------------*/
-/* line 616, ../../sass/objects/_drawer.scss */
+/* line 623, ../../sass/objects/_drawer.scss */
 .drawer-container {
   margin-right: auto;
   margin-left: auto;
 }
 
 @media (min-width: 64em) {
-  /* line 622, ../../sass/objects/_drawer.scss */
+  /* line 629, ../../sass/objects/_drawer.scss */
   .drawer-container {
     max-width: 60rem;
   }
 }
 @media (min-width: 75em) {
-  /* line 628, ../../sass/objects/_drawer.scss */
+  /* line 635, ../../sass/objects/_drawer.scss */
   .drawer-container {
     max-width: 70rem;
   }
@@ -10651,6 +10685,10 @@ necessitatibus magnam.</p>
   }
 }
 
+/*.anglegrid__item:hover .anglegrid__link{
+	//z-index: 9;
+	//position: relative;
+}*/
 /* line 155, ../../sass/objects/_angled-portfolio.scss */
 .layer {
   position: relative;
@@ -10795,6 +10833,14 @@ necessitatibus magnam.</p>
   }
 }
 
+/* line 291, ../../sass/objects/_angled-portfolio.scss */
+.anglegrid__item:hover,
+.anglegrid__item.aos-animate:hover {
+  /*.layer {
+  	//transition-duration: .2s;
+  	//transition-delay: 0s;
+  }*/
+}
 @media screen and (min-width: 64em) {
   /* line 294, ../../sass/objects/_angled-portfolio.scss */
   .anglegrid__item:hover .anglegrid__title,
@@ -11902,14 +11948,27 @@ h2.margin-w {
 .dimension-mobile {
   width: 150px;
   height: 300px;
-  position: absolute;
-  left: 50%;
+  position: relative;
   top: 50%;
   margin: -75px 0 0 -48px;
   /*perspective: 500px;*/
 }
+@media screen and (min-width: 64em) {
+  /* line 13, ../../sass/objects/_dimension-mobile.scss */
+  .dimension-mobile {
+    width: 250px;
+    height: 541px;
+  }
+}
+@media screen and (min-width: 106.25em) {
+  /* line 13, ../../sass/objects/_dimension-mobile.scss */
+  .dimension-mobile {
+    width: 375px;
+    height: 812px;
+  }
+}
 
-/* line 22, ../../sass/objects/_dimension-mobile.scss */
+/* line 30, ../../sass/objects/_dimension-mobile.scss */
 .shadow {
   position: absolute;
   width: 60px;
@@ -11921,14 +11980,32 @@ h2.margin-w {
   animation: shadow 7s ease;
   transition: transform 0.3s;
 }
+@media screen and (min-width: 64em) {
+  /* line 30, ../../sass/objects/_dimension-mobile.scss */
+  .shadow {
+    left: 80px;
+    top: 582px;
+    width: 90px;
+    box-shadow: 0 0 90px 60px rgba(0, 0, 0, 0.3);
+  }
+}
+@media screen and (min-width: 106.25em) {
+  /* line 30, ../../sass/objects/_dimension-mobile.scss */
+  .shadow {
+    left: 160px;
+    top: 872px;
+    width: 120px;
+    box-shadow: 0 0 120px 80px rgba(0, 0, 0, 0.3);
+  }
+}
 
-/* line 35, ../../sass/objects/_dimension-mobile.scss */
+/* line 55, ../../sass/objects/_dimension-mobile.scss */
 .dimension-mobile:hover .shadow,
 .dimension-mobile:focus .shadow {
   transform: rotateX(-34deg) rotateY(0deg) rotateZ(0deg);
 }
 
-/* line 40, ../../sass/objects/_dimension-mobile.scss */
+/* line 60, ../../sass/objects/_dimension-mobile.scss */
 .inner {
   z-index: 20;
   position: absolute;
@@ -11941,14 +12018,28 @@ h2.margin-w {
   animation: rotate 7s ease;
   transition: transform 0.3s;
 }
+@media screen and (min-width: 64em) {
+  /* line 60, ../../sass/objects/_dimension-mobile.scss */
+  .inner {
+    width: 262px;
+    height: 553px;
+  }
+}
+@media screen and (min-width: 106.25em) {
+  /* line 60, ../../sass/objects/_dimension-mobile.scss */
+  .inner {
+    width: 395px;
+    height: 832px;
+  }
+}
 
-/* line 52, ../../sass/objects/_dimension-mobile.scss */
+/* line 80, ../../sass/objects/_dimension-mobile.scss */
 .dimension-mobile:hover .inner,
 .dimension-mobile:focus .inner {
   transform: rotateX(0deg) rotateY(0deg);
 }
 
-/* line 57, ../../sass/objects/_dimension-mobile.scss */
+/* line 85, ../../sass/objects/_dimension-mobile.scss */
 .screen {
   width: 150px;
   height: 300px;
@@ -11966,8 +12057,22 @@ h2.margin-w {
   background-size: 300px 300px;
   box-shadow: inset 0 3px 7px rgba(255, 255, 255, 0.5);
 }
+@media screen and (min-width: 64em) {
+  /* line 85, ../../sass/objects/_dimension-mobile.scss */
+  .screen {
+    width: 262px;
+    height: 553px;
+  }
+}
+@media screen and (min-width: 106.25em) {
+  /* line 85, ../../sass/objects/_dimension-mobile.scss */
+  .screen {
+    width: 395px;
+    height: 832px;
+  }
+}
 
-/* line 74, ../../sass/objects/_dimension-mobile.scss */
+/* line 111, ../../sass/objects/_dimension-mobile.scss */
 .screen .face-one {
   width: 150px;
   height: 300px;
@@ -11979,8 +12084,22 @@ h2.margin-w {
   transform: translateZ(2px);
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 100%);
 }
+@media screen and (min-width: 64em) {
+  /* line 111, ../../sass/objects/_dimension-mobile.scss */
+  .screen .face-one {
+    width: 262px;
+    height: 553px;
+  }
+}
+@media screen and (min-width: 106.25em) {
+  /* line 111, ../../sass/objects/_dimension-mobile.scss */
+  .screen .face-one {
+    width: 395px;
+    height: 832px;
+  }
+}
 
-/* line 85, ../../sass/objects/_dimension-mobile.scss */
+/* line 130, ../../sass/objects/_dimension-mobile.scss */
 .screen .face-one .display {
   width: 140px;
   height: 290px;
@@ -11992,21 +12111,51 @@ h2.margin-w {
   position: relative;
   box-shadow: inset 0 0 2px black;
 }
+@media screen and (min-width: 64em) {
+  /* line 130, ../../sass/objects/_dimension-mobile.scss */
+  .screen .face-one .display {
+    width: 250px;
+    height: 541px;
+    margin: 6px;
+  }
+}
+@media screen and (min-width: 106.25em) {
+  /* line 130, ../../sass/objects/_dimension-mobile.scss */
+  .screen .face-one .display {
+    width: 375px;
+    height: 812px;
+    margin: 10px;
+  }
+}
 
-/* line 96, ../../sass/objects/_dimension-mobile.scss */
+/* line 152, ../../sass/objects/_dimension-mobile.scss */
 .screen .face-one .display .shade {
   position: absolute;
   left: 0;
   top: 0;
   width: 130px;
   height: 74px;
-  background: linear-gradient(-135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 47%, rgba(255, 255, 255, 0) 48%);
+  background: linear-gradient(-135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 30%, rgba(255, 255, 255, 0) 31%);
   /*animation: screen-shade infinite 7s ease;*/
   background-size: 300px 200px;
   background-position: 0px 0px;
 }
+@media screen and (min-width: 64em) {
+  /* line 152, ../../sass/objects/_dimension-mobile.scss */
+  .screen .face-one .display .shade {
+    width: 250px;
+    height: 130px;
+  }
+}
+@media screen and (min-width: 106.25em) {
+  /* line 152, ../../sass/objects/_dimension-mobile.scss */
+  .screen .face-one .display .shade {
+    width: 375px;
+    height: 194px;
+  }
+}
 
-/* line 107, ../../sass/objects/_dimension-mobile.scss */
+/* line 172, ../../sass/objects/_dimension-mobile.scss */
 .screen .face-one span {
   position: absolute;
   top: 85px;
@@ -12015,7 +12164,13 @@ h2.margin-w {
   color: #ddd;
 }
 
-/* line 115, ../../sass/objects/_dimension-mobile.scss */
+/* line 180, ../../sass/objects/_dimension-mobile.scss */
+.display img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 185, ../../sass/objects/_dimension-mobile.scss */
 .dimension-mobile-body {
   width: 150px;
   height: 96px;
@@ -12030,8 +12185,22 @@ h2.margin-w {
   /*animation: lid-body infinite 7s ease;*/
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0) 100%);
 }
+@media screen and (min-width: 64em) {
+  /* line 185, ../../sass/objects/_dimension-mobile.scss */
+  .dimension-mobile-body {
+    width: 262px;
+    height: 130px;
+  }
+}
+@media screen and (min-width: 106.25em) {
+  /* line 185, ../../sass/objects/_dimension-mobile.scss */
+  .dimension-mobile-body {
+    width: 395px;
+    height: 196px;
+  }
+}
 
-/* line 129, ../../sass/objects/_dimension-mobile.scss */
+/* line 207, ../../sass/objects/_dimension-mobile.scss */
 .dimension-mobile-body .face-one {
   width: 150px;
   height: 96px;
@@ -12045,8 +12214,22 @@ h2.margin-w {
   transform: translateZ(-2px);
   background-image: linear-gradient(30deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0) 100%);
 }
+@media screen and (min-width: 64em) {
+  /* line 207, ../../sass/objects/_dimension-mobile.scss */
+  .dimension-mobile-body .face-one {
+    width: 262px;
+    height: 130px;
+  }
+}
+@media screen and (min-width: 106.25em) {
+  /* line 207, ../../sass/objects/_dimension-mobile.scss */
+  .dimension-mobile-body .face-one {
+    width: 395px;
+    height: 64px;
+  }
+}
 
-/* line 142, ../../sass/objects/_dimension-mobile.scss */
+/* line 229, ../../sass/objects/_dimension-mobile.scss */
 .dimension-mobile-body .touchpad {
   width: 40px;
   height: 31px;
@@ -12114,13 +12297,12 @@ h2.margin-w {
     transform: rotateX(-34deg) rotateY(-34deg) rotateZ(0deg);
   }
 }
-/* line 211, ../../sass/objects/_dimension-mobile.scss */
-.links {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
+@media screen and (min-width: 30.0625em) {
+  /* line 301, ../../sass/objects/_dimension-mobile.scss */
+  .story__img-feature.img-feature-mobile {
+    margin-top: -40vw;
+  }
 }
-
 /**
  ********************************
  * _COOLBEANS.SCSS

@@ -26,7 +26,7 @@ $toggler-color: lighten($brand-color, 20%) !default;
 $toggler-checked-color: $brand-color !default;
 $toggler-focus-color: $brand-color !default;
 
-$drawer-bgcolor: $brand-color-2 !default;
+$drawer-bgcolor: rgba(55,26,92, 0.9) !default;
 
 // For 'left' and 'right' positioned drawers.
 //$drawer-width-small: 100% !default;
@@ -73,7 +73,7 @@ $drawer-fontSize: 2.5rem;
 
 $drawer-borderColor: $brand-color-2;
 $drawer-color: lighten($brand-color, 20%);
-$drawer-bgColor: $brand-color-2;
+$drawer-bgColor: rgba(55,26,92, 0.9);
 $drawer-link-color: $white !default;
 $drawer-hover-color: $white;
 $drawer-hover-bgColor: transparent !default;
@@ -111,10 +111,11 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
 /*!------------------------------------*\
     Base
 \*!------------------------------------*/
-
+/*
 .drawer-open {
     //overflow: hidden !important;
 }
+*/
 
 .drawer-nav {
   position: fixed;
@@ -125,6 +126,7 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
   height: 100%;
   color: $drawer-color;
   background-color: $drawer-bgColor;
+  backdrop-filter: blur(5px);
 }
 
 .drawer-brand {
@@ -229,7 +231,7 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
     //right: (0 - $drawer-width);
     //transition: right $drawer-transitionDuration $drawer-transitionFunction;
   }
-  
+  /*
   .drawer--right.drawer-open .drawer-nav,
   .drawer--right .drawer-hamburger,
   .drawer--right.drawer-open .drawer-navbar .drawer-hamburger {
@@ -241,6 +243,7 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
     //right: 0;
     //right: $drawer-width;
   }
+  */
   
 //@import "./hamburger";
 /*!------------------------------------*\
@@ -372,10 +375,12 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
 }
 
 @media #{$drawer-viewport-md} {
+  /*
   .drawer--sidebar .drawer-hamburger {
     //display: none;
     //visibility: hidden;
   }
+  */
 
   .drawer--sidebar .drawer-nav {
     display: block;
@@ -416,6 +421,7 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
     width: $drawer-width-lg;
   }
 
+  /*
   .drawer--sidebar.drawer--left .drawer-contents {
     //margin-left: $drawer-width-lg;
   }
@@ -423,6 +429,7 @@ $drawer-viewport-lg: '(min-width: 75em)' !default;
   .drawer--sidebar.drawer--right .drawer-contents {
     //margin-right: $drawer-width-lg;
   }
+  */
 
   /*! container */
   .drawer--sidebar .drawer-container {

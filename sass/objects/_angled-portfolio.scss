@@ -147,10 +147,10 @@
 	}
 }
 
-.anglegrid__item:hover .anglegrid__link{
+/*.anglegrid__item:hover .anglegrid__link{
 	//z-index: 9;
 	//position: relative;
-}
+}*/
 
 .layer {
 	position: relative;
@@ -299,10 +299,10 @@
 			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 		}		
 	}
-	.layer {
+	/*.layer {
 		//transition-duration: .2s;
 		//transition-delay: 0s;
-	}
+	}*/
 	.layer-1 { 
 		@include media(large, $gemini-screens) {
 			transform: rotateY(40deg);
